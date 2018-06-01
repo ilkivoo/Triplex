@@ -1,0 +1,64 @@
+*************************************************************
+*** Triplexator - Finding nucleic acid triple helices     ***
+***         (c) Copyright 2011 by Fabian Buske            ***
+***     Comments, Bugs, Feedback: f.buske@uq.edu.au       ***
+*************************************************************
+*** Version 1.3.1 (12/11/2012) SeqAn Revision: 1225
+*** COMMAND:
+>./triplexator/bin/triplexator -l 10 -fm 0 -of 1 -od MEG3WithPeaks -o triplexMEG3andPeaks.tpx -ss data/_MEG3.fna -ds data/_MEG3.peaks_wo_N.fna 
+*************************************************************
+*** INPUT:
+- single-stranded file supplied : Yes
+- duplex file supplied : Yes
+-> search putative triplexes (matching triplex-forming oligonucleotides and target sites)
+*************************************************************
+*** Output Options:
+- output directory : MEG3WithPeaks/
+- output file : triplexMEG3andPeaks.tpx
+- output format : 1 = extended Triplex (+Alignment)
+- merge features : Yes
+- report duplicate locations : No
+- error reference : 0 = Watson strand (TTS)
+*************************************************************
+*** Main Options:
+- maximum error-rate : 5%
+- maximum total error : 1
+- minimum guanine content with respect to the target : 10%
+- maximum guanine content with respect to the target : 100%
+- minimum length : 10 nucleotides
+- maximum length : 30 nucleotides
+- maximum number of tolerated consecutive pyrimidine interruptions in a target: 1
+- include GT-motif : Yes
+- include GA-motif : Yes
+- include TC-motif : Yes
+- minimum guanine-percentage in anti-parallel mixed motif TFOs : 0%
+- maximum guanine-percentage in parallel mixed motif TFOs : 100%
+- number of consecutive matches required in a feature : 1
+- longest match only : yes
+- detect duplicates : 0 = off
+- same sequence duplicates : on
+*************************************************************
+*** Filtration Options :
+- filter repeats : Yes
+- minimum repeat length : 10
+- maximum repeat period : 4
+- duplicate cutoff : -1
+- filtering : none - greedy algorithm
+*************************************************************
+*** Runtime mode:
+- OpenMP support : Yes
+- runtime mode : 0 = serial
+*************************************************************
+*** Log messages:
+[06/01/18 22:49:07] * Started checking duplex file
+[06/01/18 22:49:07] * Finished checking duplex file
+[06/01/18 22:49:07] * Started reading single-stranded file:data/_MEG3.fna
+[06/01/18 22:49:07] * Finished reading single-stranded file (1 sequences read)
+[06/01/18 22:49:07] * Started detecting triplex-forming oligonucleotides in single-stranded sequences
+[06/01/18 22:49:07] * Finished detecting TFOs within 0.00128 seconds (10 TFOs detected)
+[06/01/18 22:49:07] * Started searching for triplexes
+[06/01/18 22:49:07] * Processing data/_MEG3.peaks_wo_N.fna
+[06/01/18 22:49:10] * Finished processing data/_MEG3.peaks_wo_N.fna
+[06/01/18 22:49:10] * Finished searching for triplexes  within 2.84 seconds (summed over all cpus)
+[06/01/18 22:49:10] * Exit without errors 
+[06/01/18 22:49:10] * Finished program within 2.85 seconds

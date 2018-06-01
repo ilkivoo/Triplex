@@ -108,7 +108,7 @@ int main()
         ans[ind].r = r;
     }
 
-    ofstream out("RNAsites");
+    ofstream out("MEG3sites");
     for (int i = 0; i < ans.size() - 1; i++) {
         out << name << ":" << ans[i].l << "-" << ans[i].r << endl
             << ans[i].str << endl;
