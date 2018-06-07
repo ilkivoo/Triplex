@@ -7,6 +7,13 @@
 #include <iomanip>
 using namespace std;
 
+
+struct classcomp {
+	bool operator() (const double& a, const double& b) const {
+  		return a > b;
+  	}
+};
+
 void getTotalRel(string fileName, unordered_map<string, double>& map, vector<string>& keys, set<double>& values)
 {
     ifstream fis(fileName);
@@ -18,7 +25,7 @@ void getTotalRel(string fileName, unordered_map<string, double>& map, vector<str
     while (!fis.eof()) {
         fis >> dnaName >> rnaName >> totalAbs >> totalRel >> gaAbs >> gaRel >> tcAbs >> tcRel >> gtAbs >> gtRel;
         if (map.count(dnaName) == 0) {
-            map[dnaName] = totalRel;
+            map[dnaName] = 1 - totalRel;
             keys.push_back(dnaName);
         }
         else {
@@ -45,7 +52,7 @@ int main()
     set<double> valuesOfTriplexWithPeaks;
     getTotalRel("../MEG3WithPeaks/triplexMEG3andPeaks.tpx.summary", triplexWithPeaks, keysOfTriplexWithPeaks, valuesOfTriplexWithPeaks);
 
-    set<double> all;
+    set<double, classcomp> all;
     for (double x : valuesOfTriplexWithBkg) {
         all.insert(x);
     }
@@ -66,12 +73,27 @@ int main()
         if (valuesOfTriplexWithBkg.find(triplex) != valuesOfTriplexWithBkg.end()) {
             x++;
         }
-        // Эти цифры для нормировки 
-        xs.push_back(((double)x) / 201.0);
-        ys.push_back(y / 461.0);
+        xs.push_back((double)x);
+        ys.push_back((double)y);
     }
     s = 0;
     last = 0;
+
+    double maxx = 0, maxy = 0;
+    for (int i  = 0; i < xs.size(); i++) {
+    	if (xs[i] > maxx) {
+    		maxx = xs[i];
+    	}
+    	if (ys[i] >maxy) {
+    		maxy = ys[i];
+    	}
+    }
+
+    for (int i = 0; i < xs.size(); i++) {
+    	xs[i] = xs[i]/maxx;
+    	ys[i] = ys[i]/maxy;
+    }
+
     for (int i = 0; i < xs.size(); i++) {
         s += (xs[i] - last) * ys[i];
         last = xs[i];
