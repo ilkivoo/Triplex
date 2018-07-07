@@ -27,7 +27,7 @@ void writeMeg3Sites(int l, int r)
 void startScript()
 {
     cout << "startScript" << endl;
-    system("./startVienna.sh");
+    system("./../ViennaRNA-2.4.6/src/bin/RNAplfold --print_onthefly --cutoff=0.7 <Meg3Site.fna> 1.out ");
 }
 
 void parse(int l1, int r1)
