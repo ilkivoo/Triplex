@@ -1,0 +1,307 @@
+\hypertarget{group__plotting__utils}{}\section{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}
+\label{group__plotting__utils}\index{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}}
+
+
+\subsection{Detailed Description}
+Collaboration diagram for Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__plotting__utils}
+\end{center}
+\end{figure}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__annotation__utils}{Functions to generate annotations for Secondary Structure Plots, Dot-\/\+Plots, and Others}
+\end{DoxyCompactItemize}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{naview_8h}{naview.\+h}
+\item 
+file \hyperlink{plot__aln_8h}{plot\+\_\+aln.\+h}
+\begin{DoxyCompactList}\small\item\em Various functions for plotting Sequence / Structure Alignments. \end{DoxyCompactList}\item 
+file \hyperlink{plot__layouts_8h}{plot\+\_\+layouts.\+h}
+\begin{DoxyCompactList}\small\item\em Secondary structure plot layout algorithms. \end{DoxyCompactList}\item 
+file \hyperlink{plot__structure_8h}{plot\+\_\+structure.\+h}
+\begin{DoxyCompactList}\small\item\em Various functions for plotting R\+NA secondary structures. \end{DoxyCompactList}\item 
+file \hyperlink{plot__utils_8h}{plot\+\_\+utils.\+h}
+\begin{DoxyCompactList}\small\item\em Various utilities to assist in plotting secondary structures and consensus structures. \end{DoxyCompactList}\item 
+file \hyperlink{PS__dot_8h}{P\+S\+\_\+dot.\+h}
+\begin{DoxyCompactList}\small\item\em Various functions for plotting R\+NA secondary structures, dot-\/plots and other visualizations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{group__plotting__utils_structCOORDINATE}{C\+O\+O\+R\+D\+I\+N\+A\+TE}
+\begin{DoxyCompactList}\small\item\em this is a workarround for the S\+W\+IG Perl Wrapper R\+NA plot function that returns an array of type \hyperlink{group__plotting__utils_structCOORDINATE}{C\+O\+O\+R\+D\+I\+N\+A\+TE}  \hyperlink{group__plotting__utils_structCOORDINATE}{More...}\end{DoxyCompactList}\item 
+struct \hyperlink{group__plotting__utils_structvrna__dotplot__auxdata__t}{vrna\+\_\+dotplot\+\_\+auxdata\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__plotting__utils_gae6d17b9f0a53cf5205a9181e0f8422e9}{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+M\+P\+LE}~0
+\begin{DoxyCompactList}\small\item\em Definition of Plot type {\itshape simple} \end{DoxyCompactList}\item 
+\#define \hyperlink{group__plotting__utils_ga94d4c863ecac2f220f76658afb92f964}{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+V\+I\+EW}~1
+\begin{DoxyCompactList}\small\item\em Definition of Plot type {\itshape Naview} \end{DoxyCompactList}\item 
+\#define \hyperlink{group__plotting__utils_ga8c9eac631348da92136c8363ecdd9fb9}{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+I\+R\+C\+U\+L\+AR}~2
+\begin{DoxyCompactList}\small\item\em Definition of Plot type {\itshape Circular} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__plotting__utils_ga821802c3685e37e15182341f6217470d}\label{group__plotting__utils_ga821802c3685e37e15182341f6217470d}} 
+int \hyperlink{group__plotting__utils_ga821802c3685e37e15182341f6217470d}{P\+S\+\_\+color\+\_\+aln} (const char $\ast$structure, const char $\ast$filename, const char $\ast$seqs\mbox{[}$\,$\mbox{]}, const char $\ast$names\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Produce Post\+Script sequence alignment color-\/annotated by consensus structure. \end{DoxyCompactList}\item 
+int \hyperlink{group__plotting__utils_gaab48d4dac655d688abe921389ac2847c}{ali\+P\+S\+\_\+color\+\_\+aln} (const char $\ast$structure, const char $\ast$filename, const char $\ast$seqs\mbox{[}$\,$\mbox{]}, const char $\ast$names\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{group__plotting__utils_gaf4b9173e7d3fd361c3c85e6def194123}{simple\+\_\+xy\+\_\+coordinates} (short $\ast$pair\+\_\+table, float $\ast$X, float $\ast$Y)
+\begin{DoxyCompactList}\small\item\em Calculate nucleotide coordinates for secondary structure plot the {\itshape Simple way} \end{DoxyCompactList}\item 
+int \hyperlink{group__plotting__utils_gac4ea13d35308f09940178d2b05a248c2}{simple\+\_\+circplot\+\_\+coordinates} (short $\ast$pair\+\_\+table, float $\ast$x, float $\ast$y)
+\begin{DoxyCompactList}\small\item\em Calculate nucleotide coordinates for {\itshape Circular Plot} \end{DoxyCompactList}\item 
+int \hyperlink{group__plotting__utils_ga00ea223b5cf02eb2faae5ff29f0d5e12}{P\+S\+\_\+dot\+\_\+plot\+\_\+list} (char $\ast$seq, char $\ast$filename, \hyperlink{group__data__structures_ga9608eed021ebfbdd7a901cfdc446c8e9}{plist} $\ast$pl, \hyperlink{group__data__structures_ga9608eed021ebfbdd7a901cfdc446c8e9}{plist} $\ast$mf, char $\ast$comment)
+\begin{DoxyCompactList}\small\item\em Produce a postscript dot-\/plot from two pair lists. \end{DoxyCompactList}\item 
+int \hyperlink{group__plotting__utils_ga689a97a7e3b8a2df14728b8204d9d57b}{P\+S\+\_\+dot\+\_\+plot} (char $\ast$string, char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Produce postscript dot-\/plot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__plotting__utils_ga5964c4581431b098b80027d6e14dcdd4}{rna\+\_\+plot\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Switch for changing the secondary structure layout algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Data Structure Documentation}
+\index{C\+O\+O\+R\+D\+I\+N\+A\+TE@{C\+O\+O\+R\+D\+I\+N\+A\+TE}}\label{structCOORDINATE}
+\Hypertarget{group__plotting__utils_structCOORDINATE}
+\subsubsection{struct C\+O\+O\+R\+D\+I\+N\+A\+TE}
+this is a workarround for the S\+W\+IG Perl Wrapper R\+NA plot function that returns an array of type \hyperlink{group__plotting__utils_structCOORDINATE}{C\+O\+O\+R\+D\+I\+N\+A\+TE} \index{vrna\+\_\+dotplot\+\_\+auxdata\+\_\+t@{vrna\+\_\+dotplot\+\_\+auxdata\+\_\+t}}\label{structvrna__dotplot__auxdata__t}
+\Hypertarget{group__plotting__utils_structvrna__dotplot__auxdata__t}
+\subsubsection{struct vrna\+\_\+dotplot\+\_\+auxdata\+\_\+t}
+
+
+Collaboration diagram for vrna\+\_\+dotplot\+\_\+auxdata\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{structvrna__dotplot__auxdata__t__coll__graph}
+\end{center}
+\end{figure}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__plotting__utils_gae6d17b9f0a53cf5205a9181e0f8422e9}\label{group__plotting__utils_gae6d17b9f0a53cf5205a9181e0f8422e9}} 
+\index{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}!V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+M\+P\+LE@{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+M\+P\+LE}}
+\index{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+M\+P\+LE@{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+M\+P\+LE}!Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}}
+\subsubsection{\texorpdfstring{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+M\+P\+LE}{VRNA\_PLOT\_TYPE\_SIMPLE}}
+{\footnotesize\ttfamily \#define V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+M\+P\+LE~0}
+
+
+
+{\ttfamily \#include $<$\hyperlink{plot__layouts_8h}{Vienna\+R\+N\+A/plot\+\_\+layouts.\+h}$>$}
+
+
+
+Definition of Plot type {\itshape simple} 
+
+This is the plot type definition for several R\+NA structure plotting functions telling them to use {\bfseries Simple} plotting algorithm
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__plotting__utils_ga5964c4581431b098b80027d6e14dcdd4}{rna\+\_\+plot\+\_\+type}, \hyperlink{plot__structure_8h_a139a31dd0ba9fc6612431f67de901c31}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot\+\_\+a()}, \hyperlink{plot__structure_8h_abdc8f6548ba4a3bc3cd868ccbcfdb86a}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot()}, \hyperlink{plot__structure_8h_ae7853539b5df98f294b4af434e979304}{svg\+\_\+rna\+\_\+plot()}, \hyperlink{plot__structure_8h_a70834bc8c0aad4fe6824ff76ccb8f329}{gml\+R\+N\+A()}, \hyperlink{plot__structure_8h_add368528755f9a830727b680243541df}{ssv\+\_\+rna\+\_\+plot()}, \hyperlink{plot__structure_8h_a2f6d5953e6a323df898896b8d6614483}{xrna\+\_\+plot()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__plotting__utils_ga94d4c863ecac2f220f76658afb92f964}\label{group__plotting__utils_ga94d4c863ecac2f220f76658afb92f964}} 
+\index{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}!V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+V\+I\+EW@{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+V\+I\+EW}}
+\index{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+V\+I\+EW@{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+V\+I\+EW}!Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}}
+\subsubsection{\texorpdfstring{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+V\+I\+EW}{VRNA\_PLOT\_TYPE\_NAVIEW}}
+{\footnotesize\ttfamily \#define V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+V\+I\+EW~1}
+
+
+
+{\ttfamily \#include $<$\hyperlink{plot__layouts_8h}{Vienna\+R\+N\+A/plot\+\_\+layouts.\+h}$>$}
+
+
+
+Definition of Plot type {\itshape Naview} 
+
+This is the plot type definition for several R\+NA structure plotting functions telling them to use {\bfseries Naview} plotting algorithm
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__plotting__utils_ga5964c4581431b098b80027d6e14dcdd4}{rna\+\_\+plot\+\_\+type}, \hyperlink{plot__structure_8h_a139a31dd0ba9fc6612431f67de901c31}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot\+\_\+a()}, \hyperlink{plot__structure_8h_abdc8f6548ba4a3bc3cd868ccbcfdb86a}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot()}, \hyperlink{plot__structure_8h_ae7853539b5df98f294b4af434e979304}{svg\+\_\+rna\+\_\+plot()}, \hyperlink{plot__structure_8h_a70834bc8c0aad4fe6824ff76ccb8f329}{gml\+R\+N\+A()}, \hyperlink{plot__structure_8h_add368528755f9a830727b680243541df}{ssv\+\_\+rna\+\_\+plot()}, \hyperlink{plot__structure_8h_a2f6d5953e6a323df898896b8d6614483}{xrna\+\_\+plot()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__plotting__utils_ga8c9eac631348da92136c8363ecdd9fb9}\label{group__plotting__utils_ga8c9eac631348da92136c8363ecdd9fb9}} 
+\index{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}!V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+I\+R\+C\+U\+L\+AR@{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+I\+R\+C\+U\+L\+AR}}
+\index{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+I\+R\+C\+U\+L\+AR@{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+I\+R\+C\+U\+L\+AR}!Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}}
+\subsubsection{\texorpdfstring{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+I\+R\+C\+U\+L\+AR}{VRNA\_PLOT\_TYPE\_CIRCULAR}}
+{\footnotesize\ttfamily \#define V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+I\+R\+C\+U\+L\+AR~2}
+
+
+
+{\ttfamily \#include $<$\hyperlink{plot__layouts_8h}{Vienna\+R\+N\+A/plot\+\_\+layouts.\+h}$>$}
+
+
+
+Definition of Plot type {\itshape Circular} 
+
+This is the plot type definition for several R\+NA structure plotting functions telling them to produce a {\bfseries Circular plot}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__plotting__utils_ga5964c4581431b098b80027d6e14dcdd4}{rna\+\_\+plot\+\_\+type}, \hyperlink{plot__structure_8h_a139a31dd0ba9fc6612431f67de901c31}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot\+\_\+a()}, \hyperlink{plot__structure_8h_abdc8f6548ba4a3bc3cd868ccbcfdb86a}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot()}, \hyperlink{plot__structure_8h_ae7853539b5df98f294b4af434e979304}{svg\+\_\+rna\+\_\+plot()}, \hyperlink{plot__structure_8h_a70834bc8c0aad4fe6824ff76ccb8f329}{gml\+R\+N\+A()}, \hyperlink{plot__structure_8h_add368528755f9a830727b680243541df}{ssv\+\_\+rna\+\_\+plot()}, \hyperlink{plot__structure_8h_a2f6d5953e6a323df898896b8d6614483}{xrna\+\_\+plot()} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__plotting__utils_gaab48d4dac655d688abe921389ac2847c}\label{group__plotting__utils_gaab48d4dac655d688abe921389ac2847c}} 
+\index{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}!ali\+P\+S\+\_\+color\+\_\+aln@{ali\+P\+S\+\_\+color\+\_\+aln}}
+\index{ali\+P\+S\+\_\+color\+\_\+aln@{ali\+P\+S\+\_\+color\+\_\+aln}!Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}}
+\subsubsection{\texorpdfstring{ali\+P\+S\+\_\+color\+\_\+aln()}{aliPS\_color\_aln()}}
+{\footnotesize\ttfamily int ali\+P\+S\+\_\+color\+\_\+aln (\begin{DoxyParamCaption}\item[{const char $\ast$}]{structure,  }\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{seqs\mbox{[}$\,$\mbox{]},  }\item[{const char $\ast$}]{names\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{plot__aln_8h}{Vienna\+R\+N\+A/plot\+\_\+aln.\+h}$>$}
+
+P\+S\+\_\+color\+\_\+aln for duplexes \mbox{\Hypertarget{group__plotting__utils_gaf4b9173e7d3fd361c3c85e6def194123}\label{group__plotting__utils_gaf4b9173e7d3fd361c3c85e6def194123}} 
+\index{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}!simple\+\_\+xy\+\_\+coordinates@{simple\+\_\+xy\+\_\+coordinates}}
+\index{simple\+\_\+xy\+\_\+coordinates@{simple\+\_\+xy\+\_\+coordinates}!Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}}
+\subsubsection{\texorpdfstring{simple\+\_\+xy\+\_\+coordinates()}{simple\_xy\_coordinates()}}
+{\footnotesize\ttfamily int simple\+\_\+xy\+\_\+coordinates (\begin{DoxyParamCaption}\item[{short $\ast$}]{pair\+\_\+table,  }\item[{float $\ast$}]{X,  }\item[{float $\ast$}]{Y }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{plot__layouts_8h}{Vienna\+R\+N\+A/plot\+\_\+layouts.\+h}$>$}
+
+
+
+Calculate nucleotide coordinates for secondary structure plot the {\itshape Simple way} 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_ga89c32307ee50a0026f4a3131fac0845a}{make\+\_\+pair\+\_\+table()}, \hyperlink{group__plotting__utils_ga5964c4581431b098b80027d6e14dcdd4}{rna\+\_\+plot\+\_\+type}, \hyperlink{group__plotting__utils_gac4ea13d35308f09940178d2b05a248c2}{simple\+\_\+circplot\+\_\+coordinates()}, naview\+\_\+xy\+\_\+coordinates(), \hyperlink{plot__structure_8h_a139a31dd0ba9fc6612431f67de901c31}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot\+\_\+a()}, \hyperlink{plot__structure_8h_abdc8f6548ba4a3bc3cd868ccbcfdb86a}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot}, \hyperlink{plot__structure_8h_ae7853539b5df98f294b4af434e979304}{svg\+\_\+rna\+\_\+plot()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em pair\+\_\+table} & The pair table of the secondary structure \\
+\hline
+{\em X} & a pointer to an array with enough allocated space to hold the x coordinates \\
+\hline
+{\em Y} & a pointer to an array with enough allocated space to hold the y coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+length of sequence on success, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__plotting__utils_gac4ea13d35308f09940178d2b05a248c2}\label{group__plotting__utils_gac4ea13d35308f09940178d2b05a248c2}} 
+\index{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}!simple\+\_\+circplot\+\_\+coordinates@{simple\+\_\+circplot\+\_\+coordinates}}
+\index{simple\+\_\+circplot\+\_\+coordinates@{simple\+\_\+circplot\+\_\+coordinates}!Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}}
+\subsubsection{\texorpdfstring{simple\+\_\+circplot\+\_\+coordinates()}{simple\_circplot\_coordinates()}}
+{\footnotesize\ttfamily int simple\+\_\+circplot\+\_\+coordinates (\begin{DoxyParamCaption}\item[{short $\ast$}]{pair\+\_\+table,  }\item[{float $\ast$}]{x,  }\item[{float $\ast$}]{y }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{plot__layouts_8h}{Vienna\+R\+N\+A/plot\+\_\+layouts.\+h}$>$}
+
+
+
+Calculate nucleotide coordinates for {\itshape Circular Plot} 
+
+This function calculates the coordinates of nucleotides mapped in equal distancies onto a unit circle.
+
+\begin{DoxyNote}{Note}
+In order to draw nice arcs using quadratic bezier curves that connect base pairs one may calculate a second tangential point $P^t$ in addition to the actual R\textsuperscript{2} coordinates. the simplest way to do so may be to compute a radius scaling factor $rs$ in the interval $[0,1]$ that weights the proportion of base pair span to the actual length of the sequence. This scaling factor can then be used to calculate the coordinates for $P^t$, i.\+e. $ P^{t}_x[i] = X[i] * rs$ and $P^{t}_y[i] = Y[i] * rs$.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_ga89c32307ee50a0026f4a3131fac0845a}{make\+\_\+pair\+\_\+table()}, \hyperlink{group__plotting__utils_ga5964c4581431b098b80027d6e14dcdd4}{rna\+\_\+plot\+\_\+type}, \hyperlink{group__plotting__utils_gaf4b9173e7d3fd361c3c85e6def194123}{simple\+\_\+xy\+\_\+coordinates()}, naview\+\_\+xy\+\_\+coordinates(), \hyperlink{plot__structure_8h_a139a31dd0ba9fc6612431f67de901c31}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot\+\_\+a()}, \hyperlink{plot__structure_8h_abdc8f6548ba4a3bc3cd868ccbcfdb86a}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot}, \hyperlink{plot__structure_8h_ae7853539b5df98f294b4af434e979304}{svg\+\_\+rna\+\_\+plot()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em pair\+\_\+table} & The pair table of the secondary structure \\
+\hline
+{\em x} & a pointer to an array with enough allocated space to hold the x coordinates \\
+\hline
+{\em y} & a pointer to an array with enough allocated space to hold the y coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+length of sequence on success, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__plotting__utils_ga00ea223b5cf02eb2faae5ff29f0d5e12}\label{group__plotting__utils_ga00ea223b5cf02eb2faae5ff29f0d5e12}} 
+\index{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}!P\+S\+\_\+dot\+\_\+plot\+\_\+list@{P\+S\+\_\+dot\+\_\+plot\+\_\+list}}
+\index{P\+S\+\_\+dot\+\_\+plot\+\_\+list@{P\+S\+\_\+dot\+\_\+plot\+\_\+list}!Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}}
+\subsubsection{\texorpdfstring{P\+S\+\_\+dot\+\_\+plot\+\_\+list()}{PS\_dot\_plot\_list()}}
+{\footnotesize\ttfamily int P\+S\+\_\+dot\+\_\+plot\+\_\+list (\begin{DoxyParamCaption}\item[{char $\ast$}]{seq,  }\item[{char $\ast$}]{filename,  }\item[{\hyperlink{group__data__structures_ga9608eed021ebfbdd7a901cfdc446c8e9}{plist} $\ast$}]{pl,  }\item[{\hyperlink{group__data__structures_ga9608eed021ebfbdd7a901cfdc446c8e9}{plist} $\ast$}]{mf,  }\item[{char $\ast$}]{comment }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{PS__dot_8h}{Vienna\+R\+N\+A/\+P\+S\+\_\+dot.\+h}$>$}
+
+
+
+Produce a postscript dot-\/plot from two pair lists. 
+
+This function reads two plist structures (e.\+g. base pair probabilities and a secondary structure) as produced by \hyperlink{group__pf__fold_ga1cc05aaa9b0e7df2d3887e98321c2030}{assign\+\_\+plist\+\_\+from\+\_\+pr()} and \hyperlink{group__struct__utils_gab61df77cf7949cd516181fce0c3d7d78}{assign\+\_\+plist\+\_\+from\+\_\+db()} and produces a postscript \char`\"{}dot plot\char`\"{} that is written to \textquotesingle{}filename\textquotesingle{}.~\newline
+Using base pair probabilities in the first and mfe structure in the second plist, the resulting \char`\"{}dot plot\char`\"{} represents each base pairing probability by a square of corresponding area in a upper triangle matrix. The lower part of the matrix contains the minimum free energy structure.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__pf__fold_ga1cc05aaa9b0e7df2d3887e98321c2030}{assign\+\_\+plist\+\_\+from\+\_\+pr()}, \hyperlink{group__struct__utils_gab61df77cf7949cd516181fce0c3d7d78}{assign\+\_\+plist\+\_\+from\+\_\+db()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The R\+NA sequence \\
+\hline
+{\em filename} & A filename for the postscript output \\
+\hline
+{\em pl} & The base pair probability pairlist \\
+\hline
+{\em mf} & The mfe secondary structure pairlist \\
+\hline
+{\em comment} & A comment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if postscript was successfully written, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__plotting__utils_ga689a97a7e3b8a2df14728b8204d9d57b}\label{group__plotting__utils_ga689a97a7e3b8a2df14728b8204d9d57b}} 
+\index{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}!P\+S\+\_\+dot\+\_\+plot@{P\+S\+\_\+dot\+\_\+plot}}
+\index{P\+S\+\_\+dot\+\_\+plot@{P\+S\+\_\+dot\+\_\+plot}!Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}}
+\subsubsection{\texorpdfstring{P\+S\+\_\+dot\+\_\+plot()}{PS\_dot\_plot()}}
+{\footnotesize\ttfamily int P\+S\+\_\+dot\+\_\+plot (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{PS__dot_8h}{Vienna\+R\+N\+A/\+P\+S\+\_\+dot.\+h}$>$}
+
+
+
+Produce postscript dot-\/plot. 
+
+Wrapper to P\+S\+\_\+dot\+\_\+plot\+\_\+list
+
+Reads base pair probabilities produced by \hyperlink{group__pf__fold_gadc3db3d98742427e7001a7fd36ef28c2}{pf\+\_\+fold()} from the global array \hyperlink{fold__vars_8h_ac98ec419070aee6831b44e5c700f090f}{pr} and the pair list \hyperlink{fold__vars_8h_a0244a629b5ab4f58b77590c3dfd130dc}{base\+\_\+pair} produced by \hyperlink{group__mfe__fold__single_gaadafcb0f140795ae62e5ca027e335a9b}{fold()} and produces a postscript \char`\"{}dot plot\char`\"{} that is written to \textquotesingle{}filename\textquotesingle{}. The \char`\"{}dot plot\char`\"{} represents each base pairing probability by a square of corresponding area in a upper triangle matrix. The lower part of the matrix contains the minimum free energy \begin{DoxyNote}{Note}
+DO N\+OT U\+SE T\+H\+IS F\+U\+N\+C\+T\+I\+ON A\+N\+Y\+M\+O\+RE S\+I\+N\+CE IT IS N\+OT T\+H\+R\+E\+A\+D\+S\+A\+FE
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000131}{Deprecated}]This function is deprecated and will be removed soon! Use \hyperlink{group__plotting__utils_ga00ea223b5cf02eb2faae5ff29f0d5e12}{P\+S\+\_\+dot\+\_\+plot\+\_\+list()} instead! \end{DoxyRefDesc}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__plotting__utils_ga5964c4581431b098b80027d6e14dcdd4}\label{group__plotting__utils_ga5964c4581431b098b80027d6e14dcdd4}} 
+\index{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}!rna\+\_\+plot\+\_\+type@{rna\+\_\+plot\+\_\+type}}
+\index{rna\+\_\+plot\+\_\+type@{rna\+\_\+plot\+\_\+type}!Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More@{Functions for Creating Secondary Structure Plots, Dot-\/\+Plots, and More}}
+\subsubsection{\texorpdfstring{rna\+\_\+plot\+\_\+type}{rna\_plot\_type}}
+{\footnotesize\ttfamily int rna\+\_\+plot\+\_\+type}
+
+
+
+{\ttfamily \#include $<$\hyperlink{plot__layouts_8h}{Vienna\+R\+N\+A/plot\+\_\+layouts.\+h}$>$}
+
+
+
+Switch for changing the secondary structure layout algorithm. 
+
+Current possibility are 0 for a simple radial drawing or 1 for the modified radial drawing taken from the {\itshape naview} program of \cite{bruccoleri:1988}.
+
+\begin{DoxyNote}{Note}
+To provide thread safety please do not rely on this global variable in future implementations but pass a plot type flag directly to the function that decides which layout algorithm it may use!
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__plotting__utils_gae6d17b9f0a53cf5205a9181e0f8422e9}{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+M\+P\+LE}, \hyperlink{group__plotting__utils_ga94d4c863ecac2f220f76658afb92f964}{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+V\+I\+EW}, \hyperlink{group__plotting__utils_ga8c9eac631348da92136c8363ecdd9fb9}{V\+R\+N\+A\+\_\+\+P\+L\+O\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+I\+R\+C\+U\+L\+AR} 
+\end{DoxySeeAlso}

@@ -1,0 +1,62 @@
+\hypertarget{sequence_8h}{}\section{Vienna\+R\+N\+A/sequence.h File Reference}
+\label{sequence_8h}\index{Vienna\+R\+N\+A/sequence.\+h@{Vienna\+R\+N\+A/sequence.\+h}}
+
+
+Functions and data structures related to sequence representations.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sequence_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structvrna__sequence__s}{vrna\+\_\+sequence\+\_\+s}
+\begin{DoxyCompactList}\small\item\em Data structure representing a nucleotide sequence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609}{vrna\+\_\+seq\+\_\+type\+\_\+e} \{ \hyperlink{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609ad8682ac290d0dd51022e3b82840e1a74}{V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+U\+N\+K\+N\+O\+WN}, 
+\hyperlink{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609ac52309234beaf94e6a3bd1b9b69de9f4}{V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+R\+NA}, 
+\hyperlink{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609a4da1613644c3a3766ef1d6494f271332}{V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+D\+NA}
+ \}\begin{DoxyCompactList}\small\item\em A enumerator used in \hyperlink{structvrna__sequence__s}{vrna\+\_\+sequence\+\_\+s} to distinguish different nucleotide sequences. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{sequence_8h_aa35bee3061759495467070b47d0e1f22}\label{sequence_8h_aa35bee3061759495467070b47d0e1f22}} 
+typedef struct \hyperlink{structvrna__sequence__s}{vrna\+\_\+sequence\+\_\+s} \hyperlink{sequence_8h_aa35bee3061759495467070b47d0e1f22}{vrna\+\_\+seq\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Typename for nucleotide sequence representation data structure \hyperlink{structvrna__sequence__s}{vrna\+\_\+sequence\+\_\+s}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions and data structures related to sequence representations. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609}\label{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609}} 
+\index{sequence.\+h@{sequence.\+h}!vrna\+\_\+seq\+\_\+type\+\_\+e@{vrna\+\_\+seq\+\_\+type\+\_\+e}}
+\index{vrna\+\_\+seq\+\_\+type\+\_\+e@{vrna\+\_\+seq\+\_\+type\+\_\+e}!sequence.\+h@{sequence.\+h}}
+\subsubsection{\texorpdfstring{vrna\+\_\+seq\+\_\+type\+\_\+e}{vrna\_seq\_type\_e}}
+{\footnotesize\ttfamily enum \hyperlink{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609}{vrna\+\_\+seq\+\_\+type\+\_\+e}}
+
+
+
+A enumerator used in \hyperlink{structvrna__sequence__s}{vrna\+\_\+sequence\+\_\+s} to distinguish different nucleotide sequences. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+U\+N\+K\+N\+O\+WN@{V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+U\+N\+K\+N\+O\+WN}!sequence.\+h@{sequence.\+h}}\index{sequence.\+h@{sequence.\+h}!V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+U\+N\+K\+N\+O\+WN@{V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+U\+N\+K\+N\+O\+WN}}}\mbox{\Hypertarget{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609ad8682ac290d0dd51022e3b82840e1a74}\label{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609ad8682ac290d0dd51022e3b82840e1a74}} 
+V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+U\+N\+K\+N\+O\+WN&Nucleotide sequence represents an Unkown type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+R\+NA@{V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+R\+NA}!sequence.\+h@{sequence.\+h}}\index{sequence.\+h@{sequence.\+h}!V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+R\+NA@{V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+R\+NA}}}\mbox{\Hypertarget{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609ac52309234beaf94e6a3bd1b9b69de9f4}\label{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609ac52309234beaf94e6a3bd1b9b69de9f4}} 
+V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+R\+NA&Nucleotide sequence represents an R\+NA type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+D\+NA@{V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+D\+NA}!sequence.\+h@{sequence.\+h}}\index{sequence.\+h@{sequence.\+h}!V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+D\+NA@{V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+D\+NA}}}\mbox{\Hypertarget{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609a4da1613644c3a3766ef1d6494f271332}\label{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609a4da1613644c3a3766ef1d6494f271332}} 
+V\+R\+N\+A\+\_\+\+S\+E\+Q\+\_\+\+D\+NA&Nucleotide sequence represents a D\+NA type. \\
+\hline
+
+\end{DoxyEnumFields}

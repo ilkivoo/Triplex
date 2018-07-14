@@ -1,0 +1,104 @@
+\hypertarget{PS__dot_8h_source}{}\section{P\+S\+\_\+dot.\+h}
+\label{PS__dot_8h_source}\index{Vienna\+R\+N\+A/\+P\+S\+\_\+dot.\+h@{Vienna\+R\+N\+A/\+P\+S\+\_\+dot.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_PS\_DOT\_H}
+00002 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_PS\_DOT\_H}
+00003 
+00004 
+00005 \textcolor{preprocessor}{#include <\hyperlink{data__structures_8h}{ViennaRNA/data\_structures.h}>}
+00006 \textcolor{preprocessor}{#include <\hyperlink{structure__utils_8h}{ViennaRNA/structure\_utils.h}>}
+00007 \textcolor{preprocessor}{#include <\hyperlink{plot__structure_8h}{ViennaRNA/plot\_structure.h}>}
+00008 \textcolor{preprocessor}{#include <\hyperlink{plot__aln_8h}{ViennaRNA/plot\_aln.h}>}
+00009 
+00010 \textcolor{preprocessor}{#ifdef VRNA\_WARN\_DEPRECATED}
+00011 \textcolor{preprocessor}{# if defined(\_\_clang\_\_)}
+00012 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("", msg)))}
+00013 \textcolor{preprocessor}{# elif defined(\_\_GNUC\_\_)}
+00014 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}
+00015 \textcolor{preprocessor}{# else}
+00016 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func}
+00017 \textcolor{preprocessor}{# endif}
+00018 \textcolor{preprocessor}{#else}
+00019 \textcolor{preprocessor}{# define DEPRECATED(func, msg) func}
+00020 \textcolor{preprocessor}{#endif}
+00021 
+00034 \textcolor{preprocessor}{#define VRNA\_PLOT\_PROBABILITIES\_BP        1U}
+00035 \textcolor{preprocessor}{#define VRNA\_PLOT\_PROBABILITIES\_ACC       2U}
+00036 
+00037 \textcolor{preprocessor}{#define VRNA\_PLOT\_PROBABILITIES\_UD        4U}
+00038 \textcolor{preprocessor}{#define VRNA\_PLOT\_PROBABILITIES\_UD\_LIN    8U}
+00039 
+00040 \textcolor{preprocessor}{#define VRNA\_PLOT\_PROBABILITIES\_SD        16U}
+00041 
+00042 \textcolor{preprocessor}{#define VRNA\_PLOT\_PROBABILITIES\_SC\_MOTIF  32U}
+00043 \textcolor{preprocessor}{#define VRNA\_PLOT\_PROBABILITIES\_SC\_UP     64U}
+00044 \textcolor{preprocessor}{#define VRNA\_PLOT\_PROBABILITIES\_SC\_BP     128U}
+00045 
+00046 \textcolor{preprocessor}{#define VRNA\_PLOT\_PROBABILITIES\_DEFAULT   (   VRNA\_PLOT\_PROBABILITIES\_BP \(\backslash\)}
+00047 \textcolor{preprocessor}{                                            | VRNA\_PLOT\_PROBABILITIES\_SD \(\backslash\)}
+00048 \textcolor{preprocessor}{                                            | VRNA\_PLOT\_PROBABILITIES\_SC\_MOTIF \(\backslash\)}
+00049 \textcolor{preprocessor}{                                            | VRNA\_PLOT\_PROBABILITIES\_UD\_LIN )}
+\Hypertarget{PS__dot_8h_source_l00050}\hyperlink{group__plotting__utils}{00050} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{
+00051   \textcolor{keywordtype}{char}            *comment;
+00052   \textcolor{keywordtype}{char}            *title;
+00053 
+00054   \hyperlink{group__data__structures_structvrna__data__linear__s}{vrna\_data\_lin\_t} **top;
+00055   \textcolor{keywordtype}{char}            **top\_title;
+00056 
+00057   \hyperlink{group__data__structures_structvrna__data__linear__s}{vrna\_data\_lin\_t} **bottom;
+00058   \textcolor{keywordtype}{char}            **bottom\_title;
+00059 
+00060   \hyperlink{group__data__structures_structvrna__data__linear__s}{vrna\_data\_lin\_t} **left;
+00061   \textcolor{keywordtype}{char}            **left\_title;
+00062 
+00063   \hyperlink{group__data__structures_structvrna__data__linear__s}{vrna\_data\_lin\_t} **right;
+00064   \textcolor{keywordtype}{char}            **right\_title;
+00065 \} \hyperlink{group__plotting__utils_structvrna__dotplot__auxdata__t}{vrna\_dotplot\_auxdata\_t};
+00066 
+00067 
+00068 \textcolor{keywordtype}{int}
+00069 vrna\_plot\_dp\_EPS( \textcolor{keyword}{const} \textcolor{keywordtype}{char}              *filename,
+00070                   \textcolor{keyword}{const} \textcolor{keywordtype}{char}              *sequence,
+00071                   \hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t}               *upper,
+00072                   \hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t}               *lower,
+00073                   \hyperlink{group__plotting__utils_structvrna__dotplot__auxdata__t}{vrna\_dotplot\_auxdata\_t}  *auxdata,
+00074                   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}            options);
+00075 
+00076 \textcolor{keywordtype}{int} PS\_color\_dot\_plot(\textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+00077                       \hyperlink{group__data__structures_structvrna__cpair__s}{cpair} *pi,
+00078                       \textcolor{keywordtype}{char} *filename);
+00079 
+00080 \textcolor{keywordtype}{int} PS\_color\_dot\_plot\_turn( \textcolor{keywordtype}{char} *seq,
+00081                             \hyperlink{group__data__structures_structvrna__cpair__s}{cpair} *pi,
+00082                             \textcolor{keywordtype}{char} *filename,
+00083                             \textcolor{keywordtype}{int} winSize);
+00084 
+00104 \textcolor{keywordtype}{int} \hyperlink{group__plotting__utils_ga00ea223b5cf02eb2faae5ff29f0d5e12}{PS\_dot\_plot\_list}( \textcolor{keywordtype}{char} *seq,
+00105                       \textcolor{keywordtype}{char} *filename,
+00106                       \hyperlink{group__struct__utils_structvrna__elem__prob__s}{plist} *pl,
+00107                       \hyperlink{group__struct__utils_structvrna__elem__prob__s}{plist} *mf,
+00108                       \textcolor{keywordtype}{char} *comment);
+00109 
+00110 \textcolor{keywordtype}{int} vrna\_plot\_dp\_PS\_list( \textcolor{keywordtype}{char} *seq,
+00111                           \textcolor{keywordtype}{int} cp,
+00112                           \textcolor{keywordtype}{char} *wastlfile,
+00113                           \hyperlink{group__struct__utils_structvrna__elem__prob__s}{plist} *pl,
+00114                           \hyperlink{group__struct__utils_structvrna__elem__prob__s}{plist} *mf,
+00115                           \textcolor{keywordtype}{char} *comment);
+00116 
+00117 \textcolor{keywordtype}{int} PS\_dot\_plot\_turn( \textcolor{keywordtype}{char} *seq,
+00118                       \hyperlink{group__struct__utils_structvrna__elem__prob__s}{plist} *pl,
+00119                       \textcolor{keywordtype}{char} *filename,
+00120                       \textcolor{keywordtype}{int} winSize);
+00121 
+00122 \textcolor{preprocessor}{#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}
+00123 
+00139 DEPRECATED(\textcolor{keywordtype}{int} \hyperlink{group__plotting__utils_ga689a97a7e3b8a2df14728b8204d9d57b}{PS\_dot\_plot}( \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+00140                             \textcolor{keywordtype}{char} *file),
+00141 \textcolor{stringliteral}{"Use vrna\_plot\_dp\_EPS() instead"});
+00142 
+00143 \textcolor{preprocessor}{#endif}
+00144 
+00149 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

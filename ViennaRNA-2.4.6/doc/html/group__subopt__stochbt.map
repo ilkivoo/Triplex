@@ -1,0 +1,5 @@
+<map id="Structure sampling from the ensemble" name="Structure sampling from the ensemble">
+<area shape="rect" id="node1" href="$group__kl__neighborhood__stochbt.html" title="Contains functions related to stochastic backtracking from a specified distance class. " alt="" coords="443,5,630,61"/>
+<area shape="rect" id="node3" href="$group__consensus__stochbt.html" title="Stochastic Backtracking\l of Consensus Structures\l from Sequence Alignment(s)" alt="" coords="441,85,632,141"/>
+<area shape="rect" id="node4" href="$group__subopt__and__representatives.html" title="Sample and enumerate suboptimal secondary structures from RNA sequence data. " alt="" coords="5,53,211,94"/>
+</map>

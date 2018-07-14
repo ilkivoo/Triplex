@@ -1,0 +1,62 @@
+\hypertarget{commands_8h_source}{}\section{commands.\+h}
+\label{commands_8h_source}\index{Vienna\+R\+N\+A/commands.\+h@{Vienna\+R\+N\+A/commands.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_COMMANDS\_H}
+00002 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_COMMANDS\_H}
+00003 
+\Hypertarget{commands_8h_source_l00017}\hyperlink{group__file__utils_ga92cb3b5952352b103bcb32e5a99e0e5a}{00017} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\hyperlink{group__file__utils_structvrna__command__s}{vrna\_command\_s} \hyperlink{group__file__utils_structvrna__command__s}{vrna\_cmd\_t};
+00018 
+00019 
+00020 \textcolor{preprocessor}{#include <\hyperlink{data__structures_8h}{ViennaRNA/data\_structures.h}>}
+00021 
+\Hypertarget{commands_8h_source_l00026}\hyperlink{group__file__utils_gac54dec838d7b6bebd5df85f71702d324}{00026} \textcolor{preprocessor}{#define VRNA\_CMD\_PARSE\_HC      1U}
+00027 
+\Hypertarget{commands_8h_source_l00031}\hyperlink{group__file__utils_ga8cad3c1f83e6f149829c49a186a83e21}{00031} \textcolor{preprocessor}{#define VRNA\_CMD\_PARSE\_SC      2U}
+00032 
+\Hypertarget{commands_8h_source_l00036}\hyperlink{group__file__utils_ga6c6409780698826b04ebfed9151d7649}{00036} \textcolor{preprocessor}{#define VRNA\_CMD\_PARSE\_UD      4U}
+00037 
+\Hypertarget{commands_8h_source_l00041}\hyperlink{group__file__utils_gaf5e20210173cdb83bf70256a454f284b}{00041} \textcolor{preprocessor}{#define VRNA\_CMD\_PARSE\_SD      8U}
+00042 
+\Hypertarget{commands_8h_source_l00046}\hyperlink{group__file__utils_ga0a6c88e21e366dca14958d69cd024008}{00046} \textcolor{preprocessor}{#define VRNA\_CMD\_PARSE\_DEFAULTS (VRNA\_CMD\_PARSE\_HC \(\backslash\)}
+00047 \textcolor{preprocessor}{                                 | VRNA\_CMD\_PARSE\_SC \(\backslash\)}
+00048 \textcolor{preprocessor}{                                 | VRNA\_CMD\_PARSE\_UD \(\backslash\)}
+00049 \textcolor{preprocessor}{                                 | VRNA\_CMD\_PARSE\_SD \(\backslash\)}
+00050 \textcolor{preprocessor}{                                 )}
+00051 
+00052 \textcolor{preprocessor}{#define VRNA\_CMD\_PARSE\_SILENT   16U}
+00053 
+\Hypertarget{commands_8h_source_l00057}\hyperlink{group__file__utils_ga2ea3e452bf3b3f3ca513b3b081a86137}{00057} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{
+00058   VRNA\_CMD\_ERROR  = -1,
+00059   VRNA\_CMD\_LAST   = 0,
+00060   VRNA\_CMD\_HC,
+00061   VRNA\_CMD\_SC,
+00062   VRNA\_CMD\_MOTIF,
+00063   VRNA\_CMD\_UD,
+00064   VRNA\_CMD\_SD
+00065 \} \hyperlink{group__file__utils_ga2ea3e452bf3b3f3ca513b3b081a86137}{vrna\_command\_e};
+00066 
+\Hypertarget{commands_8h_source_l00071}\hyperlink{group__file__utils}{00071} \textcolor{keyword}{struct }\hyperlink{group__file__utils_structvrna__command__s}{vrna\_command\_s} \{
+00072   \hyperlink{group__file__utils_ga2ea3e452bf3b3f3ca513b3b081a86137}{vrna\_command\_e}  type;
+00073   \textcolor{keywordtype}{void}            *data;
+00074 \};
+00075 
+00089 \hyperlink{group__file__utils_structvrna__command__s}{vrna\_cmd\_t} *\hyperlink{group__file__utils_ga5d2a64331cff5b1059e7d327545d8a63}{vrna\_file\_commands\_read}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}    *filename,
+00090                                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  options);
+00091 
+00092 
+00106 \textcolor{keywordtype}{int} \hyperlink{group__file__utils_gadbe8c9622f7bcc6dcbe3448b98df8656}{vrna\_file\_commands\_apply}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00107                              \textcolor{keyword}{const} \textcolor{keywordtype}{char}           *filename,
+00108                              \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}         options);
+00109 
+00110 
+00119 \textcolor{keywordtype}{int} \hyperlink{group__file__utils_ga5e993fc4b9602af73aaaab4d3b3cd9a9}{vrna\_commands\_apply}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00120                         \hyperlink{group__file__utils_structvrna__command__s}{vrna\_cmd\_t}            *commands,
+00121                         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          options);
+00122 
+00123 
+00130 \textcolor{keywordtype}{void} \hyperlink{group__file__utils_ga926fd7632e68f3da2e2069402b80b1ab}{vrna\_commands\_free}(\hyperlink{group__file__utils_structvrna__command__s}{vrna\_cmd\_t} *commands);
+00131 
+00132 
+00137 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

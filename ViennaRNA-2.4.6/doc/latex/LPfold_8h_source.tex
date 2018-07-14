@@ -1,0 +1,163 @@
+\hypertarget{LPfold_8h_source}{}\section{L\+Pfold.\+h}
+\label{LPfold_8h_source}\index{Vienna\+R\+N\+A/\+L\+Pfold.\+h@{Vienna\+R\+N\+A/\+L\+Pfold.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_LPFOLD\_H}
+00002 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_LPFOLD\_H}
+00003 
+\Hypertarget{LPfold_8h_source_l00034}\hyperlink{LPfold_8h_abe710a1182e6db69cc75329dfc9bed67}{00034} \textcolor{keyword}{typedef} void (\hyperlink{LPfold_8h_abe710a1182e6db69cc75329dfc9bed67}{vrna\_probs\_window\_callback})(\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}    *
+      \hyperlink{fold__vars_8h_ac98ec419070aee6831b44e5c700f090f}{pr},
+00035                                           \textcolor{keywordtype}{int}           pr\_size,
+00036                                           \textcolor{keywordtype}{int}           i,
+00037                                           \textcolor{keywordtype}{int}           max,
+00038                                           \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  type,
+00039                                           \textcolor{keywordtype}{void}          *data);
+00040 
+00041 \textcolor{preprocessor}{#include <\hyperlink{data__structures_8h}{ViennaRNA/data\_structures.h}>}
+00042 \textcolor{preprocessor}{#include <\hyperlink{params_8h}{ViennaRNA/params.h}>}
+00043 
+00044 \textcolor{preprocessor}{#ifdef VRNA\_WARN\_DEPRECATED}
+00045 \textcolor{preprocessor}{# if defined(\_\_clang\_\_)}
+00046 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("", msg)))}
+00047 \textcolor{preprocessor}{# elif defined(\_\_GNUC\_\_)}
+00048 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}
+00049 \textcolor{preprocessor}{# else}
+00050 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func}
+00051 \textcolor{preprocessor}{# endif}
+00052 \textcolor{preprocessor}{#else}
+00053 \textcolor{preprocessor}{# define DEPRECATED(func, msg) func}
+00054 \textcolor{preprocessor}{#endif}
+00055 
+00056 
+00057 \textcolor{preprocessor}{#define VRNA\_EXT\_LOOP   1U}
+00058 \textcolor{preprocessor}{#define VRNA\_HP\_LOOP    2U}
+00059 \textcolor{preprocessor}{#define VRNA\_INT\_LOOP   4U}
+00060 \textcolor{preprocessor}{#define VRNA\_MB\_LOOP    8U}
+00061 \textcolor{preprocessor}{#define VRNA\_ANY\_LOOP   (VRNA\_EXT\_LOOP | VRNA\_HP\_LOOP | VRNA\_INT\_LOOP | VRNA\_MB\_LOOP)}
+00062 
+00063 
+\Hypertarget{LPfold_8h_source_l00069}\hyperlink{group__local__pf__fold_ga296217b76e76e5f7e6927e7210aa9b1f}{00069} \textcolor{preprocessor}{#define VRNA\_PROBS\_WINDOW\_BPP  4096U}
+00070 
+\Hypertarget{LPfold_8h_source_l00076}\hyperlink{group__local__pf__fold_ga18325811c7dfc7b7d9d4ac37f4353615}{00076} \textcolor{preprocessor}{#define VRNA\_PROBS\_WINDOW\_UP   8192U}
+00077 
+\Hypertarget{LPfold_8h_source_l00083}\hyperlink{group__local__pf__fold_ga0a13fc668b02f21b225e2334e4caac08}{00083} \textcolor{preprocessor}{#define VRNA\_PROBS\_WINDOW\_STACKP   16384U}
+00084 
+\Hypertarget{LPfold_8h_source_l00090}\hyperlink{group__local__pf__fold_ga9068f4ec008bf1c042a9357f5c2c5e13}{00090} \textcolor{preprocessor}{#define VRNA\_PROBS\_WINDOW\_UP\_SPLIT   32768U}
+00091 
+00092 
+00093 \textcolor{preprocessor}{#define VRNA\_PROBS\_WINDOW\_PF        65536U}
+00094 
+00115 \hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t} *
+00116 \hyperlink{group__local__pf__fold_ga6267230f20cab0e2315375310b4dad85}{vrna\_pfl\_fold}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *sequence,
+00117               \textcolor{keywordtype}{int}         window\_size,
+00118               \textcolor{keywordtype}{int}         \hyperlink{group__model__details_ga18df869af0d70101106458fc3f027806}{max\_bp\_span},
+00119               \textcolor{keywordtype}{float}       cutoff);
+00120 
+00121 
+00144 \textcolor{keywordtype}{void}
+00145 \hyperlink{group__local__pf__fold_ga8dc3788e66420f524f2bfc0b685a939d}{vrna\_pfl\_fold\_cb}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}                 *sequence,
+00146                  \textcolor{keywordtype}{int}                        window\_size,
+00147                  \textcolor{keywordtype}{int}                        \hyperlink{group__model__details_ga18df869af0d70101106458fc3f027806}{max\_bp\_span},
+00148                  \hyperlink{LPfold_8h_abe710a1182e6db69cc75329dfc9bed67}{vrna\_probs\_window\_callback} *cb,
+00149                  \textcolor{keywordtype}{void}                       *data);
+00150 
+00151 
+00175 \textcolor{keywordtype}{double} **
+00176 \hyperlink{group__local__pf__fold_ga1dd5c51b797c961124912e289bff553a}{vrna\_pfl\_fold\_up}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *sequence,
+00177                  \textcolor{keywordtype}{int}        ulength,
+00178                  \textcolor{keywordtype}{int}        window\_size,
+00179                  \textcolor{keywordtype}{int}        \hyperlink{group__model__details_ga18df869af0d70101106458fc3f027806}{max\_bp\_span});
+00180 
+00181 
+00206 \textcolor{keywordtype}{void}
+00207 \hyperlink{group__local__pf__fold_ga8958d91b1f1aebfb32b58805d141ccf3}{vrna\_pfl\_fold\_up\_cb}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}                  *sequence,
+00208                     \textcolor{keywordtype}{int}                         ulength,
+00209                     \textcolor{keywordtype}{int}                         window\_size,
+00210                     \textcolor{keywordtype}{int}                         \hyperlink{group__model__details_ga18df869af0d70101106458fc3f027806}{max\_bp\_span},
+00211                     \hyperlink{LPfold_8h_abe710a1182e6db69cc75329dfc9bed67}{vrna\_probs\_window\_callback}  *cb,
+00212                     \textcolor{keywordtype}{void}                        *data);
+00213 
+00214 
+00228 \textcolor{keywordtype}{void}
+00229 \hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\_probs\_window}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}        *fc,
+00230                   \textcolor{keywordtype}{int}                         ulength,
+00231                   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}                options,
+00232                   \hyperlink{LPfold_8h_abe710a1182e6db69cc75329dfc9bed67}{vrna\_probs\_window\_callback}  *cb,
+00233                   \textcolor{keywordtype}{void}                        *data);
+00234 
+00235 
+00236 \textcolor{preprocessor}{#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}
+00237 
+00245 DEPRECATED(\textcolor{keywordtype}{void} \hyperlink{group__local__pf__fold_ga5a019014d37fe6105131dfc2fc447880}{update\_pf\_paramsLP}(\textcolor{keywordtype}{int} length),
+00246 \textcolor{stringliteral}{"This function is obsolete"});
+00247 
+00248 
+00255 DEPRECATED(\textcolor{keywordtype}{void} update\_pf\_paramsLP\_par(\textcolor{keywordtype}{int}              length,
+00256                                        \hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t} *parameters),
+00257 \textcolor{stringliteral}{"Use the new API with vrna\_folc\_compound\_t instead"});
+00258 
+00259 
+00297 DEPRECATED(\hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t} *\hyperlink{group__local__pf__fold_ga7cdf690583871f9c158a0f91d4785cb6}{pfl\_fold}(\textcolor{keywordtype}{char}          *sequence,
+00298                                \textcolor{keywordtype}{int}           winSize,
+00299                                \textcolor{keywordtype}{int}           pairSize,
+00300                                \textcolor{keywordtype}{float}         cutoffb,
+00301                                \textcolor{keywordtype}{double}        **pU,
+00302                                \hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t}     **dpp2,
+00303                                FILE          *pUfp,
+00304                                FILE          *spup),
+00305 \textcolor{stringliteral}{"Use vrna\_pfl\_fold(), vrna\_pfl\_fold\_cb(), vrna\_pfl\_fold\_up(), or vrna\_pfl\_fold\_up\_cb() instead"});
+00306 
+00307 
+00314 DEPRECATED(\hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t} *\hyperlink{group__local__pf__fold_gaedf355f07b3d83bc93f98712132571b0}{pfl\_fold\_par}(\textcolor{keywordtype}{char}              *sequence,
+00315                                       \textcolor{keywordtype}{int}               winSize,
+00316                                       \textcolor{keywordtype}{int}               pairSize,
+00317                                       \textcolor{keywordtype}{float}             cutoffb,
+00318                                       \textcolor{keywordtype}{double}            **pU,
+00319                                       \hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t}         **dpp2,
+00320                                       FILE              *pUfp,
+00321                                       FILE              *spup,
+00322                                       \hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t}  *parameters),
+00323 \textcolor{stringliteral}{"Use the new API and vrna\_probs\_window() instead"});
+00324 
+00325 
+00326 DEPRECATED(\textcolor{keywordtype}{void} putoutpU\_prob\_par(\textcolor{keywordtype}{double}            **pU,
+00327                                   \textcolor{keywordtype}{int}               length,
+00328                                   \textcolor{keywordtype}{int}               ulength,
+00329                                   FILE              *fp,
+00330                                   \textcolor{keywordtype}{int}               energies,
+00331                                   \hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t}  *parameters),
+00332 \textcolor{stringliteral}{""});
+00333 
+00334 
+00349 DEPRECATED(\textcolor{keywordtype}{void}    \hyperlink{group__local__pf__fold_ga0bcb751860bbf34e3dfee8c2fbdb3ef3}{putoutpU\_prob}(\textcolor{keywordtype}{double} **pU,
+00350                                  \textcolor{keywordtype}{int}    length,
+00351                                  \textcolor{keywordtype}{int}    ulength,
+00352                                  FILE   *fp,
+00353                                  \textcolor{keywordtype}{int}    energies),
+00354 \textcolor{stringliteral}{""});
+00355 
+00356 
+00357 DEPRECATED(\textcolor{keywordtype}{void} putoutpU\_prob\_bin\_par(\textcolor{keywordtype}{double}            **pU,
+00358                                       \textcolor{keywordtype}{int}               length,
+00359                                       \textcolor{keywordtype}{int}               ulength,
+00360                                       FILE              *fp,
+00361                                       \textcolor{keywordtype}{int}               energies,
+00362                                       \hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t}  *parameters),
+00363 \textcolor{stringliteral}{""});
+00364 
+00365 
+00380 DEPRECATED(\textcolor{keywordtype}{void}    \hyperlink{group__local__pf__fold_ga9acb00ee10e96b1ca4ea394cd8bcec75}{putoutpU\_prob\_bin}(\textcolor{keywordtype}{double} **pU,
+00381                                      \textcolor{keywordtype}{int}    length,
+00382                                      \textcolor{keywordtype}{int}    ulength,
+00383                                      FILE   *fp,
+00384                                      \textcolor{keywordtype}{int}    energies),
+00385 \textcolor{stringliteral}{""});
+00386 
+00387 
+00393 DEPRECATED(\textcolor{keywordtype}{void} \hyperlink{LPfold_8h_ae85bf55053e9fb295208be322e0fa07a}{init\_pf\_foldLP}(\textcolor{keywordtype}{int} length),
+00394 \textcolor{stringliteral}{"This function is obsolete"});
+00395 
+00396 \textcolor{preprocessor}{#endif}
+00397 
+00398 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

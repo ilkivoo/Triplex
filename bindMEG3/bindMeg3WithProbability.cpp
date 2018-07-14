@@ -47,14 +47,14 @@ int move()
 {
     cout << "move" << endl;
     int l = 0;
-    int r = 200;
-    while (r < meg3.length()) {
+    int r = 500;
+    /*while (r < meg3.length()) {
 		writeMeg3Sites(l, r);
 		startScript();
 		parse(l, r);
-		l += 50;
+		l += 10;
 		r += 50;
-	}
+	}*/
     r = meg3.length() - 1;
     writeMeg3Sites(l, r);
     startScript();

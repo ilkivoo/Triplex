@@ -1,0 +1,248 @@
+\hypertarget{plot__structure_8h}{}\section{Vienna\+R\+N\+A/plot\+\_\+structure.h File Reference}
+\label{plot__structure_8h}\index{Vienna\+R\+N\+A/plot\+\_\+structure.\+h@{Vienna\+R\+N\+A/plot\+\_\+structure.\+h}}
+
+
+Various functions for plotting R\+NA secondary structures.  
+
+
+Include dependency graph for plot\+\_\+structure.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plot__structure_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{plot__structure_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{plot__structure_8h_a6d0abe209468084b5a24c837e2d222a6}{P\+S\+\_\+rna\+\_\+plot\+\_\+snoop\+\_\+a} (const char $\ast$string, const char $\ast$structure, const char $\ast$ssfile, int $\ast$relative\+\_\+access, const char $\ast$seqs\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{plot__structure_8h_abdc8f6548ba4a3bc3cd868ccbcfdb86a}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot} (const char $\ast$seq, const char $\ast$structure, const char $\ast$file, \hyperlink{group__model__details_ga1f8a10e12a0a1915f2a4eff0b28ea17c}{vrna\+\_\+md\+\_\+t} $\ast$md\+\_\+p)
+\begin{DoxyCompactList}\small\item\em Produce a secondary structure graph in Post\+Script and write it to \textquotesingle{}filename\textquotesingle{}. \end{DoxyCompactList}\item 
+int \hyperlink{plot__structure_8h_a139a31dd0ba9fc6612431f67de901c31}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot\+\_\+a} (const char $\ast$seq, const char $\ast$structure, const char $\ast$file, const char $\ast$pre, const char $\ast$post, \hyperlink{group__model__details_ga1f8a10e12a0a1915f2a4eff0b28ea17c}{vrna\+\_\+md\+\_\+t} $\ast$md\+\_\+p)
+\begin{DoxyCompactList}\small\item\em Produce a secondary structure graph in Post\+Script including additional annotation macros and write it to \textquotesingle{}filename\textquotesingle{}. \end{DoxyCompactList}\item 
+int \hyperlink{plot__structure_8h_a70834bc8c0aad4fe6824ff76ccb8f329}{gml\+R\+NA} (char $\ast$string, char $\ast$structure, char $\ast$ssfile, char option)
+\begin{DoxyCompactList}\small\item\em Produce a secondary structure graph in Graph Meta Language (gml) and write it to a file. \end{DoxyCompactList}\item 
+int \hyperlink{plot__structure_8h_add368528755f9a830727b680243541df}{ssv\+\_\+rna\+\_\+plot} (char $\ast$string, char $\ast$structure, char $\ast$ssfile)
+\begin{DoxyCompactList}\small\item\em Produce a secondary structure graph in S\+Struct\+View format. \end{DoxyCompactList}\item 
+int \hyperlink{plot__structure_8h_ae7853539b5df98f294b4af434e979304}{svg\+\_\+rna\+\_\+plot} (char $\ast$string, char $\ast$structure, char $\ast$ssfile)
+\begin{DoxyCompactList}\small\item\em Produce a secondary structure plot in S\+VG format and write it to a file. \end{DoxyCompactList}\item 
+int \hyperlink{plot__structure_8h_a2f6d5953e6a323df898896b8d6614483}{xrna\+\_\+plot} (char $\ast$string, char $\ast$structure, char $\ast$ssfile)
+\begin{DoxyCompactList}\small\item\em Produce a secondary structure plot for further editing in X\+R\+NA. \end{DoxyCompactList}\item 
+int \hyperlink{plot__structure_8h_a0873c7cc4cd7a11c9a2cea19dde7e9c9}{P\+S\+\_\+rna\+\_\+plot} (char $\ast$string, char $\ast$structure, char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Produce a secondary structure graph in Post\+Script and write it to \textquotesingle{}filename\textquotesingle{}. \end{DoxyCompactList}\item 
+int \hyperlink{plot__structure_8h_a47856b2504b566588785597b6ebb8271}{P\+S\+\_\+rna\+\_\+plot\+\_\+a} (char $\ast$string, char $\ast$structure, char $\ast$file, char $\ast$pre, char $\ast$post)
+\begin{DoxyCompactList}\small\item\em Produce a secondary structure graph in Post\+Script including additional annotation macros and write it to \textquotesingle{}filename\textquotesingle{}. \end{DoxyCompactList}\item 
+int \hyperlink{plot__structure_8h_a32fa0f97625119e9d24dd2e7153abc4f}{P\+S\+\_\+rna\+\_\+plot\+\_\+a\+\_\+gquad} (char $\ast$string, char $\ast$structure, char $\ast$ssfile, char $\ast$pre, char $\ast$post)
+\begin{DoxyCompactList}\small\item\em Produce a secondary structure graph in Post\+Script including additional annotation macros and write it to \textquotesingle{}filename\textquotesingle{} (detect and draw g-\/quadruplexes) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+Various functions for plotting R\+NA secondary structures. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{plot__structure_8h_a6d0abe209468084b5a24c837e2d222a6}\label{plot__structure_8h_a6d0abe209468084b5a24c837e2d222a6}} 
+\index{plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}!P\+S\+\_\+rna\+\_\+plot\+\_\+snoop\+\_\+a@{P\+S\+\_\+rna\+\_\+plot\+\_\+snoop\+\_\+a}}
+\index{P\+S\+\_\+rna\+\_\+plot\+\_\+snoop\+\_\+a@{P\+S\+\_\+rna\+\_\+plot\+\_\+snoop\+\_\+a}!plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}}
+\subsubsection{\texorpdfstring{P\+S\+\_\+rna\+\_\+plot\+\_\+snoop\+\_\+a()}{PS\_rna\_plot\_snoop\_a()}}
+{\footnotesize\ttfamily int P\+S\+\_\+rna\+\_\+plot\+\_\+snoop\+\_\+a (\begin{DoxyParamCaption}\item[{const char $\ast$}]{string,  }\item[{const char $\ast$}]{structure,  }\item[{const char $\ast$}]{ssfile,  }\item[{int $\ast$}]{relative\+\_\+access,  }\item[{const char $\ast$}]{seqs\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+plotting\+\_\+utils \mbox{\Hypertarget{plot__structure_8h_abdc8f6548ba4a3bc3cd868ccbcfdb86a}\label{plot__structure_8h_abdc8f6548ba4a3bc3cd868ccbcfdb86a}} 
+\index{plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}!vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot@{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot}}
+\index{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot@{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot}!plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}}
+\subsubsection{\texorpdfstring{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot()}{vrna\_file\_PS\_rnaplot()}}
+{\footnotesize\ttfamily int vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot (\begin{DoxyParamCaption}\item[{const char $\ast$}]{seq,  }\item[{const char $\ast$}]{structure,  }\item[{const char $\ast$}]{file,  }\item[{\hyperlink{group__model__details_ga1f8a10e12a0a1915f2a4eff0b28ea17c}{vrna\+\_\+md\+\_\+t} $\ast$}]{md\+\_\+p }\end{DoxyParamCaption})}
+
+
+
+Produce a secondary structure graph in Post\+Script and write it to \textquotesingle{}filename\textquotesingle{}. 
+
+Note that this function has changed from previous versions and now expects the structure to be plotted in dot-\/bracket notation as an argument. It does not make use of the global \hyperlink{fold__vars_8h_a0244a629b5ab4f58b77590c3dfd130dc}{base\+\_\+pair} array anymore.
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The R\+NA sequence \\
+\hline
+{\em structure} & The secondary structure in dot-\/bracket notation \\
+\hline
+{\em file} & The filename of the postscript output \\
+\hline
+{\em md\+\_\+p} & Model parameters used to generate a commandline option string in the output (Maybe N\+U\+LL) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plot__structure_8h_a139a31dd0ba9fc6612431f67de901c31}\label{plot__structure_8h_a139a31dd0ba9fc6612431f67de901c31}} 
+\index{plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}!vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot\+\_\+a@{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot\+\_\+a}}
+\index{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot\+\_\+a@{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot\+\_\+a}!plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}}
+\subsubsection{\texorpdfstring{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot\+\_\+a()}{vrna\_file\_PS\_rnaplot\_a()}}
+{\footnotesize\ttfamily int vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot\+\_\+a (\begin{DoxyParamCaption}\item[{const char $\ast$}]{seq,  }\item[{const char $\ast$}]{structure,  }\item[{const char $\ast$}]{file,  }\item[{const char $\ast$}]{pre,  }\item[{const char $\ast$}]{post,  }\item[{\hyperlink{group__model__details_ga1f8a10e12a0a1915f2a4eff0b28ea17c}{vrna\+\_\+md\+\_\+t} $\ast$}]{md\+\_\+p }\end{DoxyParamCaption})}
+
+
+
+Produce a secondary structure graph in Post\+Script including additional annotation macros and write it to \textquotesingle{}filename\textquotesingle{}. 
+
+Same as \hyperlink{plot__structure_8h_abdc8f6548ba4a3bc3cd868ccbcfdb86a}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot()} but adds extra Post\+Script macros for various annotations (see generated PS code). The \textquotesingle{}pre\textquotesingle{} and \textquotesingle{}post\textquotesingle{} variables contain Post\+Script code that is verbatim copied in the resulting PS file just before and after the structure plot. If both arguments (\textquotesingle{}pre\textquotesingle{} and \textquotesingle{}post\textquotesingle{}) are N\+U\+LL, no additional macros will be printed into the Post\+Script.
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The R\+NA sequence \\
+\hline
+{\em structure} & The secondary structure in dot-\/bracket notation \\
+\hline
+{\em file} & The filename of the postscript output \\
+\hline
+{\em pre} & Post\+Script code to appear before the secondary structure plot \\
+\hline
+{\em post} & Post\+Script code to appear after the secondary structure plot \\
+\hline
+{\em md\+\_\+p} & Model parameters used to generate a commandline option string in the output (Maybe N\+U\+LL) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plot__structure_8h_a70834bc8c0aad4fe6824ff76ccb8f329}\label{plot__structure_8h_a70834bc8c0aad4fe6824ff76ccb8f329}} 
+\index{plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}!gml\+R\+NA@{gml\+R\+NA}}
+\index{gml\+R\+NA@{gml\+R\+NA}!plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}}
+\subsubsection{\texorpdfstring{gml\+R\+N\+A()}{gmlRNA()}}
+{\footnotesize\ttfamily int gml\+R\+NA (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{char $\ast$}]{structure,  }\item[{char $\ast$}]{ssfile,  }\item[{char}]{option }\end{DoxyParamCaption})}
+
+
+
+Produce a secondary structure graph in Graph Meta Language (gml) and write it to a file. 
+
+If \textquotesingle{}option\textquotesingle{} is an uppercase letter the R\+NA sequence is used to label nodes, if \textquotesingle{}option\textquotesingle{} equals {\itshape \textquotesingle{}X\textquotesingle{}} or {\itshape \textquotesingle{}x\textquotesingle{}} the resulting file will coordinates for an initial layout of the graph.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The R\+NA sequence \\
+\hline
+{\em structure} & The secondary structure in dot-\/bracket notation \\
+\hline
+{\em ssfile} & The filename of the gml output \\
+\hline
+{\em option} & The option flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plot__structure_8h_add368528755f9a830727b680243541df}\label{plot__structure_8h_add368528755f9a830727b680243541df}} 
+\index{plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}!ssv\+\_\+rna\+\_\+plot@{ssv\+\_\+rna\+\_\+plot}}
+\index{ssv\+\_\+rna\+\_\+plot@{ssv\+\_\+rna\+\_\+plot}!plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}}
+\subsubsection{\texorpdfstring{ssv\+\_\+rna\+\_\+plot()}{ssv\_rna\_plot()}}
+{\footnotesize\ttfamily int ssv\+\_\+rna\+\_\+plot (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{char $\ast$}]{structure,  }\item[{char $\ast$}]{ssfile }\end{DoxyParamCaption})}
+
+
+
+Produce a secondary structure graph in S\+Struct\+View format. 
+
+Write coord file for S\+Struct\+View
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The R\+NA sequence \\
+\hline
+{\em structure} & The secondary structure in dot-\/bracket notation \\
+\hline
+{\em ssfile} & The filename of the ssv output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plot__structure_8h_ae7853539b5df98f294b4af434e979304}\label{plot__structure_8h_ae7853539b5df98f294b4af434e979304}} 
+\index{plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}!svg\+\_\+rna\+\_\+plot@{svg\+\_\+rna\+\_\+plot}}
+\index{svg\+\_\+rna\+\_\+plot@{svg\+\_\+rna\+\_\+plot}!plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}}
+\subsubsection{\texorpdfstring{svg\+\_\+rna\+\_\+plot()}{svg\_rna\_plot()}}
+{\footnotesize\ttfamily int svg\+\_\+rna\+\_\+plot (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{char $\ast$}]{structure,  }\item[{char $\ast$}]{ssfile }\end{DoxyParamCaption})}
+
+
+
+Produce a secondary structure plot in S\+VG format and write it to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The R\+NA sequence \\
+\hline
+{\em structure} & The secondary structure in dot-\/bracket notation \\
+\hline
+{\em ssfile} & The filename of the svg output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plot__structure_8h_a2f6d5953e6a323df898896b8d6614483}\label{plot__structure_8h_a2f6d5953e6a323df898896b8d6614483}} 
+\index{plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}!xrna\+\_\+plot@{xrna\+\_\+plot}}
+\index{xrna\+\_\+plot@{xrna\+\_\+plot}!plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}}
+\subsubsection{\texorpdfstring{xrna\+\_\+plot()}{xrna\_plot()}}
+{\footnotesize\ttfamily int xrna\+\_\+plot (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{char $\ast$}]{structure,  }\item[{char $\ast$}]{ssfile }\end{DoxyParamCaption})}
+
+
+
+Produce a secondary structure plot for further editing in X\+R\+NA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The R\+NA sequence \\
+\hline
+{\em structure} & The secondary structure in dot-\/bracket notation \\
+\hline
+{\em ssfile} & The filename of the xrna output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{plot__structure_8h_a0873c7cc4cd7a11c9a2cea19dde7e9c9}\label{plot__structure_8h_a0873c7cc4cd7a11c9a2cea19dde7e9c9}} 
+\index{plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}!P\+S\+\_\+rna\+\_\+plot@{P\+S\+\_\+rna\+\_\+plot}}
+\index{P\+S\+\_\+rna\+\_\+plot@{P\+S\+\_\+rna\+\_\+plot}!plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}}
+\subsubsection{\texorpdfstring{P\+S\+\_\+rna\+\_\+plot()}{PS\_rna\_plot()}}
+{\footnotesize\ttfamily int P\+S\+\_\+rna\+\_\+plot (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{char $\ast$}]{structure,  }\item[{char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Produce a secondary structure graph in Post\+Script and write it to \textquotesingle{}filename\textquotesingle{}. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000127}{Deprecated}]Use \hyperlink{plot__structure_8h_abdc8f6548ba4a3bc3cd868ccbcfdb86a}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot()} instead! \end{DoxyRefDesc}
+\mbox{\Hypertarget{plot__structure_8h_a47856b2504b566588785597b6ebb8271}\label{plot__structure_8h_a47856b2504b566588785597b6ebb8271}} 
+\index{plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}!P\+S\+\_\+rna\+\_\+plot\+\_\+a@{P\+S\+\_\+rna\+\_\+plot\+\_\+a}}
+\index{P\+S\+\_\+rna\+\_\+plot\+\_\+a@{P\+S\+\_\+rna\+\_\+plot\+\_\+a}!plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}}
+\subsubsection{\texorpdfstring{P\+S\+\_\+rna\+\_\+plot\+\_\+a()}{PS\_rna\_plot\_a()}}
+{\footnotesize\ttfamily int P\+S\+\_\+rna\+\_\+plot\+\_\+a (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{char $\ast$}]{structure,  }\item[{char $\ast$}]{file,  }\item[{char $\ast$}]{pre,  }\item[{char $\ast$}]{post }\end{DoxyParamCaption})}
+
+
+
+Produce a secondary structure graph in Post\+Script including additional annotation macros and write it to \textquotesingle{}filename\textquotesingle{}. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000128}{Deprecated}]Use \hyperlink{plot__structure_8h_a139a31dd0ba9fc6612431f67de901c31}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot\+\_\+a()} instead! \end{DoxyRefDesc}
+\mbox{\Hypertarget{plot__structure_8h_a32fa0f97625119e9d24dd2e7153abc4f}\label{plot__structure_8h_a32fa0f97625119e9d24dd2e7153abc4f}} 
+\index{plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}!P\+S\+\_\+rna\+\_\+plot\+\_\+a\+\_\+gquad@{P\+S\+\_\+rna\+\_\+plot\+\_\+a\+\_\+gquad}}
+\index{P\+S\+\_\+rna\+\_\+plot\+\_\+a\+\_\+gquad@{P\+S\+\_\+rna\+\_\+plot\+\_\+a\+\_\+gquad}!plot\+\_\+structure.\+h@{plot\+\_\+structure.\+h}}
+\subsubsection{\texorpdfstring{P\+S\+\_\+rna\+\_\+plot\+\_\+a\+\_\+gquad()}{PS\_rna\_plot\_a\_gquad()}}
+{\footnotesize\ttfamily int P\+S\+\_\+rna\+\_\+plot\+\_\+a\+\_\+gquad (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{char $\ast$}]{structure,  }\item[{char $\ast$}]{ssfile,  }\item[{char $\ast$}]{pre,  }\item[{char $\ast$}]{post }\end{DoxyParamCaption})}
+
+
+
+Produce a secondary structure graph in Post\+Script including additional annotation macros and write it to \textquotesingle{}filename\textquotesingle{} (detect and draw g-\/quadruplexes) 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000129}{Deprecated}]Use \hyperlink{plot__structure_8h_a139a31dd0ba9fc6612431f67de901c31}{vrna\+\_\+file\+\_\+\+P\+S\+\_\+rnaplot\+\_\+a()} instead! \end{DoxyRefDesc}

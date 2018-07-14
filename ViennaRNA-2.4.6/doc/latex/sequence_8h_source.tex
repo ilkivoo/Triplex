@@ -1,0 +1,50 @@
+\hypertarget{sequence_8h_source}{}\section{sequence.\+h}
+\label{sequence_8h_source}\index{Vienna\+R\+N\+A/sequence.\+h@{Vienna\+R\+N\+A/sequence.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_SEQUENCE\_H}
+00002 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_SEQUENCE\_H}
+00003 
+\Hypertarget{sequence_8h_source_l00015}\hyperlink{sequence_8h_aa35bee3061759495467070b47d0e1f22}{00015} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\hyperlink{structvrna__sequence__s}{vrna\_sequence\_s} \hyperlink{structvrna__sequence__s}{vrna\_seq\_t};
+00016 
+00017 
+00018 \textcolor{preprocessor}{#define VRNA\_SEQUENCE\_RNA       1U}
+00019 
+00020 \textcolor{preprocessor}{#define VRNA\_SEQUENCE\_DNA       2U}
+00021 
+\Hypertarget{sequence_8h_source_l00025}\hyperlink{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609}{00025} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{
+\Hypertarget{sequence_8h_source_l00026}\hyperlink{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609ad8682ac290d0dd51022e3b82840e1a74}{00026}   \hyperlink{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609ad8682ac290d0dd51022e3b82840e1a74}{VRNA\_SEQ\_UNKNOWN},   
+\Hypertarget{sequence_8h_source_l00027}\hyperlink{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609ac52309234beaf94e6a3bd1b9b69de9f4}{00027}   \hyperlink{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609ac52309234beaf94e6a3bd1b9b69de9f4}{VRNA\_SEQ\_RNA},       
+\Hypertarget{sequence_8h_source_l00028}\hyperlink{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609a4da1613644c3a3766ef1d6494f271332}{00028}   \hyperlink{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609a4da1613644c3a3766ef1d6494f271332}{VRNA\_SEQ\_DNA}        
+00029 \} \hyperlink{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609}{vrna\_seq\_type\_e};
+00030 
+00031 
+\Hypertarget{sequence_8h_source_l00035}\hyperlink{structvrna__sequence__s}{00035} \textcolor{keyword}{struct }\hyperlink{structvrna__sequence__s}{vrna\_sequence\_s} \{
+\Hypertarget{sequence_8h_source_l00036}\hyperlink{structvrna__sequence__s_aee11f4cc6f792cd36afab3bf7a30ca7b}{00036}   \hyperlink{sequence_8h_a85cda3fcf5d6bd7ec090d3a96e808609}{vrna\_seq\_type\_e} \hyperlink{structvrna__sequence__s_aee11f4cc6f792cd36afab3bf7a30ca7b}{type};       
+\Hypertarget{sequence_8h_source_l00037}\hyperlink{structvrna__sequence__s_aa885a2c52b3f87fb6c8f51a77a3430a7}{00037}   \textcolor{keywordtype}{char}            *\hyperlink{structvrna__sequence__s_aa885a2c52b3f87fb6c8f51a77a3430a7}{string};    
+\Hypertarget{sequence_8h_source_l00038}\hyperlink{structvrna__sequence__s_a8010ad82da6766e859e6f25e275a1d89}{00038}   \textcolor{keywordtype}{short}           *\hyperlink{structvrna__sequence__s_a8010ad82da6766e859e6f25e275a1d89}{encoding};  
+\Hypertarget{sequence_8h_source_l00039}\hyperlink{structvrna__sequence__s_af60876d93312ce0b842574a14c3a9cdd}{00039}   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}    \hyperlink{structvrna__sequence__s_af60876d93312ce0b842574a14c3a9cdd}{length};     
+00040 \};
+00041 
+00042 
+00043 \hyperlink{structvrna__sequence__s}{vrna\_seq\_t} *vrna\_sequence(\textcolor{keyword}{const} \textcolor{keywordtype}{char}    *\textcolor{keywordtype}{string},
+00044                           \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  options);
+00045 
+00046 
+00047 \textcolor{keywordtype}{int}           vrna\_sequence\_add(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00048                                 \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *\textcolor{keywordtype}{string},
+00049                                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          options);
+00050 
+00051 
+00052 \textcolor{keywordtype}{int}           vrna\_sequence\_remove(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00053                                    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}         i);
+00054 
+00055 
+00056 \textcolor{keywordtype}{void}          vrna\_sequence\_remove\_all(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc);
+00057 
+00058 
+00059 \textcolor{keywordtype}{void}          vrna\_sequence\_prepare(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *fc);
+00060 
+00061 
+00066 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

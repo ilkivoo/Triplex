@@ -1,0 +1,656 @@
+\hypertarget{group__loops}{}\section{Process and evaluate individual loops}
+\label{group__loops}\index{Process and evaluate individual loops@{Process and evaluate individual loops}}
+
+
+\subsection{Detailed Description}
+Collaboration diagram for Process and evaluate individual loops\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{group__loops}
+\end{center}
+\end{figure}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{exterior__loops_8h}{exterior\+\_\+loops.\+h}
+\begin{DoxyCompactList}\small\item\em Energy evaluation of exterior loops for M\+FE and partition function calculations. \end{DoxyCompactList}\item 
+file \hyperlink{hairpin__loops_8h}{hairpin\+\_\+loops.\+h}
+\begin{DoxyCompactList}\small\item\em Energy evaluation of hairpin loops for M\+FE and partition function calculations. \end{DoxyCompactList}\item 
+file \hyperlink{interior__loops_8h}{interior\+\_\+loops.\+h}
+\begin{DoxyCompactList}\small\item\em Energy evaluation of interior loops for M\+FE and partition function calculations. \end{DoxyCompactList}\item 
+file \hyperlink{loop__energies_8h}{loop\+\_\+energies.\+h}
+\begin{DoxyCompactList}\small\item\em Energy evaluation for M\+FE and partition function calculations. \end{DoxyCompactList}\item 
+file \hyperlink{multibranch__loops_8h}{multibranch\+\_\+loops.\+h}
+\begin{DoxyCompactList}\small\item\em Energy evaluation of multibranch loops for M\+FE and partition function calculations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{group__loops_structvrna__mx__pf__aux__el__t}{vrna\+\_\+mx\+\_\+pf\+\_\+aux\+\_\+el\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Auxiliary helper arrays for fast exterior loop computations.  \hyperlink{group__loops_structvrna__mx__pf__aux__el__t}{More...}\end{DoxyCompactList}\item 
+struct \hyperlink{group__loops_structvrna__mx__pf__aux__ml__t}{vrna\+\_\+mx\+\_\+pf\+\_\+aux\+\_\+ml\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Auxiliary helper arrays for fast exterior loop computations.  \hyperlink{group__loops_structvrna__mx__pf__aux__ml__t}{More...}\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__loops_gaa0c313c90da11aa741dcd62746d85337}{vrna\+\_\+\+E\+\_\+ext\+\_\+stem} (unsigned int type, int n5d, int n3d, \hyperlink{group__energy__parameters_ga8a69ca7d787e4fd6079914f5343a1f35}{vrna\+\_\+param\+\_\+t} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Evaluate a stem branching off the exterior loop. \end{DoxyCompactList}\item 
+\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} \hyperlink{group__loops_ga357484958d3cd677f88f16c75c8a5730}{vrna\+\_\+exp\+\_\+\+E\+\_\+ext\+\_\+stem} (unsigned int type, int n5d, int n3d, \hyperlink{group__energy__parameters_ga01d8b92fe734df8d79a6169482c7d8d8}{vrna\+\_\+exp\+\_\+param\+\_\+t} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Evaluate a stem branching off the exterior loop (Boltzmann factor version) \end{DoxyCompactList}\item 
+int \hyperlink{group__loops_ga51f9851f3500c2aae66674142a6a2dd5}{E\+\_\+\+Stem} (int type, int si1, int sj1, int ext\+Loop, \hyperlink{group__energy__parameters_ga8a69ca7d787e4fd6079914f5343a1f35}{vrna\+\_\+param\+\_\+t} $\ast$P)
+\begin{DoxyCompactList}\small\item\em Compute the energy contribution of a stem branching off a loop-\/region. \end{DoxyCompactList}\item 
+\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} \hyperlink{group__loops_ga446828a191c127861e76e2c84055f672}{exp\+\_\+\+E\+\_\+\+Ext\+Loop} (int type, int si1, int sj1, \hyperlink{group__energy__parameters_ga01d8b92fe734df8d79a6169482c7d8d8}{vrna\+\_\+exp\+\_\+param\+\_\+t} $\ast$P)
+\item 
+\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} \hyperlink{group__loops_gab0aa9833ab41875a91a9be8a5ffd7092}{exp\+\_\+\+E\+\_\+\+Stem} (int type, int si1, int sj1, int ext\+Loop, \hyperlink{group__energy__parameters_ga01d8b92fe734df8d79a6169482c7d8d8}{vrna\+\_\+exp\+\_\+param\+\_\+t} $\ast$P)
+\item 
+P\+R\+I\+V\+A\+TE int \hyperlink{group__loops_gadf943ee9a45b7f4cee9192c06210dace}{E\+\_\+\+Hairpin} (int size, int type, int si1, int sj1, const char $\ast$string, \hyperlink{group__energy__parameters_ga8a69ca7d787e4fd6079914f5343a1f35}{vrna\+\_\+param\+\_\+t} $\ast$P)
+\begin{DoxyCompactList}\small\item\em Compute the Energy of a hairpin-\/loop. \end{DoxyCompactList}\item 
+P\+R\+I\+V\+A\+TE \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} \hyperlink{group__loops_ga51fb555974f180b78d76142b2894851c}{exp\+\_\+\+E\+\_\+\+Hairpin} (int u, int type, short si1, short sj1, const char $\ast$string, \hyperlink{group__energy__parameters_ga01d8b92fe734df8d79a6169482c7d8d8}{vrna\+\_\+exp\+\_\+param\+\_\+t} $\ast$P)
+\begin{DoxyCompactList}\small\item\em Compute Boltzmann weight $e^{-\Delta G/kT} $ of a hairpin loop. \end{DoxyCompactList}\item 
+int \hyperlink{group__loops_ga999ba163a8148d72fd5f22819a681df7}{vrna\+\_\+\+E\+\_\+hp\+\_\+loop} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, int i, int j)
+\begin{DoxyCompactList}\small\item\em Evaluate the free energy of a hairpin loop and consider hard constraints if they apply. \end{DoxyCompactList}\item 
+int \hyperlink{group__loops_gac3393ee309372eccae944e3a07f455f9}{vrna\+\_\+\+E\+\_\+ext\+\_\+hp\+\_\+loop} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, int i, int j)
+\begin{DoxyCompactList}\small\item\em Evaluate the free energy of an exterior hairpin loop and consider possible hard constraints. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__loops_gad3b92453a6b501856eec8fae39f3235d}\label{group__loops_gad3b92453a6b501856eec8fae39f3235d}} 
+int \hyperlink{group__loops_gad3b92453a6b501856eec8fae39f3235d}{vrna\+\_\+eval\+\_\+ext\+\_\+hp\+\_\+loop} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, int i, int j)
+\begin{DoxyCompactList}\small\item\em Evaluate free energy of an exterior hairpin loop. \end{DoxyCompactList}\item 
+int \hyperlink{group__loops_gab3eb4651dc26dc2b653a57dd340d7e68}{vrna\+\_\+eval\+\_\+hp\+\_\+loop} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, int i, int j)
+\begin{DoxyCompactList}\small\item\em Evaluate free energy of a hairpin loop. \end{DoxyCompactList}\item 
+\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} \hyperlink{group__loops_gac9f49b31d3ec1d9040798b05506c71da}{vrna\+\_\+exp\+\_\+\+E\+\_\+hp\+\_\+loop} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, int i, int j)
+\begin{DoxyCompactList}\small\item\em High-\/\+Level function for hairpin loop energy evaluation (partition function variant) \end{DoxyCompactList}\item 
+int \hyperlink{group__loops_ga6c4ba14d24f716d0ca9021771357e903}{vrna\+\_\+\+B\+T\+\_\+hp\+\_\+loop} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, int i, int j, int en, \hyperlink{group__data__structures_gaa651bda42e7692f08cb603cd6834b0ee}{vrna\+\_\+bp\+\_\+stack\+\_\+t} $\ast$bp\+\_\+stack, int $\ast$stack\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Backtrack a hairpin loop closed by $ (i,j) $. \end{DoxyCompactList}\item 
+P\+R\+I\+V\+A\+TE int \hyperlink{group__loops_gaafbc187b7f78e8e82afb77dd6f3b8fc5}{E\+\_\+\+Int\+Loop} (int n1, int n2, int type, int type\+\_\+2, int si1, int sj1, int sp1, int sq1, \hyperlink{group__energy__parameters_ga8a69ca7d787e4fd6079914f5343a1f35}{vrna\+\_\+param\+\_\+t} $\ast$P)
+\item 
+P\+R\+I\+V\+A\+TE \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} \hyperlink{group__loops_ga95de54d8a2a17645a95e0f34e189d9c9}{exp\+\_\+\+E\+\_\+\+Int\+Loop} (int u1, int u2, int type, int type2, short si1, short sj1, short sp1, short sq1, \hyperlink{group__energy__parameters_ga01d8b92fe734df8d79a6169482c7d8d8}{vrna\+\_\+exp\+\_\+param\+\_\+t} $\ast$P)
+\item 
+int \hyperlink{group__loops_ga018f1314dbbae42fdd27c94670b61721}{vrna\+\_\+eval\+\_\+int\+\_\+loop} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, int i, int j, int k, int l)
+\begin{DoxyCompactList}\small\item\em Evaluate the free energy contribution of an interior loop with delimiting base pairs $(i,j)$ and $(k,l)$. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__loops_gad320d5d721e33bed120168213d8f45e5}\label{group__loops_gad320d5d721e33bed120168213d8f45e5}} 
+int \hyperlink{group__loops_gad320d5d721e33bed120168213d8f45e5}{vrna\+\_\+\+B\+T\+\_\+stack} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, int $\ast$i, int $\ast$j, int $\ast$en, \hyperlink{group__data__structures_gaa651bda42e7692f08cb603cd6834b0ee}{vrna\+\_\+bp\+\_\+stack\+\_\+t} $\ast$bp\+\_\+stack, int $\ast$stack\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Backtrack a stacked pair closed by $ (i,j) $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__loops_ga849b7dc373b6c0b029672e16a7e52053}\label{group__loops_ga849b7dc373b6c0b029672e16a7e52053}} 
+int \hyperlink{group__loops_ga849b7dc373b6c0b029672e16a7e52053}{vrna\+\_\+\+B\+T\+\_\+int\+\_\+loop} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, int $\ast$i, int $\ast$j, int en, \hyperlink{group__data__structures_gaa651bda42e7692f08cb603cd6834b0ee}{vrna\+\_\+bp\+\_\+stack\+\_\+t} $\ast$bp\+\_\+stack, int $\ast$stack\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Backtrack an interior loop closed by $ (i,j) $. \end{DoxyCompactList}\item 
+int \hyperlink{group__loops_ga73f048d35475e1d8f50b7d4ac6a2aeb6}{vrna\+\_\+\+E\+\_\+mb\+\_\+loop\+\_\+stack} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, int i, int j)
+\begin{DoxyCompactList}\small\item\em Evaluate energy of a multi branch helices stacking onto closing pair (i,j) \end{DoxyCompactList}\item 
+int \hyperlink{group__loops_ga9cb520ddfd8b3a48089a7910b045d06b}{vrna\+\_\+\+B\+T\+\_\+mb\+\_\+loop} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, int $\ast$i, int $\ast$j, int $\ast$k, int en, int $\ast$component1, int $\ast$component2)
+\begin{DoxyCompactList}\small\item\em Backtrack the decomposition of a multi branch loop closed by $ (i,j) $. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Data Structure Documentation}
+\index{vrna\+\_\+mx\+\_\+pf\+\_\+aux\+\_\+el\+\_\+t@{vrna\+\_\+mx\+\_\+pf\+\_\+aux\+\_\+el\+\_\+t}}\label{structvrna__mx__pf__aux__el__t}
+\Hypertarget{group__loops_structvrna__mx__pf__aux__el__t}
+\subsubsection{struct vrna\+\_\+mx\+\_\+pf\+\_\+aux\+\_\+el\+\_\+t}
+Auxiliary helper arrays for fast exterior loop computations. 
+
+\begin{DoxySeeAlso}{See also}
+vrna\+\_\+exp\+\_\+\+E\+\_\+ext\+\_\+fast\+\_\+init(), vrna\+\_\+exp\+\_\+\+E\+\_\+ext\+\_\+fast\+\_\+rotate(), vrna\+\_\+exp\+\_\+\+E\+\_\+ext\+\_\+fast\+\_\+free(), vrna\+\_\+exp\+\_\+\+E\+\_\+ext\+\_\+fast() 
+\end{DoxySeeAlso}
+\index{vrna\+\_\+mx\+\_\+pf\+\_\+aux\+\_\+ml\+\_\+t@{vrna\+\_\+mx\+\_\+pf\+\_\+aux\+\_\+ml\+\_\+t}}\label{structvrna__mx__pf__aux__ml__t}
+\Hypertarget{group__loops_structvrna__mx__pf__aux__ml__t}
+\subsubsection{struct vrna\+\_\+mx\+\_\+pf\+\_\+aux\+\_\+ml\+\_\+t}
+Auxiliary helper arrays for fast exterior loop computations. 
+
+\begin{DoxySeeAlso}{See also}
+vrna\+\_\+exp\+\_\+\+E\+\_\+ml\+\_\+fast\+\_\+init(), vrna\+\_\+exp\+\_\+\+E\+\_\+ml\+\_\+fast\+\_\+rotate(), vrna\+\_\+exp\+\_\+\+E\+\_\+ml\+\_\+fast\+\_\+free(), vrna\+\_\+exp\+\_\+\+E\+\_\+ml\+\_\+fast() 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__loops_gaa0c313c90da11aa741dcd62746d85337}\label{group__loops_gaa0c313c90da11aa741dcd62746d85337}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!vrna\+\_\+\+E\+\_\+ext\+\_\+stem@{vrna\+\_\+\+E\+\_\+ext\+\_\+stem}}
+\index{vrna\+\_\+\+E\+\_\+ext\+\_\+stem@{vrna\+\_\+\+E\+\_\+ext\+\_\+stem}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{vrna\+\_\+\+E\+\_\+ext\+\_\+stem()}{vrna\_E\_ext\_stem()}}
+{\footnotesize\ttfamily int vrna\+\_\+\+E\+\_\+ext\+\_\+stem (\begin{DoxyParamCaption}\item[{unsigned int}]{type,  }\item[{int}]{n5d,  }\item[{int}]{n3d,  }\item[{\hyperlink{group__energy__parameters_ga8a69ca7d787e4fd6079914f5343a1f35}{vrna\+\_\+param\+\_\+t} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{exterior__loops_8h}{Vienna\+R\+N\+A/exterior\+\_\+loops.\+h}$>$}
+
+
+
+Evaluate a stem branching off the exterior loop. 
+
+Given a base pair $(i,j)$ encoded by {\itshape type}, compute the energy contribution including dangling-\/end/terminal-\/mismatch contributions. Instead of returning the energy contribution per-\/se, this function returns the corresponding Boltzmann factor. If either of the adjacent nucleotides $(i - 1)$ and $(j+1)$ must not contribute stacking energy, the corresponding encoding must be $-1$.
+
+\begin{DoxySeeAlso}{See also}
+vrna\+\_\+\+E\+\_\+exp\+\_\+stem()
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The base pair encoding \\
+\hline
+{\em n5d} & The encoded nucleotide directly adjacent at the 5\textquotesingle{} side of the base pair (may be -\/1) \\
+\hline
+{\em n3d} & The encoded nucleotide directly adjacent at the 3\textquotesingle{} side of the base pair (may be -\/1) \\
+\hline
+{\em p} & The pre-\/computed energy parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The energy contribution of the introduced exterior-\/loop stem 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__loops_ga357484958d3cd677f88f16c75c8a5730}\label{group__loops_ga357484958d3cd677f88f16c75c8a5730}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!vrna\+\_\+exp\+\_\+\+E\+\_\+ext\+\_\+stem@{vrna\+\_\+exp\+\_\+\+E\+\_\+ext\+\_\+stem}}
+\index{vrna\+\_\+exp\+\_\+\+E\+\_\+ext\+\_\+stem@{vrna\+\_\+exp\+\_\+\+E\+\_\+ext\+\_\+stem}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{vrna\+\_\+exp\+\_\+\+E\+\_\+ext\+\_\+stem()}{vrna\_exp\_E\_ext\_stem()}}
+{\footnotesize\ttfamily \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} vrna\+\_\+exp\+\_\+\+E\+\_\+ext\+\_\+stem (\begin{DoxyParamCaption}\item[{unsigned int}]{type,  }\item[{int}]{n5d,  }\item[{int}]{n3d,  }\item[{\hyperlink{group__energy__parameters_ga01d8b92fe734df8d79a6169482c7d8d8}{vrna\+\_\+exp\+\_\+param\+\_\+t} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{exterior__loops_8h}{Vienna\+R\+N\+A/exterior\+\_\+loops.\+h}$>$}
+
+
+
+Evaluate a stem branching off the exterior loop (Boltzmann factor version) 
+
+Given a base pair $(i,j)$ encoded by {\itshape type}, compute the energy contribution including dangling-\/end/terminal-\/mismatch contributions. Instead of returning the energy contribution per-\/se, this function returns the corresponding Boltzmann factor. If either of the adjacent nucleotides $(i - 1)$ and $(j+1)$ must not contribute stacking energy, the corresponding encoding must be $-1$.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__loops_gaa0c313c90da11aa741dcd62746d85337}{vrna\+\_\+\+E\+\_\+ext\+\_\+stem()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The base pair encoding \\
+\hline
+{\em n5d} & The encoded nucleotide directly adjacent at the 5\textquotesingle{} side of the base pair (may be -\/1) \\
+\hline
+{\em n3d} & The encoded nucleotide directly adjacent at the 3\textquotesingle{} side of the base pair (may be -\/1) \\
+\hline
+{\em p} & The pre-\/computed energy parameters (Boltzmann factor version) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Boltzmann weighted energy contribution of the introduced exterior-\/loop stem 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__loops_ga51f9851f3500c2aae66674142a6a2dd5}\label{group__loops_ga51f9851f3500c2aae66674142a6a2dd5}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!E\+\_\+\+Stem@{E\+\_\+\+Stem}}
+\index{E\+\_\+\+Stem@{E\+\_\+\+Stem}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{E\+\_\+\+Stem()}{E\_Stem()}}
+{\footnotesize\ttfamily int E\+\_\+\+Stem (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{int}]{si1,  }\item[{int}]{sj1,  }\item[{int}]{ext\+Loop,  }\item[{\hyperlink{group__energy__parameters_ga8a69ca7d787e4fd6079914f5343a1f35}{vrna\+\_\+param\+\_\+t} $\ast$}]{P }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{exterior__loops_8h}{Vienna\+R\+N\+A/exterior\+\_\+loops.\+h}$>$}
+
+
+
+Compute the energy contribution of a stem branching off a loop-\/region. 
+
+This function computes the energy contribution of a stem that branches off a loop region. This can be the case in multiloops, when a stem branching off increases the degree of the loop but also {\itshape immediately interior base pairs} of an exterior loop contribute free energy. To switch the behavior of the function according to the evaluation of a multiloop-\/ or exterior-\/loop-\/stem, you pass the flag \textquotesingle{}ext\+Loop\textquotesingle{}. The returned energy contribution consists of a Terminal\+AU penalty if the pair type is greater than 2, dangling end contributions of mismatching nucleotides adjacent to the stem if only one of the si1, sj1 parameters is greater than 0 and mismatch energies if both mismatching nucleotides are positive values. Thus, to avoid incorporating dangling end or mismatch energies just pass a negative number, e.\+g. -\/1 to the mismatch argument.
+
+This is an illustration of how the energy contribution is assembled\+: 
+\begin{DoxyPre}
+      3'  5'
+      |   |
+      X - Y
+5'-si1     sj1-3'
+\end{DoxyPre}
+
+
+Here, (X,Y) is the base pair that closes the stem that branches off a loop region. The nucleotides si1 and sj1 are the 5\textquotesingle{}-\/ and 3\textquotesingle{}-\/ mismatches, respectively. If the base pair type of (X,Y) is greater than 2 (i.\+e. an A-\/U or G-\/U pair, the Terminal\+AU penalty will be included in the energy contribution returned. If si1 and sj1 are both nonnegative numbers, mismatch energies will also be included. If one of si1 or sj1 is a negative value, only 5\textquotesingle{} or 3\textquotesingle{} dangling end contributions are taken into account. To prohibit any of these mismatch contributions to be incorporated, just pass a negative number to both, si1 and sj1. In case the argument ext\+Loop is 0, the returned energy contribution also includes the {\itshape internal-\/loop-\/penalty} of a multiloop stem with closing pair type.
+
+\begin{DoxySeeAlso}{See also}
+E\+\_\+\+M\+Lstem() 
+
+E\+\_\+\+Ext\+Loop() 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+This function is threadsafe
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The pair type of the first base pair un the stem \\
+\hline
+{\em si1} & The 5\textquotesingle{}-\/mismatching nucleotide \\
+\hline
+{\em sj1} & The 3\textquotesingle{}-\/mismatching nucleotide \\
+\hline
+{\em ext\+Loop} & A flag that indicates whether the contribution reflects the one of an exterior loop or not \\
+\hline
+{\em P} & The data structure containing scaled energy parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Free energy of the branch off the loop in dcal/mol 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__loops_ga446828a191c127861e76e2c84055f672}\label{group__loops_ga446828a191c127861e76e2c84055f672}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!exp\+\_\+\+E\+\_\+\+Ext\+Loop@{exp\+\_\+\+E\+\_\+\+Ext\+Loop}}
+\index{exp\+\_\+\+E\+\_\+\+Ext\+Loop@{exp\+\_\+\+E\+\_\+\+Ext\+Loop}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{exp\+\_\+\+E\+\_\+\+Ext\+Loop()}{exp\_E\_ExtLoop()}}
+{\footnotesize\ttfamily \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} exp\+\_\+\+E\+\_\+\+Ext\+Loop (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{int}]{si1,  }\item[{int}]{sj1,  }\item[{\hyperlink{group__energy__parameters_ga01d8b92fe734df8d79a6169482c7d8d8}{vrna\+\_\+exp\+\_\+param\+\_\+t} $\ast$}]{P }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{exterior__loops_8h}{Vienna\+R\+N\+A/exterior\+\_\+loops.\+h}$>$}
+
+This is the partition function variant of E\+\_\+\+Ext\+Loop() \begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000064}{Deprecated}]Use \hyperlink{group__loops_ga357484958d3cd677f88f16c75c8a5730}{vrna\+\_\+exp\+\_\+\+E\+\_\+ext\+\_\+stem()} instead!\end{DoxyRefDesc}
+
+
+\begin{DoxySeeAlso}{See also}
+E\+\_\+\+Ext\+Loop() 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+The Boltzmann weighted energy contribution of the introduced exterior-\/loop stem 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__loops_gab0aa9833ab41875a91a9be8a5ffd7092}\label{group__loops_gab0aa9833ab41875a91a9be8a5ffd7092}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!exp\+\_\+\+E\+\_\+\+Stem@{exp\+\_\+\+E\+\_\+\+Stem}}
+\index{exp\+\_\+\+E\+\_\+\+Stem@{exp\+\_\+\+E\+\_\+\+Stem}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{exp\+\_\+\+E\+\_\+\+Stem()}{exp\_E\_Stem()}}
+{\footnotesize\ttfamily \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} exp\+\_\+\+E\+\_\+\+Stem (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{int}]{si1,  }\item[{int}]{sj1,  }\item[{int}]{ext\+Loop,  }\item[{\hyperlink{group__energy__parameters_ga01d8b92fe734df8d79a6169482c7d8d8}{vrna\+\_\+exp\+\_\+param\+\_\+t} $\ast$}]{P }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{exterior__loops_8h}{Vienna\+R\+N\+A/exterior\+\_\+loops.\+h}$>$}
+
+\subsubsection*{Compute the Boltzmann weighted energy contribution of a stem branching off a loop-\/region}
+
+This is the partition function variant of \hyperlink{group__loops_ga51f9851f3500c2aae66674142a6a2dd5}{E\+\_\+\+Stem()} \begin{DoxySeeAlso}{See also}
+\hyperlink{group__loops_ga51f9851f3500c2aae66674142a6a2dd5}{E\+\_\+\+Stem()} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+This function is threadsafe
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The Boltzmann weighted energy contribution of the branch off the loop 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__loops_gadf943ee9a45b7f4cee9192c06210dace}\label{group__loops_gadf943ee9a45b7f4cee9192c06210dace}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!E\+\_\+\+Hairpin@{E\+\_\+\+Hairpin}}
+\index{E\+\_\+\+Hairpin@{E\+\_\+\+Hairpin}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{E\+\_\+\+Hairpin()}{E\_Hairpin()}}
+{\footnotesize\ttfamily P\+R\+I\+V\+A\+TE int E\+\_\+\+Hairpin (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{type,  }\item[{int}]{si1,  }\item[{int}]{sj1,  }\item[{const char $\ast$}]{string,  }\item[{\hyperlink{group__energy__parameters_ga8a69ca7d787e4fd6079914f5343a1f35}{vrna\+\_\+param\+\_\+t} $\ast$}]{P }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{hairpin__loops_8h}{Vienna\+R\+N\+A/hairpin\+\_\+loops.\+h}$>$}
+
+
+
+Compute the Energy of a hairpin-\/loop. 
+
+To evaluate the free energy of a hairpin-\/loop, several parameters have to be known. A general hairpin-\/loop has this structure\+:~\newline
+ 
+\begin{DoxyPre}
+      a3 a4
+    a2     a5
+    a1     a6
+      X - Y
+      |   |
+      5'  3'
+\end{DoxyPre}
+ where X-\/Y marks the closing pair \mbox{[}e.\+g. a {\bfseries (G,C)} pair\mbox{]}. The length of this loop is 6 as there are six unpaired nucleotides (a1-\/a6) enclosed by (X,Y). The 5\textquotesingle{} mismatching nucleotide is a1 while the 3\textquotesingle{} mismatch is a6. The nucleotide sequence of this loop is "a1.\+a2.\+a3.\+a4.\+a5.\+a6" ~\newline
+ \begin{DoxyNote}{Note}
+The parameter sequence should contain the sequence of the loop in capital letters of the nucleic acid alphabet if the loop size is below 7. This is useful for unusually stable tri-\/, tetra-\/ and hexa-\/loops which are treated differently (based on experimental data) if they are tabulated. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__energy__parameters_ga541f2cf7436e9bc939b0a49b24baf987}{scale\+\_\+parameters()} 
+
+\hyperlink{group__energy__parameters_ga8a69ca7d787e4fd6079914f5343a1f35}{vrna\+\_\+param\+\_\+t} 
+\end{DoxySeeAlso}
+\begin{DoxyWarning}{Warning}
+Not (really) thread safe! A threadsafe implementation will replace this function in a future release!~\newline
+Energy evaluation may change due to updates in global variable \char`\"{}tetra\+\_\+loop\char`\"{}
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of the loop (number of unpaired nucleotides) \\
+\hline
+{\em type} & The pair type of the base pair closing the hairpin \\
+\hline
+{\em si1} & The 5\textquotesingle{}-\/mismatching nucleotide \\
+\hline
+{\em sj1} & The 3\textquotesingle{}-\/mismatching nucleotide \\
+\hline
+{\em string} & The sequence of the loop \\
+\hline
+{\em P} & The datastructure containing scaled energy parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Free energy of the Hairpin-\/loop in dcal/mol 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__loops_ga51fb555974f180b78d76142b2894851c}\label{group__loops_ga51fb555974f180b78d76142b2894851c}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!exp\+\_\+\+E\+\_\+\+Hairpin@{exp\+\_\+\+E\+\_\+\+Hairpin}}
+\index{exp\+\_\+\+E\+\_\+\+Hairpin@{exp\+\_\+\+E\+\_\+\+Hairpin}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{exp\+\_\+\+E\+\_\+\+Hairpin()}{exp\_E\_Hairpin()}}
+{\footnotesize\ttfamily P\+R\+I\+V\+A\+TE \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} exp\+\_\+\+E\+\_\+\+Hairpin (\begin{DoxyParamCaption}\item[{int}]{u,  }\item[{int}]{type,  }\item[{short}]{si1,  }\item[{short}]{sj1,  }\item[{const char $\ast$}]{string,  }\item[{\hyperlink{group__energy__parameters_ga01d8b92fe734df8d79a6169482c7d8d8}{vrna\+\_\+exp\+\_\+param\+\_\+t} $\ast$}]{P }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{hairpin__loops_8h}{Vienna\+R\+N\+A/hairpin\+\_\+loops.\+h}$>$}
+
+
+
+Compute Boltzmann weight $e^{-\Delta G/kT} $ of a hairpin loop. 
+
+multiply by scale\mbox{[}u+2\mbox{]} \begin{DoxySeeAlso}{See also}
+\hyperlink{group__energy__parameters_gabf3b9271c41dd3fac02d56e0b02b3344}{get\+\_\+scaled\+\_\+pf\+\_\+parameters()} 
+
+\hyperlink{group__energy__parameters_ga01d8b92fe734df8d79a6169482c7d8d8}{vrna\+\_\+exp\+\_\+param\+\_\+t} 
+
+\hyperlink{group__loops_gadf943ee9a45b7f4cee9192c06210dace}{E\+\_\+\+Hairpin()} 
+\end{DoxySeeAlso}
+\begin{DoxyWarning}{Warning}
+Not (really) thread safe! A threadsafe implementation will replace this function in a future release!~\newline
+Energy evaluation may change due to updates in global variable \char`\"{}tetra\+\_\+loop\char`\"{}
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em u} & The size of the loop (number of unpaired nucleotides) \\
+\hline
+{\em type} & The pair type of the base pair closing the hairpin \\
+\hline
+{\em si1} & The 5\textquotesingle{}-\/mismatching nucleotide \\
+\hline
+{\em sj1} & The 3\textquotesingle{}-\/mismatching nucleotide \\
+\hline
+{\em string} & The sequence of the loop \\
+\hline
+{\em P} & The datastructure containing scaled Boltzmann weights of the energy parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Boltzmann weight of the Hairpin-\/loop 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__loops_ga999ba163a8148d72fd5f22819a681df7}\label{group__loops_ga999ba163a8148d72fd5f22819a681df7}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!vrna\+\_\+\+E\+\_\+hp\+\_\+loop@{vrna\+\_\+\+E\+\_\+hp\+\_\+loop}}
+\index{vrna\+\_\+\+E\+\_\+hp\+\_\+loop@{vrna\+\_\+\+E\+\_\+hp\+\_\+loop}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{vrna\+\_\+\+E\+\_\+hp\+\_\+loop()}{vrna\_E\_hp\_loop()}}
+{\footnotesize\ttfamily int vrna\+\_\+\+E\+\_\+hp\+\_\+loop (\begin{DoxyParamCaption}\item[{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{hairpin__loops_8h}{Vienna\+R\+N\+A/hairpin\+\_\+loops.\+h}$>$}
+
+
+
+Evaluate the free energy of a hairpin loop and consider hard constraints if they apply. 
+
+This function evaluates the free energy of a hairpin loop
+
+In case the base pair is not allowed due to a constraint conflict, this function returns \hyperlink{energy__const_8h_a12c2040f25d8e3a7b9e1c2024c618cb6}{I\+NF}.
+
+\begin{DoxyNote}{Note}
+This function is polymorphic! The provided \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} may be of type \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447da7e264dd3cf2dc9b6448caabcb7763cd6}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+N\+G\+LE} or \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447dab821ce46ea3cf665be97df22a76f5023}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+P\+A\+R\+A\+T\+I\+VE}
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em vc} & The \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} that stores all relevant model settings \\
+\hline
+{\em i} & The 5\textquotesingle{} nucleotide of the base pair (3\textquotesingle{} to evaluate the pair as exterior hairpin loop) \\
+\hline
+{\em j} & The 3\textquotesingle{} nucleotide of the base pair (5\textquotesingle{} to evaluate the pair as exterior hairpin loop) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The free energy of the hairpin loop in 10cal/mol 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__loops_gac3393ee309372eccae944e3a07f455f9}\label{group__loops_gac3393ee309372eccae944e3a07f455f9}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!vrna\+\_\+\+E\+\_\+ext\+\_\+hp\+\_\+loop@{vrna\+\_\+\+E\+\_\+ext\+\_\+hp\+\_\+loop}}
+\index{vrna\+\_\+\+E\+\_\+ext\+\_\+hp\+\_\+loop@{vrna\+\_\+\+E\+\_\+ext\+\_\+hp\+\_\+loop}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{vrna\+\_\+\+E\+\_\+ext\+\_\+hp\+\_\+loop()}{vrna\_E\_ext\_hp\_loop()}}
+{\footnotesize\ttfamily int vrna\+\_\+\+E\+\_\+ext\+\_\+hp\+\_\+loop (\begin{DoxyParamCaption}\item[{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{hairpin__loops_8h}{Vienna\+R\+N\+A/hairpin\+\_\+loops.\+h}$>$}
+
+
+
+Evaluate the free energy of an exterior hairpin loop and consider possible hard constraints. 
+
+\begin{DoxyNote}{Note}
+This function is polymorphic! The provided \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} may be of type \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447da7e264dd3cf2dc9b6448caabcb7763cd6}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+N\+G\+LE} or \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447dab821ce46ea3cf665be97df22a76f5023}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+P\+A\+R\+A\+T\+I\+VE} 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__loops_gab3eb4651dc26dc2b653a57dd340d7e68}\label{group__loops_gab3eb4651dc26dc2b653a57dd340d7e68}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!vrna\+\_\+eval\+\_\+hp\+\_\+loop@{vrna\+\_\+eval\+\_\+hp\+\_\+loop}}
+\index{vrna\+\_\+eval\+\_\+hp\+\_\+loop@{vrna\+\_\+eval\+\_\+hp\+\_\+loop}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{vrna\+\_\+eval\+\_\+hp\+\_\+loop()}{vrna\_eval\_hp\_loop()}}
+{\footnotesize\ttfamily int vrna\+\_\+eval\+\_\+hp\+\_\+loop (\begin{DoxyParamCaption}\item[{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{hairpin__loops_8h}{Vienna\+R\+N\+A/hairpin\+\_\+loops.\+h}$>$}
+
+
+
+Evaluate free energy of a hairpin loop. 
+
+\begin{DoxyNote}{Note}
+This function is polymorphic! The provided \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} may be of type \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447da7e264dd3cf2dc9b6448caabcb7763cd6}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+N\+G\+LE} or \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447dab821ce46ea3cf665be97df22a76f5023}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+P\+A\+R\+A\+T\+I\+VE}
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em vc} & The \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} for the particular energy evaluation \\
+\hline
+{\em i} & 5\textquotesingle{}-\/position of the base pair \\
+\hline
+{\em j} & 3\textquotesingle{}-\/position of the base pair \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Free energy of the hairpin loop closed by $ (i,j) $ in deka-\/kal/mol
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{S\+W\+I\+G Wrapper Notes}
+\item[\hyperlink{wrappers__wrappers000033}{S\+W\+I\+G Wrapper Notes}]This function is attached as method {\bfseries eval\+\_\+hp\+\_\+loop()} to objects of type {\itshape fold\+\_\+compound} \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__loops_gac9f49b31d3ec1d9040798b05506c71da}\label{group__loops_gac9f49b31d3ec1d9040798b05506c71da}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!vrna\+\_\+exp\+\_\+\+E\+\_\+hp\+\_\+loop@{vrna\+\_\+exp\+\_\+\+E\+\_\+hp\+\_\+loop}}
+\index{vrna\+\_\+exp\+\_\+\+E\+\_\+hp\+\_\+loop@{vrna\+\_\+exp\+\_\+\+E\+\_\+hp\+\_\+loop}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{vrna\+\_\+exp\+\_\+\+E\+\_\+hp\+\_\+loop()}{vrna\_exp\_E\_hp\_loop()}}
+{\footnotesize\ttfamily \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} vrna\+\_\+exp\+\_\+\+E\+\_\+hp\+\_\+loop (\begin{DoxyParamCaption}\item[{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{hairpin__loops_8h}{Vienna\+R\+N\+A/hairpin\+\_\+loops.\+h}$>$}
+
+
+
+High-\/\+Level function for hairpin loop energy evaluation (partition function variant) 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__loops_ga999ba163a8148d72fd5f22819a681df7}{vrna\+\_\+\+E\+\_\+hp\+\_\+loop()} for it\textquotesingle{}s free energy counterpart
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+This function is polymorphic! The provided \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} may be of type \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447da7e264dd3cf2dc9b6448caabcb7763cd6}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+N\+G\+LE} or \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447dab821ce46ea3cf665be97df22a76f5023}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+P\+A\+R\+A\+T\+I\+VE} 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__loops_ga6c4ba14d24f716d0ca9021771357e903}\label{group__loops_ga6c4ba14d24f716d0ca9021771357e903}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!vrna\+\_\+\+B\+T\+\_\+hp\+\_\+loop@{vrna\+\_\+\+B\+T\+\_\+hp\+\_\+loop}}
+\index{vrna\+\_\+\+B\+T\+\_\+hp\+\_\+loop@{vrna\+\_\+\+B\+T\+\_\+hp\+\_\+loop}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{vrna\+\_\+\+B\+T\+\_\+hp\+\_\+loop()}{vrna\_BT\_hp\_loop()}}
+{\footnotesize\ttfamily int vrna\+\_\+\+B\+T\+\_\+hp\+\_\+loop (\begin{DoxyParamCaption}\item[{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc,  }\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{en,  }\item[{\hyperlink{group__data__structures_gaa651bda42e7692f08cb603cd6834b0ee}{vrna\+\_\+bp\+\_\+stack\+\_\+t} $\ast$}]{bp\+\_\+stack,  }\item[{int $\ast$}]{stack\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{hairpin__loops_8h}{Vienna\+R\+N\+A/hairpin\+\_\+loops.\+h}$>$}
+
+
+
+Backtrack a hairpin loop closed by $ (i,j) $. 
+
+\begin{DoxyNote}{Note}
+This function is polymorphic! The provided \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} may be of type \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447da7e264dd3cf2dc9b6448caabcb7763cd6}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+N\+G\+LE} or \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447dab821ce46ea3cf665be97df22a76f5023}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+P\+A\+R\+A\+T\+I\+VE} 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__loops_gaafbc187b7f78e8e82afb77dd6f3b8fc5}\label{group__loops_gaafbc187b7f78e8e82afb77dd6f3b8fc5}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!E\+\_\+\+Int\+Loop@{E\+\_\+\+Int\+Loop}}
+\index{E\+\_\+\+Int\+Loop@{E\+\_\+\+Int\+Loop}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{E\+\_\+\+Int\+Loop()}{E\_IntLoop()}}
+{\footnotesize\ttfamily P\+R\+I\+V\+A\+TE int E\+\_\+\+Int\+Loop (\begin{DoxyParamCaption}\item[{int}]{n1,  }\item[{int}]{n2,  }\item[{int}]{type,  }\item[{int}]{type\+\_\+2,  }\item[{int}]{si1,  }\item[{int}]{sj1,  }\item[{int}]{sp1,  }\item[{int}]{sq1,  }\item[{\hyperlink{group__energy__parameters_ga8a69ca7d787e4fd6079914f5343a1f35}{vrna\+\_\+param\+\_\+t} $\ast$}]{P }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{interior__loops_8h}{Vienna\+R\+N\+A/interior\+\_\+loops.\+h}$>$}
+
+\subsubsection*{Compute the Energy of an interior-\/loop}
+
+This function computes the free energy $\Delta G$ of an interior-\/loop with the following structure\+: ~\newline
+ 
+\begin{DoxyPre}
+      3'  5'
+      |   |
+      U - V
+  a\_n       b\_1
+   .        .
+   .        .
+   .        .
+  a\_1       b\_m
+      X - Y
+      |   |
+      5'  3'
+\end{DoxyPre}
+ This general structure depicts an interior-\/loop that is closed by the base pair (X,Y). The enclosed base pair is (V,U) which leaves the unpaired bases a\+\_\+1-\/a\+\_\+n and b\+\_\+1-\/b\+\_\+n that constitute the loop. In this example, the length of the interior-\/loop is $(n+m)$ where n or m may be 0 resulting in a bulge-\/loop or base pair stack. The mismatching nucleotides for the closing pair (X,Y) are\+:~\newline
+ 5\textquotesingle{}-\/mismatch\+: a\+\_\+1~\newline
+ 3\textquotesingle{}-\/mismatch\+: b\+\_\+m~\newline
+ and for the enclosed base pair (V,U)\+:~\newline
+ 5\textquotesingle{}-\/mismatch\+: b\+\_\+1~\newline
+ 3\textquotesingle{}-\/mismatch\+: a\+\_\+n~\newline
+ \begin{DoxyNote}{Note}
+Base pairs are always denoted in 5\textquotesingle{}-\/$>$3\textquotesingle{} direction. Thus the enclosed base pair must be \textquotesingle{}turned arround\textquotesingle{} when evaluating the free energy of the interior-\/loop 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__energy__parameters_ga541f2cf7436e9bc939b0a49b24baf987}{scale\+\_\+parameters()} 
+
+\hyperlink{group__energy__parameters_ga8a69ca7d787e4fd6079914f5343a1f35}{vrna\+\_\+param\+\_\+t} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+This function is threadsafe
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em n1} & The size of the \textquotesingle{}left\textquotesingle{}-\/loop (number of unpaired nucleotides) \\
+\hline
+{\em n2} & The size of the \textquotesingle{}right\textquotesingle{}-\/loop (number of unpaired nucleotides) \\
+\hline
+{\em type} & The pair type of the base pair closing the interior loop \\
+\hline
+{\em type\+\_\+2} & The pair type of the enclosed base pair \\
+\hline
+{\em si1} & The 5\textquotesingle{}-\/mismatching nucleotide of the closing pair \\
+\hline
+{\em sj1} & The 3\textquotesingle{}-\/mismatching nucleotide of the closing pair \\
+\hline
+{\em sp1} & The 3\textquotesingle{}-\/mismatching nucleotide of the enclosed pair \\
+\hline
+{\em sq1} & The 5\textquotesingle{}-\/mismatching nucleotide of the enclosed pair \\
+\hline
+{\em P} & The datastructure containing scaled energy parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Free energy of the Interior-\/loop in dcal/mol 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__loops_ga95de54d8a2a17645a95e0f34e189d9c9}\label{group__loops_ga95de54d8a2a17645a95e0f34e189d9c9}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!exp\+\_\+\+E\+\_\+\+Int\+Loop@{exp\+\_\+\+E\+\_\+\+Int\+Loop}}
+\index{exp\+\_\+\+E\+\_\+\+Int\+Loop@{exp\+\_\+\+E\+\_\+\+Int\+Loop}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{exp\+\_\+\+E\+\_\+\+Int\+Loop()}{exp\_E\_IntLoop()}}
+{\footnotesize\ttfamily P\+R\+I\+V\+A\+TE \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} exp\+\_\+\+E\+\_\+\+Int\+Loop (\begin{DoxyParamCaption}\item[{int}]{u1,  }\item[{int}]{u2,  }\item[{int}]{type,  }\item[{int}]{type2,  }\item[{short}]{si1,  }\item[{short}]{sj1,  }\item[{short}]{sp1,  }\item[{short}]{sq1,  }\item[{\hyperlink{group__energy__parameters_ga01d8b92fe734df8d79a6169482c7d8d8}{vrna\+\_\+exp\+\_\+param\+\_\+t} $\ast$}]{P }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{interior__loops_8h}{Vienna\+R\+N\+A/interior\+\_\+loops.\+h}$>$}
+
+\subsubsection*{Compute Boltzmann weight $e^{-\Delta G/kT} $ of interior loop}
+
+multiply by scale\mbox{[}u1+u2+2\mbox{]} for scaling \begin{DoxySeeAlso}{See also}
+\hyperlink{group__energy__parameters_gabf3b9271c41dd3fac02d56e0b02b3344}{get\+\_\+scaled\+\_\+pf\+\_\+parameters()} 
+
+\hyperlink{group__energy__parameters_ga01d8b92fe734df8d79a6169482c7d8d8}{vrna\+\_\+exp\+\_\+param\+\_\+t} 
+
+\hyperlink{group__loops_gaafbc187b7f78e8e82afb77dd6f3b8fc5}{E\+\_\+\+Int\+Loop()} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+This function is threadsafe
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em u1} & The size of the \textquotesingle{}left\textquotesingle{}-\/loop (number of unpaired nucleotides) \\
+\hline
+{\em u2} & The size of the \textquotesingle{}right\textquotesingle{}-\/loop (number of unpaired nucleotides) \\
+\hline
+{\em type} & The pair type of the base pair closing the interior loop \\
+\hline
+{\em type2} & The pair type of the enclosed base pair \\
+\hline
+{\em si1} & The 5\textquotesingle{}-\/mismatching nucleotide of the closing pair \\
+\hline
+{\em sj1} & The 3\textquotesingle{}-\/mismatching nucleotide of the closing pair \\
+\hline
+{\em sp1} & The 3\textquotesingle{}-\/mismatching nucleotide of the enclosed pair \\
+\hline
+{\em sq1} & The 5\textquotesingle{}-\/mismatching nucleotide of the enclosed pair \\
+\hline
+{\em P} & The datastructure containing scaled Boltzmann weights of the energy parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Boltzmann weight of the Interior-\/loop 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__loops_ga018f1314dbbae42fdd27c94670b61721}\label{group__loops_ga018f1314dbbae42fdd27c94670b61721}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!vrna\+\_\+eval\+\_\+int\+\_\+loop@{vrna\+\_\+eval\+\_\+int\+\_\+loop}}
+\index{vrna\+\_\+eval\+\_\+int\+\_\+loop@{vrna\+\_\+eval\+\_\+int\+\_\+loop}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{vrna\+\_\+eval\+\_\+int\+\_\+loop()}{vrna\_eval\_int\_loop()}}
+{\footnotesize\ttfamily int vrna\+\_\+eval\+\_\+int\+\_\+loop (\begin{DoxyParamCaption}\item[{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc,  }\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{int}]{l }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{interior__loops_8h}{Vienna\+R\+N\+A/interior\+\_\+loops.\+h}$>$}
+
+
+
+Evaluate the free energy contribution of an interior loop with delimiting base pairs $(i,j)$ and $(k,l)$. 
+
+\begin{DoxyNote}{Note}
+This function is polymorphic, i.\+e. it accepts \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} of type \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447da7e264dd3cf2dc9b6448caabcb7763cd6}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+N\+G\+LE} as well as \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447dab821ce46ea3cf665be97df22a76f5023}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+P\+A\+R\+A\+T\+I\+VE}
+\end{DoxyNote}
+\begin{DoxyRefDesc}{S\+W\+I\+G Wrapper Notes}
+\item[\hyperlink{wrappers__wrappers000034}{S\+W\+I\+G Wrapper Notes}]This function is attached as method {\bfseries eval\+\_\+int\+\_\+loop()} to objects of type {\itshape fold\+\_\+compound} \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__loops_ga73f048d35475e1d8f50b7d4ac6a2aeb6}\label{group__loops_ga73f048d35475e1d8f50b7d4ac6a2aeb6}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!vrna\+\_\+\+E\+\_\+mb\+\_\+loop\+\_\+stack@{vrna\+\_\+\+E\+\_\+mb\+\_\+loop\+\_\+stack}}
+\index{vrna\+\_\+\+E\+\_\+mb\+\_\+loop\+\_\+stack@{vrna\+\_\+\+E\+\_\+mb\+\_\+loop\+\_\+stack}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{vrna\+\_\+\+E\+\_\+mb\+\_\+loop\+\_\+stack()}{vrna\_E\_mb\_loop\_stack()}}
+{\footnotesize\ttfamily int vrna\+\_\+\+E\+\_\+mb\+\_\+loop\+\_\+stack (\begin{DoxyParamCaption}\item[{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{multibranch__loops_8h}{Vienna\+R\+N\+A/multibranch\+\_\+loops.\+h}$>$}
+
+
+
+Evaluate energy of a multi branch helices stacking onto closing pair (i,j) 
+
+Computes total free energy for coaxial stacking of (i.\+j) with (i+1.k) or (k+1.j-\/1) \mbox{\Hypertarget{group__loops_ga9cb520ddfd8b3a48089a7910b045d06b}\label{group__loops_ga9cb520ddfd8b3a48089a7910b045d06b}} 
+\index{Process and evaluate individual loops@{Process and evaluate individual loops}!vrna\+\_\+\+B\+T\+\_\+mb\+\_\+loop@{vrna\+\_\+\+B\+T\+\_\+mb\+\_\+loop}}
+\index{vrna\+\_\+\+B\+T\+\_\+mb\+\_\+loop@{vrna\+\_\+\+B\+T\+\_\+mb\+\_\+loop}!Process and evaluate individual loops@{Process and evaluate individual loops}}
+\subsubsection{\texorpdfstring{vrna\+\_\+\+B\+T\+\_\+mb\+\_\+loop()}{vrna\_BT\_mb\_loop()}}
+{\footnotesize\ttfamily int vrna\+\_\+\+B\+T\+\_\+mb\+\_\+loop (\begin{DoxyParamCaption}\item[{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc,  }\item[{int $\ast$}]{i,  }\item[{int $\ast$}]{j,  }\item[{int $\ast$}]{k,  }\item[{int}]{en,  }\item[{int $\ast$}]{component1,  }\item[{int $\ast$}]{component2 }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{multibranch__loops_8h}{Vienna\+R\+N\+A/multibranch\+\_\+loops.\+h}$>$}
+
+
+
+Backtrack the decomposition of a multi branch loop closed by $ (i,j) $. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vc} & The \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} filled with all relevant data for backtracking \\
+\hline
+{\em i} & 5\textquotesingle{} position of base pair closing the loop (will be set to 5\textquotesingle{} position of leftmost decomposed block upon successful backtracking) \\
+\hline
+{\em j} & 3\textquotesingle{} position of base pair closing the loop (will be set to 3\textquotesingle{} position of rightmost decomposed block upon successful backtracking) \\
+\hline
+{\em k} & Split position that delimits leftmost from rightmost block, \mbox{[}i,k\mbox{]} and \mbox{[}k+1, j\mbox{]}, respectively. (Will be set upon successful backtracking) \\
+\hline
+{\em en} & The energy contribution of the substructure enclosed by $ (i,j) $ \\
+\hline
+{\em component1} & Type of leftmost block (1 = ML, 2 = C) \\
+\hline
+{\em component2} & Type of rightmost block (1 = ML, 2 = C) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, if backtracking succeeded, 0 otherwise. 
+\end{DoxyReturn}

@@ -1,0 +1,6 @@
+<map id="Comparative structure prediction" name="Comparative structure prediction">
+<area shape="rect" id="node2" href="$group__consensus__pf__fold.html" title="Partition Function\l and Base Pair Probabilities\l for Sequence Alignment(s)" alt="" coords="208,5,391,61"/>
+<area shape="rect" id="node3" href="$group__local__consensus__fold.html" title="Local MFE Consensus\l Structure Prediction\l for Sequence Alignments" alt="" coords="213,85,385,141"/>
+<area shape="rect" id="node4" href="$group__consensus__stochbt.html" title="Stochastic Backtracking\l of Consensus Structures\l from Sequence Alignment(s)" alt="" coords="204,165,395,221"/>
+<area shape="rect" id="node5" href="$group__consensus__mfe__fold.html" title="MFE Consensus Structures\l for Sequence Alignment(s)" alt="" coords="207,246,391,287"/>
+</map>

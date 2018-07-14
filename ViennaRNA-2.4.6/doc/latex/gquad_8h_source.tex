@@ -1,0 +1,1212 @@
+\hypertarget{gquad_8h_source}{}\section{gquad.\+h}
+\label{gquad_8h_source}\index{Vienna\+R\+N\+A/gquad.\+h@{Vienna\+R\+N\+A/gquad.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_GQUAD\_H}
+00002 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_GQUAD\_H}
+00003 
+00004 \textcolor{preprocessor}{#include <\hyperlink{data__structures_8h}{ViennaRNA/data\_structures.h}>}
+00005 \textcolor{preprocessor}{#include <\hyperlink{params_8h}{ViennaRNA/params.h}>}
+00006 
+00007 \textcolor{preprocessor}{#ifndef INLINE}
+00008 \textcolor{preprocessor}{#ifdef \_\_GNUC\_\_}
+00009 \textcolor{preprocessor}{# define INLINE inline}
+00010 \textcolor{preprocessor}{#else}
+00011 \textcolor{preprocessor}{# define INLINE}
+00012 \textcolor{preprocessor}{#endif}
+00013 \textcolor{preprocessor}{#endif}
+00014 
+00029 \textcolor{keywordtype}{int}         E\_gquad(\textcolor{keywordtype}{int} L,
+00030                     \textcolor{keywordtype}{int} l[3],
+00031                     \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} * P);
+00032 
+00033 \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}  exp\_E\_gquad(\textcolor{keywordtype}{int} L,
+00034                         \textcolor{keywordtype}{int} l[3],
+00035                         \hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t} * pf);
+00036 
+00037 \textcolor{keywordtype}{int}         E\_gquad\_ali(\textcolor{keywordtype}{int} i,
+00038                         \textcolor{keywordtype}{int} L,
+00039                         \textcolor{keywordtype}{int} l[3],
+00040                         \textcolor{keyword}{const} \textcolor{keywordtype}{short} **S,
+00041                         \textcolor{keywordtype}{int} n\_seq,
+00042                         \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} * P);
+00043 
+00044 
+00045 \textcolor{keywordtype}{void} E\_gquad\_ali\_en(\textcolor{keywordtype}{int} i,
+00046                     \textcolor{keywordtype}{int} L,
+00047                     \textcolor{keywordtype}{int} l[3],
+00048                     \textcolor{keyword}{const} \textcolor{keywordtype}{short} **S,
+00049                     \textcolor{keywordtype}{int} n\_seq,
+00050                     \textcolor{keywordtype}{int} en[2],
+00051                     \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} * P);
+00052 
+00069 \textcolor{keywordtype}{int} *\hyperlink{group__gquads_ga392e45c9615aa123737671603fa4203c}{get\_gquad\_matrix}(\textcolor{keywordtype}{short}         *S,
+00070                       \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}  *P);
+00071 
+00072 
+00073 \textcolor{keywordtype}{int} *get\_gquad\_ali\_matrix(\textcolor{keywordtype}{short}         *S\_cons,
+00074                           \textcolor{keywordtype}{short}         **S,
+00075                           \textcolor{keywordtype}{int}           n\_seq,
+00076                           \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}  *P);
+00077 
+00078 
+00079 \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL} *get\_gquad\_pf\_matrix(\textcolor{keywordtype}{short}             *S,
+00080                                 \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}        *scale,
+00081                                 \hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t}  *pf);
+00082 
+00083 
+00084 \textcolor{keywordtype}{int} **get\_gquad\_L\_matrix(\textcolor{keywordtype}{short}        *S,
+00085                          \textcolor{keywordtype}{int}          start,
+00086                          \textcolor{keywordtype}{int}          maxdist,
+00087                          \textcolor{keywordtype}{int}          n,
+00088                          \textcolor{keywordtype}{int}          **g,
+00089                          \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} *P);
+00090 
+00091 
+00092 \textcolor{keywordtype}{void}        vrna\_gquad\_mx\_local\_update(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00093                                        \textcolor{keywordtype}{int}                  start);
+00094 
+00095 
+00096 \textcolor{keywordtype}{void} get\_gquad\_pattern\_mfe(\textcolor{keywordtype}{short} *S,
+00097                            \textcolor{keywordtype}{int} i,
+00098                            \textcolor{keywordtype}{int} j,
+00099                            \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} * P,
+00100                            \textcolor{keywordtype}{int} *L,
+00101                            \textcolor{keywordtype}{int} l[3]);
+00102 
+00103 \textcolor{keywordtype}{void}
+00104 get\_gquad\_pattern\_exhaustive(\textcolor{keywordtype}{short}        *S,
+00105                              \textcolor{keywordtype}{int}          i,
+00106                              \textcolor{keywordtype}{int}          j,
+00107                              \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} *P,
+00108                              \textcolor{keywordtype}{int}          *L,
+00109                              \textcolor{keywordtype}{int}          *l,
+00110                              \textcolor{keywordtype}{int}          threshold);
+00111 
+00112 
+00113 \textcolor{keywordtype}{void} get\_gquad\_pattern\_pf(\textcolor{keywordtype}{short} *S,
+00114                           \textcolor{keywordtype}{int} i,
+00115                           \textcolor{keywordtype}{int} j,
+00116                           \hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t} * pf,
+00117                           \textcolor{keywordtype}{int} *L,
+00118                           \textcolor{keywordtype}{int} l[3]);
+00119 
+00120 \hyperlink{group__struct__utils_structvrna__elem__prob__s}{plist} *get\_plist\_gquad\_from\_pr(\textcolor{keywordtype}{short}            *S,
+00121                                \textcolor{keywordtype}{int}              gi,
+00122                                \textcolor{keywordtype}{int}              gj,
+00123                                \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}       *G,
+00124                                \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}       *probs,
+00125                                \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}       *scale,
+00126                                \hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t} *pf);
+00127 
+00128 
+00129 \hyperlink{group__struct__utils_structvrna__elem__prob__s}{plist} *get\_plist\_gquad\_from\_pr\_max(\textcolor{keywordtype}{short} *S,
+00130                                    \textcolor{keywordtype}{int} gi,
+00131                                    \textcolor{keywordtype}{int} gj,
+00132                                    \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL} * G,
+00133                                    \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL} * probs,
+00134                                    \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL} * scale,
+00135                                    \textcolor{keywordtype}{int} *L,
+00136                                    \textcolor{keywordtype}{int} l[3],
+00137                                    \hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t} * pf);
+00138 
+00139 \hyperlink{group__struct__utils_structvrna__elem__prob__s}{plist} *get\_plist\_gquad\_from\_db(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,
+00140                                \textcolor{keywordtype}{float}      \hyperlink{fold__vars_8h_ac98ec419070aee6831b44e5c700f090f}{pr});
+00141 
+00142 
+00143 \textcolor{keywordtype}{int}         get\_gquad\_count(\textcolor{keywordtype}{short} *S,
+00144                             \textcolor{keywordtype}{int}   i,
+00145                             \textcolor{keywordtype}{int}   j);
+00146 
+00147 
+00148 \textcolor{keywordtype}{int}         get\_gquad\_layer\_count(\textcolor{keywordtype}{short} *S,
+00149                                   \textcolor{keywordtype}{int}   i,
+00150                                   \textcolor{keywordtype}{int}   j);
+00151 
+00152 
+00153 \textcolor{keywordtype}{void} get\_gquad\_pattern\_mfe\_ali(\textcolor{keywordtype}{short} **S,
+00154                                \textcolor{keywordtype}{short} *S\_cons,
+00155                                \textcolor{keywordtype}{int} n\_seq,
+00156                                \textcolor{keywordtype}{int} i,
+00157                                \textcolor{keywordtype}{int} j,
+00158                                \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} * P,
+00159                                \textcolor{keywordtype}{int} *L,
+00160                                \textcolor{keywordtype}{int} l[3]);
+00161 
+00172 \textcolor{keywordtype}{int} \hyperlink{group__gquads_gae41763215b9c64d2a7b67f0df8a28078}{parse\_gquad}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *struc, \textcolor{keywordtype}{int} *L, \textcolor{keywordtype}{int} l[3]);
+00173 
+00174 INLINE PRIVATE \textcolor{keywordtype}{int} \hyperlink{group__gquads_ga220c41e8dbcee940ac975b8ce88e55c5}{backtrack\_GQuad\_IntLoop}(\textcolor{keywordtype}{int}          c,
+00175                                            \textcolor{keywordtype}{int}          i,
+00176                                            \textcolor{keywordtype}{int}          j,
+00177                                            \textcolor{keywordtype}{int}          type,
+00178                                            \textcolor{keywordtype}{short}        *S,
+00179                                            \textcolor{keywordtype}{int}          *ggg,
+00180                                            \textcolor{keywordtype}{int}          *index,
+00181                                            \textcolor{keywordtype}{int}          *p,
+00182                                            \textcolor{keywordtype}{int}          *q,
+00183                                            \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} *P);
+00184 
+00185 
+00186 INLINE PRIVATE \textcolor{keywordtype}{int} backtrack\_GQuad\_IntLoop\_comparative(\textcolor{keywordtype}{int}          c,
+00187                                                        \textcolor{keywordtype}{int}          i,
+00188                                                        \textcolor{keywordtype}{int}          j,
+00189                                                        \textcolor{keywordtype}{int}          *type,
+00190                                                        \textcolor{keywordtype}{short}        *S\_cons,
+00191                                                        \textcolor{keywordtype}{short}        **S5,
+00192                                                        \textcolor{keywordtype}{short}        **S3,
+00193                                                        \textcolor{keywordtype}{int}          *ggg,
+00194                                                        \textcolor{keywordtype}{int}          *index,
+00195                                                        \textcolor{keywordtype}{int}          *p,
+00196                                                        \textcolor{keywordtype}{int}          *q,
+00197                                                        \textcolor{keywordtype}{int}          n\_seq,
+00198                                                        \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} *P);
+00199 
+00200 
+00201 INLINE PRIVATE \textcolor{keywordtype}{int} \hyperlink{group__gquads_ga7b371308fa5a45c7ac353ef6ed1014de}{backtrack\_GQuad\_IntLoop\_L}(\textcolor{keywordtype}{int}          c,
+00202                                              \textcolor{keywordtype}{int}          i,
+00203                                              \textcolor{keywordtype}{int}          j,
+00204                                              \textcolor{keywordtype}{int}          type,
+00205                                              \textcolor{keywordtype}{short}        *S,
+00206                                              \textcolor{keywordtype}{int}          **ggg,
+00207                                              \textcolor{keywordtype}{int}          maxdist,
+00208                                              \textcolor{keywordtype}{int}          *p,
+00209                                              \textcolor{keywordtype}{int}          *q,
+00210                                              \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} *P);
+00211 
+00212 
+00213 PRIVATE INLINE \textcolor{keywordtype}{int}
+00214 vrna\_BT\_gquad\_int(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00215                   \textcolor{keywordtype}{int}                   i,
+00216                   \textcolor{keywordtype}{int}                   j,
+00217                   \textcolor{keywordtype}{int}                   en,
+00218                   \hyperlink{group__data__structures_structvrna__bp__stack__s}{vrna\_bp\_stack\_t}       *bp\_stack,
+00219                   \textcolor{keywordtype}{int}                   *stack\_count);
+00220 
+00221 
+00222 PRIVATE INLINE \textcolor{keywordtype}{int}
+00223 vrna\_BT\_gquad\_mfe(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00224                   \textcolor{keywordtype}{int}                   i,
+00225                   \textcolor{keywordtype}{int}                   j,
+00226                   \hyperlink{group__data__structures_structvrna__bp__stack__s}{vrna\_bp\_stack\_t}       *bp\_stack,
+00227                   \textcolor{keywordtype}{int}                   *stack\_count)
+00228 \{
+00229   \textcolor{comment}{/*}
+00230 \textcolor{comment}{   * here we do some fancy stuff to backtrace the stacksize and linker lengths}
+00231 \textcolor{comment}{   * of the g-quadruplex that should reside within position i,j}
+00232 \textcolor{comment}{   */}
+00233   \textcolor{keywordtype}{short}         *S;
+00234   \textcolor{keywordtype}{int}           l[3], L, a, n\_seq;
+00235   \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}  *P;
+00236 
+00237   \textcolor{keywordflow}{if} (vc) \{
+00238     P = vc->\hyperlink{group__fold__compound_a19b8720c2c5321c1b97c830bd17566ea}{params};
+00239     \textcolor{keywordflow}{switch} (vc->\hyperlink{group__fold__compound_ac5eab693deac9a1a40c2a95ac294707c}{type}) \{
+00240       \textcolor{keywordflow}{case} \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447da7e264dd3cf2dc9b6448caabcb7763cd6}{VRNA\_FC\_TYPE\_SINGLE}:
+00241         S = vc->sequence\_encoding2;
+00242         L = -1;
+00243 
+00244         get\_gquad\_pattern\_mfe(S, i, j, P, &L, l);
+00245         \textcolor{keywordflow}{break};
+00246 
+00247       \textcolor{keywordflow}{case} \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447dab821ce46ea3cf665be97df22a76f5023}{VRNA\_FC\_TYPE\_COMPARATIVE}:
+00248         n\_seq = vc->\hyperlink{group__fold__compound_a614702ab74478e786272be44f8cebfe3}{n\_seq};
+00249         L     = -1;
+00250         get\_gquad\_pattern\_mfe\_ali(vc->\hyperlink{group__fold__compound_aebb37297f92c7bd22aac6343f8f61d61}{S}, vc->\hyperlink{group__fold__compound_aa3fab7ae38ebfed2028375221d295686}{S\_cons}, n\_seq, i, j, P, &L, l);
+00251         \textcolor{keywordflow}{break};
+00252     \}
+00253 
+00254     \textcolor{keywordflow}{if} (L != -1) \{
+00255       \textcolor{comment}{/* fill the G's of the quadruplex into base\_pair2 */}
+00256       \textcolor{keywordflow}{for} (a = 0; a < L; a++) \{
+00257         bp\_stack[++(*stack\_count)].i  = i + a;
+00258         bp\_stack[(*stack\_count)].j    = i + a;
+00259         bp\_stack[++(*stack\_count)].i  = i + L + l[0] + a;
+00260         bp\_stack[(*stack\_count)].j    = i + L + l[0] + a;
+00261         bp\_stack[++(*stack\_count)].i  = i + L + l[0] + L + l[1] + a;
+00262         bp\_stack[(*stack\_count)].j    = i + L + l[0] + L + l[1] + a;
+00263         bp\_stack[++(*stack\_count)].i  = i + L + l[0] + L + l[1] + L + l[2] + a;
+00264         bp\_stack[(*stack\_count)].j    = i + L + l[0] + L + l[1] + L + l[2] + a;
+00265       \}
+00266       \textcolor{keywordflow}{return} 1;
+00267     \} \textcolor{keywordflow}{else} \{
+00268       \textcolor{keywordflow}{return} 0;
+00269     \}
+00270   \}
+00271 
+00272   \textcolor{keywordflow}{return} 0;
+00273 \}
+00274 
+00275 
+00276 PRIVATE INLINE \textcolor{keywordtype}{int}
+00277 vrna\_BT\_gquad\_int(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00278                   \textcolor{keywordtype}{int}                   i,
+00279                   \textcolor{keywordtype}{int}                   j,
+00280                   \textcolor{keywordtype}{int}                   en,
+00281                   \hyperlink{group__data__structures_structvrna__bp__stack__s}{vrna\_bp\_stack\_t}       *bp\_stack,
+00282                   \textcolor{keywordtype}{int}                   *stack\_count)
+00283 \{
+00284   \textcolor{keywordtype}{int}           energy, \hyperlink{group__model__details_ga72b511ed1201f7e23ec437e468790d74}{dangles}, *idx, ij, p, q, maxl, minl, c0, l1, *ggg;
+00285   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} type;
+00286   \textcolor{keywordtype}{char}          *ptype;
+00287   \textcolor{keywordtype}{short}         si, sj, *S, *S1;
+00288 
+00289   \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}  *P;
+00290   \hyperlink{group__model__details_structvrna__md__s}{vrna\_md\_t}     *md;
+00291 
+00292   idx     = vc->\hyperlink{group__fold__compound_a5037235dee512efd85ca543780bbca1a}{jindx};
+00293   ij      = idx[j] + i;
+00294   P       = vc->\hyperlink{group__fold__compound_a19b8720c2c5321c1b97c830bd17566ea}{params};
+00295   md      = &(P->\hyperlink{group__energy__parameters_a7b84353eb9075c595bad4ceb871bcae7}{model\_details});
+00296   ptype   = vc->\hyperlink{group__fold__compound_a3fbea559f1d1976b2d67c215cdeee0b2}{ptype};
+00297   type    = (\textcolor{keywordtype}{unsigned} char)ptype[ij];
+00298   S1      = vc->\hyperlink{group__fold__compound_a9934bdb695d35a3544285cbcc19f9763}{sequence\_encoding};
+00299   S       = vc->sequence\_encoding2;
+00300   dangles = md->\hyperlink{group__model__details_adcda4ff2ea77748ae0e8700288282efc}{dangles};
+00301   si      = S1[i + 1];
+00302   sj      = S1[j - 1];
+00303   ggg     = vc->\hyperlink{group__fold__compound_aca8be7bdc65bafe2172c6ee777f18568}{matrices}->\hyperlink{group__dp__matrices_a0b7b86a5c75c96eabb89eb53a13e7164}{ggg};
+00304   energy  = 0;
+00305 
+00306   \textcolor{keywordflow}{if} (dangles == 2)
+00307     energy += P->mismatchI[type][si][sj];
+00308 
+00309   \textcolor{keywordflow}{if} (type > 2)
+00310     energy += P->TerminalAU;
+00311 
+00312   p = i + 1;
+00313   \textcolor{keywordflow}{if} (S1[p] == 3) \{
+00314     \textcolor{keywordflow}{if} (p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE) \{
+00315       minl  = j - i + p - \hyperlink{energy__const_8h_ad1bd6eabac419670ddd3c9ed82145988}{MAXLOOP} - 2;
+00316       c0    = p + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+00317       minl  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minl);
+00318       c0    = j - 3;
+00319       maxl  = p + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+00320       maxl  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxl);
+00321       \textcolor{keywordflow}{for} (q = minl; q < maxl; q++) \{
+00322         \textcolor{keywordflow}{if} (S[q] != 3)
+00323           \textcolor{keywordflow}{continue};
+00324 
+00325         \textcolor{keywordflow}{if} (en == energy + ggg[idx[q] + p] + P->internal\_loop[j - q - 1])
+00326           \textcolor{keywordflow}{return} vrna\_BT\_gquad\_mfe(vc, p, q, bp\_stack, stack\_count);
+00327       \}
+00328     \}
+00329   \}
+00330 
+00331   \textcolor{keywordflow}{for} (p = i + 2;
+00332        p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+00333        p++) \{
+00334     l1 = p - i - 1;
+00335     \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+00336       \textcolor{keywordflow}{break};
+00337 
+00338     \textcolor{keywordflow}{if} (S1[p] != 3)
+00339       \textcolor{keywordflow}{continue};
+00340 
+00341     minl  = j - i + p - MAXLOOP - 2;
+00342     c0    = p + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+00343     minl  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minl);
+00344     c0    = j - 1;
+00345     maxl  = p + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+00346     maxl  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxl);
+00347     \textcolor{keywordflow}{for} (q = minl; q < maxl; q++) \{
+00348       \textcolor{keywordflow}{if} (S1[q] != 3)
+00349         \textcolor{keywordflow}{continue};
+00350 
+00351       \textcolor{keywordflow}{if} (en == energy + ggg[idx[q] + p] + P->internal\_loop[l1 + j - q - 1])
+00352         \textcolor{keywordflow}{return} vrna\_BT\_gquad\_mfe(vc, p, q, bp\_stack, stack\_count);
+00353     \}
+00354   \}
+00355 
+00356   q = j - 1;
+00357   \textcolor{keywordflow}{if} (S1[q] == 3)
+00358     \textcolor{keywordflow}{for} (p = i + 4;
+00359          p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+00360          p++) \{
+00361       l1 = p - i - 1;
+00362       \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+00363         \textcolor{keywordflow}{break};
+00364 
+00365       \textcolor{keywordflow}{if} (S1[p] != 3)
+00366         \textcolor{keywordflow}{continue};
+00367 
+00368       \textcolor{keywordflow}{if} (en == energy + ggg[idx[q] + p] + P->internal\_loop[l1])
+00369         \textcolor{keywordflow}{return} vrna\_BT\_gquad\_mfe(vc, p, q, bp\_stack, stack\_count);
+00370     \}
+00371 
+00372   \textcolor{keywordflow}{return} 0;
+00373 \}
+00374 
+00375 
+00393 INLINE PRIVATE \textcolor{keywordtype}{int}
+\Hypertarget{gquad_8h_source_l00394}\hyperlink{group__gquads_ga220c41e8dbcee940ac975b8ce88e55c5}{00394} \hyperlink{group__gquads_ga220c41e8dbcee940ac975b8ce88e55c5}{backtrack\_GQuad\_IntLoop}(\textcolor{keywordtype}{int}           c,
+00395                         \textcolor{keywordtype}{int}           i,
+00396                         \textcolor{keywordtype}{int}           j,
+00397                         \textcolor{keywordtype}{int}           type,
+00398                         \textcolor{keywordtype}{short}         *S,
+00399                         \textcolor{keywordtype}{int}           *ggg,
+00400                         \textcolor{keywordtype}{int}           *index,
+00401                         \textcolor{keywordtype}{int}           *p,
+00402                         \textcolor{keywordtype}{int}           *q,
+00403                         \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}  *P)
+00404 \{
+00405   \textcolor{keywordtype}{int}   energy, \hyperlink{group__model__details_ga72b511ed1201f7e23ec437e468790d74}{dangles}, k, l, maxl, minl, c0, l1;
+00406   \textcolor{keywordtype}{short} si, sj;
+00407 
+00408   dangles = P->\hyperlink{group__energy__parameters_a7b84353eb9075c595bad4ceb871bcae7}{model\_details}.\hyperlink{group__model__details_adcda4ff2ea77748ae0e8700288282efc}{dangles};
+00409   si      = S[i + 1];
+00410   sj      = S[j - 1];
+00411   energy  = 0;
+00412 
+00413   \textcolor{keywordflow}{if} (dangles == 2)
+00414     energy += P->mismatchI[type][si][sj];
+00415 
+00416   \textcolor{keywordflow}{if} (type > 2)
+00417     energy += P->TerminalAU;
+00418 
+00419   k = i + 1;
+00420   \textcolor{keywordflow}{if} (S[k] == 3) \{
+00421     \textcolor{keywordflow}{if} (k < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE) \{
+00422       minl  = j - i + k - MAXLOOP - 2;
+00423       c0    = k + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+00424       minl  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minl);
+00425       c0    = j - 3;
+00426       maxl  = k + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+00427       maxl  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxl);
+00428       \textcolor{keywordflow}{for} (l = minl; l < maxl; l++) \{
+00429         \textcolor{keywordflow}{if} (S[l] != 3)
+00430           \textcolor{keywordflow}{continue};
+00431 
+00432         \textcolor{keywordflow}{if} (c == energy + ggg[index[l] + k] + P->internal\_loop[j - l - 1]) \{
+00433           *p  = k;
+00434           *q  = l;
+00435           \textcolor{keywordflow}{return} 1;
+00436         \}
+00437       \}
+00438     \}
+00439   \}
+00440 
+00441   \textcolor{keywordflow}{for} (k = i + 2;
+00442        k < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+00443        k++) \{
+00444     l1 = k - i - 1;
+00445     \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+00446       \textcolor{keywordflow}{break};
+00447 
+00448     \textcolor{keywordflow}{if} (S[k] != 3)
+00449       \textcolor{keywordflow}{continue};
+00450 
+00451     minl  = j - i + k - MAXLOOP - 2;
+00452     c0    = k + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+00453     minl  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minl);
+00454     c0    = j - 1;
+00455     maxl  = k + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+00456     maxl  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxl);
+00457     \textcolor{keywordflow}{for} (l = minl; l < maxl; l++) \{
+00458       \textcolor{keywordflow}{if} (S[l] != 3)
+00459         \textcolor{keywordflow}{continue};
+00460 
+00461       \textcolor{keywordflow}{if} (c == energy + ggg[index[l] + k] + P->internal\_loop[l1 + j - l - 1]) \{
+00462         *p  = k;
+00463         *q  = l;
+00464         \textcolor{keywordflow}{return} 1;
+00465       \}
+00466     \}
+00467   \}
+00468 
+00469   l = j - 1;
+00470   \textcolor{keywordflow}{if} (S[l] == 3)
+00471     \textcolor{keywordflow}{for} (k = i + 4;
+00472          k < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+00473          k++) \{
+00474       l1 = k - i - 1;
+00475       \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+00476         \textcolor{keywordflow}{break};
+00477 
+00478       \textcolor{keywordflow}{if} (S[k] != 3)
+00479         \textcolor{keywordflow}{continue};
+00480 
+00481       \textcolor{keywordflow}{if} (c == energy + ggg[index[l] + k] + P->internal\_loop[l1]) \{
+00482         *p  = k;
+00483         *q  = l;
+00484         \textcolor{keywordflow}{return} 1;
+00485       \}
+00486     \}
+00487 
+00488   \textcolor{keywordflow}{return} 0;
+00489 \}
+00490 
+00491 
+00492 INLINE PRIVATE \textcolor{keywordtype}{int}
+00493 backtrack\_GQuad\_IntLoop\_comparative(\textcolor{keywordtype}{int}           c,
+00494                                     \textcolor{keywordtype}{int}           i,
+00495                                     \textcolor{keywordtype}{int}           j,
+00496                                     \textcolor{keywordtype}{int}           *type,
+00497                                     \textcolor{keywordtype}{short}         *S\_cons,
+00498                                     \textcolor{keywordtype}{short}         **S5,
+00499                                     \textcolor{keywordtype}{short}         **S3,
+00500                                     \textcolor{keywordtype}{int}           *ggg,
+00501                                     \textcolor{keywordtype}{int}           *index,
+00502                                     \textcolor{keywordtype}{int}           *p,
+00503                                     \textcolor{keywordtype}{int}           *q,
+00504                                     \textcolor{keywordtype}{int}           n\_seq,
+00505                                     \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}  *P)
+00506 \{
+00507   \textcolor{keywordtype}{int} energy, \hyperlink{group__model__details_ga72b511ed1201f7e23ec437e468790d74}{dangles}, k, l, maxl, minl, c0, l1, ss, tt;
+00508 
+00509   dangles = P->\hyperlink{group__energy__parameters_a7b84353eb9075c595bad4ceb871bcae7}{model\_details}.\hyperlink{group__model__details_adcda4ff2ea77748ae0e8700288282efc}{dangles};
+00510   energy  = 0;
+00511 
+00512   \textcolor{keywordflow}{for} (ss = 0; ss < n\_seq; ss++) \{
+00513     tt = type[ss];
+00514     \textcolor{keywordflow}{if} (tt == 0)
+00515       tt = 7;
+00516 
+00517     \textcolor{keywordflow}{if} (dangles == 2)
+00518       energy += P->mismatchI[tt][S3[ss][i]][S5[ss][j]];
+00519 
+00520     \textcolor{keywordflow}{if} (tt > 2)
+00521       energy += P->TerminalAU;
+00522   \}
+00523 
+00524   k = i + 1;
+00525   \textcolor{keywordflow}{if} (S\_cons[k] == 3) \{
+00526     \textcolor{keywordflow}{if} (k < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE) \{
+00527       minl  = j - i + k - MAXLOOP - 2;
+00528       c0    = k + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+00529       minl  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minl);
+00530       c0    = j - 3;
+00531       maxl  = k + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+00532       maxl  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxl);
+00533       \textcolor{keywordflow}{for} (l = minl; l < maxl; l++) \{
+00534         \textcolor{keywordflow}{if} (S\_cons[l] != 3)
+00535           \textcolor{keywordflow}{continue};
+00536 
+00537         \textcolor{keywordflow}{if} (c == energy + ggg[index[l] + k] + n\_seq * P->internal\_loop[j - l - 1]) \{
+00538           *p  = k;
+00539           *q  = l;
+00540           \textcolor{keywordflow}{return} 1;
+00541         \}
+00542       \}
+00543     \}
+00544   \}
+00545 
+00546   \textcolor{keywordflow}{for} (k = i + 2;
+00547        k < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+00548        k++) \{
+00549     l1 = k - i - 1;
+00550     \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+00551       \textcolor{keywordflow}{break};
+00552 
+00553     \textcolor{keywordflow}{if} (S\_cons[k] != 3)
+00554       \textcolor{keywordflow}{continue};
+00555 
+00556     minl  = j - i + k - MAXLOOP - 2;
+00557     c0    = k + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+00558     minl  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minl);
+00559     c0    = j - 1;
+00560     maxl  = k + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+00561     maxl  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxl);
+00562     \textcolor{keywordflow}{for} (l = minl; l < maxl; l++) \{
+00563       \textcolor{keywordflow}{if} (S\_cons[l] != 3)
+00564         \textcolor{keywordflow}{continue};
+00565 
+00566       \textcolor{keywordflow}{if} (c == energy + ggg[index[l] + k] + n\_seq * P->internal\_loop[l1 + j - l - 1]) \{
+00567         *p  = k;
+00568         *q  = l;
+00569         \textcolor{keywordflow}{return} 1;
+00570       \}
+00571     \}
+00572   \}
+00573 
+00574   l = j - 1;
+00575   \textcolor{keywordflow}{if} (S\_cons[l] == 3)
+00576     \textcolor{keywordflow}{for} (k = i + 4;
+00577          k < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+00578          k++) \{
+00579       l1 = k - i - 1;
+00580       \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+00581         \textcolor{keywordflow}{break};
+00582 
+00583       \textcolor{keywordflow}{if} (S\_cons[k] != 3)
+00584         \textcolor{keywordflow}{continue};
+00585 
+00586       \textcolor{keywordflow}{if} (c == energy + ggg[index[l] + k] + n\_seq * P->internal\_loop[l1]) \{
+00587         *p  = k;
+00588         *q  = l;
+00589         \textcolor{keywordflow}{return} 1;
+00590       \}
+00591     \}
+00592 
+00593   \textcolor{keywordflow}{return} 0;
+00594 \}
+00595 
+00596 
+00613 INLINE PRIVATE \textcolor{keywordtype}{int}
+\Hypertarget{gquad_8h_source_l00614}\hyperlink{group__gquads_ga7b371308fa5a45c7ac353ef6ed1014de}{00614} \hyperlink{group__gquads_ga7b371308fa5a45c7ac353ef6ed1014de}{backtrack\_GQuad\_IntLoop\_L}(\textcolor{keywordtype}{int}           c,
+00615                           \textcolor{keywordtype}{int}           i,
+00616                           \textcolor{keywordtype}{int}           j,
+00617                           \textcolor{keywordtype}{int}           type,
+00618                           \textcolor{keywordtype}{short}         *S,
+00619                           \textcolor{keywordtype}{int}           **ggg,
+00620                           \textcolor{keywordtype}{int}           maxdist,
+00621                           \textcolor{keywordtype}{int}           *p,
+00622                           \textcolor{keywordtype}{int}           *q,
+00623                           \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}  *P)
+00624 \{
+00625   \textcolor{keywordtype}{int}   energy, \hyperlink{group__model__details_ga72b511ed1201f7e23ec437e468790d74}{dangles}, k, l, maxl, minl, c0, l1;
+00626   \textcolor{keywordtype}{short} si, sj;
+00627 
+00628   dangles = P->\hyperlink{group__energy__parameters_a7b84353eb9075c595bad4ceb871bcae7}{model\_details}.\hyperlink{group__model__details_adcda4ff2ea77748ae0e8700288282efc}{dangles};
+00629   si      = S[i + 1];
+00630   sj      = S[j - 1];
+00631   energy  = 0;
+00632 
+00633   \textcolor{keywordflow}{if} (dangles == 2)
+00634     energy += P->mismatchI[type][si][sj];
+00635 
+00636   \textcolor{keywordflow}{if} (type > 2)
+00637     energy += P->TerminalAU;
+00638 
+00639   k = i + 1;
+00640   \textcolor{keywordflow}{if} (S[k] == 3) \{
+00641     \textcolor{keywordflow}{if} (k < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE) \{
+00642       minl  = j - i + k - MAXLOOP - 2;
+00643       c0    = k + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+00644       minl  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minl);
+00645       c0    = j - 3;
+00646       maxl  = k + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+00647       maxl  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxl);
+00648       \textcolor{keywordflow}{for} (l = minl; l < maxl; l++) \{
+00649         \textcolor{keywordflow}{if} (S[l] != 3)
+00650           \textcolor{keywordflow}{continue};
+00651 
+00652         \textcolor{keywordflow}{if} (c == energy + ggg[k][l - k] + P->internal\_loop[j - l - 1]) \{
+00653           *p  = k;
+00654           *q  = l;
+00655           \textcolor{keywordflow}{return} 1;
+00656         \}
+00657       \}
+00658     \}
+00659   \}
+00660 
+00661   \textcolor{keywordflow}{for} (k = i + 2;
+00662        k < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+00663        k++) \{
+00664     l1 = k - i - 1;
+00665     \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+00666       \textcolor{keywordflow}{break};
+00667 
+00668     \textcolor{keywordflow}{if} (S[k] != 3)
+00669       \textcolor{keywordflow}{continue};
+00670 
+00671     minl  = j - i + k - MAXLOOP - 2;
+00672     c0    = k + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+00673     minl  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minl);
+00674     c0    = j - 1;
+00675     maxl  = k + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+00676     maxl  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxl);
+00677     \textcolor{keywordflow}{for} (l = minl; l < maxl; l++) \{
+00678       \textcolor{keywordflow}{if} (S[l] != 3)
+00679         \textcolor{keywordflow}{continue};
+00680 
+00681       \textcolor{keywordflow}{if} (c == energy + ggg[k][l - k] + P->internal\_loop[l1 + j - l - 1]) \{
+00682         *p  = k;
+00683         *q  = l;
+00684         \textcolor{keywordflow}{return} 1;
+00685       \}
+00686     \}
+00687   \}
+00688 
+00689   l = j - 1;
+00690   \textcolor{keywordflow}{if} (S[l] == 3)
+00691     \textcolor{keywordflow}{for} (k = i + 4;
+00692          k < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+00693          k++) \{
+00694       l1 = k - i - 1;
+00695       \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+00696         \textcolor{keywordflow}{break};
+00697 
+00698       \textcolor{keywordflow}{if} (S[k] != 3)
+00699         \textcolor{keywordflow}{continue};
+00700 
+00701       \textcolor{keywordflow}{if} (c == energy + ggg[k][l - k] + P->internal\_loop[l1]) \{
+00702         *p  = k;
+00703         *q  = l;
+00704         \textcolor{keywordflow}{return} 1;
+00705       \}
+00706     \}
+00707 
+00708   \textcolor{keywordflow}{return} 0;
+00709 \}
+00710 
+00711 
+00712 INLINE PRIVATE \textcolor{keywordtype}{int}
+00713 backtrack\_GQuad\_IntLoop\_L\_comparative(\textcolor{keywordtype}{int}           c,
+00714                                       \textcolor{keywordtype}{int}           i,
+00715                                       \textcolor{keywordtype}{int}           j,
+00716                                       \textcolor{keywordtype}{int}           *type,
+00717                                       \textcolor{keywordtype}{short}         *S\_cons,
+00718                                       \textcolor{keywordtype}{short}         **S5,
+00719                                       \textcolor{keywordtype}{short}         **S3,
+00720                                       \textcolor{keywordtype}{int}           **ggg,
+00721                                       \textcolor{keywordtype}{int}           *p,
+00722                                       \textcolor{keywordtype}{int}           *q,
+00723                                       \textcolor{keywordtype}{int}           n\_seq,
+00724                                       \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}  *P)
+00725 \{
+00726   \textcolor{comment}{/*}
+00727 \textcolor{comment}{   * The case that is handled here actually resembles something like}
+00728 \textcolor{comment}{   * an interior loop where the enclosing base pair is of regular}
+00729 \textcolor{comment}{   * kind and the enclosed pair is not a canonical one but a g-quadruplex}
+00730 \textcolor{comment}{   * that should then be decomposed further...}
+00731 \textcolor{comment}{   */}
+00732   \textcolor{keywordtype}{int} mm, dangle\_model, k, l, maxl, minl, c0, l1, ss, tt;
+00733 
+00734   dangle\_model = P->\hyperlink{group__energy__parameters_a7b84353eb9075c595bad4ceb871bcae7}{model\_details}.\hyperlink{group__model__details_adcda4ff2ea77748ae0e8700288282efc}{dangles};
+00735 
+00736   mm = 0;
+00737   \textcolor{keywordflow}{for} (ss = 0; ss < n\_seq; ss++) \{
+00738     tt = type[ss];
+00739 
+00740     \textcolor{keywordflow}{if} (dangle\_model == 2)
+00741       mm += P->mismatchI[tt][S3[ss][i]][S5[ss][j]];
+00742 
+00743     \textcolor{keywordflow}{if} (tt > 2)
+00744       mm += P->TerminalAU;
+00745   \}
+00746 
+00747   \textcolor{keywordflow}{for} (k = i + 2;
+00748        k < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+00749        k++) \{
+00750     \textcolor{keywordflow}{if} (S\_cons[k] != 3)
+00751       \textcolor{keywordflow}{continue};
+00752 
+00753     l1 = k - i - 1;
+00754     \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+00755       \textcolor{keywordflow}{break};
+00756 
+00757     minl  = j - i + k - MAXLOOP - 2;
+00758     c0    = k + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+00759     minl  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minl);
+00760     c0    = j - 1;
+00761     maxl  = k + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+00762     maxl  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxl);
+00763     \textcolor{keywordflow}{for} (l = minl; l < maxl; l++) \{
+00764       \textcolor{keywordflow}{if} (S\_cons[l] != 3)
+00765         \textcolor{keywordflow}{continue};
+00766 
+00767       c0 = mm + ggg[k][l - k] + n\_seq * P->internal\_loop[l1 + j - l - 1];
+00768       \textcolor{keywordflow}{if} (c == c0) \{
+00769         *p  = k;
+00770         *q  = l;
+00771         \textcolor{keywordflow}{return} 1;
+00772       \}
+00773     \}
+00774   \}
+00775   k = i + 1;
+00776   \textcolor{keywordflow}{if} (S\_cons[k] == 3) \{
+00777     \textcolor{keywordflow}{if} (k < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE) \{
+00778       minl  = j - i + k - MAXLOOP - 2;
+00779       c0    = k + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+00780       minl  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minl);
+00781       c0    = j - 3;
+00782       maxl  = k + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+00783       maxl  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxl);
+00784       \textcolor{keywordflow}{for} (l = minl; l < maxl; l++) \{
+00785         \textcolor{keywordflow}{if} (S\_cons[l] != 3)
+00786           \textcolor{keywordflow}{continue};
+00787 
+00788         \textcolor{keywordflow}{if} (c == mm + ggg[k][l - k] + n\_seq * P->internal\_loop[j - l - 1]) \{
+00789           *p  = k;
+00790           *q  = l;
+00791           \textcolor{keywordflow}{return} 1;
+00792         \}
+00793       \}
+00794     \}
+00795   \}
+00796 
+00797   l = j - 1;
+00798   \textcolor{keywordflow}{if} (S\_cons[l] == 3) \{
+00799     \textcolor{keywordflow}{for} (k = i + 4; k < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE; k++) \{
+00800       l1 = k - i - 1;
+00801       \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+00802         \textcolor{keywordflow}{break};
+00803 
+00804       \textcolor{keywordflow}{if} (S\_cons[k] != 3)
+00805         \textcolor{keywordflow}{continue};
+00806 
+00807       \textcolor{keywordflow}{if} (c == mm + ggg[k][l - k] + n\_seq * P->internal\_loop[l1]) \{
+00808         *p  = k;
+00809         *q  = l;
+00810         \textcolor{keywordflow}{return} 1;
+00811       \}
+00812     \}
+00813   \}
+00814 
+00815   \textcolor{keywordflow}{return} 0;
+00816 \}
+00817 
+00818 
+00819 PRIVATE INLINE
+00820 \textcolor{keywordtype}{int}
+00821 E\_GQuad\_IntLoop(\textcolor{keywordtype}{int}           i,
+00822                 \textcolor{keywordtype}{int}           j,
+00823                 \textcolor{keywordtype}{int}           type,
+00824                 \textcolor{keywordtype}{short}         *S,
+00825                 \textcolor{keywordtype}{int}           *ggg,
+00826                 \textcolor{keywordtype}{int}           *index,
+00827                 \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}  *P)
+00828 \{
+00829   \textcolor{keywordtype}{int}   energy, ge, \hyperlink{group__model__details_ga72b511ed1201f7e23ec437e468790d74}{dangles}, p, q, l1, minq, maxq, c0;
+00830   \textcolor{keywordtype}{short} si, sj;
+00831 
+00832   dangles = P->\hyperlink{group__energy__parameters_a7b84353eb9075c595bad4ceb871bcae7}{model\_details}.\hyperlink{group__model__details_adcda4ff2ea77748ae0e8700288282efc}{dangles};
+00833   si      = S[i + 1];
+00834   sj      = S[j - 1];
+00835   energy  = 0;
+00836 
+00837   \textcolor{keywordflow}{if} (dangles == 2)
+00838     energy += P->mismatchI[type][si][sj];
+00839 
+00840   \textcolor{keywordflow}{if} (type > 2)
+00841     energy += P->TerminalAU;
+00842 
+00843   ge = \hyperlink{energy__const_8h_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF};
+00844 
+00845   p = i + 1;
+00846   \textcolor{keywordflow}{if} (S[p] == 3) \{
+00847     \textcolor{keywordflow}{if} (p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE) \{
+00848       minq  = j - i + p - MAXLOOP - 2;
+00849       c0    = p + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+00850       minq  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minq);
+00851       c0    = j - 3;
+00852       maxq  = p + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+00853       maxq  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxq);
+00854       \textcolor{keywordflow}{for} (q = minq; q < maxq; q++) \{
+00855         \textcolor{keywordflow}{if} (S[q] != 3)
+00856           \textcolor{keywordflow}{continue};
+00857 
+00858         c0  = energy + ggg[index[q] + p] + P->internal\_loop[j - q - 1];
+00859         ge  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(ge, c0);
+00860       \}
+00861     \}
+00862   \}
+00863 
+00864   \textcolor{keywordflow}{for} (p = i + 2;
+00865        p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+00866        p++) \{
+00867     l1 = p - i - 1;
+00868     \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+00869       \textcolor{keywordflow}{break};
+00870 
+00871     \textcolor{keywordflow}{if} (S[p] != 3)
+00872       \textcolor{keywordflow}{continue};
+00873 
+00874     minq  = j - i + p - MAXLOOP - 2;
+00875     c0    = p + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+00876     minq  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minq);
+00877     c0    = j - 1;
+00878     maxq  = p + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+00879     maxq  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxq);
+00880     \textcolor{keywordflow}{for} (q = minq; q < maxq; q++) \{
+00881       \textcolor{keywordflow}{if} (S[q] != 3)
+00882         \textcolor{keywordflow}{continue};
+00883 
+00884       c0  = energy + ggg[index[q] + p] + P->internal\_loop[l1 + j - q - 1];
+00885       ge  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(ge, c0);
+00886     \}
+00887   \}
+00888 
+00889   q = j - 1;
+00890   \textcolor{keywordflow}{if} (S[q] == 3)
+00891     \textcolor{keywordflow}{for} (p = i + 4;
+00892          p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+00893          p++) \{
+00894       l1 = p - i - 1;
+00895       \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+00896         \textcolor{keywordflow}{break};
+00897 
+00898       \textcolor{keywordflow}{if} (S[p] != 3)
+00899         \textcolor{keywordflow}{continue};
+00900 
+00901       c0  = energy + ggg[index[q] + p] + P->internal\_loop[l1];
+00902       ge  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(ge, c0);
+00903     \}
+00904 
+00905 \textcolor{preprocessor}{#if 0}
+00906   \textcolor{comment}{/* here comes the additional stuff for the odd dangle models */}
+00907   \textcolor{keywordflow}{if} (dangles % 1) \{
+00908     en1 = energy + P->dangle5[type][si];
+00909     en2 = energy + P->dangle5[type][sj];
+00910     en3 = energy + P->mismatchI[type][si][sj];
+00911 
+00912     \textcolor{comment}{/* first case with 5' dangle (i.e. j-1) onto enclosing pair */}
+00913     p = i + 1;
+00914     \textcolor{keywordflow}{if} (S[p] == 3) \{
+00915       \textcolor{keywordflow}{if} (p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE) \{
+00916         minq  = j - i + p - MAXLOOP - 2;
+00917         c0    = p + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+00918         minq  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minq);
+00919         c0    = j - 4;
+00920         maxq  = p + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+00921         maxq  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxq);
+00922         \textcolor{keywordflow}{for} (q = minq; q < maxq; q++) \{
+00923           \textcolor{keywordflow}{if} (S[q] != 3)
+00924             \textcolor{keywordflow}{continue};
+00925 
+00926           c0  = en1 + ggg[index[q] + p] + P->internal\_loop[j - q - 1];
+00927           ge  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(ge, c0);
+00928         \}
+00929       \}
+00930     \}
+00931 
+00932     \textcolor{keywordflow}{for} (p = i + 2; p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE; p++) \{
+00933       l1 = p - i - 1;
+00934       \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+00935         \textcolor{keywordflow}{break};
+00936 
+00937       \textcolor{keywordflow}{if} (S[p] != 3)
+00938         \textcolor{keywordflow}{continue};
+00939 
+00940       minq  = j - i + p - MAXLOOP - 2;
+00941       c0    = p + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+00942       minq  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minq);
+00943       c0    = j - 2;
+00944       maxq  = p + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+00945       maxq  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxq);
+00946       \textcolor{keywordflow}{for} (q = minq; q < maxq; q++) \{
+00947         \textcolor{keywordflow}{if} (S[q] != 3)
+00948           \textcolor{keywordflow}{continue};
+00949 
+00950         c0  = en1 + ggg[index[q] + p] + P->internal\_loop[l1 + j - q - 1];
+00951         ge  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(ge, c0);
+00952       \}
+00953     \}
+00954 
+00955     q = j - 2;
+00956     \textcolor{keywordflow}{if} (S[q] == 3)
+00957       \textcolor{keywordflow}{for} (p = i + 4; p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE; p++) \{
+00958         l1 = p - i - 1;
+00959         \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+00960           \textcolor{keywordflow}{break};
+00961 
+00962         \textcolor{keywordflow}{if} (S[p] != 3)
+00963           \textcolor{keywordflow}{continue};
+00964 
+00965         c0  = en1 + ggg[index[q] + p] + P->internal\_loop[l1 + 1];
+00966         ge  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(ge, c0);
+00967       \}
+00968 
+00969     \textcolor{comment}{/* second case with 3' dangle (i.e. i+1) onto enclosing pair */}
+00970   \}
+00971 
+00972 \textcolor{preprocessor}{#endif}
+00973   \textcolor{keywordflow}{return} ge;
+00974 \}
+00975 
+00976 
+00977 PRIVATE INLINE
+00978 \textcolor{keywordtype}{int} *
+00979 E\_GQuad\_IntLoop\_exhaustive(\textcolor{keywordtype}{int}          i,
+00980                            \textcolor{keywordtype}{int}          j,
+00981                            \textcolor{keywordtype}{int}          **p\_p,
+00982                            \textcolor{keywordtype}{int}          **q\_p,
+00983                            \textcolor{keywordtype}{int}          type,
+00984                            \textcolor{keywordtype}{short}        *S,
+00985                            \textcolor{keywordtype}{int}          *ggg,
+00986                            \textcolor{keywordtype}{int}          threshold,
+00987                            \textcolor{keywordtype}{int}          *index,
+00988                            \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} *P)
+00989 \{
+00990   \textcolor{keywordtype}{int}   energy, *ge, \hyperlink{group__model__details_ga72b511ed1201f7e23ec437e468790d74}{dangles}, p, q, l1, minq, maxq, c0;
+00991   \textcolor{keywordtype}{short} si, sj;
+00992   \textcolor{keywordtype}{int}   cnt = 0;
+00993 
+00994   dangles = P->\hyperlink{group__energy__parameters_a7b84353eb9075c595bad4ceb871bcae7}{model\_details}.\hyperlink{group__model__details_adcda4ff2ea77748ae0e8700288282efc}{dangles};
+00995   si      = S[i + 1];
+00996   sj      = S[j - 1];
+00997   energy  = 0;
+00998 
+00999   \textcolor{keywordflow}{if} (dangles == 2)
+01000     energy += P->mismatchI[type][si][sj];
+01001 
+01002   \textcolor{keywordflow}{if} (type > 2)
+01003     energy += P->TerminalAU;
+01004 
+01005   \textcolor{comment}{/* guess how many gquads are possible in interval [i+1,j-1] */}
+01006   *p\_p  = (\textcolor{keywordtype}{int} *)\hyperlink{group__utils_gaf37a0979367c977edfb9da6614eebe99}{vrna\_alloc}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 256);
+01007   *q\_p  = (\textcolor{keywordtype}{int} *)\hyperlink{group__utils_gaf37a0979367c977edfb9da6614eebe99}{vrna\_alloc}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 256);
+01008   ge    = (\textcolor{keywordtype}{int} *)\hyperlink{group__utils_gaf37a0979367c977edfb9da6614eebe99}{vrna\_alloc}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 256);
+01009 
+01010   p = i + 1;
+01011   \textcolor{keywordflow}{if} (S[p] == 3) \{
+01012     \textcolor{keywordflow}{if} (p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE) \{
+01013       minq  = j - i + p - MAXLOOP - 2;
+01014       c0    = p + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+01015       minq  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minq);
+01016       c0    = j - 3;
+01017       maxq  = p + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+01018       maxq  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxq);
+01019       \textcolor{keywordflow}{for} (q = minq; q < maxq; q++) \{
+01020         \textcolor{keywordflow}{if} (S[q] != 3)
+01021           \textcolor{keywordflow}{continue};
+01022 
+01023         c0 = energy + ggg[index[q] + p] + P->internal\_loop[j - q - 1];
+01024         \textcolor{keywordflow}{if} (c0 <= threshold) \{
+01025           ge[cnt]       = energy + P->internal\_loop[j - q - 1];
+01026           (*p\_p)[cnt]   = p;
+01027           (*q\_p)[cnt++] = q;
+01028         \}
+01029       \}
+01030     \}
+01031   \}
+01032 
+01033   \textcolor{keywordflow}{for} (p = i + 2;
+01034        p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+01035        p++) \{
+01036     l1 = p - i - 1;
+01037     \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+01038       \textcolor{keywordflow}{break};
+01039 
+01040     \textcolor{keywordflow}{if} (S[p] != 3)
+01041       \textcolor{keywordflow}{continue};
+01042 
+01043     minq  = j - i + p - MAXLOOP - 2;
+01044     c0    = p + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+01045     minq  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minq);
+01046     c0    = j - 1;
+01047     maxq  = p + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+01048     maxq  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxq);
+01049     \textcolor{keywordflow}{for} (q = minq; q < maxq; q++) \{
+01050       \textcolor{keywordflow}{if} (S[q] != 3)
+01051         \textcolor{keywordflow}{continue};
+01052 
+01053       c0 = energy + ggg[index[q] + p] + P->internal\_loop[l1 + j - q - 1];
+01054       \textcolor{keywordflow}{if} (c0 <= threshold) \{
+01055         ge[cnt]       = energy + P->internal\_loop[l1 + j - q - 1];
+01056         (*p\_p)[cnt]   = p;
+01057         (*q\_p)[cnt++] = q;
+01058       \}
+01059     \}
+01060   \}
+01061 
+01062   q = j - 1;
+01063   \textcolor{keywordflow}{if} (S[q] == 3)
+01064     \textcolor{keywordflow}{for} (p = i + 4;
+01065          p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+01066          p++) \{
+01067       l1 = p - i - 1;
+01068       \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+01069         \textcolor{keywordflow}{break};
+01070 
+01071       \textcolor{keywordflow}{if} (S[p] != 3)
+01072         \textcolor{keywordflow}{continue};
+01073 
+01074       c0 = energy + ggg[index[q] + p] + P->internal\_loop[l1];
+01075       \textcolor{keywordflow}{if} (c0 <= threshold) \{
+01076         ge[cnt]       = energy + P->internal\_loop[l1];
+01077         (*p\_p)[cnt]   = p;
+01078         (*q\_p)[cnt++] = q;
+01079       \}
+01080     \}
+01081 
+01082   (*p\_p)[cnt] = -1;
+01083 
+01084   \textcolor{keywordflow}{return} ge;
+01085 \}
+01086 
+01087 
+01088 PRIVATE INLINE
+01089 \textcolor{keywordtype}{int}
+01090 E\_GQuad\_IntLoop\_L(\textcolor{keywordtype}{int}           i,
+01091                   \textcolor{keywordtype}{int}           j,
+01092                   \textcolor{keywordtype}{int}           type,
+01093                   \textcolor{keywordtype}{short}         *S,
+01094                   \textcolor{keywordtype}{int}           **ggg,
+01095                   \textcolor{keywordtype}{int}           maxdist,
+01096                   \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}  *P)
+01097 \{
+01098   \textcolor{keywordtype}{int}   energy, ge, \hyperlink{group__model__details_ga72b511ed1201f7e23ec437e468790d74}{dangles}, p, q, l1, minq, maxq, c0;
+01099   \textcolor{keywordtype}{short} si, sj;
+01100 
+01101   dangles = P->\hyperlink{group__energy__parameters_a7b84353eb9075c595bad4ceb871bcae7}{model\_details}.\hyperlink{group__model__details_adcda4ff2ea77748ae0e8700288282efc}{dangles};
+01102   si      = S[i + 1];
+01103   sj      = S[j - 1];
+01104   energy  = 0;
+01105 
+01106   \textcolor{keywordflow}{if} (dangles == 2)
+01107     energy += P->mismatchI[type][si][sj];
+01108 
+01109   \textcolor{keywordflow}{if} (type > 2)
+01110     energy += P->TerminalAU;
+01111 
+01112   ge = \hyperlink{energy__const_8h_a12c2040f25d8e3a7b9e1c2024c618cb6}{INF};
+01113 
+01114   p = i + 1;
+01115   \textcolor{keywordflow}{if} (S[p] == 3) \{
+01116     \textcolor{keywordflow}{if} (p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE) \{
+01117       minq  = j - i + p - MAXLOOP - 2;
+01118       c0    = p + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+01119       minq  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minq);
+01120       c0    = j - 3;
+01121       maxq  = p + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+01122       maxq  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxq);
+01123       \textcolor{keywordflow}{for} (q = minq; q < maxq; q++) \{
+01124         \textcolor{keywordflow}{if} (S[q] != 3)
+01125           \textcolor{keywordflow}{continue};
+01126 
+01127         c0  = energy + ggg[p][q - p] + P->internal\_loop[j - q - 1];
+01128         ge  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(ge, c0);
+01129       \}
+01130     \}
+01131   \}
+01132 
+01133   \textcolor{keywordflow}{for} (p = i + 2;
+01134        p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+01135        p++) \{
+01136     l1 = p - i - 1;
+01137     \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+01138       \textcolor{keywordflow}{break};
+01139 
+01140     \textcolor{keywordflow}{if} (S[p] != 3)
+01141       \textcolor{keywordflow}{continue};
+01142 
+01143     minq  = j - i + p - MAXLOOP - 2;
+01144     c0    = p + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+01145     minq  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(c0, minq);
+01146     c0    = j - 1;
+01147     maxq  = p + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+01148     maxq  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(c0, maxq);
+01149     \textcolor{keywordflow}{for} (q = minq; q < maxq; q++) \{
+01150       \textcolor{keywordflow}{if} (S[q] != 3)
+01151         \textcolor{keywordflow}{continue};
+01152 
+01153       c0  = energy + ggg[p][q - p] + P->internal\_loop[l1 + j - q - 1];
+01154       ge  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(ge, c0);
+01155     \}
+01156   \}
+01157 
+01158   q = j - 1;
+01159   \textcolor{keywordflow}{if} (S[q] == 3)
+01160     \textcolor{keywordflow}{for} (p = i + 4;
+01161          p < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+01162          p++) \{
+01163       l1 = p - i - 1;
+01164       \textcolor{keywordflow}{if} (l1 > MAXLOOP)
+01165         \textcolor{keywordflow}{break};
+01166 
+01167       \textcolor{keywordflow}{if} (S[p] != 3)
+01168         \textcolor{keywordflow}{continue};
+01169 
+01170       c0  = energy + ggg[p][q - p] + P->internal\_loop[l1];
+01171       ge  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(ge, c0);
+01172     \}
+01173 
+01174   \textcolor{keywordflow}{return} ge;
+01175 \}
+01176 
+01177 
+01178 PRIVATE INLINE
+01179 \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}
+01180 exp\_E\_GQuad\_IntLoop(\textcolor{keywordtype}{int}               i,
+01181                     \textcolor{keywordtype}{int}               j,
+01182                     \textcolor{keywordtype}{int}               type,
+01183                     \textcolor{keywordtype}{short}             *S,
+01184                     \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}        *G,
+01185                     \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}        *scale,
+01186                     \textcolor{keywordtype}{int}               *index,
+01187                     \hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t}  *pf)
+01188 \{
+01189   \textcolor{keywordtype}{int}         k, l, minl, maxl, u, r;
+01190   \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}  q, qe;
+01191   \textcolor{keywordtype}{double}      *expintern;
+01192   \textcolor{keywordtype}{short}       si, sj;
+01193 
+01194   q         = 0;
+01195   si        = S[i + 1];
+01196   sj        = S[j - 1];
+01197   qe        = (\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL})pf->expmismatchI[type][si][sj];
+01198   expintern = &(pf->expinternal[0]);
+01199 
+01200   \textcolor{keywordflow}{if} (type > 2)
+01201     qe *= (\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL})pf->expTermAU;
+01202 
+01203   k = i + 1;
+01204   if (S[k] == 3) \{
+01205     \textcolor{keywordflow}{if} (k < j - VRNA\_GQUAD\_MIN\_BOX\_SIZE) \{
+01206       minl  = j - MAXLOOP - 1;
+01207       u     = k + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+01208       minl  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(u, minl);
+01209       u     = j - 3;
+01210       maxl  = k + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+01211       maxl  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(u, maxl);
+01212       \textcolor{keywordflow}{for} (l = minl; l < maxl; l++) \{
+01213         \textcolor{keywordflow}{if} (S[l] != 3)
+01214           \textcolor{keywordflow}{continue};
+01215 
+01216         \textcolor{keywordflow}{if} (G[index[k] - l] == 0.)
+01217           \textcolor{keywordflow}{continue};
+01218 
+01219         q += qe
+01220              * G[index[k] - l]
+01221              * (\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL})expintern[j - l - 1]
+01222              * scale[j - l + 1];
+01223       \}
+01224     \}
+01225   \}
+01226 
+01227   \textcolor{keywordflow}{for} (k = i + 2;
+01228        k <= j - VRNA\_GQUAD\_MIN\_BOX\_SIZE;
+01229        k++) \{
+01230     u = k - i - 1;
+01231     \textcolor{keywordflow}{if} (u > MAXLOOP)
+01232       \textcolor{keywordflow}{break};
+01233 
+01234     \textcolor{keywordflow}{if} (S[k] != 3)
+01235       \textcolor{keywordflow}{continue};
+01236 
+01237     minl  = j - i + k - MAXLOOP - 2;
+01238     r     = k + VRNA\_GQUAD\_MIN\_BOX\_SIZE - 1;
+01239     minl  = \hyperlink{group__utils_ga33297b3679c713b0c4d897cd0fe3b122}{MAX2}(r, minl);
+01240     maxl  = k + VRNA\_GQUAD\_MAX\_BOX\_SIZE + 1;
+01241     r     = j - 1;
+01242     maxl  = \hyperlink{group__utils_gae0b9cd0ce090bd69b951aa73e8fa4f7d}{MIN2}(r, maxl);
+01243     \textcolor{keywordflow}{for} (l = minl; l < maxl; l++) \{
+01244       \textcolor{keywordflow}{if} (S[l] != 3)
+01245         \textcolor{keywordflow}{continue};
+01246 
+01247       \textcolor{keywordflow}{if} (G[index[k] - l] == 0.)
+01248         \textcolor{keywordflow}{continue};
+01249 
+01250       q += qe
+01251            * G[index[k] - l]
+01252            * (\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL})expintern[u + j - l - 1]
+01253            * scale[u + j - l + 1];
+01254     \}
+01255   \}
+01256 
+01257   l = j - 1;
+01258   \textcolor{keywordflow}{if} (S[l] == 3)
+01259     \textcolor{keywordflow}{for} (k = i + 4; k <= j - VRNA\_GQUAD\_MIN\_BOX\_SIZE; k++) \{
+01260       u = k - i - 1;
+01261       \textcolor{keywordflow}{if} (u > MAXLOOP)
+01262         \textcolor{keywordflow}{break};
+01263 
+01264       \textcolor{keywordflow}{if} (S[k] != 3)
+01265         \textcolor{keywordflow}{continue};
+01266 
+01267       \textcolor{keywordflow}{if} (G[index[k] - l] == 0.)
+01268         \textcolor{keywordflow}{continue};
+01269 
+01270       q += qe
+01271            * G[index[k] - l]
+01272            * (\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL})expintern[u]
+01273            * scale[u + 2];
+01274     \}
+01275 
+01276   \textcolor{keywordflow}{return} q;
+01277 \}
+01278 
+01279 
+01285 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

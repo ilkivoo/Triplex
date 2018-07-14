@@ -1,0 +1,117 @@
+\hypertarget{group__mfe__fold}{}\section{Minimum Free Energy (M\+FE) algorithms}
+\label{group__mfe__fold}\index{Minimum Free Energy (\+M\+F\+E) algorithms@{Minimum Free Energy (\+M\+F\+E) algorithms}}
+
+
+\subsection{Detailed Description}
+Collaboration diagram for Minimum Free Energy (M\+FE) algorithms\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__mfe__fold}
+\end{center}
+\end{figure}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__consensus__mfe__fold}{M\+F\+E Consensus Structures for Sequence Alignment(s)}
+\item 
+\hyperlink{group__kl__neighborhood__mfe}{Calculating M\+F\+E representatives of a Distance Based Partitioning}
+\begin{DoxyCompactList}\small\item\em Compute the minimum free energy (M\+FE) and secondary structures for a partitioning of the secondary structure space according to the base pair distance to two fixed reference structures basepair distance to two fixed reference structures. \end{DoxyCompactList}\item 
+\hyperlink{group__mfe__fold__single}{M\+F\+E Structures of single Nucleic Acid Sequences}
+\begin{DoxyCompactList}\small\item\em This module contains all functions and variables related to the calculation of global minimum free energy structures for single sequences. \end{DoxyCompactList}\item 
+\hyperlink{group__mfe__cofold}{M\+F\+E Structures of two hybridized Sequences}
+\begin{DoxyCompactList}\small\item\em M\+FE version of cofolding routines This file includes (almost) all function declarations within the {\bfseries R\+N\+Alib} that are related to M\+FE Cofolding... This also includes the Zuker suboptimals calculations, since they are implemented using the cofold routines. \end{DoxyCompactList}\item 
+\hyperlink{group__local__mfe__fold}{Local M\+F\+E Structure Prediction and Z-\/scores}
+\end{DoxyCompactItemize}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{fold_8h}{fold.\+h}
+\begin{DoxyCompactList}\small\item\em M\+FE calculations for single R\+NA sequences. \end{DoxyCompactList}\item 
+file \hyperlink{mfe_8h}{mfe.\+h}
+\begin{DoxyCompactList}\small\item\em Compute Minimum Free energy (M\+FE) and backtrace corresponding secondary structures from R\+NA sequence data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void() \hyperlink{group__mfe__fold_ga4f3e5bc214ef803074ace313cb9571b4}{vrna\+\_\+mfe\+\_\+window\+\_\+callback}(int start, int end, const char $\ast$structure, float en, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em The default callback for sliding window M\+FE structure predictions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{group__mfe__fold_gabd3b147371ccf25c577f88bbbaf159fd}{vrna\+\_\+mfe} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, char $\ast$structure)
+\begin{DoxyCompactList}\small\item\em Compute minimum free energy and an appropriate secondary structure of an R\+NA sequence, or R\+NA sequence alignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__mfe__fold_ga4f3e5bc214ef803074ace313cb9571b4}\label{group__mfe__fold_ga4f3e5bc214ef803074ace313cb9571b4}} 
+\index{Minimum Free Energy (\+M\+F\+E) algorithms@{Minimum Free Energy (\+M\+F\+E) algorithms}!vrna\+\_\+mfe\+\_\+window\+\_\+callback@{vrna\+\_\+mfe\+\_\+window\+\_\+callback}}
+\index{vrna\+\_\+mfe\+\_\+window\+\_\+callback@{vrna\+\_\+mfe\+\_\+window\+\_\+callback}!Minimum Free Energy (\+M\+F\+E) algorithms@{Minimum Free Energy (\+M\+F\+E) algorithms}}
+\subsubsection{\texorpdfstring{vrna\+\_\+mfe\+\_\+window\+\_\+callback}{vrna\_mfe\_window\_callback}}
+{\footnotesize\ttfamily typedef void() vrna\+\_\+mfe\+\_\+window\+\_\+callback(int start, int end, const char $\ast$structure, float en, void $\ast$data)}
+
+
+
+{\ttfamily \#include $<$\hyperlink{mfe_8h}{Vienna\+R\+N\+A/mfe.\+h}$>$}
+
+
+
+The default callback for sliding window M\+FE structure predictions. 
+
+\begin{DoxyRefDesc}{Notes on Callback Functions}
+\item[\hyperlink{callbacks__callbacks000008}{Notes on Callback Functions}]This function will be called for each hit in a sliding window M\+FE prediction. \end{DoxyRefDesc}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__local__mfe__fold_ga689df235a1915a1ad56e377383c044ce}{vrna\+\_\+mfe\+\_\+window()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em start} & provides the first position of the hit (1-\/based, relative to entire sequence/alignment) \\
+\hline
+{\em end} & provides the last position of the hit (1-\/based, relative to the entire sequence/alignment) \\
+\hline
+{\em structure} & provides the (sub)structure in dot-\/bracket notation \\
+\hline
+{\em en} & is the free energy of the structure hit in kcal/mol \\
+\hline
+{\em data} & is some arbitrary data pointer passed through by the function executing the callback \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__mfe__fold_gabd3b147371ccf25c577f88bbbaf159fd}\label{group__mfe__fold_gabd3b147371ccf25c577f88bbbaf159fd}} 
+\index{Minimum Free Energy (\+M\+F\+E) algorithms@{Minimum Free Energy (\+M\+F\+E) algorithms}!vrna\+\_\+mfe@{vrna\+\_\+mfe}}
+\index{vrna\+\_\+mfe@{vrna\+\_\+mfe}!Minimum Free Energy (\+M\+F\+E) algorithms@{Minimum Free Energy (\+M\+F\+E) algorithms}}
+\subsubsection{\texorpdfstring{vrna\+\_\+mfe()}{vrna\_mfe()}}
+{\footnotesize\ttfamily float vrna\+\_\+mfe (\begin{DoxyParamCaption}\item[{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc,  }\item[{char $\ast$}]{structure }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{mfe_8h}{Vienna\+R\+N\+A/mfe.\+h}$>$}
+
+
+
+Compute minimum free energy and an appropriate secondary structure of an R\+NA sequence, or R\+NA sequence alignment. 
+
+Depending on the type of the provided \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t}, this function predicts the M\+FE for a single sequence, or a corresponding averaged M\+FE for a sequence alignment. If backtracking is activated, it also constructs the corresponding secondary structure, or consensus structure. Therefore, the second parameter, {\itshape structure}, has to point to an allocated block of memory with a size of at least $\mathrm{strlen}(\mathrm{sequence})+1$ to store the backtracked M\+FE structure. (For consensus structures, this is the length of the alignment + 1. If {\ttfamily N\+U\+LL} is passed, no backtracking will be performed.
+
+\begin{DoxyNote}{Note}
+This function is polymorphic. It accepts \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} of type \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447da7e264dd3cf2dc9b6448caabcb7763cd6}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+N\+G\+LE}, and \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447dab821ce46ea3cf665be97df22a76f5023}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+P\+A\+R\+A\+T\+I\+VE}.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t}, \hyperlink{group__fold__compound_ga6601d994ba32b11511b36f68b08403be}{vrna\+\_\+fold\+\_\+compound()}, \hyperlink{group__mfe__fold__single_ga29a33b2895f4e67b0480271ff289afdc}{vrna\+\_\+fold()}, \hyperlink{group__mfe__fold__single_gaf973483d8acbc8cc9aacfc8a9b7f0074}{vrna\+\_\+circfold()}, \hyperlink{group__fold__compound_gad6bacc816af274922b13d947f708aa0c}{vrna\+\_\+fold\+\_\+compound\+\_\+comparative()}, \hyperlink{group__consensus__mfe__fold_ga6c9d3bef3e92c6d423ffac9f981418c1}{vrna\+\_\+alifold()}, \hyperlink{group__consensus__mfe__fold_ga17a1be7490468c29c335ba9bffacba53}{vrna\+\_\+circalifold()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em vc} & fold compound \\
+\hline
+{\em structure} & A pointer to the character array where the secondary structure in dot-\/bracket notation will be written to (Maybe N\+U\+LL)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the minimum free energy (M\+FE) in kcal/mol
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{S\+W\+I\+G Wrapper Notes}
+\item[\hyperlink{wrappers__wrappers000074}{S\+W\+I\+G Wrapper Notes}]This function is attached as method {\bfseries mfe()} to objects of type {\itshape fold\+\_\+compound} \end{DoxyRefDesc}

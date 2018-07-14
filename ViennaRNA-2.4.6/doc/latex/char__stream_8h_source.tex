@@ -1,0 +1,78 @@
+\hypertarget{char__stream_8h_source}{}\section{char\+\_\+stream.\+h}
+\label{char__stream_8h_source}\index{Vienna\+R\+N\+A/char\+\_\+stream.\+h@{Vienna\+R\+N\+A/char\+\_\+stream.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_CHAR\_STREAM\_H}
+00002 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_CHAR\_STREAM\_H}
+00003 
+00015 \textcolor{preprocessor}{#include <stdarg.h>}
+00016 
+00017 \textcolor{comment}{/* below is our own implementation of a dynamic char * stream */}
+00018 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }vrna\_cstr\_s *vrna\_cstr\_t;
+00019 
+00020 vrna\_cstr\_t
+00021 vrna\_cstr(\textcolor{keywordtype}{size\_t}  size,
+00022           FILE    *output);
+00023 
+00024 
+00025 \textcolor{keywordtype}{void}
+00026 vrna\_cstr\_free(vrna\_cstr\_t buf);
+00027 
+00028 
+00029 \textcolor{keywordtype}{void}
+00030 vrna\_cstr\_close(vrna\_cstr\_t buf);
+00031 
+00032 
+00033 \textcolor{keywordtype}{void}
+00034 vrna\_cstr\_fflush(\textcolor{keyword}{struct} vrna\_cstr\_s *buf);
+00035 
+00036 
+00037 \textcolor{keyword}{const} \textcolor{keywordtype}{char} *
+00038 vrna\_cstr\_string(vrna\_cstr\_t buf);
+00039 
+00040 
+00041 \textcolor{keywordtype}{int}
+00042 vrna\_cstr\_vprintf(vrna\_cstr\_t buf,
+00043                   \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *format,
+00044                   va\_list     args);
+00045 
+00046 
+00047 \textcolor{keywordtype}{int}
+00048 vrna\_cstr\_printf(vrna\_cstr\_t  buf,
+00049                  \textcolor{keyword}{const} \textcolor{keywordtype}{char}   *format,
+00050                  ...);
+00051 
+00052 
+00053 \textcolor{keywordtype}{void}
+00054 vrna\_cstr\_message\_info(vrna\_cstr\_t  buf,
+00055                        \textcolor{keyword}{const} \textcolor{keywordtype}{char}   *format,
+00056                        ...);
+00057 
+00058 
+00059 \textcolor{keywordtype}{void}
+00060 vrna\_cstr\_message\_vinfo(vrna\_cstr\_t buf,
+00061                         \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *format,
+00062                         va\_list     args);
+00063 
+00064 
+00065 \textcolor{keywordtype}{void}
+00066 vrna\_cstr\_print\_fasta\_header(vrna\_cstr\_t  buf,
+00067                              \textcolor{keyword}{const} \textcolor{keywordtype}{char}   *head);
+00068 
+00069 
+00070 \textcolor{keywordtype}{void}
+00071 vrna\_cstr\_printf\_structure(\textcolor{keyword}{struct} vrna\_cstr\_s *buf,
+00072                            \textcolor{keyword}{const} \textcolor{keywordtype}{char}         *structure,
+00073                            \textcolor{keyword}{const} \textcolor{keywordtype}{char}         *format,
+00074                            ...);
+00075 
+00076 
+00077 \textcolor{keywordtype}{void}
+00078 vrna\_cstr\_vprintf\_structure(\textcolor{keyword}{struct} vrna\_cstr\_s  *buf,
+00079                             \textcolor{keyword}{const} \textcolor{keywordtype}{char}          *structure,
+00080                             \textcolor{keyword}{const} \textcolor{keywordtype}{char}          *format,
+00081                             va\_list             args);
+00082 
+00083 
+00088 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

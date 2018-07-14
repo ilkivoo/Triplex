@@ -1,0 +1,7 @@
+<map id="Minimum Free Energy (MFE) algorithms" name="Minimum Free Energy (MFE) algorithms">
+<area shape="rect" id="node1" href="$group__local__mfe__fold.html" title="Local MFE Structure\l Prediction and Z&#45;scores" alt="" coords="229,5,393,47"/>
+<area shape="rect" id="node2" href="$group__kl__neighborhood__mfe.html" title="Compute the minimum free energy (MFE) and secondary structures for a partitioning of the secondary st..." alt="" coords="204,71,419,112"/>
+<area shape="rect" id="node4" href="$group__mfe__cofold.html" title="MFE version of cofolding routines This file includes (almost) all function declarations within the RN..." alt="" coords="234,136,389,177"/>
+<area shape="rect" id="node5" href="$group__mfe__fold__single.html" title="This module contains all functions and variables related to the calculation of global minimum free en..." alt="" coords="227,201,396,243"/>
+<area shape="rect" id="node6" href="$group__consensus__mfe__fold.html" title="MFE Consensus Structures\l for Sequence Alignment(s)" alt="" coords="219,267,403,308"/>
+</map>

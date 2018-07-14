@@ -1,0 +1,1237 @@
+\hypertarget{group__struct__utils}{}\section{Parsing, converting, comparing secondary structures}
+\label{group__struct__utils}\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+
+
+\subsection{Detailed Description}
+Collaboration diagram for Parsing, converting, comparing secondary structures\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{group__struct__utils}
+\end{center}
+\end{figure}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{RNAstruct_8h}{R\+N\+Astruct.\+h}
+\begin{DoxyCompactList}\small\item\em Parsing and Coarse Graining of Structures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{group__struct__utils_structvrna__hx__s}{vrna\+\_\+hx\+\_\+s}
+\begin{DoxyCompactList}\small\item\em Data structure representing an entry of a helix list.  \hyperlink{group__struct__utils_structvrna__hx__s}{More...}\end{DoxyCompactList}\item 
+struct \hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\+\_\+elem\+\_\+prob\+\_\+s}
+\begin{DoxyCompactList}\small\item\em Data structure representing a single entry of an element probability list (e.\+g. list of pair probabilities)  \hyperlink{group__struct__utils_structvrna__elem__prob__s}{More...}\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__struct__utils_ga7e3f630af8d69bb0e917145aacf2f96d}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+L\+P\+HA}~4U
+\begin{DoxyCompactList}\small\item\em Bitflag to indicate secondary structure notations using uppercase/lowercase letters from the latin alphabet. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__struct__utils_gac92d5fa7c6625bce2670ece510a24fbd}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+R\+ND}~8U
+\begin{DoxyCompactList}\small\item\em Bitflag to indicate secondary structure notations using round brackets (parenthesis), {\ttfamily ()} \end{DoxyCompactList}\item 
+\#define \hyperlink{group__struct__utils_gaf41be40e79cb756c4e0bb8edb4d803d2}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+C\+LY}~16U
+\begin{DoxyCompactList}\small\item\em Bitflag to indicate secondary structure notations using curly brackets, {\ttfamily \{\}} \end{DoxyCompactList}\item 
+\#define \hyperlink{group__struct__utils_ga863e03f7f73f10fc9bbcbefbdda4bec8}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+NG}~32U
+\begin{DoxyCompactList}\small\item\em Bitflag to indicate secondary structure notations using angular brackets, {\ttfamily $<$$>$} \end{DoxyCompactList}\item 
+\#define \hyperlink{group__struct__utils_ga60525d61d7496eeea490a37f3d6bf757}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+S\+QR}~64U
+\begin{DoxyCompactList}\small\item\em Bitflag to indicate secondary structure notations using square brackets, {\ttfamily \mbox{[}\mbox{]}} \end{DoxyCompactList}\item 
+\#define \hyperlink{group__struct__utils_ga559ebf76b1b289f85309f4206e99aa1a}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+D\+E\+F\+A\+U\+LT}
+\begin{DoxyCompactList}\small\item\em Default bitmask to indicate secondary structure notation using any pair of brackets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__struct__utils_ga877363f3a1703b53ecd025c6fcf897a0}\label{group__struct__utils_ga877363f3a1703b53ecd025c6fcf897a0}} 
+typedef struct \hyperlink{group__struct__utils_structvrna__hx__s}{vrna\+\_\+hx\+\_\+s} \hyperlink{group__struct__utils_ga877363f3a1703b53ecd025c6fcf897a0}{vrna\+\_\+hx\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Convenience typedef for data structure \hyperlink{group__struct__utils_structvrna__hx__s}{vrna\+\_\+hx\+\_\+s}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}\label{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}} 
+typedef struct \hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\+\_\+elem\+\_\+prob\+\_\+s} \hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Convenience typedef for data structure \#vrna\+\_\+pp\+\_\+s. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{group__struct__utils_ga07b7e90e712559a1992fba3ac6d21bbd}{b2\+H\+IT} (const char $\ast$structure)
+\begin{DoxyCompactList}\small\item\em Converts the full structure from bracket notation to the H\+IT notation including root. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_ga9c80d92391f2833549a8b6dac92233f0}{b2C} (const char $\ast$structure)
+\begin{DoxyCompactList}\small\item\em Converts the full structure from bracket notation to the a coarse grained notation using the \textquotesingle{}H\textquotesingle{} \textquotesingle{}B\textquotesingle{} \textquotesingle{}I\textquotesingle{} \textquotesingle{}M\textquotesingle{} and \textquotesingle{}R\textquotesingle{} identifiers. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_ga5cd2feb367feeacad0c03cb7ddba5f10}{b2\+Shapiro} (const char $\ast$structure)
+\begin{DoxyCompactList}\small\item\em Converts the full structure from bracket notation to the {\itshape weighted} coarse grained notation using the \textquotesingle{}H\textquotesingle{} \textquotesingle{}B\textquotesingle{} \textquotesingle{}I\textquotesingle{} \textquotesingle{}M\textquotesingle{} \textquotesingle{}S\textquotesingle{} \textquotesingle{}E\textquotesingle{} and \textquotesingle{}R\textquotesingle{} identifiers. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_ga880d33066dd95441e5fbb73c57ed1c3e}{add\+\_\+root} (const char $\ast$structure)
+\begin{DoxyCompactList}\small\item\em Adds a root to an un-\/rooted tree in any except bracket notation. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_gabe3d815b420dc4553bfb23511198b4c6}{expand\+\_\+\+Shapiro} (const char $\ast$coarse)
+\begin{DoxyCompactList}\small\item\em Inserts missing \textquotesingle{}S\textquotesingle{} identifiers in unweighted coarse grained structures as obtained from \hyperlink{group__struct__utils_ga9c80d92391f2833549a8b6dac92233f0}{b2\+C()}. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_ga78d73cd54a068ef2812812771cdddc6f}{expand\+\_\+\+Full} (const char $\ast$structure)
+\begin{DoxyCompactList}\small\item\em Convert the full structure from bracket notation to the expanded notation including root. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_ga260c4b622093b76a883bf96628280de1}{unexpand\+\_\+\+Full} (const char $\ast$ffull)
+\begin{DoxyCompactList}\small\item\em Restores the bracket notation from an expanded full or H\+IT tree, that is any tree using only identifiers \textquotesingle{}U\textquotesingle{} \textquotesingle{}P\textquotesingle{} and \textquotesingle{}R\textquotesingle{}. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_ga09a80253ac7b6bae606871ba7c6e5136}{unweight} (const char $\ast$wcoarse)
+\begin{DoxyCompactList}\small\item\em Strip weights from any weighted tree. \end{DoxyCompactList}\item 
+void \hyperlink{group__struct__utils_ga1054c4477d53b31d79d4cb132100e87a}{unexpand\+\_\+aligned\+\_\+F} (char $\ast$align\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em Converts two aligned structures in expanded notation. \end{DoxyCompactList}\item 
+void \hyperlink{group__struct__utils_ga3c79042e6bf6f01706bf30ec9e69e8ac}{parse\+\_\+structure} (const char $\ast$structure)
+\begin{DoxyCompactList}\small\item\em Collects a statistic of structure elements of the full structure in bracket notation. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_ga55c4783060a1464f862f858d5599c9e1}{vrna\+\_\+db\+\_\+pack} (const char $\ast$struc)
+\begin{DoxyCompactList}\small\item\em Pack secondary secondary structure, 5\+:1 compression using base 3 encoding. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_ga6490adff857d84ce06e6f379ae3a4512}{vrna\+\_\+db\+\_\+unpack} (const char $\ast$packed)
+\begin{DoxyCompactList}\small\item\em Unpack secondary structure previously packed with \hyperlink{group__struct__utils_ga55c4783060a1464f862f858d5599c9e1}{vrna\+\_\+db\+\_\+pack()} \end{DoxyCompactList}\item 
+short $\ast$ \hyperlink{group__struct__utils_gae829fb8bb7f694c12a9c0bbc34c77c60}{vrna\+\_\+ptable} (const char $\ast$structure)
+\begin{DoxyCompactList}\small\item\em Create a pair table of a secondary structure. \end{DoxyCompactList}\item 
+short $\ast$ \hyperlink{group__struct__utils_gac76c9ef3de507748fb0416a59323362b}{vrna\+\_\+ptable\+\_\+from\+\_\+string} (const char $\ast$string, unsigned int options)
+\begin{DoxyCompactList}\small\item\em Create a pair table for a secondary structure string. \end{DoxyCompactList}\item 
+short $\ast$ \hyperlink{group__struct__utils_gacca520048b24ec5a8978f4dafb4e4bf8}{vrna\+\_\+pt\+\_\+pk\+\_\+get} (const char $\ast$structure)
+\begin{DoxyCompactList}\small\item\em Create a pair table of a secondary structure (pseudo-\/knot version) \end{DoxyCompactList}\item 
+short $\ast$ \hyperlink{group__struct__utils_ga2daefbbd6d9f8803731651882f54332d}{vrna\+\_\+ptable\+\_\+copy} (const short $\ast$pt)
+\begin{DoxyCompactList}\small\item\em Get an exact copy of a pair table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__struct__utils_ga1ee4cdcda1f57d32dcb38032116d335d}\label{group__struct__utils_ga1ee4cdcda1f57d32dcb38032116d335d}} 
+short $\ast$ \hyperlink{group__struct__utils_ga1ee4cdcda1f57d32dcb38032116d335d}{vrna\+\_\+pt\+\_\+ali\+\_\+get} (const char $\ast$structure)
+\begin{DoxyCompactList}\small\item\em Create a pair table of a secondary structure (snoop align version) \end{DoxyCompactList}\item 
+short $\ast$ \hyperlink{group__struct__utils_gaef0f7e1a6c00c81a349973de53039dda}{vrna\+\_\+pt\+\_\+snoop\+\_\+get} (const char $\ast$structure)
+\begin{DoxyCompactList}\small\item\em Create a pair table of a secondary structure (snoop version) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__struct__utils_ga03e15af299be0866ff21da880c74b92e}\label{group__struct__utils_ga03e15af299be0866ff21da880c74b92e}} 
+int $\ast$ \hyperlink{group__struct__utils_ga03e15af299be0866ff21da880c74b92e}{vrna\+\_\+loopidx\+\_\+from\+\_\+ptable} (const short $\ast$pt)
+\begin{DoxyCompactList}\small\item\em Get a loop index representation of a structure. \end{DoxyCompactList}\item 
+void \hyperlink{group__struct__utils_gae966b9f44168a4f4b39ca42ffb5f37b7}{vrna\+\_\+db\+\_\+flatten} (char $\ast$structure, unsigned int options)
+\begin{DoxyCompactList}\small\item\em Substitute pairs of brackets in a string with parenthesis. \end{DoxyCompactList}\item 
+void \hyperlink{group__struct__utils_ga690425199c8b71545e7196e3af1436f8}{vrna\+\_\+db\+\_\+flatten\+\_\+to} (char $\ast$string, const char target\mbox{[}3\mbox{]}, unsigned int options)
+\begin{DoxyCompactList}\small\item\em Substitute pairs of brackets in a string with another type of pair characters. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_gaf9ecd0d7877fecdbb0292e24f40283d5}{vrna\+\_\+db\+\_\+from\+\_\+ptable} (short $\ast$pt)
+\begin{DoxyCompactList}\small\item\em Convert a pair table into dot-\/parenthesis notation. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_ga02ca70cffb2d864f7b2d95d92218bae0}{vrna\+\_\+db\+\_\+from\+\_\+\+W\+U\+SS} (const char $\ast$wuss)
+\begin{DoxyCompactList}\small\item\em Convert a W\+U\+SS annotation string to dot-\/bracket format. \end{DoxyCompactList}\item 
+int \hyperlink{group__struct__utils_ga65bdfbac6a16bf30286e8a3f7d15f60a}{vrna\+\_\+bp\+\_\+distance} (const char $\ast$str1, const char $\ast$str2)
+\begin{DoxyCompactList}\small\item\em Compute the \char`\"{}base pair\char`\"{} distance between two secondary structures s1 and s2. \end{DoxyCompactList}\item 
+unsigned int $\ast$ \hyperlink{group__struct__utils_gab4c2a00c99ce1d612ffa5bde114eb96d}{vrna\+\_\+ref\+B\+Pcnt\+\_\+matrix} (const short $\ast$reference\+\_\+pt, unsigned int turn)
+\begin{DoxyCompactList}\small\item\em Make a reference base pair count matrix. \end{DoxyCompactList}\item 
+unsigned int $\ast$ \hyperlink{group__struct__utils_ga5a27bd058183170afd4716f5b8ff511a}{vrna\+\_\+ref\+B\+Pdist\+\_\+matrix} (const short $\ast$pt1, const short $\ast$pt2, unsigned int turn)
+\begin{DoxyCompactList}\small\item\em Make a reference base pair distance matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__struct__utils_ga0c28c410a5ab22d6ab9c77a84e8d5b44}\label{group__struct__utils_ga0c28c410a5ab22d6ab9c77a84e8d5b44}} 
+char $\ast$ \hyperlink{group__struct__utils_ga0c28c410a5ab22d6ab9c77a84e8d5b44}{vrna\+\_\+db\+\_\+from\+\_\+probs} (const \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} $\ast$\hyperlink{fold__vars_8h_ac98ec419070aee6831b44e5c700f090f}{pr}, unsigned int length)
+\begin{DoxyCompactList}\small\item\em Create a dot-\/bracket like structure string from base pair probability matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__struct__utils_ga025bff1b27fa46534c8fae6980f64bb5}\label{group__struct__utils_ga025bff1b27fa46534c8fae6980f64bb5}} 
+char \hyperlink{group__struct__utils_ga025bff1b27fa46534c8fae6980f64bb5}{vrna\+\_\+bpp\+\_\+symbol} (const float $\ast$x)
+\begin{DoxyCompactList}\small\item\em Get a pseudo dot bracket notation for a given probability information. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_ga27bea2c241564af53a065982183389df}{vrna\+\_\+db\+\_\+from\+\_\+bp\+\_\+stack} (\hyperlink{group__data__structures_gaa651bda42e7692f08cb603cd6834b0ee}{vrna\+\_\+bp\+\_\+stack\+\_\+t} $\ast$bp, unsigned int length)
+\begin{DoxyCompactList}\small\item\em Create a dot-\/backet/parenthesis structure from backtracking stack. \end{DoxyCompactList}\item 
+\hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} $\ast$ \hyperlink{group__struct__utils_gaf002d69024d709744664a8b9ca3dd77d}{vrna\+\_\+plist} (const char $\ast$struc, float \hyperlink{fold__vars_8h_ac98ec419070aee6831b44e5c700f090f}{pr})
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} from a dot-\/bracket string. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_ga6a51a36b9245d0bac868c5cd172b9611}{vrna\+\_\+db\+\_\+from\+\_\+plist} (\hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} $\ast$\hyperlink{group__struct__utils_ga6341cbb704924824e0236c1dce791032}{pairs}, unsigned int n)
+\begin{DoxyCompactList}\small\item\em Convert a list of base pairs into dot-\/bracket notation. \end{DoxyCompactList}\item 
+void \hyperlink{group__struct__utils_gab61df77cf7949cd516181fce0c3d7d78}{assign\+\_\+plist\+\_\+from\+\_\+db} (\hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} $\ast$$\ast$pl, const char $\ast$struc, float \hyperlink{fold__vars_8h_ac98ec419070aee6831b44e5c700f090f}{pr})
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} from a dot-\/bracket string. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_gac6dfa5e22928c087c6e09ff0054a7ced}{pack\+\_\+structure} (const char $\ast$struc)
+\begin{DoxyCompactList}\small\item\em Pack secondary secondary structure, 5\+:1 compression using base 3 encoding. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__struct__utils_ga071c6921efe1eb974f115ee6fefa3c39}{unpack\+\_\+structure} (const char $\ast$packed)
+\begin{DoxyCompactList}\small\item\em Unpack secondary structure previously packed with \hyperlink{group__struct__utils_gac6dfa5e22928c087c6e09ff0054a7ced}{pack\+\_\+structure()} \end{DoxyCompactList}\item 
+short $\ast$ \hyperlink{group__struct__utils_ga89c32307ee50a0026f4a3131fac0845a}{make\+\_\+pair\+\_\+table} (const char $\ast$structure)
+\begin{DoxyCompactList}\small\item\em Create a pair table of a secondary structure. \end{DoxyCompactList}\item 
+short $\ast$ \hyperlink{group__struct__utils_gafeaa6d68eef3a99d0a7aa08aa91c6601}{copy\+\_\+pair\+\_\+table} (const short $\ast$pt)
+\begin{DoxyCompactList}\small\item\em Get an exact copy of a pair table. \end{DoxyCompactList}\item 
+short $\ast$ \hyperlink{group__struct__utils_ga3c81b3967056c3888b8472b65fbb16f5}{alimake\+\_\+pair\+\_\+table} (const char $\ast$structure)
+\item 
+short $\ast$ \hyperlink{group__struct__utils_ga9aa3bf3b4346bb7fb88efc154dd07a79}{make\+\_\+pair\+\_\+table\+\_\+snoop} (const char $\ast$structure)
+\item 
+int \hyperlink{group__struct__utils_ga6ebbcd29a754f0e4f1a66d1fd84184db}{bp\+\_\+distance} (const char $\ast$str1, const char $\ast$str2)
+\begin{DoxyCompactList}\small\item\em Compute the \char`\"{}base pair\char`\"{} distance between two secondary structures s1 and s2. \end{DoxyCompactList}\item 
+unsigned int $\ast$ \hyperlink{group__struct__utils_ga578cd9712dee812fb1c58aa3cc489864}{make\+\_\+reference\+B\+P\+\_\+array} (short $\ast$reference\+\_\+pt, unsigned int turn)
+\begin{DoxyCompactList}\small\item\em Make a reference base pair count matrix. \end{DoxyCompactList}\item 
+unsigned int $\ast$ \hyperlink{group__struct__utils_gadd463184355d0803b6ee6e09f29182f2}{compute\+\_\+\+B\+Pdifferences} (short $\ast$pt1, short $\ast$pt2, unsigned int turn)
+\begin{DoxyCompactList}\small\item\em Make a reference base pair distance matrix. \end{DoxyCompactList}\item 
+void \hyperlink{group__struct__utils_gadf0ad2d46c9ca7b850437d1b79627a7e}{parenthesis\+\_\+structure} (char $\ast$structure, \hyperlink{group__data__structures_gaa651bda42e7692f08cb603cd6834b0ee}{vrna\+\_\+bp\+\_\+stack\+\_\+t} $\ast$bp, int length)
+\begin{DoxyCompactList}\small\item\em Create a dot-\/backet/parenthesis structure from backtracking stack. \end{DoxyCompactList}\item 
+void \hyperlink{group__struct__utils_gab9c5c8311bd5120900585d4fa50c2df0}{parenthesis\+\_\+zuker} (char $\ast$structure, \hyperlink{group__data__structures_gaa651bda42e7692f08cb603cd6834b0ee}{vrna\+\_\+bp\+\_\+stack\+\_\+t} $\ast$bp, int length)
+\begin{DoxyCompactList}\small\item\em Create a dot-\/backet/parenthesis structure from backtracking stack obtained by zuker suboptimal calculation in cofold.\+c. \end{DoxyCompactList}\item 
+void \hyperlink{group__struct__utils_ga129d81c4a1ead793c5b2311333e03dfa}{bppm\+\_\+to\+\_\+structure} (char $\ast$structure, \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} $\ast$\hyperlink{fold__vars_8h_ac98ec419070aee6831b44e5c700f090f}{pr}, unsigned int length)
+\begin{DoxyCompactList}\small\item\em Create a dot-\/bracket like structure string from base pair probability matrix. \end{DoxyCompactList}\item 
+char \hyperlink{group__struct__utils_ga49962ad6242b8c628de6ca16bb831c1d}{bppm\+\_\+symbol} (const float $\ast$x)
+\begin{DoxyCompactList}\small\item\em Get a pseudo dot bracket notation for a given probability information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__struct__utils_ga3f31e0e48125601bfa57b52f8b038e8e}\label{group__struct__utils_ga3f31e0e48125601bfa57b52f8b038e8e}} 
+int \hyperlink{group__struct__utils_ga3f31e0e48125601bfa57b52f8b038e8e}{loop\+\_\+size} \mbox{[}S\+T\+R\+UC\mbox{]}
+\begin{DoxyCompactList}\small\item\em contains a list of all loop sizes. loop\+\_\+size\mbox{[}0\mbox{]} contains the number of external bases. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__struct__utils_ga8218c0d581a3fba2a1a56a196abe19a5}\label{group__struct__utils_ga8218c0d581a3fba2a1a56a196abe19a5}} 
+int \hyperlink{group__struct__utils_ga8218c0d581a3fba2a1a56a196abe19a5}{helix\+\_\+size} \mbox{[}S\+T\+R\+UC\mbox{]}
+\begin{DoxyCompactList}\small\item\em contains a list of all stack sizes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__struct__utils_gaef14e2f8ab3f61e8e659ba6b9003b08a}\label{group__struct__utils_gaef14e2f8ab3f61e8e659ba6b9003b08a}} 
+int \hyperlink{group__struct__utils_gaef14e2f8ab3f61e8e659ba6b9003b08a}{loop\+\_\+degree} \mbox{[}S\+T\+R\+UC\mbox{]}
+\begin{DoxyCompactList}\small\item\em contains the corresponding list of loop degrees. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__struct__utils_ga439fcb9f8d4f9f4d2227fde5fbfecb30}\label{group__struct__utils_ga439fcb9f8d4f9f4d2227fde5fbfecb30}} 
+int \hyperlink{group__struct__utils_ga439fcb9f8d4f9f4d2227fde5fbfecb30}{loops}
+\begin{DoxyCompactList}\small\item\em contains the number of loops ( and therefore of stacks ). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__struct__utils_gadd2f952597e02d66e1116a9d11d252d6}\label{group__struct__utils_gadd2f952597e02d66e1116a9d11d252d6}} 
+int \hyperlink{group__struct__utils_gadd2f952597e02d66e1116a9d11d252d6}{unpaired}
+\begin{DoxyCompactList}\small\item\em contains the number of unpaired bases. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__struct__utils_ga6341cbb704924824e0236c1dce791032}\label{group__struct__utils_ga6341cbb704924824e0236c1dce791032}} 
+int \hyperlink{group__struct__utils_ga6341cbb704924824e0236c1dce791032}{pairs}
+\begin{DoxyCompactList}\small\item\em contains the number of base pairs in the last parsed structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Data Structure Documentation}
+\index{vrna\+\_\+hx\+\_\+s@{vrna\+\_\+hx\+\_\+s}}\label{structvrna__hx__s}
+\Hypertarget{group__struct__utils_structvrna__hx__s}
+\subsubsection{struct vrna\+\_\+hx\+\_\+s}
+Data structure representing an entry of a helix list. \index{vrna\+\_\+elem\+\_\+prob\+\_\+s@{vrna\+\_\+elem\+\_\+prob\+\_\+s}}\label{structvrna__elem__prob__s}
+\Hypertarget{group__struct__utils_structvrna__elem__prob__s}
+\subsubsection{struct vrna\+\_\+elem\+\_\+prob\+\_\+s}
+Data structure representing a single entry of an element probability list (e.\+g. list of pair probabilities) 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_gaf002d69024d709744664a8b9ca3dd77d}{vrna\+\_\+plist()}, \hyperlink{group__pf__fold_ga94f6efc0b8d8712b023452794a0a5bd2}{vrna\+\_\+plist\+\_\+from\+\_\+probs()}, \hyperlink{group__struct__utils_ga6a51a36b9245d0bac868c5cd172b9611}{vrna\+\_\+db\+\_\+from\+\_\+plist()}, \#\+V\+R\+N\+A\+\_\+\+P\+L\+I\+S\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+E\+P\+A\+IR, \#\+V\+R\+N\+A\+\_\+\+P\+L\+I\+S\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+Q\+U\+AD, \#\+V\+R\+N\+A\+\_\+\+P\+L\+I\+S\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+M\+O\+T\+IF, \#\+V\+R\+N\+A\+\_\+\+P\+L\+I\+S\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+\_\+\+M\+O\+T\+IF, \#\+V\+R\+N\+A\+\_\+\+P\+L\+I\+S\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+D\+\_\+\+M\+O\+T\+IF, \#\+V\+R\+N\+A\+\_\+\+P\+L\+I\+S\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+A\+CK 
+\end{DoxySeeAlso}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__struct__utils_ga7e3f630af8d69bb0e917145aacf2f96d}\label{group__struct__utils_ga7e3f630af8d69bb0e917145aacf2f96d}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+L\+P\+HA@{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+L\+P\+HA}}
+\index{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+L\+P\+HA@{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+L\+P\+HA}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+L\+P\+HA}{VRNA\_BRACKETS\_ALPHA}}
+{\footnotesize\ttfamily \#define V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+L\+P\+HA~4U}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Bitflag to indicate secondary structure notations using uppercase/lowercase letters from the latin alphabet. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_gac76c9ef3de507748fb0416a59323362b}{vrna\+\_\+ptable\+\_\+from\+\_\+string()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__struct__utils_gac92d5fa7c6625bce2670ece510a24fbd}\label{group__struct__utils_gac92d5fa7c6625bce2670ece510a24fbd}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+R\+ND@{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+R\+ND}}
+\index{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+R\+ND@{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+R\+ND}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+R\+ND}{VRNA\_BRACKETS\_RND}}
+{\footnotesize\ttfamily \#define V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+R\+ND~8U}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Bitflag to indicate secondary structure notations using round brackets (parenthesis), {\ttfamily ()} 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_gac76c9ef3de507748fb0416a59323362b}{vrna\+\_\+ptable\+\_\+from\+\_\+string()}, \hyperlink{group__struct__utils_gae966b9f44168a4f4b39ca42ffb5f37b7}{vrna\+\_\+db\+\_\+flatten()}, \hyperlink{group__struct__utils_ga690425199c8b71545e7196e3af1436f8}{vrna\+\_\+db\+\_\+flatten\+\_\+to()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__struct__utils_gaf41be40e79cb756c4e0bb8edb4d803d2}\label{group__struct__utils_gaf41be40e79cb756c4e0bb8edb4d803d2}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+C\+LY@{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+C\+LY}}
+\index{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+C\+LY@{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+C\+LY}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+C\+LY}{VRNA\_BRACKETS\_CLY}}
+{\footnotesize\ttfamily \#define V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+C\+LY~16U}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Bitflag to indicate secondary structure notations using curly brackets, {\ttfamily \{\}} 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_gac76c9ef3de507748fb0416a59323362b}{vrna\+\_\+ptable\+\_\+from\+\_\+string()}, \hyperlink{group__struct__utils_gae966b9f44168a4f4b39ca42ffb5f37b7}{vrna\+\_\+db\+\_\+flatten()}, \hyperlink{group__struct__utils_ga690425199c8b71545e7196e3af1436f8}{vrna\+\_\+db\+\_\+flatten\+\_\+to()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__struct__utils_ga863e03f7f73f10fc9bbcbefbdda4bec8}\label{group__struct__utils_ga863e03f7f73f10fc9bbcbefbdda4bec8}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+NG@{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+NG}}
+\index{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+NG@{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+NG}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+NG}{VRNA\_BRACKETS\_ANG}}
+{\footnotesize\ttfamily \#define V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+NG~32U}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Bitflag to indicate secondary structure notations using angular brackets, {\ttfamily $<$$>$} 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_gac76c9ef3de507748fb0416a59323362b}{vrna\+\_\+ptable\+\_\+from\+\_\+string()}, \hyperlink{group__struct__utils_gae966b9f44168a4f4b39ca42ffb5f37b7}{vrna\+\_\+db\+\_\+flatten()}, \hyperlink{group__struct__utils_ga690425199c8b71545e7196e3af1436f8}{vrna\+\_\+db\+\_\+flatten\+\_\+to()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__struct__utils_ga60525d61d7496eeea490a37f3d6bf757}\label{group__struct__utils_ga60525d61d7496eeea490a37f3d6bf757}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+S\+QR@{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+S\+QR}}
+\index{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+S\+QR@{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+S\+QR}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+S\+QR}{VRNA\_BRACKETS\_SQR}}
+{\footnotesize\ttfamily \#define V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+S\+QR~64U}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Bitflag to indicate secondary structure notations using square brackets, {\ttfamily \mbox{[}\mbox{]}} 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_gac76c9ef3de507748fb0416a59323362b}{vrna\+\_\+ptable\+\_\+from\+\_\+string()}, \hyperlink{group__struct__utils_gae966b9f44168a4f4b39ca42ffb5f37b7}{vrna\+\_\+db\+\_\+flatten()}, \hyperlink{group__struct__utils_ga690425199c8b71545e7196e3af1436f8}{vrna\+\_\+db\+\_\+flatten\+\_\+to()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__struct__utils_ga559ebf76b1b289f85309f4206e99aa1a}\label{group__struct__utils_ga559ebf76b1b289f85309f4206e99aa1a}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+D\+E\+F\+A\+U\+LT@{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+D\+E\+F\+A\+U\+LT}}
+\index{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+D\+E\+F\+A\+U\+LT@{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+D\+E\+F\+A\+U\+LT}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+D\+E\+F\+A\+U\+LT}{VRNA\_BRACKETS\_DEFAULT}}
+{\footnotesize\ttfamily \#define V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+D\+E\+F\+A\+U\+LT}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(\hyperlink{group__struct__utils_gac92d5fa7c6625bce2670ece510a24fbd}{VRNA\_BRACKETS\_RND} | \(\backslash\)
+   VRNA\_BRACKETS\_CLY | \(\backslash\)
+   VRNA\_BRACKETS\_ANG | \(\backslash\)
+   VRNA\_BRACKETS\_SQR)
+\end{DoxyCode}
+
+
+Default bitmask to indicate secondary structure notation using any pair of brackets. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_gac76c9ef3de507748fb0416a59323362b}{vrna\+\_\+ptable\+\_\+from\+\_\+string()}, \hyperlink{group__struct__utils_gae966b9f44168a4f4b39ca42ffb5f37b7}{vrna\+\_\+db\+\_\+flatten()}, \hyperlink{group__struct__utils_ga690425199c8b71545e7196e3af1436f8}{vrna\+\_\+db\+\_\+flatten\+\_\+to()} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__struct__utils_ga07b7e90e712559a1992fba3ac6d21bbd}\label{group__struct__utils_ga07b7e90e712559a1992fba3ac6d21bbd}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!b2\+H\+IT@{b2\+H\+IT}}
+\index{b2\+H\+IT@{b2\+H\+IT}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{b2\+H\+I\+T()}{b2HIT()}}
+{\footnotesize\ttfamily char$\ast$ b2\+H\+IT (\begin{DoxyParamCaption}\item[{const char $\ast$}]{structure }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{RNAstruct_8h}{Vienna\+R\+N\+A/\+R\+N\+Astruct.\+h}$>$}
+
+
+
+Converts the full structure from bracket notation to the H\+IT notation including root. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em structure} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga9c80d92391f2833549a8b6dac92233f0}\label{group__struct__utils_ga9c80d92391f2833549a8b6dac92233f0}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!b2C@{b2C}}
+\index{b2C@{b2C}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{b2\+C()}{b2C()}}
+{\footnotesize\ttfamily char$\ast$ b2C (\begin{DoxyParamCaption}\item[{const char $\ast$}]{structure }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{RNAstruct_8h}{Vienna\+R\+N\+A/\+R\+N\+Astruct.\+h}$>$}
+
+
+
+Converts the full structure from bracket notation to the a coarse grained notation using the \textquotesingle{}H\textquotesingle{} \textquotesingle{}B\textquotesingle{} \textquotesingle{}I\textquotesingle{} \textquotesingle{}M\textquotesingle{} and \textquotesingle{}R\textquotesingle{} identifiers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em structure} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga5cd2feb367feeacad0c03cb7ddba5f10}\label{group__struct__utils_ga5cd2feb367feeacad0c03cb7ddba5f10}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!b2\+Shapiro@{b2\+Shapiro}}
+\index{b2\+Shapiro@{b2\+Shapiro}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{b2\+Shapiro()}{b2Shapiro()}}
+{\footnotesize\ttfamily char$\ast$ b2\+Shapiro (\begin{DoxyParamCaption}\item[{const char $\ast$}]{structure }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{RNAstruct_8h}{Vienna\+R\+N\+A/\+R\+N\+Astruct.\+h}$>$}
+
+
+
+Converts the full structure from bracket notation to the {\itshape weighted} coarse grained notation using the \textquotesingle{}H\textquotesingle{} \textquotesingle{}B\textquotesingle{} \textquotesingle{}I\textquotesingle{} \textquotesingle{}M\textquotesingle{} \textquotesingle{}S\textquotesingle{} \textquotesingle{}E\textquotesingle{} and \textquotesingle{}R\textquotesingle{} identifiers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em structure} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga880d33066dd95441e5fbb73c57ed1c3e}\label{group__struct__utils_ga880d33066dd95441e5fbb73c57ed1c3e}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!add\+\_\+root@{add\+\_\+root}}
+\index{add\+\_\+root@{add\+\_\+root}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{add\+\_\+root()}{add\_root()}}
+{\footnotesize\ttfamily char$\ast$ add\+\_\+root (\begin{DoxyParamCaption}\item[{const char $\ast$}]{structure }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{RNAstruct_8h}{Vienna\+R\+N\+A/\+R\+N\+Astruct.\+h}$>$}
+
+
+
+Adds a root to an un-\/rooted tree in any except bracket notation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em structure} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_gabe3d815b420dc4553bfb23511198b4c6}\label{group__struct__utils_gabe3d815b420dc4553bfb23511198b4c6}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!expand\+\_\+\+Shapiro@{expand\+\_\+\+Shapiro}}
+\index{expand\+\_\+\+Shapiro@{expand\+\_\+\+Shapiro}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{expand\+\_\+\+Shapiro()}{expand\_Shapiro()}}
+{\footnotesize\ttfamily char$\ast$ expand\+\_\+\+Shapiro (\begin{DoxyParamCaption}\item[{const char $\ast$}]{coarse }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{RNAstruct_8h}{Vienna\+R\+N\+A/\+R\+N\+Astruct.\+h}$>$}
+
+
+
+Inserts missing \textquotesingle{}S\textquotesingle{} identifiers in unweighted coarse grained structures as obtained from \hyperlink{group__struct__utils_ga9c80d92391f2833549a8b6dac92233f0}{b2\+C()}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coarse} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga78d73cd54a068ef2812812771cdddc6f}\label{group__struct__utils_ga78d73cd54a068ef2812812771cdddc6f}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!expand\+\_\+\+Full@{expand\+\_\+\+Full}}
+\index{expand\+\_\+\+Full@{expand\+\_\+\+Full}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{expand\+\_\+\+Full()}{expand\_Full()}}
+{\footnotesize\ttfamily char$\ast$ expand\+\_\+\+Full (\begin{DoxyParamCaption}\item[{const char $\ast$}]{structure }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{RNAstruct_8h}{Vienna\+R\+N\+A/\+R\+N\+Astruct.\+h}$>$}
+
+
+
+Convert the full structure from bracket notation to the expanded notation including root. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em structure} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga260c4b622093b76a883bf96628280de1}\label{group__struct__utils_ga260c4b622093b76a883bf96628280de1}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!unexpand\+\_\+\+Full@{unexpand\+\_\+\+Full}}
+\index{unexpand\+\_\+\+Full@{unexpand\+\_\+\+Full}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{unexpand\+\_\+\+Full()}{unexpand\_Full()}}
+{\footnotesize\ttfamily char$\ast$ unexpand\+\_\+\+Full (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ffull }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{RNAstruct_8h}{Vienna\+R\+N\+A/\+R\+N\+Astruct.\+h}$>$}
+
+
+
+Restores the bracket notation from an expanded full or H\+IT tree, that is any tree using only identifiers \textquotesingle{}U\textquotesingle{} \textquotesingle{}P\textquotesingle{} and \textquotesingle{}R\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ffull} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga09a80253ac7b6bae606871ba7c6e5136}\label{group__struct__utils_ga09a80253ac7b6bae606871ba7c6e5136}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!unweight@{unweight}}
+\index{unweight@{unweight}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{unweight()}{unweight()}}
+{\footnotesize\ttfamily char$\ast$ unweight (\begin{DoxyParamCaption}\item[{const char $\ast$}]{wcoarse }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{RNAstruct_8h}{Vienna\+R\+N\+A/\+R\+N\+Astruct.\+h}$>$}
+
+
+
+Strip weights from any weighted tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wcoarse} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga1054c4477d53b31d79d4cb132100e87a}\label{group__struct__utils_ga1054c4477d53b31d79d4cb132100e87a}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!unexpand\+\_\+aligned\+\_\+F@{unexpand\+\_\+aligned\+\_\+F}}
+\index{unexpand\+\_\+aligned\+\_\+F@{unexpand\+\_\+aligned\+\_\+F}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{unexpand\+\_\+aligned\+\_\+\+F()}{unexpand\_aligned\_F()}}
+{\footnotesize\ttfamily void unexpand\+\_\+aligned\+\_\+F (\begin{DoxyParamCaption}\item[{char $\ast$}]{align\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{RNAstruct_8h}{Vienna\+R\+N\+A/\+R\+N\+Astruct.\+h}$>$}
+
+
+
+Converts two aligned structures in expanded notation. 
+
+Takes two aligned structures as produced by \hyperlink{treedist_8h_a3b21f1925f7071f46d93431a835217bb}{tree\+\_\+edit\+\_\+distance()} function back to bracket notation with \textquotesingle{}\+\_\+\textquotesingle{} as the gap character. The result overwrites the input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em align} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__struct__utils_ga3c79042e6bf6f01706bf30ec9e69e8ac}\label{group__struct__utils_ga3c79042e6bf6f01706bf30ec9e69e8ac}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!parse\+\_\+structure@{parse\+\_\+structure}}
+\index{parse\+\_\+structure@{parse\+\_\+structure}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{parse\+\_\+structure()}{parse\_structure()}}
+{\footnotesize\ttfamily void parse\+\_\+structure (\begin{DoxyParamCaption}\item[{const char $\ast$}]{structure }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{RNAstruct_8h}{Vienna\+R\+N\+A/\+R\+N\+Astruct.\+h}$>$}
+
+
+
+Collects a statistic of structure elements of the full structure in bracket notation. 
+
+The function writes to the following global variables\+: \hyperlink{group__struct__utils_ga3f31e0e48125601bfa57b52f8b038e8e}{loop\+\_\+size}, \hyperlink{group__struct__utils_gaef14e2f8ab3f61e8e659ba6b9003b08a}{loop\+\_\+degree}, \hyperlink{group__struct__utils_ga8218c0d581a3fba2a1a56a196abe19a5}{helix\+\_\+size}, \hyperlink{group__struct__utils_ga439fcb9f8d4f9f4d2227fde5fbfecb30}{loops}, \hyperlink{group__struct__utils_ga6341cbb704924824e0236c1dce791032}{pairs}, \hyperlink{group__struct__utils_gadd2f952597e02d66e1116a9d11d252d6}{unpaired}
+
+
+\begin{DoxyParams}{Parameters}
+{\em structure} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga55c4783060a1464f862f858d5599c9e1}\label{group__struct__utils_ga55c4783060a1464f862f858d5599c9e1}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+db\+\_\+pack@{vrna\+\_\+db\+\_\+pack}}
+\index{vrna\+\_\+db\+\_\+pack@{vrna\+\_\+db\+\_\+pack}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+db\+\_\+pack()}{vrna\_db\_pack()}}
+{\footnotesize\ttfamily char$\ast$ vrna\+\_\+db\+\_\+pack (\begin{DoxyParamCaption}\item[{const char $\ast$}]{struc }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Pack secondary secondary structure, 5\+:1 compression using base 3 encoding. 
+
+Returns a binary string encoding of the secondary structure using a 5\+:1 compression scheme. The string is N\+U\+LL terminated and can therefore be used with standard string functions such as strcmp(). Useful for programs that need to keep many structures in memory.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_ga6490adff857d84ce06e6f379ae3a4512}{vrna\+\_\+db\+\_\+unpack()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em struc} & The secondary structure in dot-\/bracket notation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The binary encoded structure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga6490adff857d84ce06e6f379ae3a4512}\label{group__struct__utils_ga6490adff857d84ce06e6f379ae3a4512}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+db\+\_\+unpack@{vrna\+\_\+db\+\_\+unpack}}
+\index{vrna\+\_\+db\+\_\+unpack@{vrna\+\_\+db\+\_\+unpack}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+db\+\_\+unpack()}{vrna\_db\_unpack()}}
+{\footnotesize\ttfamily char$\ast$ vrna\+\_\+db\+\_\+unpack (\begin{DoxyParamCaption}\item[{const char $\ast$}]{packed }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Unpack secondary structure previously packed with \hyperlink{group__struct__utils_ga55c4783060a1464f862f858d5599c9e1}{vrna\+\_\+db\+\_\+pack()} 
+
+Translate a compressed binary string produced by \hyperlink{group__struct__utils_ga55c4783060a1464f862f858d5599c9e1}{vrna\+\_\+db\+\_\+pack()} back into the familiar dot-\/bracket notation.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_ga55c4783060a1464f862f858d5599c9e1}{vrna\+\_\+db\+\_\+pack()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em packed} & The binary encoded packed secondary structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The unpacked secondary structure in dot-\/bracket notation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_gae829fb8bb7f694c12a9c0bbc34c77c60}\label{group__struct__utils_gae829fb8bb7f694c12a9c0bbc34c77c60}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+ptable@{vrna\+\_\+ptable}}
+\index{vrna\+\_\+ptable@{vrna\+\_\+ptable}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+ptable()}{vrna\_ptable()}}
+{\footnotesize\ttfamily short$\ast$ vrna\+\_\+ptable (\begin{DoxyParamCaption}\item[{const char $\ast$}]{structure }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Create a pair table of a secondary structure. 
+
+Returns a newly allocated table, such that table\mbox{[}i\mbox{]}=j if (i.\+j) pair or 0 if i is unpaired, table\mbox{[}0\mbox{]} contains the length of the structure.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_gac76c9ef3de507748fb0416a59323362b}{vrna\+\_\+ptable\+\_\+from\+\_\+string()}, \hyperlink{group__struct__utils_gaf9ecd0d7877fecdbb0292e24f40283d5}{vrna\+\_\+db\+\_\+from\+\_\+ptable()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em structure} & The secondary structure in dot-\/bracket notation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created pair\+\_\+table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_gac76c9ef3de507748fb0416a59323362b}\label{group__struct__utils_gac76c9ef3de507748fb0416a59323362b}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+ptable\+\_\+from\+\_\+string@{vrna\+\_\+ptable\+\_\+from\+\_\+string}}
+\index{vrna\+\_\+ptable\+\_\+from\+\_\+string@{vrna\+\_\+ptable\+\_\+from\+\_\+string}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+ptable\+\_\+from\+\_\+string()}{vrna\_ptable\_from\_string()}}
+{\footnotesize\ttfamily short$\ast$ vrna\+\_\+ptable\+\_\+from\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{string,  }\item[{unsigned int}]{options }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Create a pair table for a secondary structure string. 
+
+This function takes an input string of a secondary structure annotation in \hyperlink{rna_structure_notations_dot-bracket-notation}{Dot-\/\+Bracket Notation (a.\+k.\+a. Dot-\/\+Parenthesis Notation)} or \hyperlink{rna_structure_notations_dot-bracket-ext-notation}{Extended Dot-\/\+Bracket Notation}, and converts it into a pair table representation.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_gae829fb8bb7f694c12a9c0bbc34c77c60}{vrna\+\_\+ptable()}, \hyperlink{group__struct__utils_gaf9ecd0d7877fecdbb0292e24f40283d5}{vrna\+\_\+db\+\_\+from\+\_\+ptable()}, \hyperlink{group__struct__utils_ga690425199c8b71545e7196e3af1436f8}{vrna\+\_\+db\+\_\+flatten\+\_\+to()}, \hyperlink{group__struct__utils_gac92d5fa7c6625bce2670ece510a24fbd}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+R\+ND}, \hyperlink{group__struct__utils_ga863e03f7f73f10fc9bbcbefbdda4bec8}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+NG}, \hyperlink{group__struct__utils_gaf41be40e79cb756c4e0bb8edb4d803d2}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+C\+LY}, \hyperlink{group__struct__utils_ga60525d61d7496eeea490a37f3d6bf757}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+S\+QR}, \hyperlink{group__struct__utils_ga559ebf76b1b289f85309f4206e99aa1a}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+D\+E\+F\+A\+U\+LT}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Secondary structure in \hyperlink{rna_structure_notations_dot-bracket-ext-notation}{Extended Dot-\/\+Bracket Notation} \\
+\hline
+{\em options} & A bitmask to specify which brackets are recognized during conversion to pair table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a new pair table of the provided secondary structure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_gacca520048b24ec5a8978f4dafb4e4bf8}\label{group__struct__utils_gacca520048b24ec5a8978f4dafb4e4bf8}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+pt\+\_\+pk\+\_\+get@{vrna\+\_\+pt\+\_\+pk\+\_\+get}}
+\index{vrna\+\_\+pt\+\_\+pk\+\_\+get@{vrna\+\_\+pt\+\_\+pk\+\_\+get}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+pt\+\_\+pk\+\_\+get()}{vrna\_pt\_pk\_get()}}
+{\footnotesize\ttfamily short$\ast$ vrna\+\_\+pt\+\_\+pk\+\_\+get (\begin{DoxyParamCaption}\item[{const char $\ast$}]{structure }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Create a pair table of a secondary structure (pseudo-\/knot version) 
+
+Returns a newly allocated table, such that table\mbox{[}i\mbox{]}=j if (i.\+j) pair or 0 if i is unpaired, table\mbox{[}0\mbox{]} contains the length of the structure.
+
+In contrast to \hyperlink{group__struct__utils_gae829fb8bb7f694c12a9c0bbc34c77c60}{vrna\+\_\+ptable()} this function also recognizes the base pairs denoted by \textquotesingle{}\mbox{[}\textquotesingle{} and \textquotesingle{}\mbox{]}\textquotesingle{} brackets.
+
+
+\begin{DoxyParams}{Parameters}
+{\em structure} & The secondary structure in (extended) dot-\/bracket notation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created pair\+\_\+table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga2daefbbd6d9f8803731651882f54332d}\label{group__struct__utils_ga2daefbbd6d9f8803731651882f54332d}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+ptable\+\_\+copy@{vrna\+\_\+ptable\+\_\+copy}}
+\index{vrna\+\_\+ptable\+\_\+copy@{vrna\+\_\+ptable\+\_\+copy}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+ptable\+\_\+copy()}{vrna\_ptable\_copy()}}
+{\footnotesize\ttfamily short$\ast$ vrna\+\_\+ptable\+\_\+copy (\begin{DoxyParamCaption}\item[{const short $\ast$}]{pt }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Get an exact copy of a pair table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & The pair table to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the copy of \textquotesingle{}pt\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_gaef0f7e1a6c00c81a349973de53039dda}\label{group__struct__utils_gaef0f7e1a6c00c81a349973de53039dda}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+pt\+\_\+snoop\+\_\+get@{vrna\+\_\+pt\+\_\+snoop\+\_\+get}}
+\index{vrna\+\_\+pt\+\_\+snoop\+\_\+get@{vrna\+\_\+pt\+\_\+snoop\+\_\+get}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+pt\+\_\+snoop\+\_\+get()}{vrna\_pt\_snoop\_get()}}
+{\footnotesize\ttfamily short$\ast$ vrna\+\_\+pt\+\_\+snoop\+\_\+get (\begin{DoxyParamCaption}\item[{const char $\ast$}]{structure }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Create a pair table of a secondary structure (snoop version) 
+
+returns a newly allocated table, such that\+: table\mbox{[}i\mbox{]}=j if (i.\+j) pair or 0 if i is unpaired, table\mbox{[}0\mbox{]} contains the length of the structure. The special pseudoknotted H/\+A\+C\+A-\/m\+R\+NA structure is taken into account. \mbox{\Hypertarget{group__struct__utils_gae966b9f44168a4f4b39ca42ffb5f37b7}\label{group__struct__utils_gae966b9f44168a4f4b39ca42ffb5f37b7}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+db\+\_\+flatten@{vrna\+\_\+db\+\_\+flatten}}
+\index{vrna\+\_\+db\+\_\+flatten@{vrna\+\_\+db\+\_\+flatten}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+db\+\_\+flatten()}{vrna\_db\_flatten()}}
+{\footnotesize\ttfamily vrna\+\_\+db\+\_\+flatten (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{unsigned int}]{options }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Substitute pairs of brackets in a string with parenthesis. 
+
+This function can be used to replace brackets of unusual types, such as angular brackets  $<$$>$  , to dot-\/bracket format. The {\ttfamily options} parameter is used tpo specify which types of brackets will be replaced by round parenthesis  () .
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_ga690425199c8b71545e7196e3af1436f8}{vrna\+\_\+db\+\_\+flatten\+\_\+to()}, \hyperlink{group__struct__utils_gac92d5fa7c6625bce2670ece510a24fbd}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+R\+ND}, \hyperlink{group__struct__utils_ga863e03f7f73f10fc9bbcbefbdda4bec8}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+NG}, \hyperlink{group__struct__utils_gaf41be40e79cb756c4e0bb8edb4d803d2}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+C\+LY}, \hyperlink{group__struct__utils_ga60525d61d7496eeea490a37f3d6bf757}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+S\+QR}, \hyperlink{group__struct__utils_ga559ebf76b1b289f85309f4206e99aa1a}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+D\+E\+F\+A\+U\+LT}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em structure} & The structure string where brackets are flattened in-\/place \\
+\hline
+{\em options} & A bitmask to specify which types of brackets should be flattened out\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{S\+W\+I\+G Wrapper Notes}
+\item[\hyperlink{wrappers__wrappers000088}{S\+W\+I\+G Wrapper Notes}]This function flattens an input structure string in-\/place! The second parameter is optional and defaults to \hyperlink{group__struct__utils_ga559ebf76b1b289f85309f4206e99aa1a}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+D\+E\+F\+A\+U\+LT}.
+
+An overloaded version of this function exists, where an additional second parameter can be passed to specify the target brackets, i.\+e. the type of matching pair characters all brackets will be flattened to. Therefore, in the scripting language interface this function is a replacement for \hyperlink{group__struct__utils_ga690425199c8b71545e7196e3af1436f8}{vrna\+\_\+db\+\_\+flatten\+\_\+to()}. \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__struct__utils_ga690425199c8b71545e7196e3af1436f8}\label{group__struct__utils_ga690425199c8b71545e7196e3af1436f8}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+db\+\_\+flatten\+\_\+to@{vrna\+\_\+db\+\_\+flatten\+\_\+to}}
+\index{vrna\+\_\+db\+\_\+flatten\+\_\+to@{vrna\+\_\+db\+\_\+flatten\+\_\+to}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+db\+\_\+flatten\+\_\+to()}{vrna\_db\_flatten\_to()}}
+{\footnotesize\ttfamily void vrna\+\_\+db\+\_\+flatten\+\_\+to (\begin{DoxyParamCaption}\item[{char $\ast$}]{string,  }\item[{const char}]{target\mbox{[}3\mbox{]},  }\item[{unsigned int}]{options }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Substitute pairs of brackets in a string with another type of pair characters. 
+
+This function can be used to replace brackets in a structure annotation string, such as square brackets  \mbox{[}\mbox{]}  , to another type of pair characters, e.\+g. angular brackets  $<$$>$ .
+
+The {\ttfamily target} array must contain a character for the \textquotesingle{}pair open\textquotesingle{} annotation at position 0, and one for \textquotesingle{}pair close\textquotesingle{} at position 1. T{\ttfamily options} parameter is used to specify which types of brackets will be replaced by the new pairs.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_gae966b9f44168a4f4b39ca42ffb5f37b7}{vrna\+\_\+db\+\_\+flatten()}, \hyperlink{group__struct__utils_gac92d5fa7c6625bce2670ece510a24fbd}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+R\+ND}, \hyperlink{group__struct__utils_ga863e03f7f73f10fc9bbcbefbdda4bec8}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+A\+NG}, \hyperlink{group__struct__utils_gaf41be40e79cb756c4e0bb8edb4d803d2}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+C\+LY}, \hyperlink{group__struct__utils_ga60525d61d7496eeea490a37f3d6bf757}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+S\+QR}, \hyperlink{group__struct__utils_ga559ebf76b1b289f85309f4206e99aa1a}{V\+R\+N\+A\+\_\+\+B\+R\+A\+C\+K\+E\+T\+S\+\_\+\+D\+E\+F\+A\+U\+LT}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em structure} & The structure string where brackets are flattened in-\/place \\
+\hline
+{\em target} & The new pair characters the string will be flattened to \\
+\hline
+{\em options} & A bitmask to specify which types of brackets should be flattened out\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{S\+W\+I\+G Wrapper Notes}
+\item[\hyperlink{wrappers__wrappers000089}{S\+W\+I\+G Wrapper Notes}]This function is available as an overloaded version of \hyperlink{group__struct__utils_gae966b9f44168a4f4b39ca42ffb5f37b7}{vrna\+\_\+db\+\_\+flatten()} \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__struct__utils_gaf9ecd0d7877fecdbb0292e24f40283d5}\label{group__struct__utils_gaf9ecd0d7877fecdbb0292e24f40283d5}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+db\+\_\+from\+\_\+ptable@{vrna\+\_\+db\+\_\+from\+\_\+ptable}}
+\index{vrna\+\_\+db\+\_\+from\+\_\+ptable@{vrna\+\_\+db\+\_\+from\+\_\+ptable}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+db\+\_\+from\+\_\+ptable()}{vrna\_db\_from\_ptable()}}
+{\footnotesize\ttfamily char$\ast$ vrna\+\_\+db\+\_\+from\+\_\+ptable (\begin{DoxyParamCaption}\item[{short $\ast$}]{pt }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Convert a pair table into dot-\/parenthesis notation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & The pair table to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A char pointer to the dot-\/bracket string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga02ca70cffb2d864f7b2d95d92218bae0}\label{group__struct__utils_ga02ca70cffb2d864f7b2d95d92218bae0}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+db\+\_\+from\+\_\+\+W\+U\+SS@{vrna\+\_\+db\+\_\+from\+\_\+\+W\+U\+SS}}
+\index{vrna\+\_\+db\+\_\+from\+\_\+\+W\+U\+SS@{vrna\+\_\+db\+\_\+from\+\_\+\+W\+U\+SS}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+db\+\_\+from\+\_\+\+W\+U\+S\+S()}{vrna\_db\_from\_WUSS()}}
+{\footnotesize\ttfamily char$\ast$ vrna\+\_\+db\+\_\+from\+\_\+\+W\+U\+SS (\begin{DoxyParamCaption}\item[{const char $\ast$}]{wuss }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Convert a W\+U\+SS annotation string to dot-\/bracket format. 
+
+\begin{DoxyNote}{Note}
+This function flattens all brackets, and treats pseudo-\/knots annotated by matching pairs of upper/lowercase letters as unpaired nucleotides
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{rna_structure_notations_wuss-notation}{Washington University Secondary Structure (W\+U\+SS) notation}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em wuss} & The input string in W\+U\+SS notation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dot-\/bracket notation of the input secondary structure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga65bdfbac6a16bf30286e8a3f7d15f60a}\label{group__struct__utils_ga65bdfbac6a16bf30286e8a3f7d15f60a}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+bp\+\_\+distance@{vrna\+\_\+bp\+\_\+distance}}
+\index{vrna\+\_\+bp\+\_\+distance@{vrna\+\_\+bp\+\_\+distance}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+bp\+\_\+distance()}{vrna\_bp\_distance()}}
+{\footnotesize\ttfamily int vrna\+\_\+bp\+\_\+distance (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str1,  }\item[{const char $\ast$}]{str2 }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Compute the \char`\"{}base pair\char`\"{} distance between two secondary structures s1 and s2. 
+
+The sequences should have the same length. dist = number of base pairs in one structure but not in the other same as edit distance with open-\/pair close-\/pair as move-\/set
+
+
+\begin{DoxyParams}{Parameters}
+{\em str1} & First structure in dot-\/bracket notation \\
+\hline
+{\em str2} & Second structure in dot-\/bracket notation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The base pair distance between str1 and str2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_gab4c2a00c99ce1d612ffa5bde114eb96d}\label{group__struct__utils_gab4c2a00c99ce1d612ffa5bde114eb96d}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+ref\+B\+Pcnt\+\_\+matrix@{vrna\+\_\+ref\+B\+Pcnt\+\_\+matrix}}
+\index{vrna\+\_\+ref\+B\+Pcnt\+\_\+matrix@{vrna\+\_\+ref\+B\+Pcnt\+\_\+matrix}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+ref\+B\+Pcnt\+\_\+matrix()}{vrna\_refBPcnt\_matrix()}}
+{\footnotesize\ttfamily unsigned int$\ast$ vrna\+\_\+ref\+B\+Pcnt\+\_\+matrix (\begin{DoxyParamCaption}\item[{const short $\ast$}]{reference\+\_\+pt,  }\item[{unsigned int}]{turn }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Make a reference base pair count matrix. 
+
+Get an upper triangular matrix containing the number of basepairs of a reference structure for each interval \mbox{[}i,j\mbox{]} with i$<$j. Access it via iindx!!! \mbox{\Hypertarget{group__struct__utils_ga5a27bd058183170afd4716f5b8ff511a}\label{group__struct__utils_ga5a27bd058183170afd4716f5b8ff511a}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+ref\+B\+Pdist\+\_\+matrix@{vrna\+\_\+ref\+B\+Pdist\+\_\+matrix}}
+\index{vrna\+\_\+ref\+B\+Pdist\+\_\+matrix@{vrna\+\_\+ref\+B\+Pdist\+\_\+matrix}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+ref\+B\+Pdist\+\_\+matrix()}{vrna\_refBPdist\_matrix()}}
+{\footnotesize\ttfamily unsigned int$\ast$ vrna\+\_\+ref\+B\+Pdist\+\_\+matrix (\begin{DoxyParamCaption}\item[{const short $\ast$}]{pt1,  }\item[{const short $\ast$}]{pt2,  }\item[{unsigned int}]{turn }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Make a reference base pair distance matrix. 
+
+Get an upper triangular matrix containing the base pair distance of two reference structures for each interval \mbox{[}i,j\mbox{]} with i$<$j. Access it via iindx!!! \mbox{\Hypertarget{group__struct__utils_ga27bea2c241564af53a065982183389df}\label{group__struct__utils_ga27bea2c241564af53a065982183389df}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+db\+\_\+from\+\_\+bp\+\_\+stack@{vrna\+\_\+db\+\_\+from\+\_\+bp\+\_\+stack}}
+\index{vrna\+\_\+db\+\_\+from\+\_\+bp\+\_\+stack@{vrna\+\_\+db\+\_\+from\+\_\+bp\+\_\+stack}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+db\+\_\+from\+\_\+bp\+\_\+stack()}{vrna\_db\_from\_bp\_stack()}}
+{\footnotesize\ttfamily char$\ast$ vrna\+\_\+db\+\_\+from\+\_\+bp\+\_\+stack (\begin{DoxyParamCaption}\item[{\hyperlink{group__data__structures_gaa651bda42e7692f08cb603cd6834b0ee}{vrna\+\_\+bp\+\_\+stack\+\_\+t} $\ast$}]{bp,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Create a dot-\/backet/parenthesis structure from backtracking stack. 
+
+This function is capable to create dot-\/bracket structures from suboptimal structure prediction sensu M. Zuker
+
+
+\begin{DoxyParams}{Parameters}
+{\em bp} & Base pair stack containing the traced base pairs \\
+\hline
+{\em length} & The length of the structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The secondary structure in dot-\/bracket notation as provided in the input 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_gaf002d69024d709744664a8b9ca3dd77d}\label{group__struct__utils_gaf002d69024d709744664a8b9ca3dd77d}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+plist@{vrna\+\_\+plist}}
+\index{vrna\+\_\+plist@{vrna\+\_\+plist}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+plist()}{vrna\_plist()}}
+{\footnotesize\ttfamily \hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t}$\ast$ vrna\+\_\+plist (\begin{DoxyParamCaption}\item[{const char $\ast$}]{struc,  }\item[{float}]{pr }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Create a \hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} from a dot-\/bracket string. 
+
+The dot-\/bracket string is parsed and for each base pair an entry in the plist is created. The probability of each pair in the list is set by a function parameter.
+
+The end of the plist is marked by sequence positions i as well as j equal to 0. This condition should be used to stop looping over its entries
+
+
+\begin{DoxyParams}{Parameters}
+{\em struc} & The secondary structure in dot-\/bracket notation \\
+\hline
+{\em pr} & The probability for each base pair used in the plist \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The plist array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga6a51a36b9245d0bac868c5cd172b9611}\label{group__struct__utils_ga6a51a36b9245d0bac868c5cd172b9611}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!vrna\+\_\+db\+\_\+from\+\_\+plist@{vrna\+\_\+db\+\_\+from\+\_\+plist}}
+\index{vrna\+\_\+db\+\_\+from\+\_\+plist@{vrna\+\_\+db\+\_\+from\+\_\+plist}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+db\+\_\+from\+\_\+plist()}{vrna\_db\_from\_plist()}}
+{\footnotesize\ttfamily char$\ast$ vrna\+\_\+db\+\_\+from\+\_\+plist (\begin{DoxyParamCaption}\item[{\hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} $\ast$}]{pairs,  }\item[{unsigned int}]{n }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Convert a list of base pairs into dot-\/bracket notation. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__struct__utils_gaf002d69024d709744664a8b9ca3dd77d}{vrna\+\_\+plist()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em pairs} & A \hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} containing the pairs to be included in the dot-\/bracket string \\
+\hline
+{\em n} & The length of the structure (number of nucleotides) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The dot-\/bracket string containing the provided base pairs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_gab61df77cf7949cd516181fce0c3d7d78}\label{group__struct__utils_gab61df77cf7949cd516181fce0c3d7d78}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!assign\+\_\+plist\+\_\+from\+\_\+db@{assign\+\_\+plist\+\_\+from\+\_\+db}}
+\index{assign\+\_\+plist\+\_\+from\+\_\+db@{assign\+\_\+plist\+\_\+from\+\_\+db}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{assign\+\_\+plist\+\_\+from\+\_\+db()}{assign\_plist\_from\_db()}}
+{\footnotesize\ttfamily void assign\+\_\+plist\+\_\+from\+\_\+db (\begin{DoxyParamCaption}\item[{\hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} $\ast$$\ast$}]{pl,  }\item[{const char $\ast$}]{struc,  }\item[{float}]{pr }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Create a \hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} from a dot-\/bracket string. 
+
+The dot-\/bracket string is parsed and for each base pair an entry in the plist is created. The probability of each pair in the list is set by a function parameter.
+
+The end of the plist is marked by sequence positions i as well as j equal to 0. This condition should be used to stop looping over its entries
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000137}{Deprecated}]Use \hyperlink{group__struct__utils_gaf002d69024d709744664a8b9ca3dd77d}{vrna\+\_\+plist()} instead\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em pl} & A pointer to the \hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} that is to be created \\
+\hline
+{\em struc} & The secondary structure in dot-\/bracket notation \\
+\hline
+{\em pr} & The probability for each base pair \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__struct__utils_gac6dfa5e22928c087c6e09ff0054a7ced}\label{group__struct__utils_gac6dfa5e22928c087c6e09ff0054a7ced}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!pack\+\_\+structure@{pack\+\_\+structure}}
+\index{pack\+\_\+structure@{pack\+\_\+structure}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{pack\+\_\+structure()}{pack\_structure()}}
+{\footnotesize\ttfamily char$\ast$ pack\+\_\+structure (\begin{DoxyParamCaption}\item[{const char $\ast$}]{struc }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Pack secondary secondary structure, 5\+:1 compression using base 3 encoding. 
+
+Returns a binary string encoding of the secondary structure using a 5\+:1 compression scheme. The string is N\+U\+LL terminated and can therefore be used with standard string functions such as strcmp(). Useful for programs that need to keep many structures in memory.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000138}{Deprecated}]Use \hyperlink{group__struct__utils_ga55c4783060a1464f862f858d5599c9e1}{vrna\+\_\+db\+\_\+pack()} as a replacement \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em struc} & The secondary structure in dot-\/bracket notation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The binary encoded structure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga071c6921efe1eb974f115ee6fefa3c39}\label{group__struct__utils_ga071c6921efe1eb974f115ee6fefa3c39}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!unpack\+\_\+structure@{unpack\+\_\+structure}}
+\index{unpack\+\_\+structure@{unpack\+\_\+structure}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{unpack\+\_\+structure()}{unpack\_structure()}}
+{\footnotesize\ttfamily char$\ast$ unpack\+\_\+structure (\begin{DoxyParamCaption}\item[{const char $\ast$}]{packed }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Unpack secondary structure previously packed with \hyperlink{group__struct__utils_gac6dfa5e22928c087c6e09ff0054a7ced}{pack\+\_\+structure()} 
+
+Translate a compressed binary string produced by \hyperlink{group__struct__utils_gac6dfa5e22928c087c6e09ff0054a7ced}{pack\+\_\+structure()} back into the familiar dot-\/bracket notation.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000139}{Deprecated}]Use \hyperlink{group__struct__utils_ga6490adff857d84ce06e6f379ae3a4512}{vrna\+\_\+db\+\_\+unpack()} as a replacement \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em packed} & The binary encoded packed secondary structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The unpacked secondary structure in dot-\/bracket notation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga89c32307ee50a0026f4a3131fac0845a}\label{group__struct__utils_ga89c32307ee50a0026f4a3131fac0845a}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!make\+\_\+pair\+\_\+table@{make\+\_\+pair\+\_\+table}}
+\index{make\+\_\+pair\+\_\+table@{make\+\_\+pair\+\_\+table}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{make\+\_\+pair\+\_\+table()}{make\_pair\_table()}}
+{\footnotesize\ttfamily short$\ast$ make\+\_\+pair\+\_\+table (\begin{DoxyParamCaption}\item[{const char $\ast$}]{structure }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Create a pair table of a secondary structure. 
+
+Returns a newly allocated table, such that table\mbox{[}i\mbox{]}=j if (i.\+j) pair or 0 if i is unpaired, table\mbox{[}0\mbox{]} contains the length of the structure.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000140}{Deprecated}]Use \hyperlink{group__struct__utils_gae829fb8bb7f694c12a9c0bbc34c77c60}{vrna\+\_\+ptable()} instead\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em structure} & The secondary structure in dot-\/bracket notation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created pair\+\_\+table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_gafeaa6d68eef3a99d0a7aa08aa91c6601}\label{group__struct__utils_gafeaa6d68eef3a99d0a7aa08aa91c6601}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!copy\+\_\+pair\+\_\+table@{copy\+\_\+pair\+\_\+table}}
+\index{copy\+\_\+pair\+\_\+table@{copy\+\_\+pair\+\_\+table}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{copy\+\_\+pair\+\_\+table()}{copy\_pair\_table()}}
+{\footnotesize\ttfamily short$\ast$ copy\+\_\+pair\+\_\+table (\begin{DoxyParamCaption}\item[{const short $\ast$}]{pt }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Get an exact copy of a pair table. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000141}{Deprecated}]Use \hyperlink{group__struct__utils_ga2daefbbd6d9f8803731651882f54332d}{vrna\+\_\+ptable\+\_\+copy()} instead\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & The pair table to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the copy of \textquotesingle{}pt\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga3c81b3967056c3888b8472b65fbb16f5}\label{group__struct__utils_ga3c81b3967056c3888b8472b65fbb16f5}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!alimake\+\_\+pair\+\_\+table@{alimake\+\_\+pair\+\_\+table}}
+\index{alimake\+\_\+pair\+\_\+table@{alimake\+\_\+pair\+\_\+table}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{alimake\+\_\+pair\+\_\+table()}{alimake\_pair\_table()}}
+{\footnotesize\ttfamily short$\ast$ alimake\+\_\+pair\+\_\+table (\begin{DoxyParamCaption}\item[{const char $\ast$}]{structure }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+Pair table for snoop align
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000142}{Deprecated}]Use \hyperlink{group__struct__utils_ga1ee4cdcda1f57d32dcb38032116d335d}{vrna\+\_\+pt\+\_\+ali\+\_\+get()} instead! \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__struct__utils_ga9aa3bf3b4346bb7fb88efc154dd07a79}\label{group__struct__utils_ga9aa3bf3b4346bb7fb88efc154dd07a79}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!make\+\_\+pair\+\_\+table\+\_\+snoop@{make\+\_\+pair\+\_\+table\+\_\+snoop}}
+\index{make\+\_\+pair\+\_\+table\+\_\+snoop@{make\+\_\+pair\+\_\+table\+\_\+snoop}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{make\+\_\+pair\+\_\+table\+\_\+snoop()}{make\_pair\_table\_snoop()}}
+{\footnotesize\ttfamily short$\ast$ make\+\_\+pair\+\_\+table\+\_\+snoop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{structure }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+returns a newly allocated table, such that\+: table\mbox{[}i\mbox{]}=j if (i.\+j) pair or 0 if i is unpaired, table\mbox{[}0\mbox{]} contains the length of the structure. The special pseudoknotted H/\+A\+C\+A-\/m\+R\+NA structure is taken into account. \begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000143}{Deprecated}]Use \hyperlink{group__struct__utils_gaef0f7e1a6c00c81a349973de53039dda}{vrna\+\_\+pt\+\_\+snoop\+\_\+get()} instead! \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__struct__utils_ga6ebbcd29a754f0e4f1a66d1fd84184db}\label{group__struct__utils_ga6ebbcd29a754f0e4f1a66d1fd84184db}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!bp\+\_\+distance@{bp\+\_\+distance}}
+\index{bp\+\_\+distance@{bp\+\_\+distance}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{bp\+\_\+distance()}{bp\_distance()}}
+{\footnotesize\ttfamily int bp\+\_\+distance (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str1,  }\item[{const char $\ast$}]{str2 }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Compute the \char`\"{}base pair\char`\"{} distance between two secondary structures s1 and s2. 
+
+The sequences should have the same length. dist = number of base pairs in one structure but not in the other same as edit distance with open-\/pair close-\/pair as move-\/set
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000144}{Deprecated}]Use vrna\+\_\+bp\+\_\+distance instead \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em str1} & First structure in dot-\/bracket notation \\
+\hline
+{\em str2} & Second structure in dot-\/bracket notation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The base pair distance between str1 and str2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__struct__utils_ga578cd9712dee812fb1c58aa3cc489864}\label{group__struct__utils_ga578cd9712dee812fb1c58aa3cc489864}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!make\+\_\+reference\+B\+P\+\_\+array@{make\+\_\+reference\+B\+P\+\_\+array}}
+\index{make\+\_\+reference\+B\+P\+\_\+array@{make\+\_\+reference\+B\+P\+\_\+array}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{make\+\_\+reference\+B\+P\+\_\+array()}{make\_referenceBP\_array()}}
+{\footnotesize\ttfamily unsigned int$\ast$ make\+\_\+reference\+B\+P\+\_\+array (\begin{DoxyParamCaption}\item[{short $\ast$}]{reference\+\_\+pt,  }\item[{unsigned int}]{turn }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Make a reference base pair count matrix. 
+
+Get an upper triangular matrix containing the number of basepairs of a reference structure for each interval \mbox{[}i,j\mbox{]} with i$<$j. Access it via iindx!!!
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000145}{Deprecated}]Use \hyperlink{group__struct__utils_gab4c2a00c99ce1d612ffa5bde114eb96d}{vrna\+\_\+ref\+B\+Pcnt\+\_\+matrix()} instead \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__struct__utils_gadd463184355d0803b6ee6e09f29182f2}\label{group__struct__utils_gadd463184355d0803b6ee6e09f29182f2}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!compute\+\_\+\+B\+Pdifferences@{compute\+\_\+\+B\+Pdifferences}}
+\index{compute\+\_\+\+B\+Pdifferences@{compute\+\_\+\+B\+Pdifferences}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{compute\+\_\+\+B\+Pdifferences()}{compute\_BPdifferences()}}
+{\footnotesize\ttfamily unsigned int$\ast$ compute\+\_\+\+B\+Pdifferences (\begin{DoxyParamCaption}\item[{short $\ast$}]{pt1,  }\item[{short $\ast$}]{pt2,  }\item[{unsigned int}]{turn }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Make a reference base pair distance matrix. 
+
+Get an upper triangular matrix containing the base pair distance of two reference structures for each interval \mbox{[}i,j\mbox{]} with i$<$j. Access it via iindx!!!
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000146}{Deprecated}]Use \hyperlink{group__struct__utils_ga5a27bd058183170afd4716f5b8ff511a}{vrna\+\_\+ref\+B\+Pdist\+\_\+matrix()} instead \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__struct__utils_gadf0ad2d46c9ca7b850437d1b79627a7e}\label{group__struct__utils_gadf0ad2d46c9ca7b850437d1b79627a7e}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!parenthesis\+\_\+structure@{parenthesis\+\_\+structure}}
+\index{parenthesis\+\_\+structure@{parenthesis\+\_\+structure}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{parenthesis\+\_\+structure()}{parenthesis\_structure()}}
+{\footnotesize\ttfamily void parenthesis\+\_\+structure (\begin{DoxyParamCaption}\item[{char $\ast$}]{structure,  }\item[{\hyperlink{group__data__structures_gaa651bda42e7692f08cb603cd6834b0ee}{vrna\+\_\+bp\+\_\+stack\+\_\+t} $\ast$}]{bp,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Create a dot-\/backet/parenthesis structure from backtracking stack. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000148}{Deprecated}]use vrna\+\_\+parenthesis\+\_\+structure() instead\end{DoxyRefDesc}
+
+
+\begin{DoxyNote}{Note}
+This function is threadsafe 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__struct__utils_gab9c5c8311bd5120900585d4fa50c2df0}\label{group__struct__utils_gab9c5c8311bd5120900585d4fa50c2df0}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!parenthesis\+\_\+zuker@{parenthesis\+\_\+zuker}}
+\index{parenthesis\+\_\+zuker@{parenthesis\+\_\+zuker}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{parenthesis\+\_\+zuker()}{parenthesis\_zuker()}}
+{\footnotesize\ttfamily void parenthesis\+\_\+zuker (\begin{DoxyParamCaption}\item[{char $\ast$}]{structure,  }\item[{\hyperlink{group__data__structures_gaa651bda42e7692f08cb603cd6834b0ee}{vrna\+\_\+bp\+\_\+stack\+\_\+t} $\ast$}]{bp,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Create a dot-\/backet/parenthesis structure from backtracking stack obtained by zuker suboptimal calculation in cofold.\+c. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000149}{Deprecated}]use vrna\+\_\+parenthesis\+\_\+zuker instead\end{DoxyRefDesc}
+
+
+\begin{DoxyNote}{Note}
+This function is threadsafe 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__struct__utils_ga129d81c4a1ead793c5b2311333e03dfa}\label{group__struct__utils_ga129d81c4a1ead793c5b2311333e03dfa}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!bppm\+\_\+to\+\_\+structure@{bppm\+\_\+to\+\_\+structure}}
+\index{bppm\+\_\+to\+\_\+structure@{bppm\+\_\+to\+\_\+structure}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{bppm\+\_\+to\+\_\+structure()}{bppm\_to\_structure()}}
+{\footnotesize\ttfamily void bppm\+\_\+to\+\_\+structure (\begin{DoxyParamCaption}\item[{char $\ast$}]{structure,  }\item[{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} $\ast$}]{pr,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Create a dot-\/bracket like structure string from base pair probability matrix. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000150}{Deprecated}]Use \hyperlink{group__struct__utils_ga0c28c410a5ab22d6ab9c77a84e8d5b44}{vrna\+\_\+db\+\_\+from\+\_\+probs()} instead! \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__struct__utils_ga49962ad6242b8c628de6ca16bb831c1d}\label{group__struct__utils_ga49962ad6242b8c628de6ca16bb831c1d}} 
+\index{Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}!bppm\+\_\+symbol@{bppm\+\_\+symbol}}
+\index{bppm\+\_\+symbol@{bppm\+\_\+symbol}!Parsing, converting, comparing secondary structures@{Parsing, converting, comparing secondary structures}}
+\subsubsection{\texorpdfstring{bppm\+\_\+symbol()}{bppm\_symbol()}}
+{\footnotesize\ttfamily char bppm\+\_\+symbol (\begin{DoxyParamCaption}\item[{const float $\ast$}]{x }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{structure__utils_8h}{Vienna\+R\+N\+A/structure\+\_\+utils.\+h}$>$}
+
+
+
+Get a pseudo dot bracket notation for a given probability information. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000151}{Deprecated}]Use \hyperlink{group__struct__utils_ga025bff1b27fa46534c8fae6980f64bb5}{vrna\+\_\+bpp\+\_\+symbol()} instead! \end{DoxyRefDesc}

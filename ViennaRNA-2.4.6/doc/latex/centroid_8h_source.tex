@@ -1,0 +1,49 @@
+\hypertarget{centroid_8h_source}{}\section{centroid.\+h}
+\label{centroid_8h_source}\index{Vienna\+R\+N\+A/centroid.\+h@{Vienna\+R\+N\+A/centroid.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_CENTROID\_H}
+00002 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_CENTROID\_H}
+00003 
+00004 \textcolor{preprocessor}{#include <\hyperlink{data__structures_8h}{ViennaRNA/data\_structures.h}>}
+00005 \textcolor{preprocessor}{#include <\hyperlink{structure__utils_8h}{ViennaRNA/structure\_utils.h}>}
+00006 
+00007 \textcolor{preprocessor}{#ifdef VRNA\_WARN\_DEPRECATED}
+00008 \textcolor{preprocessor}{# if defined(\_\_clang\_\_)}
+00009 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("", msg)))}
+00010 \textcolor{preprocessor}{# elif defined(\_\_GNUC\_\_)}
+00011 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}
+00012 \textcolor{preprocessor}{# else}
+00013 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func}
+00014 \textcolor{preprocessor}{# endif}
+00015 \textcolor{preprocessor}{#else}
+00016 \textcolor{preprocessor}{# define DEPRECATED(func, msg) func}
+00017 \textcolor{preprocessor}{#endif}
+00018 
+00038 \textcolor{keywordtype}{char} *\hyperlink{group__centroid__fold_ga0e64bb67e51963dc71cbd4d30b80a018}{vrna\_centroid}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00039                     \textcolor{keywordtype}{double} *dist);
+00040 
+00057 \textcolor{keywordtype}{char}  *\hyperlink{group__centroid__fold_ga13881673a0b214d42a59140ef5764dbb}{vrna\_centroid\_from\_plist}(\textcolor{keywordtype}{int} length,
+00058                                 \textcolor{keywordtype}{double} *dist,
+00059                                 \hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t} *pl);
+00060 
+00077 \textcolor{keywordtype}{char}  *\hyperlink{group__centroid__fold_ga98193ede06778a9ea966cc8fc43d0804}{vrna\_centroid\_from\_probs}(\textcolor{keywordtype}{int} length,
+00078                                 \textcolor{keywordtype}{double} *dist,
+00079                                 \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL} *probs);
+00080 
+00081 \textcolor{preprocessor}{#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}
+00082 
+00088 DEPRECATED(\textcolor{keywordtype}{char}  *\hyperlink{centroid_8h_a7dcc64bcefcf682396dd3bbea02416fe}{get\_centroid\_struct\_pl}(\textcolor{keywordtype}{int} length,
+00089                               \textcolor{keywordtype}{double} *dist,
+00090                               \hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t} *pl),
+00091           \textcolor{stringliteral}{"Use vrna\_centroid\_from\_plist() instead"});
+00092 
+00098 DEPRECATED(\textcolor{keywordtype}{char}  *\hyperlink{centroid_8h_ac92486ce514677256f4a832dc518759c}{get\_centroid\_struct\_pr}(\textcolor{keywordtype}{int} length,
+00099                               \textcolor{keywordtype}{double} *dist,
+00100                               \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL} *\hyperlink{fold__vars_8h_ac98ec419070aee6831b44e5c700f090f}{pr}),
+00101           \textcolor{stringliteral}{"Use vrna\_centroid\_from\_probs() instead"});
+00102 
+00103 \textcolor{preprocessor}{#endif}
+00104 
+00105 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

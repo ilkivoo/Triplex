@@ -1,0 +1,4 @@
+<map id="Ligands binding to RNA structures" name="Ligands binding to RNA structures">
+<area shape="rect" id="node2" href="$group__constraints__ligand.html" title="Ligand binding to specific hairpin/interior loop like motifs using the Soft constraints feature..." alt="" coords="180,5,357,76"/>
+<area shape="rect" id="node3" href="$group__ligands__up.html" title="Add ligand binding to loop regions using the Unstructured domains feature. " alt="" coords="193,100,344,141"/>
+</map>

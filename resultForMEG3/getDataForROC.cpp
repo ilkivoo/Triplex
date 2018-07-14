@@ -41,7 +41,7 @@ void getTotalRel(string fileName, unordered_map<string, double>& map, vector<str
 int main()
 {
     cout.setf(std::ios::fixed);
-    cout.precision(11);
+    cout.precision(30);
     unordered_map<string, double> triplexWithBkg;
     vector<string> keysOfTriplexWithBkg;
     set<double> valuesOfTriplexWithBkg;

@@ -5,7 +5,7 @@
 *************************************************************
 *** Version 1.3.1 (12/11/2012) SeqAn Revision: 1225
 *** COMMAND:
->./triplexator/bin/triplexator -l 10 -fm 0 -of 1 -od MEG3WithPeaks -o triplexMEG3andPeaks.tpx -ss data/_MEG3.fna -ds data/_MEG3.peaks_wo_N.fna 
+>triplexator/bin/triplexator -l 10 -fm 0 -of 1 -od MEG3WithPeaks -o triplexMEG3andPeaks.tpx -ss data/_MEG3.fna -ds data/_MEG3.peaks_wo_N.fna 
 *************************************************************
 *** INPUT:
 - single-stranded file supplied : Yes
@@ -50,15 +50,15 @@
 - runtime mode : 0 = serial
 *************************************************************
 *** Log messages:
-[06/01/18 22:49:07] * Started checking duplex file
-[06/01/18 22:49:07] * Finished checking duplex file
-[06/01/18 22:49:07] * Started reading single-stranded file:data/_MEG3.fna
-[06/01/18 22:49:07] * Finished reading single-stranded file (1 sequences read)
-[06/01/18 22:49:07] * Started detecting triplex-forming oligonucleotides in single-stranded sequences
-[06/01/18 22:49:07] * Finished detecting TFOs within 0.00128 seconds (10 TFOs detected)
-[06/01/18 22:49:07] * Started searching for triplexes
-[06/01/18 22:49:07] * Processing data/_MEG3.peaks_wo_N.fna
-[06/01/18 22:49:10] * Finished processing data/_MEG3.peaks_wo_N.fna
-[06/01/18 22:49:10] * Finished searching for triplexes  within 2.84 seconds (summed over all cpus)
-[06/01/18 22:49:10] * Exit without errors 
-[06/01/18 22:49:10] * Finished program within 2.85 seconds
+[07/14/18 20:56:14] * Started checking duplex file
+[07/14/18 20:56:14] * Finished checking duplex file
+[07/14/18 20:56:14] * Started reading single-stranded file:data/_MEG3.fna
+[07/14/18 20:56:14] * Finished reading single-stranded file (1 sequences read)
+[07/14/18 20:56:14] * Started detecting triplex-forming oligonucleotides in single-stranded sequences
+[07/14/18 20:56:14] * Finished detecting TFOs within 0.000846 seconds (10 TFOs detected)
+[07/14/18 20:56:14] * Started searching for triplexes
+[07/14/18 20:56:14] * Processing data/_MEG3.peaks_wo_N.fna
+[07/14/18 20:56:16] * Finished processing data/_MEG3.peaks_wo_N.fna
+[07/14/18 20:56:16] * Finished searching for triplexes  within 2.67 seconds (summed over all cpus)
+[07/14/18 20:56:16] * Exit without errors 
+[07/14/18 20:56:16] * Finished program within 2.67 seconds

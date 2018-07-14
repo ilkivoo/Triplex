@@ -1,0 +1,331 @@
+\hypertarget{eval_8h_source}{}\section{eval.\+h}
+\label{eval_8h_source}\index{Vienna\+R\+N\+A/eval.\+h@{Vienna\+R\+N\+A/eval.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_EVAL\_H}
+00002 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_EVAL\_H}
+00003 
+00004 \textcolor{preprocessor}{#include <stdio.h>}
+00005 \textcolor{preprocessor}{#include <\hyperlink{data__structures_8h}{ViennaRNA/data\_structures.h}>}
+00006 \textcolor{preprocessor}{#include "\hyperlink{neighbor_8h}{ViennaRNA/neighbor.h}"}
+00007 \textcolor{preprocessor}{#include <\hyperlink{params_8h}{ViennaRNA/params.h}>}   \textcolor{comment}{/* for deprecated functions */}
+00008 
+00009 \textcolor{preprocessor}{#ifdef VRNA\_WARN\_DEPRECATED}
+00010 \textcolor{preprocessor}{# if defined(\_\_clang\_\_)}
+00011 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("", msg)))}
+00012 \textcolor{preprocessor}{# elif defined(\_\_GNUC\_\_)}
+00013 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}
+00014 \textcolor{preprocessor}{# else}
+00015 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func}
+00016 \textcolor{preprocessor}{# endif}
+00017 \textcolor{preprocessor}{#else}
+00018 \textcolor{preprocessor}{# define DEPRECATED(func, msg) func}
+00019 \textcolor{preprocessor}{#endif}
+00020 
+00021 
+00022 \textcolor{preprocessor}{#define VRNA\_VERBOSITY\_QUIET     -1     }\textcolor{comment}{/* verbosity level for quiet operations */}\textcolor{preprocessor}{}
+00023 \textcolor{preprocessor}{#define VRNA\_VERBOSITY\_DEFAULT    1     }\textcolor{comment}{/* verbosity level for quiet operations */}\textcolor{preprocessor}{}
+00024 
+00025 
+00041 \textcolor{preprocessor}{#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}
+00042 
+00043 \textcolor{keyword}{extern} \textcolor{keywordtype}{int}  \hyperlink{group__eval_gab9b2c3a37a5516614c06d0ab54b97cda}{cut\_point};
+00044 
+00048 \textcolor{keyword}{extern} \textcolor{keywordtype}{int}  \hyperlink{group__eval_ga567530678f6260a1a649a5beca5da4c5}{eos\_debug};
+00049 \textcolor{preprocessor}{#endif}
+00050 
+00077 \textcolor{keywordtype}{float} \hyperlink{group__eval_ga58f199f1438d794a265f3b27fc8ea631}{vrna\_eval\_structure}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00078                           \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *structure);
+00079 
+00080 
+00101 \textcolor{keywordtype}{float} \hyperlink{group__eval_ga6cea75c0eb9857fb59172be54cab09e0}{vrna\_eval\_covar\_structure}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00102                                 \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *structure);
+00103 
+00104 
+00118 \textcolor{keywordtype}{float} \hyperlink{group__eval_ga0928d699d310178f84ee2351034e5cb5}{vrna\_eval\_structure\_verbose}(
+      \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00119                                   \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *structure,
+00120                                   FILE                  *file);
+00121 
+00122 
+00148 \textcolor{keywordtype}{float} \hyperlink{group__eval_gab12e6b1226227670322150df018734f8}{vrna\_eval\_structure\_v}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00149                             \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *structure,
+00150                             \textcolor{keywordtype}{int}                   verbosity\_level,
+00151                             FILE                  *file);
+00152 
+00153 
+00154 \textcolor{comment}{/* End basic eval interface */}
+00181 \textcolor{keywordtype}{int} \hyperlink{group__eval_gadbd09372ddfd7a450bbd590c96a6bfe4}{vrna\_eval\_structure\_pt}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00182                            \textcolor{keyword}{const} \textcolor{keywordtype}{short}          *pt);
+00183 
+00184 
+00198 \textcolor{keywordtype}{int} \hyperlink{group__eval_ga8a517cfeeae8c376ae7b1e0c401d38b4}{vrna\_eval\_structure\_pt\_verbose}(
+      \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00199                                    \textcolor{keyword}{const} \textcolor{keywordtype}{short}          *pt,
+00200                                    FILE                 *file);
+00201 
+00202 
+00228 \textcolor{keywordtype}{int} \hyperlink{group__eval_ga2c6533ba0afe4c88d335d8f1e0e2a48e}{vrna\_eval\_structure\_pt\_v}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00229                              \textcolor{keyword}{const} \textcolor{keywordtype}{short}          *pt,
+00230                              \textcolor{keywordtype}{int}                  verbosity\_level,
+00231                              FILE                 *file);
+00232 
+00233 
+00234 \textcolor{comment}{/* End basic eval interface with pair table */}
+00258 \textcolor{keywordtype}{float} \hyperlink{group__eval_ga7e5273464b775d4130245681312c1369}{vrna\_eval\_structure\_simple}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+00259                                  \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure);
+00260 
+00261 
+00272 \textcolor{keywordtype}{float} \hyperlink{group__eval_ga3e05a23ddf9b083f4e69881e440d4866}{vrna\_eval\_circ\_structure}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+00273                                \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure);
+00274 
+00275 
+00293 \textcolor{keywordtype}{float} \hyperlink{group__eval_ga3263504825ef4b523eba797c99921df4}{vrna\_eval\_gquad\_structure}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},
+00294                                 \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure);
+00295 
+00296 
+00315 \textcolor{keywordtype}{float} \hyperlink{group__eval_ga9dba2fc5d7e6ad1359a7c2f350589c0e}{vrna\_eval\_circ\_gquad\_structure}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+00316                                      \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure);
+00317 
+00318 
+00333 \textcolor{keywordtype}{float} \hyperlink{group__eval_gaf928bfd96767e1b8033a95a4cc432e39}{vrna\_eval\_structure\_simple\_verbose}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+00334                                          \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,
+00335                                          FILE       *file);
+00336 
+00337 
+00361 \textcolor{keywordtype}{float} \hyperlink{group__eval_gacd6278343e77d13f1d53588e50d303bc}{vrna\_eval\_structure\_simple\_v}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+00362                                    \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,
+00363                                    \textcolor{keywordtype}{int}        verbosity\_level,
+00364                                    FILE       *file);
+00365 
+00366 
+00382 \textcolor{keywordtype}{float} \hyperlink{group__eval_gac3fb44e0773a51be8efc5f4f595a94a7}{vrna\_eval\_circ\_structure\_v}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+00383                                  \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,
+00384                                  \textcolor{keywordtype}{int}        verbosity\_level,
+00385                                  FILE       *file);
+00386 
+00387 
+00410 \textcolor{keywordtype}{float} \hyperlink{group__eval_gaeaa2bdbc1b5d78c667e735fbdff87fff}{vrna\_eval\_gquad\_structure\_v}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},
+00411                                   \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure,
+00412                                   \textcolor{keywordtype}{int}         verbosity\_level,
+00413                                   FILE        *file);
+00414 
+00415 
+00436 \textcolor{keywordtype}{float} \hyperlink{group__eval_gab96a6c59923ff06c35f8c2fd2c239727}{vrna\_eval\_circ\_gquad\_structure\_v}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+00437                                        \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,
+00438                                        \textcolor{keywordtype}{int}        verbosity\_level,
+00439                                        FILE       *file);
+00440 
+00441 
+00442 \textcolor{comment}{/* End simplified eval interface */}
+00472 \textcolor{keywordtype}{float} \hyperlink{group__eval_ga7762c3a7bdcbc3a14ef93259d322c7d6}{vrna\_eval\_consensus\_structure\_simple}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **alignment,
+00473                                            \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure);
+00474 
+00475 
+00491 \textcolor{keywordtype}{float} \hyperlink{group__eval_gac96577cf232c71160f762737a994b7c6}{vrna\_eval\_circ\_consensus\_structure}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **alignment,
+00492                                          \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure);
+00493 
+00494 
+00517 \textcolor{keywordtype}{float} \hyperlink{group__eval_gaf09a326b3d57a4b30c27bd0e216198ac}{vrna\_eval\_gquad\_consensus\_structure}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  **alignment,
+00518                                           \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure);
+00519 
+00520 
+00543 \textcolor{keywordtype}{float} \hyperlink{group__eval_gac673ebb9ae2a29f54d201e2ac5b85540}{vrna\_eval\_circ\_gquad\_consensus\_structure}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **
+      alignment,
+00544                                                \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure);
+00545 
+00546 
+00566 \textcolor{keywordtype}{float} \hyperlink{group__eval_ga1c07851f6b665c3461a19e9e4eb33d26}{vrna\_eval\_consensus\_structure\_simple\_verbose}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *
+      *alignment,
+00567                                                    \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,
+00568                                                    FILE       *file);
+00569 
+00570 
+00595 \textcolor{keywordtype}{float} \hyperlink{group__eval_gad88927c62ab0a8b534e078e44be1b36e}{vrna\_eval\_consensus\_structure\_simple\_v}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **alignment,
+00596                                              \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,
+00597                                              \textcolor{keywordtype}{int}        verbosity\_level,
+00598                                              FILE       *file);
+00599 
+00600 
+00620 \textcolor{keywordtype}{float} \hyperlink{group__eval_gae89240c230e4740b22a703ee953396b9}{vrna\_eval\_circ\_consensus\_structure\_v}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **alignment,
+00621                                            \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,
+00622                                            \textcolor{keywordtype}{int}        verbosity\_level,
+00623                                            FILE       *file);
+00624 
+00625 
+00652 \textcolor{keywordtype}{float} \hyperlink{group__eval_ga8abc794fc48d43268ced5e8cde017baa}{vrna\_eval\_gquad\_consensus\_structure\_v}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  **alignment,
+00653                                             \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure,
+00654                                             \textcolor{keywordtype}{int}         verbosity\_level,
+00655                                             FILE        *file);
+00656 
+00657 
+00684 \textcolor{keywordtype}{float} \hyperlink{group__eval_gaecd3e17292a0b3927277434019a5e187}{vrna\_eval\_circ\_gquad\_consensus\_structure\_v}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **
+      alignment,
+00685                                                  \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,
+00686                                                  \textcolor{keywordtype}{int}        verbosity\_level,
+00687                                                  FILE       *file);
+00688 
+00689 
+00690 \textcolor{comment}{/* End simplified comparative eval interface */}
+00713 \textcolor{keywordtype}{int} \hyperlink{group__eval_ga0bba59b4d6e53461088666ff4aece7b0}{vrna\_eval\_structure\_pt\_simple}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},
+00714                                   \textcolor{keyword}{const} \textcolor{keywordtype}{short} *pt);
+00715 
+00716 
+00730 \textcolor{keywordtype}{int} \hyperlink{group__eval_ga76e152ee9a02be23da14cdddf52b4e44}{vrna\_eval\_structure\_pt\_simple\_verbose}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},
+00731                                           \textcolor{keyword}{const} \textcolor{keywordtype}{short} *pt,
+00732                                           FILE        *file);
+00733 
+00734 
+00759 \textcolor{keywordtype}{int} \hyperlink{group__eval_gac40b813d35289da9816d0c1eec94faa5}{vrna\_eval\_structure\_pt\_simple\_v}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},
+00760                                     \textcolor{keyword}{const} \textcolor{keywordtype}{short} *pt,
+00761                                     \textcolor{keywordtype}{int}         verbosity\_level,
+00762                                     FILE        *file);
+00763 
+00764 
+00765 \textcolor{comment}{/* End simplified eval interface with pair table */}
+00787 \textcolor{keywordtype}{int} \hyperlink{group__eval_gabbb4d2a7aa324ec9cce8f47ce61ab8af}{vrna\_eval\_consensus\_structure\_pt\_simple}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  **alignment,
+00788                                             \textcolor{keyword}{const} \textcolor{keywordtype}{short} *pt);
+00789 
+00790 
+00791 \textcolor{keywordtype}{int} vrna\_eval\_consensus\_structure\_pt\_simple\_verbose(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  **alignment,
+00792                                                     \textcolor{keyword}{const} \textcolor{keywordtype}{short} *pt,
+00793                                                     FILE        *file);
+00794 
+00795 
+00796 \textcolor{keywordtype}{int}
+00797 vrna\_eval\_consensus\_structure\_pt\_simple\_v(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  **alignment,
+00798                                           \textcolor{keyword}{const} \textcolor{keywordtype}{short} *pt,
+00799                                           \textcolor{keywordtype}{int}         verbosity\_level,
+00800                                           FILE        *file);
+00801 
+00802 
+00803 \textcolor{comment}{/* End simplified eval interface with pair table */}
+00820 \textcolor{keywordtype}{int} \hyperlink{group__eval_ga730ba4df55c02fd530a0cddd49faf760}{vrna\_eval\_loop\_pt}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00821                       \textcolor{keywordtype}{int}                   i,
+00822                       \textcolor{keyword}{const} \textcolor{keywordtype}{short}           *pt);
+00823 
+00824 
+00834 \textcolor{keywordtype}{int} \hyperlink{group__eval_ga30faecaff1009fe62c58312c8d56dabb}{vrna\_eval\_loop\_pt\_v}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00835                         \textcolor{keywordtype}{int}                   i,
+00836                         \textcolor{keyword}{const} \textcolor{keywordtype}{short}           *pt,
+00837                         \textcolor{keywordtype}{int}                   verbosity\_level);
+00838 
+00839 
+00840 \textcolor{comment}{/* End basic loop eval interface with pair table */}
+00864 \textcolor{keywordtype}{float} \hyperlink{group__eval_gaff1b9e4f4d17b434b0a822fe783672c1}{vrna\_eval\_move}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00865                      \textcolor{keyword}{const} \textcolor{keywordtype}{char}           *structure,
+00866                      \textcolor{keywordtype}{int}                  m1,
+00867                      \textcolor{keywordtype}{int}                  m2);
+00868 
+00869 
+00884 \textcolor{keywordtype}{int} \hyperlink{group__eval_ga123dabc119ea98c968a5e903cc46f0fb}{vrna\_eval\_move\_pt}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00885                       \textcolor{keywordtype}{short}                 *pt,
+00886                       \textcolor{keywordtype}{int}                   m1,
+00887                       \textcolor{keywordtype}{int}                   m2);
+00888 
+00889 
+00890 \textcolor{keywordtype}{int} vrna\_eval\_move\_pt\_simple(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+00891                              \textcolor{keywordtype}{short}      *pt,
+00892                              \textcolor{keywordtype}{int}        m1,
+00893                              \textcolor{keywordtype}{int}        m2);
+00894 
+00895 
+00896 \textcolor{keywordtype}{int}
+00897 vrna\_eval\_move\_shift\_pt(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00898                         \hyperlink{group__neighbors_structvrna__move__s}{vrna\_move\_t}           *m,
+00899                         \textcolor{keywordtype}{short}                 *structure);
+00900 
+00901 
+00902 \textcolor{comment}{/* End eval move interface */}
+00905 \textcolor{preprocessor}{#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}
+00906 
+00933 DEPRECATED(\textcolor{keywordtype}{float} \hyperlink{group__eval_gaf93986cb3cb29770ec9cca69c9fab8cf}{energy\_of\_structure}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+00934                                      \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,
+00935                                      \textcolor{keywordtype}{int}        verbosity\_level),
+00936            \textcolor{stringliteral}{"Use vrna\_eval\_structure\_simple() and vrna\_eval\_structure() instead"});
+00937 
+00953 DEPRECATED(\textcolor{keywordtype}{float} \hyperlink{group__eval_gaf9d064d3c496de42eca6734a96fd2090}{energy\_of\_struct\_par}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}    *\textcolor{keywordtype}{string},
+00954                                       \textcolor{keyword}{const} \textcolor{keywordtype}{char}    *structure,
+00955                                       \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}  *parameters,
+00956                                       \textcolor{keywordtype}{int}           verbosity\_level),
+00957            \textcolor{stringliteral}{"Use vrna\_eval\_structure() instead"});
+00958 
+00977 DEPRECATED(\textcolor{keywordtype}{float} \hyperlink{group__eval_gaeb14f3664aec67fc03268ac75253f0f8}{energy\_of\_circ\_structure}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},
+00978                                           \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure,
+00979                                           \textcolor{keywordtype}{int}         verbosity\_level),
+00980            \textcolor{stringliteral}{"Use vrna\_eval\_circ\_structure\_simple() and vrna\_eval\_structure() instead"});
+00981 
+00997 DEPRECATED(\textcolor{keywordtype}{float} \hyperlink{group__eval_ga3f01f9744ba6a40555eb4d81fc77f6df}{energy\_of\_circ\_struct\_par}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}   *\textcolor{keywordtype}{string},
+00998                                            \textcolor{keyword}{const} \textcolor{keywordtype}{char}   *structure,
+00999                                            \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} *parameters,
+01000                                            \textcolor{keywordtype}{int}          verbosity\_level),
+01001            \textcolor{stringliteral}{"Use vrna\_eval\_structure() instead"});
+01002 
+01003 
+01004 DEPRECATED(\textcolor{keywordtype}{float} energy\_of\_gquad\_structure(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+01005                                            \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,
+01006                                            \textcolor{keywordtype}{int}        verbosity\_level),
+01007            \textcolor{stringliteral}{"Use vrna\_eval\_structure\_simple() instead"});
+01008 
+01009 DEPRECATED(\textcolor{keywordtype}{float} energy\_of\_gquad\_struct\_par(\textcolor{keyword}{const} \textcolor{keywordtype}{char}    *\textcolor{keywordtype}{string},
+01010                                             \textcolor{keyword}{const} \textcolor{keywordtype}{char}    *structure,
+01011                                             \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}  *parameters,
+01012                                             \textcolor{keywordtype}{int}           verbosity\_level),
+01013            \textcolor{stringliteral}{"Use vrna\_eval\_structure() instead"});
+01014 
+01015 
+01036 DEPRECATED(\textcolor{keywordtype}{int} \hyperlink{group__eval_ga8831445966b761417e713360791299d8}{energy\_of\_structure\_pt}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},
+01037                                       \textcolor{keywordtype}{short}       *ptable,
+01038                                       \textcolor{keywordtype}{short}       *s,
+01039                                       \textcolor{keywordtype}{short}       *s1,
+01040                                       \textcolor{keywordtype}{int}         verbosity\_level),
+01041            \textcolor{stringliteral}{"Use vrna\_eval\_structure\_pt\_simple() and vrna\_eval\_structure\_pt() instead"});
+01042 
+01060 DEPRECATED(\textcolor{keywordtype}{int} \hyperlink{group__eval_ga49acb3d5627dc6823a7ce12d116d4c69}{energy\_of\_struct\_pt\_par}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}   *\textcolor{keywordtype}{string},
+01061                                        \textcolor{keywordtype}{short}        *ptable,
+01062                                        \textcolor{keywordtype}{short}        *s,
+01063                                        \textcolor{keywordtype}{short}        *s1,
+01064                                        \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} *parameters,
+01065                                        \textcolor{keywordtype}{int}          verbosity\_level),
+01066            \textcolor{stringliteral}{"Use vrna\_eval\_structure\_pt() instead"});
+01067 
+01068 
+01085 DEPRECATED(\textcolor{keywordtype}{float} \hyperlink{group__eval_ga539ecaed89730f7644c202f304d7529b}{energy\_of\_move}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},
+01086                                 \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure,
+01087                                 \textcolor{keywordtype}{int}         m1,
+01088                                 \textcolor{keywordtype}{int}         m2),
+01089            \textcolor{stringliteral}{"Use vrna\_eval\_move() instead"});
+01090 
+01091 
+01110 DEPRECATED(\textcolor{keywordtype}{int} \hyperlink{group__eval_ga49e0ee561be69faf0568213546f6a53f}{energy\_of\_move\_pt}(\textcolor{keywordtype}{short}  *pt,
+01111                                  \textcolor{keywordtype}{short}  *s,
+01112                                  \textcolor{keywordtype}{short}  *s1,
+01113                                  \textcolor{keywordtype}{int}    m1,
+01114                                  \textcolor{keywordtype}{int}    m2),
+01115            \textcolor{stringliteral}{"Use vrna\_eval\_move\_pt\_simple() and vrna\_eval\_move\_pt() instead"});
+01116 
+01130 DEPRECATED(\textcolor{keywordtype}{int}   \hyperlink{group__eval_ga507d4fd93f4b398d793ba2402731388d}{loop\_energy}(\textcolor{keywordtype}{short}  *ptable,
+01131                              \textcolor{keywordtype}{short}  *s,
+01132                              \textcolor{keywordtype}{short}  *s1,
+01133                              \textcolor{keywordtype}{int}    i),
+01134            \textcolor{stringliteral}{"Use vrna\_eval\_loop\_pt() instead"});
+01135 
+01150 DEPRECATED(\textcolor{keywordtype}{float} \hyperlink{group__eval_gac2b37fea2145c94d925a3f33378ef87b}{energy\_of\_struct}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},
+01151                                   \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure),
+01152            \textcolor{stringliteral}{"Use vrna\_eval\_structure\_simple() instead"});
+01153 
+01170 DEPRECATED(\textcolor{keywordtype}{int} \hyperlink{group__eval_ga27ce6f68512d43bf1fe14a06c9d76d5c}{energy\_of\_struct\_pt}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+01171                                    \textcolor{keywordtype}{short}      *ptable,
+01172                                    \textcolor{keywordtype}{short}      *s,
+01173                                    \textcolor{keywordtype}{short}      *s1),
+01174            \textcolor{stringliteral}{"Use vrna\_eval\_structure\_pt\_simple() instead"});
+01175 
+01190 DEPRECATED(\textcolor{keywordtype}{float} \hyperlink{group__eval_ga657222e2758c46bf13b416ef3032e417}{energy\_of\_circ\_struct}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+01191                                        \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure),
+01192            \textcolor{stringliteral}{"Use vrna\_eval\_circ\_structure\_simple() and vrna\_eval\_structure() instead"});
+01193 
+01194 \textcolor{comment}{/* End deprecated eval interface */}
+01197 \textcolor{preprocessor}{#endif}
+01198 
+01203 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

@@ -1,0 +1,521 @@
+\hypertarget{group__aln__utils}{}\section{Utilities for sequence alignments}
+\label{group__aln__utils}\index{Utilities for sequence alignments@{Utilities for sequence alignments}}
+
+
+\subsection{Detailed Description}
+Collaboration diagram for Utilities for sequence alignments\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{group__aln__utils}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{group__aln__utils_structvrna__pinfo__s}{vrna\+\_\+pinfo\+\_\+s}
+\begin{DoxyCompactList}\small\item\em A base pair info structure.  \hyperlink{group__aln__utils_structvrna__pinfo__s}{More...}\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__aln__utils_ga1e659227c9fc077d29989f576f129000}{V\+R\+N\+A\+\_\+\+M\+E\+A\+S\+U\+R\+E\+\_\+\+S\+H\+A\+N\+N\+O\+N\+\_\+\+E\+N\+T\+R\+O\+PY}~1U
+\begin{DoxyCompactList}\small\item\em Flag indicating Shannon Entropy measure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}\label{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}} 
+typedef struct \hyperlink{group__aln__utils_structvrna__pinfo__s}{vrna\+\_\+pinfo\+\_\+s} \hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Typename for the base pair info repesenting data structure \hyperlink{group__aln__utils_structvrna__pinfo__s}{vrna\+\_\+pinfo\+\_\+s}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{group__aln__utils_structvrna__pinfo__s}{vrna\+\_\+pinfo\+\_\+s} \hyperlink{group__aln__utils_ga7b61662a793ad0aa1ea38efc3a5baacc}{pair\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Old typename of \hyperlink{group__aln__utils_structvrna__pinfo__s}{vrna\+\_\+pinfo\+\_\+s}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__aln__utils_gade5a1f2d16e7fd9a57b37d8514f08e8e}{vrna\+\_\+aln\+\_\+mpi} (const char $\ast$$\ast$alignment)
+\begin{DoxyCompactList}\small\item\em Get the mean pairwise identity in steps from ?to?(ident) \end{DoxyCompactList}\item 
+\hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t} $\ast$ \hyperlink{group__aln__utils_gaf6421a1318586c59fea6a127ed9f65f3}{vrna\+\_\+aln\+\_\+pinfo} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, const char $\ast$structure, double threshold)
+\begin{DoxyCompactList}\small\item\em Retrieve an array of \hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t} structures from precomputed pair probabilities. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \hyperlink{group__aln__utils_gac801b0a72eac4ab9d5b2ef7533db9193}{vrna\+\_\+aln\+\_\+slice} (const char $\ast$$\ast$alignment, unsigned int i, unsigned int j)
+\begin{DoxyCompactList}\small\item\em Slice out a subalignment from a larger alignment. \end{DoxyCompactList}\item 
+void \hyperlink{group__aln__utils_gac00dc80b8a324f151f92f11ab6850ecf}{vrna\+\_\+aln\+\_\+free} (char $\ast$$\ast$alignment)
+\begin{DoxyCompactList}\small\item\em Free memory occupied by a set of aligned sequences. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \hyperlink{group__aln__utils_ga3a0476a71c4bae3d302790de58055704}{vrna\+\_\+aln\+\_\+uppercase} (const char $\ast$$\ast$alignment)
+\begin{DoxyCompactList}\small\item\em Create a copy of an alignment with only uppercase letters in the sequences. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \hyperlink{group__aln__utils_ga7886fc678553c06472a712a335cde9cf}{vrna\+\_\+aln\+\_\+to\+R\+NA} (const char $\ast$$\ast$alignment)
+\begin{DoxyCompactList}\small\item\em Create a copy of an alignment where D\+NA alphabet is replaced by R\+NA alphabet. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \hyperlink{group__aln__utils_ga08cdca592461436860daf9738279ce17}{vrna\+\_\+aln\+\_\+copy} (const char $\ast$$\ast$alignment, unsigned int options)
+\begin{DoxyCompactList}\small\item\em Make a copy of a multiple sequence alignment. \end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{group__aln__utils_gab6f16a2ea93f3bfd4d089cc8d448bb16}{vrna\+\_\+aln\+\_\+conservation\+\_\+struct} (const char $\ast$$\ast$alignment, const char $\ast$structure, const \hyperlink{group__model__details_ga1f8a10e12a0a1915f2a4eff0b28ea17c}{vrna\+\_\+md\+\_\+t} $\ast$md)
+\begin{DoxyCompactList}\small\item\em Compute base pair conservation of a consensus structure. \end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{group__aln__utils_gaa12b481a7e7b965ef2eb1bcc4399e759}{vrna\+\_\+aln\+\_\+conservation\+\_\+col} (const char $\ast$$\ast$alignment, const \hyperlink{group__model__details_ga1f8a10e12a0a1915f2a4eff0b28ea17c}{vrna\+\_\+md\+\_\+t} $\ast$md\+\_\+p, unsigned int options)
+\begin{DoxyCompactList}\small\item\em Compute nucleotide conservation in an alignment. \end{DoxyCompactList}\item 
+int \hyperlink{group__aln__utils_gaa2d600be90844094ec145ea14a314d2f}{get\+\_\+mpi} (char $\ast$Alseq\mbox{[}$\,$\mbox{]}, int n\+\_\+seq, int length, int $\ast$mini)
+\begin{DoxyCompactList}\small\item\em Get the mean pairwise identity in steps from ?to?(ident) \end{DoxyCompactList}\item 
+void \hyperlink{group__aln__utils_gaa3e40277c837d6f7603afe319884c786}{encode\+\_\+ali\+\_\+sequence} (const char $\ast$sequence, short $\ast$S, short $\ast$s5, short $\ast$s3, char $\ast$ss, unsigned short $\ast$as, int \hyperlink{group__model__details_gaf9202a1a09f5828dc731e2d9a10fa111}{circ})
+\begin{DoxyCompactList}\small\item\em Get arrays with encoded sequence of the alignment. \end{DoxyCompactList}\item 
+void \hyperlink{group__aln__utils_ga8a560930f7f2582cc3967723a86cfdfa}{alloc\+\_\+sequence\+\_\+arrays} (const char $\ast$$\ast$sequences, short $\ast$$\ast$$\ast$S, short $\ast$$\ast$$\ast$S5, short $\ast$$\ast$$\ast$S3, unsigned short $\ast$$\ast$$\ast$a2s, char $\ast$$\ast$$\ast$Ss, int \hyperlink{group__model__details_gaf9202a1a09f5828dc731e2d9a10fa111}{circ})
+\begin{DoxyCompactList}\small\item\em Allocate memory for sequence array used to deal with aligned sequences. \end{DoxyCompactList}\item 
+void \hyperlink{group__aln__utils_ga298a420a8c879202e2617b3f724fde38}{free\+\_\+sequence\+\_\+arrays} (unsigned int n\+\_\+seq, short $\ast$$\ast$$\ast$S, short $\ast$$\ast$$\ast$S5, short $\ast$$\ast$$\ast$S3, unsigned short $\ast$$\ast$$\ast$a2s, char $\ast$$\ast$$\ast$Ss)
+\begin{DoxyCompactList}\small\item\em Free the memory of the sequence arrays used to deal with aligned sequences. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Data Structure Documentation}
+\index{vrna\+\_\+pinfo\+\_\+s@{vrna\+\_\+pinfo\+\_\+s}}\label{structvrna__pinfo__s}
+\Hypertarget{group__aln__utils_structvrna__pinfo__s}
+\subsubsection{struct vrna\+\_\+pinfo\+\_\+s}
+A base pair info structure. 
+
+For each base pair (i,j) with i,j in \mbox{[}0, n-\/1\mbox{]} the structure lists\+:
+\begin{DoxyItemize}
+\item its probability \textquotesingle{}p\textquotesingle{}
+\item an entropy-\/like measure for its well-\/definedness \textquotesingle{}ent\textquotesingle{}
+\item the frequency of each type of pair in \textquotesingle{}bp\mbox{[}\mbox{]}\textquotesingle{}
+\begin{DoxyItemize}
+\item \textquotesingle{}bp\mbox{[}0\mbox{]}\textquotesingle{} contains the number of non-\/compatible sequences
+\item \textquotesingle{}bp\mbox{[}1\mbox{]}\textquotesingle{} the number of CG pairs, etc. 
+\end{DoxyItemize}
+\end{DoxyItemize}\subsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__aln__utils_ab91db0a87ef8402dc151795ba5a64c6f}\label{group__aln__utils_ab91db0a87ef8402dc151795ba5a64c6f}} 
+unsigned \hyperlink{group__aln__utils_ab91db0a87ef8402dc151795ba5a64c6f}{i}
+\begin{DoxyCompactList}\small\item\em nucleotide position i \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__aln__utils_a4142e38d6ba127acccdf680300a88e1f}\label{group__aln__utils_a4142e38d6ba127acccdf680300a88e1f}} 
+unsigned \hyperlink{group__aln__utils_a4142e38d6ba127acccdf680300a88e1f}{j}
+\begin{DoxyCompactList}\small\item\em nucleotide position j \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__aln__utils_a71990eae41fa100db8b557e4512ec281}\label{group__aln__utils_a71990eae41fa100db8b557e4512ec281}} 
+float \hyperlink{group__aln__utils_a71990eae41fa100db8b557e4512ec281}{p}
+\begin{DoxyCompactList}\small\item\em Probability. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__aln__utils_a5ab2a63f3da8e12c6d54d8e9dd9e3e73}\label{group__aln__utils_a5ab2a63f3da8e12c6d54d8e9dd9e3e73}} 
+float \hyperlink{group__aln__utils_a5ab2a63f3da8e12c6d54d8e9dd9e3e73}{ent}
+\begin{DoxyCompactList}\small\item\em Pseudo entropy for $ p(i,j) = S_i + S_j - p_ij*ln(p_ij) $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__aln__utils_aa5feac5559b36dcd7cb38111c45d444d}\label{group__aln__utils_aa5feac5559b36dcd7cb38111c45d444d}} 
+short \hyperlink{group__aln__utils_aa5feac5559b36dcd7cb38111c45d444d}{bp} \mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Frequencies of pair\+\_\+types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__aln__utils_a0720ae74ce53802a759ee9f98e9c8c43}\label{group__aln__utils_a0720ae74ce53802a759ee9f98e9c8c43}} 
+char \hyperlink{group__aln__utils_a0720ae74ce53802a759ee9f98e9c8c43}{comp}
+\begin{DoxyCompactList}\small\item\em 1 iff pair is in mfe structure \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__aln__utils_ga1e659227c9fc077d29989f576f129000}\label{group__aln__utils_ga1e659227c9fc077d29989f576f129000}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!V\+R\+N\+A\+\_\+\+M\+E\+A\+S\+U\+R\+E\+\_\+\+S\+H\+A\+N\+N\+O\+N\+\_\+\+E\+N\+T\+R\+O\+PY@{V\+R\+N\+A\+\_\+\+M\+E\+A\+S\+U\+R\+E\+\_\+\+S\+H\+A\+N\+N\+O\+N\+\_\+\+E\+N\+T\+R\+O\+PY}}
+\index{V\+R\+N\+A\+\_\+\+M\+E\+A\+S\+U\+R\+E\+\_\+\+S\+H\+A\+N\+N\+O\+N\+\_\+\+E\+N\+T\+R\+O\+PY@{V\+R\+N\+A\+\_\+\+M\+E\+A\+S\+U\+R\+E\+\_\+\+S\+H\+A\+N\+N\+O\+N\+\_\+\+E\+N\+T\+R\+O\+PY}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{V\+R\+N\+A\+\_\+\+M\+E\+A\+S\+U\+R\+E\+\_\+\+S\+H\+A\+N\+N\+O\+N\+\_\+\+E\+N\+T\+R\+O\+PY}{VRNA\_MEASURE\_SHANNON\_ENTROPY}}
+{\footnotesize\ttfamily \#define V\+R\+N\+A\+\_\+\+M\+E\+A\+S\+U\+R\+E\+\_\+\+S\+H\+A\+N\+N\+O\+N\+\_\+\+E\+N\+T\+R\+O\+PY~1U}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Flag indicating Shannon Entropy measure. 
+
+Shannon Entropy is defined as $ H = - \sum_c p_c \cdot \log_2 p_c $ 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__aln__utils_ga7b61662a793ad0aa1ea38efc3a5baacc}\label{group__aln__utils_ga7b61662a793ad0aa1ea38efc3a5baacc}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!pair\+\_\+info@{pair\+\_\+info}}
+\index{pair\+\_\+info@{pair\+\_\+info}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{pair\+\_\+info}{pair\_info}}
+{\footnotesize\ttfamily typedef struct \hyperlink{group__aln__utils_structvrna__pinfo__s}{vrna\+\_\+pinfo\+\_\+s} \hyperlink{group__aln__utils_ga7b61662a793ad0aa1ea38efc3a5baacc}{pair\+\_\+info}}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Old typename of \hyperlink{group__aln__utils_structvrna__pinfo__s}{vrna\+\_\+pinfo\+\_\+s}. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000026}{Deprecated}]Use \hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t} instead! \end{DoxyRefDesc}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__aln__utils_gade5a1f2d16e7fd9a57b37d8514f08e8e}\label{group__aln__utils_gade5a1f2d16e7fd9a57b37d8514f08e8e}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!vrna\+\_\+aln\+\_\+mpi@{vrna\+\_\+aln\+\_\+mpi}}
+\index{vrna\+\_\+aln\+\_\+mpi@{vrna\+\_\+aln\+\_\+mpi}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{vrna\+\_\+aln\+\_\+mpi()}{vrna\_aln\_mpi()}}
+{\footnotesize\ttfamily int vrna\+\_\+aln\+\_\+mpi (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{alignment }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Get the mean pairwise identity in steps from ?to?(ident) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alignment} & Aligned sequences \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The mean pairwise identity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__aln__utils_gaf6421a1318586c59fea6a127ed9f65f3}\label{group__aln__utils_gaf6421a1318586c59fea6a127ed9f65f3}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!vrna\+\_\+aln\+\_\+pinfo@{vrna\+\_\+aln\+\_\+pinfo}}
+\index{vrna\+\_\+aln\+\_\+pinfo@{vrna\+\_\+aln\+\_\+pinfo}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{vrna\+\_\+aln\+\_\+pinfo()}{vrna\_aln\_pinfo()}}
+{\footnotesize\ttfamily \hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t}$\ast$ vrna\+\_\+aln\+\_\+pinfo (\begin{DoxyParamCaption}\item[{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc,  }\item[{const char $\ast$}]{structure,  }\item[{double}]{threshold }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Retrieve an array of \hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t} structures from precomputed pair probabilities. 
+
+This array of structures contains information about positionwise pair probabilies, base pair entropy and more
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t}, and \hyperlink{group__pf__fold_ga29e256d688ad221b78d37f427e0e99bc}{vrna\+\_\+pf()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em vc} & The \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} of type \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447dab821ce46ea3cf665be97df22a76f5023}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+P\+A\+R\+A\+T\+I\+VE} with precomputed partition function matrices \\
+\hline
+{\em structure} & An optional structure in dot-\/bracket notation (Maybe N\+U\+LL) \\
+\hline
+{\em threshold} & Do not include results with pair probabilities below threshold \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t} array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__aln__utils_gac801b0a72eac4ab9d5b2ef7533db9193}\label{group__aln__utils_gac801b0a72eac4ab9d5b2ef7533db9193}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!vrna\+\_\+aln\+\_\+slice@{vrna\+\_\+aln\+\_\+slice}}
+\index{vrna\+\_\+aln\+\_\+slice@{vrna\+\_\+aln\+\_\+slice}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{vrna\+\_\+aln\+\_\+slice()}{vrna\_aln\_slice()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ vrna\+\_\+aln\+\_\+slice (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{alignment,  }\item[{unsigned int}]{i,  }\item[{unsigned int}]{j }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Slice out a subalignment from a larger alignment. 
+
+\begin{DoxyNote}{Note}
+The user is responsible to free the memory occupied by the returned subalignment
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__aln__utils_gac00dc80b8a324f151f92f11ab6850ecf}{vrna\+\_\+aln\+\_\+free()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em alignment} & The input alignment \\
+\hline
+{\em i} & The first column of the subalignment (1-\/based) \\
+\hline
+{\em j} & The last column of the subalignment (1-\/based) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The subalignment between column $i$ and $j$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__aln__utils_gac00dc80b8a324f151f92f11ab6850ecf}\label{group__aln__utils_gac00dc80b8a324f151f92f11ab6850ecf}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!vrna\+\_\+aln\+\_\+free@{vrna\+\_\+aln\+\_\+free}}
+\index{vrna\+\_\+aln\+\_\+free@{vrna\+\_\+aln\+\_\+free}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{vrna\+\_\+aln\+\_\+free()}{vrna\_aln\_free()}}
+{\footnotesize\ttfamily void vrna\+\_\+aln\+\_\+free (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{alignment }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Free memory occupied by a set of aligned sequences. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alignment} & The input alignment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__aln__utils_ga3a0476a71c4bae3d302790de58055704}\label{group__aln__utils_ga3a0476a71c4bae3d302790de58055704}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!vrna\+\_\+aln\+\_\+uppercase@{vrna\+\_\+aln\+\_\+uppercase}}
+\index{vrna\+\_\+aln\+\_\+uppercase@{vrna\+\_\+aln\+\_\+uppercase}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{vrna\+\_\+aln\+\_\+uppercase()}{vrna\_aln\_uppercase()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ vrna\+\_\+aln\+\_\+uppercase (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{alignment }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Create a copy of an alignment with only uppercase letters in the sequences. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__aln__utils_ga08cdca592461436860daf9738279ce17}{vrna\+\_\+aln\+\_\+copy}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em alignment} & The input sequence alignment (last entry must be {\itshape N\+U\+LL} terminated) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A copy of the input alignment where lowercase sequence letters are replaced by uppercase letters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__aln__utils_ga7886fc678553c06472a712a335cde9cf}\label{group__aln__utils_ga7886fc678553c06472a712a335cde9cf}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!vrna\+\_\+aln\+\_\+to\+R\+NA@{vrna\+\_\+aln\+\_\+to\+R\+NA}}
+\index{vrna\+\_\+aln\+\_\+to\+R\+NA@{vrna\+\_\+aln\+\_\+to\+R\+NA}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{vrna\+\_\+aln\+\_\+to\+R\+N\+A()}{vrna\_aln\_toRNA()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ vrna\+\_\+aln\+\_\+to\+R\+NA (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{alignment }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Create a copy of an alignment where D\+NA alphabet is replaced by R\+NA alphabet. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__aln__utils_ga08cdca592461436860daf9738279ce17}{vrna\+\_\+aln\+\_\+copy}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em alignment} & The input sequence alignment (last entry must be {\itshape N\+U\+LL} terminated) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A copy of the input alignment where D\+NA alphabet is replaced by R\+NA alphabet (T -\/$>$ U) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__aln__utils_ga08cdca592461436860daf9738279ce17}\label{group__aln__utils_ga08cdca592461436860daf9738279ce17}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!vrna\+\_\+aln\+\_\+copy@{vrna\+\_\+aln\+\_\+copy}}
+\index{vrna\+\_\+aln\+\_\+copy@{vrna\+\_\+aln\+\_\+copy}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{vrna\+\_\+aln\+\_\+copy()}{vrna\_aln\_copy()}}
+{\footnotesize\ttfamily char$\ast$$\ast$ vrna\+\_\+aln\+\_\+copy (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{alignment,  }\item[{unsigned int}]{options }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Make a copy of a multiple sequence alignment. 
+
+This function allows one to create a copy of a multiple sequence alignment. The {\ttfamily options} parameter additionally allows for sequence manipulation, such as converting D\+NA to R\+NA alphabet, and conversion to uppercase letters.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__aln__utils_ga08cdca592461436860daf9738279ce17}{vrna\+\_\+aln\+\_\+copy()}, \#\+V\+R\+N\+A\+\_\+\+A\+L\+N\+\_\+\+R\+NA, \#\+V\+R\+N\+A\+\_\+\+A\+L\+N\+\_\+\+U\+P\+P\+E\+R\+C\+A\+SE, \#\+V\+R\+N\+A\+\_\+\+A\+L\+N\+\_\+\+D\+E\+F\+A\+U\+LT
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em alignment} & The input sequence alignment (last entry must be {\itshape N\+U\+LL} terminated) \\
+\hline
+{\em options} & Option flags indicating whether the aligned sequences should be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A (manipulated) copy of the input alignment 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__aln__utils_gab6f16a2ea93f3bfd4d089cc8d448bb16}\label{group__aln__utils_gab6f16a2ea93f3bfd4d089cc8d448bb16}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!vrna\+\_\+aln\+\_\+conservation\+\_\+struct@{vrna\+\_\+aln\+\_\+conservation\+\_\+struct}}
+\index{vrna\+\_\+aln\+\_\+conservation\+\_\+struct@{vrna\+\_\+aln\+\_\+conservation\+\_\+struct}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{vrna\+\_\+aln\+\_\+conservation\+\_\+struct()}{vrna\_aln\_conservation\_struct()}}
+{\footnotesize\ttfamily float $\ast$ vrna\+\_\+aln\+\_\+conservation\+\_\+struct (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{alignment,  }\item[{const char $\ast$}]{structure,  }\item[{const \hyperlink{group__model__details_ga1f8a10e12a0a1915f2a4eff0b28ea17c}{vrna\+\_\+md\+\_\+t} $\ast$}]{md }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Compute base pair conservation of a consensus structure. 
+
+This function computes the base pair conservation (fraction of canonical base pairs) of a consensus structure given a multiple sequence alignment. The base pair types that are considered canonical may be specified using the \#vrna\+\_\+md\+\_\+t.\+pairs array. Passing {\itshape N\+U\+LL} as parameter {\ttfamily md} results in default pairing rules, i.\+e. canonical Watson-\/\+Crick and GU Wobble pairs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em alignment} & The input sequence alignment (last entry must be {\itshape N\+U\+LL} terminated) \\
+\hline
+{\em structure} & The consensus structure in dot-\/bracket notation \\
+\hline
+{\em md} & Model details that specify compatible base pairs (Maybe {\itshape N\+U\+LL}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 1-\/based vector of base pair conservations
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{S\+W\+I\+G Wrapper Notes}
+\item[\hyperlink{wrappers__wrappers000001}{S\+W\+I\+G Wrapper Notes}]This function is available in an overloaded form where the last parameter may be omitted, indicating {\ttfamily md} = {\itshape N\+U\+LL} \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__aln__utils_gaa12b481a7e7b965ef2eb1bcc4399e759}\label{group__aln__utils_gaa12b481a7e7b965ef2eb1bcc4399e759}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!vrna\+\_\+aln\+\_\+conservation\+\_\+col@{vrna\+\_\+aln\+\_\+conservation\+\_\+col}}
+\index{vrna\+\_\+aln\+\_\+conservation\+\_\+col@{vrna\+\_\+aln\+\_\+conservation\+\_\+col}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{vrna\+\_\+aln\+\_\+conservation\+\_\+col()}{vrna\_aln\_conservation\_col()}}
+{\footnotesize\ttfamily float $\ast$ vrna\+\_\+aln\+\_\+conservation\+\_\+col (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{alignment,  }\item[{const \hyperlink{group__model__details_ga1f8a10e12a0a1915f2a4eff0b28ea17c}{vrna\+\_\+md\+\_\+t} $\ast$}]{md,  }\item[{unsigned int}]{options }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Compute nucleotide conservation in an alignment. 
+
+This function computes the conservation of nucleotides in alignment columns. The simples measure is Shannon Entropy and can be selected by passing the \hyperlink{group__aln__utils_ga1e659227c9fc077d29989f576f129000}{V\+R\+N\+A\+\_\+\+M\+E\+A\+S\+U\+R\+E\+\_\+\+S\+H\+A\+N\+N\+O\+N\+\_\+\+E\+N\+T\+R\+O\+PY} flag in the {\ttfamily options} parameter.
+
+\begin{DoxyNote}{Note}
+Currently, only \hyperlink{group__aln__utils_ga1e659227c9fc077d29989f576f129000}{V\+R\+N\+A\+\_\+\+M\+E\+A\+S\+U\+R\+E\+\_\+\+S\+H\+A\+N\+N\+O\+N\+\_\+\+E\+N\+T\+R\+O\+PY} is supported as conservation measure.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__aln__utils_ga1e659227c9fc077d29989f576f129000}{V\+R\+N\+A\+\_\+\+M\+E\+A\+S\+U\+R\+E\+\_\+\+S\+H\+A\+N\+N\+O\+N\+\_\+\+E\+N\+T\+R\+O\+PY}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em alignment} & The input sequence alignment (last entry must be {\itshape N\+U\+LL} terminated) \\
+\hline
+{\em md} & Model details that specify known nucleotides (Maybe {\itshape N\+U\+LL}) \\
+\hline
+{\em options} & A flag indicating which measure of conservation should be applied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 1-\/based vector of column conservations
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{S\+W\+I\+G Wrapper Notes}
+\item[\hyperlink{wrappers__wrappers000002}{S\+W\+I\+G Wrapper Notes}]This function is available in an overloaded form where the last two parameters may be omitted, indicating {\ttfamily md} = {\itshape N\+U\+LL}, and {\ttfamily options} = \hyperlink{group__aln__utils_ga1e659227c9fc077d29989f576f129000}{V\+R\+N\+A\+\_\+\+M\+E\+A\+S\+U\+R\+E\+\_\+\+S\+H\+A\+N\+N\+O\+N\+\_\+\+E\+N\+T\+R\+O\+PY}, respectively. \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__aln__utils_gaa2d600be90844094ec145ea14a314d2f}\label{group__aln__utils_gaa2d600be90844094ec145ea14a314d2f}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!get\+\_\+mpi@{get\+\_\+mpi}}
+\index{get\+\_\+mpi@{get\+\_\+mpi}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{get\+\_\+mpi()}{get\_mpi()}}
+{\footnotesize\ttfamily int get\+\_\+mpi (\begin{DoxyParamCaption}\item[{char $\ast$}]{Alseq\mbox{[}$\,$\mbox{]},  }\item[{int}]{n\+\_\+seq,  }\item[{int}]{length,  }\item[{int $\ast$}]{mini }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Get the mean pairwise identity in steps from ?to?(ident) 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000027}{Deprecated}]Use \hyperlink{group__aln__utils_gade5a1f2d16e7fd9a57b37d8514f08e8e}{vrna\+\_\+aln\+\_\+mpi()} as a replacement\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em Alseq} & \\
+\hline
+{\em n\+\_\+seq} & The number of sequences in the alignment \\
+\hline
+{\em length} & The length of the alignment \\
+\hline
+{\em mini} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The mean pairwise identity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__aln__utils_gaa3e40277c837d6f7603afe319884c786}\label{group__aln__utils_gaa3e40277c837d6f7603afe319884c786}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!encode\+\_\+ali\+\_\+sequence@{encode\+\_\+ali\+\_\+sequence}}
+\index{encode\+\_\+ali\+\_\+sequence@{encode\+\_\+ali\+\_\+sequence}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{encode\+\_\+ali\+\_\+sequence()}{encode\_ali\_sequence()}}
+{\footnotesize\ttfamily void encode\+\_\+ali\+\_\+sequence (\begin{DoxyParamCaption}\item[{const char $\ast$}]{sequence,  }\item[{short $\ast$}]{S,  }\item[{short $\ast$}]{s5,  }\item[{short $\ast$}]{s3,  }\item[{char $\ast$}]{ss,  }\item[{unsigned short $\ast$}]{as,  }\item[{int}]{circ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Get arrays with encoded sequence of the alignment. 
+
+this function assumes that in S, S5, s3, ss and as enough space is already allocated (size must be at least sequence length+2)
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequence} & The gapped sequence from the alignment \\
+\hline
+{\em S} & pointer to an array that holds encoded sequence \\
+\hline
+{\em s5} & pointer to an array that holds the next base 5\textquotesingle{} of alignment position i \\
+\hline
+{\em s3} & pointer to an array that holds the next base 3\textquotesingle{} of alignment position i \\
+\hline
+{\em ss} & \\
+\hline
+{\em as} & \\
+\hline
+{\em circ} & assume the molecules to be circular instead of linear (circ=0) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__aln__utils_ga8a560930f7f2582cc3967723a86cfdfa}\label{group__aln__utils_ga8a560930f7f2582cc3967723a86cfdfa}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!alloc\+\_\+sequence\+\_\+arrays@{alloc\+\_\+sequence\+\_\+arrays}}
+\index{alloc\+\_\+sequence\+\_\+arrays@{alloc\+\_\+sequence\+\_\+arrays}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{alloc\+\_\+sequence\+\_\+arrays()}{alloc\_sequence\_arrays()}}
+{\footnotesize\ttfamily void alloc\+\_\+sequence\+\_\+arrays (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{sequences,  }\item[{short $\ast$$\ast$$\ast$}]{S,  }\item[{short $\ast$$\ast$$\ast$}]{S5,  }\item[{short $\ast$$\ast$$\ast$}]{S3,  }\item[{unsigned short $\ast$$\ast$$\ast$}]{a2s,  }\item[{char $\ast$$\ast$$\ast$}]{Ss,  }\item[{int}]{circ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Allocate memory for sequence array used to deal with aligned sequences. 
+
+Note that these arrays will also be initialized according to the sequence alignment given
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__aln__utils_ga298a420a8c879202e2617b3f724fde38}{free\+\_\+sequence\+\_\+arrays()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em sequences} & The aligned sequences \\
+\hline
+{\em S} & A pointer to the array of encoded sequences \\
+\hline
+{\em S5} & A pointer to the array that contains the next 5\textquotesingle{} nucleotide of a sequence position \\
+\hline
+{\em S3} & A pointer to the array that contains the next 3\textquotesingle{} nucleotide of a sequence position \\
+\hline
+{\em a2s} & A pointer to the array that contains the alignment to sequence position mapping \\
+\hline
+{\em Ss} & A pointer to the array that contains the ungapped sequence \\
+\hline
+{\em circ} & assume the molecules to be circular instead of linear (circ=0) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__aln__utils_ga298a420a8c879202e2617b3f724fde38}\label{group__aln__utils_ga298a420a8c879202e2617b3f724fde38}} 
+\index{Utilities for sequence alignments@{Utilities for sequence alignments}!free\+\_\+sequence\+\_\+arrays@{free\+\_\+sequence\+\_\+arrays}}
+\index{free\+\_\+sequence\+\_\+arrays@{free\+\_\+sequence\+\_\+arrays}!Utilities for sequence alignments@{Utilities for sequence alignments}}
+\subsubsection{\texorpdfstring{free\+\_\+sequence\+\_\+arrays()}{free\_sequence\_arrays()}}
+{\footnotesize\ttfamily void free\+\_\+sequence\+\_\+arrays (\begin{DoxyParamCaption}\item[{unsigned int}]{n\+\_\+seq,  }\item[{short $\ast$$\ast$$\ast$}]{S,  }\item[{short $\ast$$\ast$$\ast$}]{S5,  }\item[{short $\ast$$\ast$$\ast$}]{S3,  }\item[{unsigned short $\ast$$\ast$$\ast$}]{a2s,  }\item[{char $\ast$$\ast$$\ast$}]{Ss }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{aln__util_8h}{Vienna\+R\+N\+A/aln\+\_\+util.\+h}$>$}
+
+
+
+Free the memory of the sequence arrays used to deal with aligned sequences. 
+
+This function frees the memory previously allocated with \hyperlink{group__aln__utils_ga8a560930f7f2582cc3967723a86cfdfa}{alloc\+\_\+sequence\+\_\+arrays()}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__aln__utils_ga8a560930f7f2582cc3967723a86cfdfa}{alloc\+\_\+sequence\+\_\+arrays()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+seq} & The number of aligned sequences \\
+\hline
+{\em S} & A pointer to the array of encoded sequences \\
+\hline
+{\em S5} & A pointer to the array that contains the next 5\textquotesingle{} nucleotide of a sequence position \\
+\hline
+{\em S3} & A pointer to the array that contains the next 3\textquotesingle{} nucleotide of a sequence position \\
+\hline
+{\em a2s} & A pointer to the array that contains the alignment to sequence position mapping \\
+\hline
+{\em Ss} & A pointer to the array that contains the ungapped sequence \\
+\hline
+\end{DoxyParams}

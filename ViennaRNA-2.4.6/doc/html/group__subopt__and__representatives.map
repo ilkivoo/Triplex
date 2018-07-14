@@ -1,0 +1,7 @@
+<map id="Suboptimals and representative structures" name="Suboptimals and representative structures">
+<area shape="rect" id="node1" href="$group__subopt__zuker.html" title="Suboptimal structures\l sensu Stiegler et al.\l 1984 / Zuker et al. 1989" alt="" coords="261,5,425,61"/>
+<area shape="rect" id="node2" href="$group__mea__fold.html" title="Compute the structure\l with maximum expected\l accuracy (MEA)" alt="" coords="259,85,427,141"/>
+<area shape="rect" id="node3" href="$group__subopt__stochbt.html" title="Structure sampling\l from the ensemble" alt="" coords="275,166,410,207"/>
+<area shape="rect" id="node4" href="$group__centroid__fold.html" title="Compute the centroid\l structure" alt="" coords="269,231,416,273"/>
+<area shape="rect" id="node6" href="$group__subopt__wuchty.html" title="Suboptimal structures\l within an energy band\l arround the MFE" alt="" coords="266,297,419,353"/>
+</map>

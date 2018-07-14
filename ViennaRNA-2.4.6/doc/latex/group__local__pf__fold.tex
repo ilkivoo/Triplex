@@ -1,0 +1,414 @@
+\hypertarget{group__local__pf__fold}{}\section{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}
+\label{group__local__pf__fold}\index{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}}
+
+
+\subsection{Detailed Description}
+Collaboration diagram for Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__local__pf__fold}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__local__pf__fold_ga296217b76e76e5f7e6927e7210aa9b1f}{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+PP}~4096U
+\begin{DoxyCompactList}\small\item\em Option flag to activate callback triggers for pairing probabilities. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__local__pf__fold_ga18325811c7dfc7b7d9d4ac37f4353615}{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+UP}~8192U
+\begin{DoxyCompactList}\small\item\em Option flag to activate callback triggers for unpaired probabilities. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__local__pf__fold_ga0a13fc668b02f21b225e2334e4caac08}{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+T\+A\+C\+KP}~16384U
+\begin{DoxyCompactList}\small\item\em Option flag to activate callback triggers for stacking probabilities. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__local__pf__fold_ga9068f4ec008bf1c042a9357f5c2c5e13}{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+U\+P\+\_\+\+S\+P\+L\+IT}~32768U
+\begin{DoxyCompactList}\small\item\em Option flag to activate callback triggers for unpaired probabilities (split up into different loop types) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} $\ast$ \hyperlink{group__local__pf__fold_ga6267230f20cab0e2315375310b4dad85}{vrna\+\_\+pfl\+\_\+fold} (const char $\ast$sequence, int window\+\_\+size, int \hyperlink{group__model__details_ga18df869af0d70101106458fc3f027806}{max\+\_\+bp\+\_\+span}, float cutoff)
+\begin{DoxyCompactList}\small\item\em Compute base pair probabilities using a sliding-\/window approach. \end{DoxyCompactList}\item 
+void \hyperlink{group__local__pf__fold_ga8dc3788e66420f524f2bfc0b685a939d}{vrna\+\_\+pfl\+\_\+fold\+\_\+cb} (const char $\ast$sequence, int window\+\_\+size, int \hyperlink{group__model__details_ga18df869af0d70101106458fc3f027806}{max\+\_\+bp\+\_\+span}, \hyperlink{LPfold_8h_abe710a1182e6db69cc75329dfc9bed67}{vrna\+\_\+probs\+\_\+window\+\_\+callback} $\ast$cb, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Compute base pair probabilities using a sliding-\/window approach (callback version) \end{DoxyCompactList}\item 
+double $\ast$$\ast$ \hyperlink{group__local__pf__fold_ga1dd5c51b797c961124912e289bff553a}{vrna\+\_\+pfl\+\_\+fold\+\_\+up} (const char $\ast$sequence, int ulength, int window\+\_\+size, int \hyperlink{group__model__details_ga18df869af0d70101106458fc3f027806}{max\+\_\+bp\+\_\+span})
+\begin{DoxyCompactList}\small\item\em Compute probability of contiguous unpaired segments. \end{DoxyCompactList}\item 
+void \hyperlink{group__local__pf__fold_ga8958d91b1f1aebfb32b58805d141ccf3}{vrna\+\_\+pfl\+\_\+fold\+\_\+up\+\_\+cb} (const char $\ast$sequence, int ulength, int window\+\_\+size, int \hyperlink{group__model__details_ga18df869af0d70101106458fc3f027806}{max\+\_\+bp\+\_\+span}, \hyperlink{LPfold_8h_abe710a1182e6db69cc75329dfc9bed67}{vrna\+\_\+probs\+\_\+window\+\_\+callback} $\ast$cb, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Compute probability of contiguous unpaired segments. \end{DoxyCompactList}\item 
+void \hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$fc, int ulength, unsigned int options, \hyperlink{LPfold_8h_abe710a1182e6db69cc75329dfc9bed67}{vrna\+\_\+probs\+\_\+window\+\_\+callback} $\ast$cb, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Compute various equilibrium probabilities under a sliding window approach. \end{DoxyCompactList}\item 
+void \hyperlink{group__local__pf__fold_ga5a019014d37fe6105131dfc2fc447880}{update\+\_\+pf\+\_\+params\+LP} (int length)
+\item 
+\hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} $\ast$ \hyperlink{group__local__pf__fold_ga7cdf690583871f9c158a0f91d4785cb6}{pfl\+\_\+fold} (char $\ast$sequence, int win\+Size, int pair\+Size, float cutoffb, double $\ast$$\ast$pU, \hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} $\ast$$\ast$dpp2, F\+I\+LE $\ast$p\+Ufp, F\+I\+LE $\ast$spup)
+\begin{DoxyCompactList}\small\item\em Compute partition functions for locally stable secondary structures. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__local__pf__fold_gaedf355f07b3d83bc93f98712132571b0}\label{group__local__pf__fold_gaedf355f07b3d83bc93f98712132571b0}} 
+\hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} $\ast$ \hyperlink{group__local__pf__fold_gaedf355f07b3d83bc93f98712132571b0}{pfl\+\_\+fold\+\_\+par} (char $\ast$sequence, int win\+Size, int pair\+Size, float cutoffb, double $\ast$$\ast$pU, \hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} $\ast$$\ast$dpp2, F\+I\+LE $\ast$p\+Ufp, F\+I\+LE $\ast$spup, \hyperlink{group__energy__parameters_ga01d8b92fe734df8d79a6169482c7d8d8}{vrna\+\_\+exp\+\_\+param\+\_\+t} $\ast$parameters)
+\begin{DoxyCompactList}\small\item\em Compute partition functions for locally stable secondary structures. \end{DoxyCompactList}\item 
+void \hyperlink{group__local__pf__fold_ga0bcb751860bbf34e3dfee8c2fbdb3ef3}{putoutp\+U\+\_\+prob} (double $\ast$$\ast$pU, int length, int ulength, F\+I\+LE $\ast$fp, int energies)
+\begin{DoxyCompactList}\small\item\em Writes the unpaired probabilities (pU) or opening energies into a file. \end{DoxyCompactList}\item 
+void \hyperlink{group__local__pf__fold_ga9acb00ee10e96b1ca4ea394cd8bcec75}{putoutp\+U\+\_\+prob\+\_\+bin} (double $\ast$$\ast$pU, int length, int ulength, F\+I\+LE $\ast$fp, int energies)
+\begin{DoxyCompactList}\small\item\em Writes the unpaired probabilities (pU) or opening energies into a binary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__local__pf__fold_ga296217b76e76e5f7e6927e7210aa9b1f}\label{group__local__pf__fold_ga296217b76e76e5f7e6927e7210aa9b1f}} 
+\index{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}!V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+PP@{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+PP}}
+\index{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+PP@{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+PP}!Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}}
+\subsubsection{\texorpdfstring{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+PP}{VRNA\_PROBS\_WINDOW\_BPP}}
+{\footnotesize\ttfamily \#define V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+PP~4096U}
+
+
+
+{\ttfamily \#include $<$\hyperlink{LPfold_8h}{Vienna\+R\+N\+A/\+L\+Pfold.\+h}$>$}
+
+
+
+Option flag to activate callback triggers for pairing probabilities. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__local__pf__fold_ga18325811c7dfc7b7d9d4ac37f4353615}\label{group__local__pf__fold_ga18325811c7dfc7b7d9d4ac37f4353615}} 
+\index{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}!V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+UP@{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+UP}}
+\index{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+UP@{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+UP}!Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}}
+\subsubsection{\texorpdfstring{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+UP}{VRNA\_PROBS\_WINDOW\_UP}}
+{\footnotesize\ttfamily \#define V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+UP~8192U}
+
+
+
+{\ttfamily \#include $<$\hyperlink{LPfold_8h}{Vienna\+R\+N\+A/\+L\+Pfold.\+h}$>$}
+
+
+
+Option flag to activate callback triggers for unpaired probabilities. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__local__pf__fold_ga0a13fc668b02f21b225e2334e4caac08}\label{group__local__pf__fold_ga0a13fc668b02f21b225e2334e4caac08}} 
+\index{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}!V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+T\+A\+C\+KP@{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+T\+A\+C\+KP}}
+\index{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+T\+A\+C\+KP@{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+T\+A\+C\+KP}!Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}}
+\subsubsection{\texorpdfstring{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+T\+A\+C\+KP}{VRNA\_PROBS\_WINDOW\_STACKP}}
+{\footnotesize\ttfamily \#define V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+T\+A\+C\+KP~16384U}
+
+
+
+{\ttfamily \#include $<$\hyperlink{LPfold_8h}{Vienna\+R\+N\+A/\+L\+Pfold.\+h}$>$}
+
+
+
+Option flag to activate callback triggers for stacking probabilities. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__local__pf__fold_ga9068f4ec008bf1c042a9357f5c2c5e13}\label{group__local__pf__fold_ga9068f4ec008bf1c042a9357f5c2c5e13}} 
+\index{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}!V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+U\+P\+\_\+\+S\+P\+L\+IT@{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+U\+P\+\_\+\+S\+P\+L\+IT}}
+\index{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+U\+P\+\_\+\+S\+P\+L\+IT@{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+U\+P\+\_\+\+S\+P\+L\+IT}!Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}}
+\subsubsection{\texorpdfstring{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+U\+P\+\_\+\+S\+P\+L\+IT}{VRNA\_PROBS\_WINDOW\_UP\_SPLIT}}
+{\footnotesize\ttfamily \#define V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+U\+P\+\_\+\+S\+P\+L\+IT~32768U}
+
+
+
+{\ttfamily \#include $<$\hyperlink{LPfold_8h}{Vienna\+R\+N\+A/\+L\+Pfold.\+h}$>$}
+
+
+
+Option flag to activate callback triggers for unpaired probabilities (split up into different loop types) 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()}, \#\+V\+R\+N\+A\+\_\+\+E\+X\+T\+\_\+\+L\+O\+OP, \#\+V\+R\+N\+A\+\_\+\+H\+P\+\_\+\+L\+O\+OP, \#\+V\+R\+N\+A\+\_\+\+I\+N\+T\+\_\+\+L\+O\+OP, \#\+V\+R\+N\+A\+\_\+\+M\+B\+\_\+\+L\+O\+OP, \#\+V\+R\+N\+A\+\_\+\+A\+N\+Y\+\_\+\+L\+O\+OP 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__local__pf__fold_ga6267230f20cab0e2315375310b4dad85}\label{group__local__pf__fold_ga6267230f20cab0e2315375310b4dad85}} 
+\index{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}!vrna\+\_\+pfl\+\_\+fold@{vrna\+\_\+pfl\+\_\+fold}}
+\index{vrna\+\_\+pfl\+\_\+fold@{vrna\+\_\+pfl\+\_\+fold}!Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+pfl\+\_\+fold()}{vrna\_pfl\_fold()}}
+{\footnotesize\ttfamily \hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t}$\ast$ vrna\+\_\+pfl\+\_\+fold (\begin{DoxyParamCaption}\item[{const char $\ast$}]{sequence,  }\item[{int}]{window\+\_\+size,  }\item[{int}]{max\+\_\+bp\+\_\+span,  }\item[{float}]{cutoff }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{LPfold_8h}{Vienna\+R\+N\+A/\+L\+Pfold.\+h}$>$}
+
+
+
+Compute base pair probabilities using a sliding-\/window approach. 
+
+This is a simplified wrapper to \hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()} that given a nucleid acid sequence, a window size, a maximum base pair span, and a cutoff value computes the pair probabilities for any base pair in any window. The pair probabilities are returned as a list and the user has to take care to free() the memory occupied by the list.
+
+\begin{DoxyNote}{Note}
+This function uses default model settings! For custom model settings, we refer to the function \hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()}.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()}, \hyperlink{group__local__pf__fold_ga8dc3788e66420f524f2bfc0b685a939d}{vrna\+\_\+pfl\+\_\+fold\+\_\+cb()}, \hyperlink{group__local__pf__fold_ga1dd5c51b797c961124912e289bff553a}{vrna\+\_\+pfl\+\_\+fold\+\_\+up()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em sequence} & The nucleic acid input sequence \\
+\hline
+{\em window\+\_\+size} & The size of the sliding window \\
+\hline
+{\em max\+\_\+bp\+\_\+span} & The maximum distance along the backbone between two nucleotides that form a base pairs \\
+\hline
+{\em cutoff} & A cutoff value that omits all pairs with lower probability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of base pair probabilities, terminated by an entry with \#vrna\+\_\+ep\+\_\+t.\+i and \#vrna\+\_\+ep\+\_\+t.\+j set to 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__local__pf__fold_ga8dc3788e66420f524f2bfc0b685a939d}\label{group__local__pf__fold_ga8dc3788e66420f524f2bfc0b685a939d}} 
+\index{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}!vrna\+\_\+pfl\+\_\+fold\+\_\+cb@{vrna\+\_\+pfl\+\_\+fold\+\_\+cb}}
+\index{vrna\+\_\+pfl\+\_\+fold\+\_\+cb@{vrna\+\_\+pfl\+\_\+fold\+\_\+cb}!Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+pfl\+\_\+fold\+\_\+cb()}{vrna\_pfl\_fold\_cb()}}
+{\footnotesize\ttfamily void vrna\+\_\+pfl\+\_\+fold\+\_\+cb (\begin{DoxyParamCaption}\item[{const char $\ast$}]{sequence,  }\item[{int}]{window\+\_\+size,  }\item[{int}]{max\+\_\+bp\+\_\+span,  }\item[{\hyperlink{LPfold_8h_abe710a1182e6db69cc75329dfc9bed67}{vrna\+\_\+probs\+\_\+window\+\_\+callback} $\ast$}]{cb,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{LPfold_8h}{Vienna\+R\+N\+A/\+L\+Pfold.\+h}$>$}
+
+
+
+Compute base pair probabilities using a sliding-\/window approach (callback version) 
+
+This is a simplified wrapper to \hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()} that given a nucleid acid sequence, a window size, a maximum base pair span, and a cutoff value computes the pair probabilities for any base pair in any window. It is similar to \hyperlink{group__local__pf__fold_ga6267230f20cab0e2315375310b4dad85}{vrna\+\_\+pfl\+\_\+fold()} but uses a callback mechanism to return the pair probabilities.
+
+Read the details for \hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()} for details on the callback implementation!
+
+\begin{DoxyNote}{Note}
+This function uses default model settings! For custom model settings, we refer to the function \hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()}.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()}, \hyperlink{group__local__pf__fold_ga6267230f20cab0e2315375310b4dad85}{vrna\+\_\+pfl\+\_\+fold()}, \hyperlink{group__local__pf__fold_ga8958d91b1f1aebfb32b58805d141ccf3}{vrna\+\_\+pfl\+\_\+fold\+\_\+up\+\_\+cb()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em sequence} & The nucleic acid input sequence \\
+\hline
+{\em window\+\_\+size} & The size of the sliding window \\
+\hline
+{\em max\+\_\+bp\+\_\+span} & The maximum distance along the backbone between two nucleotides that form a base pairs \\
+\hline
+{\em cb} & The callback function which collects the pair probability data for further processing \\
+\hline
+{\em data} & Some arbitrary data structure that is passed to the callback {\ttfamily cb} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__local__pf__fold_ga1dd5c51b797c961124912e289bff553a}\label{group__local__pf__fold_ga1dd5c51b797c961124912e289bff553a}} 
+\index{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}!vrna\+\_\+pfl\+\_\+fold\+\_\+up@{vrna\+\_\+pfl\+\_\+fold\+\_\+up}}
+\index{vrna\+\_\+pfl\+\_\+fold\+\_\+up@{vrna\+\_\+pfl\+\_\+fold\+\_\+up}!Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+pfl\+\_\+fold\+\_\+up()}{vrna\_pfl\_fold\_up()}}
+{\footnotesize\ttfamily double$\ast$$\ast$ vrna\+\_\+pfl\+\_\+fold\+\_\+up (\begin{DoxyParamCaption}\item[{const char $\ast$}]{sequence,  }\item[{int}]{ulength,  }\item[{int}]{window\+\_\+size,  }\item[{int}]{max\+\_\+bp\+\_\+span }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{LPfold_8h}{Vienna\+R\+N\+A/\+L\+Pfold.\+h}$>$}
+
+
+
+Compute probability of contiguous unpaired segments. 
+
+This is a simplified wrapper to \hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()} that given a nucleic acid sequence, a maximum length of unpaired segments ({\ttfamily ulength}), a window size, and a maximum base pair span computes the equilibrium probability of any segment not exceeding {\ttfamily ulength}. The probabilities to be unpaired are returned as a 1-\/based, 2-\/dimensional matrix with dimensions $ N \times M $, where $N$ is the length of the sequence and $M$ is the maximum segment length. As an example, the probability of a segment of size 5 starting at position 100 is stored in the matrix entry $X[100][5]$.
+
+It is the users responsibility to free the memory occupied by this matrix.
+
+\begin{DoxyNote}{Note}
+This function uses default model settings! For custom model settings, we refer to the function \hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()}.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em sequence} & The nucleic acid input sequence \\
+\hline
+{\em ulength} & The maximal length of an unpaired segment \\
+\hline
+{\em window\+\_\+size} & The size of the sliding window \\
+\hline
+{\em max\+\_\+bp\+\_\+span} & The maximum distance along the backbone between two nucleotides that form a base pairs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The probabilities to be unpaired for any segment not exceeding {\ttfamily ulength} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__local__pf__fold_ga8958d91b1f1aebfb32b58805d141ccf3}\label{group__local__pf__fold_ga8958d91b1f1aebfb32b58805d141ccf3}} 
+\index{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}!vrna\+\_\+pfl\+\_\+fold\+\_\+up\+\_\+cb@{vrna\+\_\+pfl\+\_\+fold\+\_\+up\+\_\+cb}}
+\index{vrna\+\_\+pfl\+\_\+fold\+\_\+up\+\_\+cb@{vrna\+\_\+pfl\+\_\+fold\+\_\+up\+\_\+cb}!Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+pfl\+\_\+fold\+\_\+up\+\_\+cb()}{vrna\_pfl\_fold\_up\_cb()}}
+{\footnotesize\ttfamily void vrna\+\_\+pfl\+\_\+fold\+\_\+up\+\_\+cb (\begin{DoxyParamCaption}\item[{const char $\ast$}]{sequence,  }\item[{int}]{ulength,  }\item[{int}]{window\+\_\+size,  }\item[{int}]{max\+\_\+bp\+\_\+span,  }\item[{\hyperlink{LPfold_8h_abe710a1182e6db69cc75329dfc9bed67}{vrna\+\_\+probs\+\_\+window\+\_\+callback} $\ast$}]{cb,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{LPfold_8h}{Vienna\+R\+N\+A/\+L\+Pfold.\+h}$>$}
+
+
+
+Compute probability of contiguous unpaired segments. 
+
+This is a simplified wrapper to \hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()} that given a nucleic acid sequence, a maximum length of unpaired segments ({\ttfamily ulength}), a window size, and a maximum base pair span computes the equilibrium probability of any segment not exceeding {\ttfamily ulength}. It is similar to \hyperlink{group__local__pf__fold_ga1dd5c51b797c961124912e289bff553a}{vrna\+\_\+pfl\+\_\+fold\+\_\+up()} but uses a callback mechanism to return the unpaired probabilities.
+
+Read the details for \hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()} for details on the callback implementation!
+
+\begin{DoxyNote}{Note}
+This function uses default model settings! For custom model settings, we refer to the function \hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()}.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em sequence} & The nucleic acid input sequence \\
+\hline
+{\em ulength} & The maximal length of an unpaired segment \\
+\hline
+{\em window\+\_\+size} & The size of the sliding window \\
+\hline
+{\em max\+\_\+bp\+\_\+span} & The maximum distance along the backbone between two nucleotides that form a base pairs \\
+\hline
+{\em cb} & The callback function which collects the pair probability data for further processing \\
+\hline
+{\em data} & Some arbitrary data structure that is passed to the callback {\ttfamily cb} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The probabilities to be unpaired for any segment not exceeding {\ttfamily ulength} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}\label{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}} 
+\index{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}!vrna\+\_\+probs\+\_\+window@{vrna\+\_\+probs\+\_\+window}}
+\index{vrna\+\_\+probs\+\_\+window@{vrna\+\_\+probs\+\_\+window}!Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}}
+\subsubsection{\texorpdfstring{vrna\+\_\+probs\+\_\+window()}{vrna\_probs\_window()}}
+{\footnotesize\ttfamily void vrna\+\_\+probs\+\_\+window (\begin{DoxyParamCaption}\item[{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{fc,  }\item[{int}]{ulength,  }\item[{unsigned int}]{options,  }\item[{\hyperlink{LPfold_8h_abe710a1182e6db69cc75329dfc9bed67}{vrna\+\_\+probs\+\_\+window\+\_\+callback} $\ast$}]{cb,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{LPfold_8h}{Vienna\+R\+N\+A/\+L\+Pfold.\+h}$>$}
+
+
+
+Compute various equilibrium probabilities under a sliding window approach. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__local__pf__fold_ga8dc3788e66420f524f2bfc0b685a939d}{vrna\+\_\+pfl\+\_\+fold\+\_\+cb()}, \hyperlink{group__local__pf__fold_ga8958d91b1f1aebfb32b58805d141ccf3}{vrna\+\_\+pfl\+\_\+fold\+\_\+up\+\_\+cb()}, \hyperlink{group__local__pf__fold_ga296217b76e76e5f7e6927e7210aa9b1f}{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+PP}, \hyperlink{group__local__pf__fold_ga18325811c7dfc7b7d9d4ac37f4353615}{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+UP}, \hyperlink{group__local__pf__fold_ga9068f4ec008bf1c042a9357f5c2c5e13}{V\+R\+N\+A\+\_\+\+P\+R\+O\+B\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+U\+P\+\_\+\+S\+P\+L\+IT}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em fc} & The fold compound with sequence data, model settings and precomputed energy parameters \\
+\hline
+{\em ulength} & The maximal length of an unpaired segment (only for unpaired probability computations) \\
+\hline
+{\em cb} & The callback function which collects the pair probability data for further processing \\
+\hline
+{\em data} & Some arbitrary data structure that is passed to the callback {\ttfamily cb} \\
+\hline
+{\em options} & Option flags to control the behavior of this function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__local__pf__fold_ga5a019014d37fe6105131dfc2fc447880}\label{group__local__pf__fold_ga5a019014d37fe6105131dfc2fc447880}} 
+\index{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}!update\+\_\+pf\+\_\+params\+LP@{update\+\_\+pf\+\_\+params\+LP}}
+\index{update\+\_\+pf\+\_\+params\+LP@{update\+\_\+pf\+\_\+params\+LP}!Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}}
+\subsubsection{\texorpdfstring{update\+\_\+pf\+\_\+params\+L\+P()}{update\_pf\_paramsLP()}}
+{\footnotesize\ttfamily void update\+\_\+pf\+\_\+params\+LP (\begin{DoxyParamCaption}\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{LPfold_8h}{Vienna\+R\+N\+A/\+L\+Pfold.\+h}$>$}
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__local__pf__fold_ga7cdf690583871f9c158a0f91d4785cb6}\label{group__local__pf__fold_ga7cdf690583871f9c158a0f91d4785cb6}} 
+\index{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}!pfl\+\_\+fold@{pfl\+\_\+fold}}
+\index{pfl\+\_\+fold@{pfl\+\_\+fold}!Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}}
+\subsubsection{\texorpdfstring{pfl\+\_\+fold()}{pfl\_fold()}}
+{\footnotesize\ttfamily \hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t}$\ast$ pfl\+\_\+fold (\begin{DoxyParamCaption}\item[{char $\ast$}]{sequence,  }\item[{int}]{win\+Size,  }\item[{int}]{pair\+Size,  }\item[{float}]{cutoffb,  }\item[{double $\ast$$\ast$}]{pU,  }\item[{\hyperlink{group__struct__utils_gab9ac98ab55ded9fb90043b024b915aca}{vrna\+\_\+ep\+\_\+t} $\ast$$\ast$}]{dpp2,  }\item[{F\+I\+LE $\ast$}]{p\+Ufp,  }\item[{F\+I\+LE $\ast$}]{spup }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{LPfold_8h}{Vienna\+R\+N\+A/\+L\+Pfold.\+h}$>$}
+
+
+
+Compute partition functions for locally stable secondary structures. 
+
+pfl\+\_\+fold computes partition functions for every window of size \textquotesingle{}win\+Size\textquotesingle{} possible in a R\+NA molecule, allowing only pairs with a span smaller than \textquotesingle{}pair\+Size\textquotesingle{}. It returns the mean pair probabilities averaged over all windows containing the pair in \textquotesingle{}pl\textquotesingle{}. \textquotesingle{}win\+Size\textquotesingle{} should always be $>$= \textquotesingle{}pair\+Size\textquotesingle{}. Note that in contrast to \hyperlink{group__local__mfe__fold_ga16e5a70e60835bb969eaecbe6482f1be}{Lfold()}, bases outside of the window do not influence the structure at all. Only probabilities higher than \textquotesingle{}cutoffb\textquotesingle{} are kept.
+
+If \textquotesingle{}pU\textquotesingle{} is supplied (i.\+e is not the N\+U\+LL pointer), \hyperlink{group__local__pf__fold_ga7cdf690583871f9c158a0f91d4785cb6}{pfl\+\_\+fold()} will also compute the mean probability that regions of length \textquotesingle{}u\textquotesingle{} and smaller are unpaired. The parameter \textquotesingle{}u\textquotesingle{} is supplied in \textquotesingle{}pup\mbox{[}0\mbox{]}\mbox{[}0\mbox{]}\textquotesingle{}. On return the \textquotesingle{}pup\textquotesingle{} array will contain these probabilities, with the entry on \textquotesingle{}pup\mbox{[}x\mbox{]}\mbox{[}y\mbox{]}\textquotesingle{} containing the mean probability that x and the y-\/1 preceding bases are unpaired. The \textquotesingle{}pU\textquotesingle{} array needs to be large enough to hold n+1 float$\ast$ entries, where n is the sequence length.
+
+If an array dpp2 is supplied, the probability of base pair (i,j) given that there already exists a base pair (i+1,j-\/1) is also computed and saved in this array. If p\+Ufp is given (i.\+e. not N\+U\+LL), pU is not saved but put out imediately. If spup is given (i.\+e. is not N\+U\+LL), the pair probabilities in pl are not saved but put out imediately.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequence} & R\+NA sequence \\
+\hline
+{\em win\+Size} & size of the window \\
+\hline
+{\em pair\+Size} & maximum size of base pair \\
+\hline
+{\em cutoffb} & cutoffb for base pairs \\
+\hline
+{\em pU} & array holding all unpaired probabilities \\
+\hline
+{\em dpp2} & array of dependent pair probabilities \\
+\hline
+{\em p\+Ufp} & file pointer for pU \\
+\hline
+{\em spup} & file pointer for pair probabilities \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of pair probabilities 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__local__pf__fold_ga0bcb751860bbf34e3dfee8c2fbdb3ef3}\label{group__local__pf__fold_ga0bcb751860bbf34e3dfee8c2fbdb3ef3}} 
+\index{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}!putoutp\+U\+\_\+prob@{putoutp\+U\+\_\+prob}}
+\index{putoutp\+U\+\_\+prob@{putoutp\+U\+\_\+prob}!Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}}
+\subsubsection{\texorpdfstring{putoutp\+U\+\_\+prob()}{putoutpU\_prob()}}
+{\footnotesize\ttfamily void putoutp\+U\+\_\+prob (\begin{DoxyParamCaption}\item[{double $\ast$$\ast$}]{pU,  }\item[{int}]{length,  }\item[{int}]{ulength,  }\item[{F\+I\+LE $\ast$}]{fp,  }\item[{int}]{energies }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{LPfold_8h}{Vienna\+R\+N\+A/\+L\+Pfold.\+h}$>$}
+
+
+
+Writes the unpaired probabilities (pU) or opening energies into a file. 
+
+Can write either the unpaired probabilities (accessibilities) pU or the opening energies -\/log(pU)kT into a file
+
+
+\begin{DoxyParams}{Parameters}
+{\em pU} & pair probabilities \\
+\hline
+{\em length} & length of R\+NA sequence \\
+\hline
+{\em ulength} & maximum length of unpaired stretch \\
+\hline
+{\em fp} & file pointer of destination file \\
+\hline
+{\em energies} & switch to put out as opening energies \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__local__pf__fold_ga9acb00ee10e96b1ca4ea394cd8bcec75}\label{group__local__pf__fold_ga9acb00ee10e96b1ca4ea394cd8bcec75}} 
+\index{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}!putoutp\+U\+\_\+prob\+\_\+bin@{putoutp\+U\+\_\+prob\+\_\+bin}}
+\index{putoutp\+U\+\_\+prob\+\_\+bin@{putoutp\+U\+\_\+prob\+\_\+bin}!Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures@{Partition Function and Equilibrium Probabilities for Locally Stable Secondary Structures}}
+\subsubsection{\texorpdfstring{putoutp\+U\+\_\+prob\+\_\+bin()}{putoutpU\_prob\_bin()}}
+{\footnotesize\ttfamily void putoutp\+U\+\_\+prob\+\_\+bin (\begin{DoxyParamCaption}\item[{double $\ast$$\ast$}]{pU,  }\item[{int}]{length,  }\item[{int}]{ulength,  }\item[{F\+I\+LE $\ast$}]{fp,  }\item[{int}]{energies }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{LPfold_8h}{Vienna\+R\+N\+A/\+L\+Pfold.\+h}$>$}
+
+
+
+Writes the unpaired probabilities (pU) or opening energies into a binary file. 
+
+Can write either the unpaired probabilities (accessibilities) pU or the opening energies -\/log(pU)kT into a file
+
+
+\begin{DoxyParams}{Parameters}
+{\em pU} & pair probabilities \\
+\hline
+{\em length} & length of R\+NA sequence \\
+\hline
+{\em ulength} & maximum length of unpaired stretch \\
+\hline
+{\em fp} & file pointer of destination file \\
+\hline
+{\em energies} & switch to put out as opening energies \\
+\hline
+\end{DoxyParams}

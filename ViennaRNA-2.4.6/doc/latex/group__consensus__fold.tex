@@ -1,0 +1,194 @@
+\hypertarget{group__consensus__fold}{}\section{Comparative structure prediction}
+\label{group__consensus__fold}\index{Comparative structure prediction@{Comparative structure prediction}}
+
+
+\subsection{Detailed Description}
+Collaboration diagram for Comparative structure prediction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__consensus__fold}
+\end{center}
+\end{figure}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__consensus__mfe__fold}{M\+F\+E Consensus Structures for Sequence Alignment(s)}
+\item 
+\hyperlink{group__consensus__pf__fold}{Partition Function and Base Pair Probabilities for Sequence Alignment(s)}
+\item 
+\hyperlink{group__consensus__stochbt}{Stochastic Backtracking of Consensus Structures from Sequence Alignment(s)}
+\item 
+\hyperlink{group__local__consensus__fold}{Local M\+F\+E Consensus Structure Prediction for Sequence Alignments}
+\end{DoxyCompactItemize}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{alifold_8h}{alifold.\+h}
+\begin{DoxyCompactList}\small\item\em Functions for comparative structure prediction using R\+NA sequence alignments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{group__consensus__fold_ga1c48869c03b49a342bf4cbdd61900081}{energy\+\_\+of\+\_\+alistruct} (const char $\ast$$\ast$sequences, const char $\ast$structure, int n\+\_\+seq, float $\ast$energy)
+\begin{DoxyCompactList}\small\item\em Calculate the free energy of a consensus structure given a set of aligned sequences. \end{DoxyCompactList}\item 
+int \hyperlink{group__consensus__fold_ga5349960075b1847720a2e9df021e2675}{get\+\_\+alipf\+\_\+arrays} (short $\ast$$\ast$$\ast$S\+\_\+p, short $\ast$$\ast$$\ast$S5\+\_\+p, short $\ast$$\ast$$\ast$S3\+\_\+p, unsigned short $\ast$$\ast$$\ast$a2s\+\_\+p, char $\ast$$\ast$$\ast$Ss\+\_\+p, \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} $\ast$$\ast$qb\+\_\+p, \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} $\ast$$\ast$qm\+\_\+p, \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} $\ast$$\ast$q1k\+\_\+p, \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} $\ast$$\ast$qln\+\_\+p, short $\ast$$\ast$pscore)
+\begin{DoxyCompactList}\small\item\em Get pointers to (almost) all relavant arrays used in alifold\textquotesingle{}s partition function computation. \end{DoxyCompactList}\item 
+void \hyperlink{group__consensus__fold_gac484c6bd429bafbd353b91044508d8e9}{update\+\_\+alifold\+\_\+params} (void)
+\begin{DoxyCompactList}\small\item\em Update the energy parameters for alifold function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__consensus__fold_ga1116aed4b2dab5252cd23946d47d52c3}\label{group__consensus__fold_ga1116aed4b2dab5252cd23946d47d52c3}} 
+float $\ast$$\ast$ \hyperlink{group__consensus__fold_ga1116aed4b2dab5252cd23946d47d52c3}{get\+\_\+ribosum} (const char $\ast$$\ast$Alseq, int n\+\_\+seq, int length)
+\begin{DoxyCompactList}\small\item\em Retrieve a Ribo\+Sum Scoring Matrix for a given Alignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{group__consensus__fold_gaf3cbac6ff5d706d6e414677841ddf94c}{cv\+\_\+fact}
+\begin{DoxyCompactList}\small\item\em This variable controls the weight of the covariance term in the energy function of alignment folding algorithms. \end{DoxyCompactList}\item 
+double \hyperlink{group__consensus__fold_ga502948a122a2af5b914355b1f3ea2f61}{nc\+\_\+fact}
+\begin{DoxyCompactList}\small\item\em This variable controls the magnitude of the penalty for non-\/compatible sequences in the covariance term of alignment folding algorithms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__consensus__fold_ga1c48869c03b49a342bf4cbdd61900081}\label{group__consensus__fold_ga1c48869c03b49a342bf4cbdd61900081}} 
+\index{Comparative structure prediction@{Comparative structure prediction}!energy\+\_\+of\+\_\+alistruct@{energy\+\_\+of\+\_\+alistruct}}
+\index{energy\+\_\+of\+\_\+alistruct@{energy\+\_\+of\+\_\+alistruct}!Comparative structure prediction@{Comparative structure prediction}}
+\subsubsection{\texorpdfstring{energy\+\_\+of\+\_\+alistruct()}{energy\_of\_alistruct()}}
+{\footnotesize\ttfamily float energy\+\_\+of\+\_\+alistruct (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{sequences,  }\item[{const char $\ast$}]{structure,  }\item[{int}]{n\+\_\+seq,  }\item[{float $\ast$}]{energy }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{alifold_8h}{Vienna\+R\+N\+A/alifold.\+h}$>$}
+
+
+
+Calculate the free energy of a consensus structure given a set of aligned sequences. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000015}{Deprecated}]Usage of this function is discouraged! Use \hyperlink{group__eval_ga58f199f1438d794a265f3b27fc8ea631}{vrna\+\_\+eval\+\_\+structure()}, and \hyperlink{group__eval_ga6cea75c0eb9857fb59172be54cab09e0}{vrna\+\_\+eval\+\_\+covar\+\_\+structure()} instead!\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequences} & The N\+U\+LL terminated array of sequences \\
+\hline
+{\em structure} & The consensus structure \\
+\hline
+{\em n\+\_\+seq} & The number of sequences in the alignment \\
+\hline
+{\em energy} & A pointer to an array of at least two floats that will hold the free energies (energy\mbox{[}0\mbox{]} will contain the free energy, energy\mbox{[}1\mbox{]} will be filled with the covariance energy term) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+free energy in kcal/mol 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__consensus__fold_ga5349960075b1847720a2e9df021e2675}\label{group__consensus__fold_ga5349960075b1847720a2e9df021e2675}} 
+\index{Comparative structure prediction@{Comparative structure prediction}!get\+\_\+alipf\+\_\+arrays@{get\+\_\+alipf\+\_\+arrays}}
+\index{get\+\_\+alipf\+\_\+arrays@{get\+\_\+alipf\+\_\+arrays}!Comparative structure prediction@{Comparative structure prediction}}
+\subsubsection{\texorpdfstring{get\+\_\+alipf\+\_\+arrays()}{get\_alipf\_arrays()}}
+{\footnotesize\ttfamily int get\+\_\+alipf\+\_\+arrays (\begin{DoxyParamCaption}\item[{short $\ast$$\ast$$\ast$}]{S\+\_\+p,  }\item[{short $\ast$$\ast$$\ast$}]{S5\+\_\+p,  }\item[{short $\ast$$\ast$$\ast$}]{S3\+\_\+p,  }\item[{unsigned short $\ast$$\ast$$\ast$}]{a2s\+\_\+p,  }\item[{char $\ast$$\ast$$\ast$}]{Ss\+\_\+p,  }\item[{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} $\ast$$\ast$}]{qb\+\_\+p,  }\item[{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} $\ast$$\ast$}]{qm\+\_\+p,  }\item[{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} $\ast$$\ast$}]{q1k\+\_\+p,  }\item[{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL} $\ast$$\ast$}]{qln\+\_\+p,  }\item[{short $\ast$$\ast$}]{pscore }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{alifold_8h}{Vienna\+R\+N\+A/alifold.\+h}$>$}
+
+
+
+Get pointers to (almost) all relavant arrays used in alifold\textquotesingle{}s partition function computation. 
+
+\begin{DoxyNote}{Note}
+To obtain meaningful pointers, call alipf\+\_\+fold first!
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+pf\+\_\+alifold(), \hyperlink{group__consensus__pf__fold_ga604a42ad64178279551ad3e4def3d603}{alipf\+\_\+circ\+\_\+fold()}
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000024}{Deprecated}]It is discouraged to use this function! The new \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} allows direct access to all necessary consensus structure prediction related variables!\end{DoxyRefDesc}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t}, \hyperlink{group__fold__compound_gad6bacc816af274922b13d947f708aa0c}{vrna\+\_\+fold\+\_\+compound\+\_\+comparative()}, \hyperlink{group__pf__fold_ga29e256d688ad221b78d37f427e0e99bc}{vrna\+\_\+pf()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em S\+\_\+p} & A pointer to the \textquotesingle{}S\textquotesingle{} array (integer representation of nucleotides) \\
+\hline
+{\em S5\+\_\+p} & A pointer to the \textquotesingle{}S5\textquotesingle{} array \\
+\hline
+{\em S3\+\_\+p} & A pointer to the \textquotesingle{}S3\textquotesingle{} array \\
+\hline
+{\em a2s\+\_\+p} & A pointer to the alignment-\/column to sequence position mapping array \\
+\hline
+{\em Ss\+\_\+p} & A pointer to the \textquotesingle{}Ss\textquotesingle{} array \\
+\hline
+{\em qb\+\_\+p} & A pointer to the Q\textsuperscript{B} matrix \\
+\hline
+{\em qm\+\_\+p} & A pointer to the Q\textsuperscript{M} matrix \\
+\hline
+{\em q1k\+\_\+p} & A pointer to the 5\textquotesingle{} slice of the Q matrix ( $q1k(k) = Q(1, k)$) \\
+\hline
+{\em qln\+\_\+p} & A pointer to the 3\textquotesingle{} slice of the Q matrix ( $qln(l) = Q(l, n)$) \\
+\hline
+{\em pscore} & A pointer to the start of a pscore list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non Zero if everything went fine, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__consensus__fold_gac484c6bd429bafbd353b91044508d8e9}\label{group__consensus__fold_gac484c6bd429bafbd353b91044508d8e9}} 
+\index{Comparative structure prediction@{Comparative structure prediction}!update\+\_\+alifold\+\_\+params@{update\+\_\+alifold\+\_\+params}}
+\index{update\+\_\+alifold\+\_\+params@{update\+\_\+alifold\+\_\+params}!Comparative structure prediction@{Comparative structure prediction}}
+\subsubsection{\texorpdfstring{update\+\_\+alifold\+\_\+params()}{update\_alifold\_params()}}
+{\footnotesize\ttfamily void update\+\_\+alifold\+\_\+params (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{alifold_8h}{Vienna\+R\+N\+A/alifold.\+h}$>$}
+
+
+
+Update the energy parameters for alifold function. 
+
+Call this to recalculate the pair matrix and energy parameters after a change in folding parameters like \hyperlink{group__model__details_gab4b11c8d9c758430960896bc3fe82ead}{temperature}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000025}{Deprecated}]Usage of this function is discouraged! The new A\+PI uses \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} to lump all folding related necessities together, including the energy parameters. Use vrna\+\_\+update\+\_\+fold\+\_\+params() to update the energy parameters within a \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t}. \end{DoxyRefDesc}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__consensus__fold_gaf3cbac6ff5d706d6e414677841ddf94c}\label{group__consensus__fold_gaf3cbac6ff5d706d6e414677841ddf94c}} 
+\index{Comparative structure prediction@{Comparative structure prediction}!cv\+\_\+fact@{cv\+\_\+fact}}
+\index{cv\+\_\+fact@{cv\+\_\+fact}!Comparative structure prediction@{Comparative structure prediction}}
+\subsubsection{\texorpdfstring{cv\+\_\+fact}{cv\_fact}}
+{\footnotesize\ttfamily double cv\+\_\+fact}
+
+
+
+{\ttfamily \#include $<$\hyperlink{alifold_8h}{Vienna\+R\+N\+A/alifold.\+h}$>$}
+
+
+
+This variable controls the weight of the covariance term in the energy function of alignment folding algorithms. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000016}{Deprecated}]See \hyperlink{group__model__details_a62ebefb9d0643e5c4c8a2ec84a105ce6}{vrna\+\_\+md\+\_\+t.\+cv\+\_\+fact}, and \hyperlink{group__mfe__fold_gabd3b147371ccf25c577f88bbbaf159fd}{vrna\+\_\+mfe()} to avoid using global variables\end{DoxyRefDesc}
+
+
+Default is 1. \mbox{\Hypertarget{group__consensus__fold_ga502948a122a2af5b914355b1f3ea2f61}\label{group__consensus__fold_ga502948a122a2af5b914355b1f3ea2f61}} 
+\index{Comparative structure prediction@{Comparative structure prediction}!nc\+\_\+fact@{nc\+\_\+fact}}
+\index{nc\+\_\+fact@{nc\+\_\+fact}!Comparative structure prediction@{Comparative structure prediction}}
+\subsubsection{\texorpdfstring{nc\+\_\+fact}{nc\_fact}}
+{\footnotesize\ttfamily double nc\+\_\+fact}
+
+
+
+{\ttfamily \#include $<$\hyperlink{alifold_8h}{Vienna\+R\+N\+A/alifold.\+h}$>$}
+
+
+
+This variable controls the magnitude of the penalty for non-\/compatible sequences in the covariance term of alignment folding algorithms. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000017}{Deprecated}]See \hyperlink{group__model__details_abcf568e6124bfcb2f847ff4eb0dfded6}{vrna\+\_\+md\+\_\+t.\+nc\+\_\+fact}, and \hyperlink{group__mfe__fold_gabd3b147371ccf25c577f88bbbaf159fd}{vrna\+\_\+mfe()} to avoid using global variables\end{DoxyRefDesc}
+
+
+Default is 1. 

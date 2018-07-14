@@ -1,0 +1,88 @@
+\hypertarget{part__func__co_8h_source}{}\section{part\+\_\+func\+\_\+co.\+h}
+\label{part__func__co_8h_source}\index{Vienna\+R\+N\+A/part\+\_\+func\+\_\+co.\+h@{Vienna\+R\+N\+A/part\+\_\+func\+\_\+co.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_PART\_FUNC\_CO\_H}
+00002 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_PART\_FUNC\_CO\_H}
+00003 
+00004 \textcolor{preprocessor}{#ifdef VRNA\_WARN\_DEPRECATED}
+00005 \textcolor{preprocessor}{# if defined(\_\_clang\_\_)}
+00006 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("", msg)))}
+00007 \textcolor{preprocessor}{# elif defined(\_\_GNUC\_\_)}
+00008 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}
+00009 \textcolor{preprocessor}{# else}
+00010 \textcolor{preprocessor}{#  define DEPRECATED(func, msg) func}
+00011 \textcolor{preprocessor}{# endif}
+00012 \textcolor{preprocessor}{#else}
+00013 \textcolor{preprocessor}{# define DEPRECATED(func, msg) func}
+00014 \textcolor{preprocessor}{#endif}
+00015 
+00061 \textcolor{preprocessor}{#include <\hyperlink{data__structures_8h}{ViennaRNA/data\_structures.h}>}
+00062 \textcolor{preprocessor}{#include <\hyperlink{params_8h}{ViennaRNA/params.h}>}
+00063 \textcolor{preprocessor}{#include <\hyperlink{part__func_8h}{ViennaRNA/part\_func.h}>}
+00064 \textcolor{preprocessor}{#include <\hyperlink{equilibrium__probs_8h}{ViennaRNA/equilibrium\_probs.h}>}
+00065 \textcolor{preprocessor}{#include <\hyperlink{concentrations_8h}{ViennaRNA/concentrations.h}>}
+00066 
+00070 \textcolor{keyword}{extern} \textcolor{keywordtype}{int}    \hyperlink{group__pf__cofold_gaff27888c4088cc1f60fd59cbd589474c}{mirnatog};
+00071 
+00075 \textcolor{keyword}{extern} \textcolor{keywordtype}{double} \hyperlink{group__pf__cofold_gac2d1851a710a8561390861155ca988fe}{F\_monomer}[2];
+00076 
+00103 \hyperlink{group__pf__cofold_structvrna__dimer__pf__s}{vrna\_dimer\_pf\_t}
+00104 \hyperlink{group__pf__cofold_gaf2b846f7ac382686f35ff7b9202fdd5c}{vrna\_pf\_co\_fold}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *seq,
+00105                 \textcolor{keywordtype}{char}        *structure,
+00106                 \hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t}   **pl);
+00107 
+00108 
+00113 \textcolor{preprocessor}{#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}
+00114 
+00115 \textcolor{comment}{/*}
+00116 \textcolor{comment}{ #################################################}
+00117 \textcolor{comment}{ # DEPRECATED FUNCTIONS                          #}
+00118 \textcolor{comment}{ #################################################}
+00119 \textcolor{comment}{ */}
+00120 
+00139 DEPRECATED(\hyperlink{group__pf__cofold_structvrna__dimer__pf__s}{vrna\_dimer\_pf\_t} \hyperlink{part__func__co_8h_ae5c1e7331718669bdae7a86de2be6184}{co\_pf\_fold}(\textcolor{keywordtype}{char}  *sequence,
+00140                                       \textcolor{keywordtype}{char}  *structure),
+00141 \textcolor{stringliteral}{"Use vrna\_pf\_co\_fold() or vrna\_pf\_dimer() instead"});
+00142 
+00162 DEPRECATED(\hyperlink{group__pf__cofold_structvrna__dimer__pf__s}{vrna\_dimer\_pf\_t} \hyperlink{part__func__co_8h_aabfc6cb6d02b8f08ac4c92f4f5b125d9}{co\_pf\_fold\_par}(\textcolor{keywordtype}{char}              *sequence,
+00163                                           \textcolor{keywordtype}{char}              *structure,
+00164                                           \hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t}  *parameters,
+00165                                           \textcolor{keywordtype}{int}               calculate\_bppm,
+00166                                           \textcolor{keywordtype}{int}               is\_constrained),
+00167 \textcolor{stringliteral}{"Use the new API and vrna\_pf\_dimer() instead"});
+00168 
+00174 DEPRECATED(\hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t} *\hyperlink{part__func__co_8h_afb35675f133966dc9f8a8c2c9686e13a}{get\_plist}(\hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t} *pl,
+00175                                 \textcolor{keywordtype}{int}       length,
+00176                                 \textcolor{keywordtype}{double}    cut\_off),
+00177 \textcolor{stringliteral}{"Use vrna\_plist() and vrna\_plist\_from\_probs() instead"});
+00178 
+00198 DEPRECATED(\textcolor{keywordtype}{void} \hyperlink{part__func__co_8h_a94c19120130e66a667a10a3c8598550c}{compute\_probabilities}(\textcolor{keywordtype}{double}    FAB,
+00199                                       \textcolor{keywordtype}{double}    FEA,
+00200                                       \textcolor{keywordtype}{double}    FEB,
+00201                                       \hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t} *prAB,
+00202                                       \hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t} *prA,
+00203                                       \hyperlink{group__struct__utils_structvrna__elem__prob__s}{vrna\_ep\_t} *prB,
+00204                                       \textcolor{keywordtype}{int}       Alength),
+00205 \textcolor{stringliteral}{"Use vrna\_pf\_dimer\_probs() instead"});
+00206 
+00211 DEPRECATED(\textcolor{keywordtype}{void}   \hyperlink{part__func__co_8h_aa12dda9dd6179cdd22bcce87c0682c07}{init\_co\_pf\_fold}(\textcolor{keywordtype}{int} length),
+00212 \textcolor{stringliteral}{"This function is obsolete"});
+00213 
+00227 DEPRECATED(\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL} *\hyperlink{part__func__co_8h_ad94c0133157bed6912fe7fe866e0039e}{export\_co\_bppm}(\textcolor{keywordtype}{void}),
+00228 \textcolor{stringliteral}{"Use the new API with vrna\_fold\_compound\_t instead"});
+00229 
+00237 DEPRECATED(\textcolor{keywordtype}{void} \hyperlink{part__func__co_8h_ade3ce34ae8214811374b1d28a40dc247}{free\_co\_pf\_arrays}(\textcolor{keywordtype}{void}),
+00238 \textcolor{stringliteral}{"This function is obsolete"});
+00239 
+00250 DEPRECATED(\textcolor{keywordtype}{void} \hyperlink{part__func__co_8h_a6e0f36c1f9b7d9dd4bfbad914c1119e5}{update\_co\_pf\_params}(\textcolor{keywordtype}{int} length),
+00251 \textcolor{stringliteral}{"This function is obsolete"});
+00252 
+00272 DEPRECATED(\textcolor{keywordtype}{void} \hyperlink{part__func__co_8h_a75465d7e8793db68a434d83df9a2e794}{update\_co\_pf\_params\_par}(\textcolor{keywordtype}{int}               length,
+00273                                         \hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t}  *parameters),
+00274 \textcolor{stringliteral}{"Use the new API with vrna\_fold\_compound\_t instead"});
+00275 
+00276 \textcolor{preprocessor}{#endif}
+00277 
+00278 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

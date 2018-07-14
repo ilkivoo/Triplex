@@ -1,0 +1,29 @@
+\hypertarget{file__utils_8h_source}{}\section{file\+\_\+utils.\+h}
+\label{file__utils_8h_source}\index{Vienna\+R\+N\+A/file\+\_\+utils.\+h@{Vienna\+R\+N\+A/file\+\_\+utils.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_FILE\_UTILS\_H}
+00002 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_FILE\_UTILS\_H}
+00003 
+00021 \textcolor{keywordtype}{void} \hyperlink{group__file__utils_ga4382a56d2fee9ed738364b99329edc7c}{vrna\_file\_copy}(FILE  *from,
+00022                     FILE  *to);
+00023 
+00024 
+00035 \textcolor{keywordtype}{char} *\hyperlink{group__file__utils_gad16c270b70a77c753088b29de8a802dc}{vrna\_read\_line}(FILE *fp);
+00036 
+00037 
+00041 \textcolor{keywordtype}{int} \hyperlink{group__file__utils_gacfa44a974272a4d42c5d391cc780a0ec}{vrna\_mkdir\_p}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *path);
+00042 
+00043 
+00047 \textcolor{keywordtype}{char} *\hyperlink{group__file__utils_ga8d0f8f84f1e2628172cf3c8648b2e507}{vrna\_basename}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *path);
+00048 
+00049 
+00053 \textcolor{keywordtype}{char} *\hyperlink{group__file__utils_gae006d31b088d52d8aace86948def5fe8}{vrna\_dirname}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *path);
+00054 
+00055 
+00097 \textcolor{keywordtype}{char} *\hyperlink{group__file__utils_ga72eae0a472bad905b6facccf5b453a76}{vrna\_filename\_sanitize}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name,
+00098                              \textcolor{keyword}{const} \textcolor{keywordtype}{char} *replacement);
+00099 
+00100 
+00105 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

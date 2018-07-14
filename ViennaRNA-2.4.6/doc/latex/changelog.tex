@@ -1,0 +1,998 @@
+v2.\+4.\+6
+\begin{DoxyItemize}
+\item Stabilize rounding of free energy output in R\+N\+Aalifold
+\item A\+PI\+: Fix potential rounding errors for comparative free energies in eval.\+c and mfe.\+c
+\item A\+PI\+: Fix regression in exterior loop dangling end contributions for comparative base pair probabilities and Boltzmann sampling (introduced with v2.\+4.\+4)
+\item A\+PI\+: Fix regression with hard constrained base pairs for comparative structure prediction (introduced with v2.\+4.\+4)
+\item T\+E\+S\+TS\+: Add basic tests for R\+N\+Aalifold executable
+\item T\+E\+S\+TS\+: Ignore \textquotesingle{}frequency of M\+FE structure\textquotesingle{} in R\+N\+Acofold partition function checks
+\end{DoxyItemize}
+
+v2.\+4.\+5
+\begin{DoxyItemize}
+\item Allow for arbitrary number of input files in R\+N\+Afold
+\item Allow for parallel processing of input data in R\+N\+Afold (U\+N\+IX only, no Windows support yet)
+\item Add S\+H\+A\+PE reactivity support through commandline options for R\+N\+Aplfold
+\item Fix unstructured domain motif detection in M\+FE, centroid, and M\+EA structures computed by R\+N\+Afold
+\item Limit allowed set of commands in command file for R\+N\+Acofold to hard and soft constraints
+\item A\+PI\+: Add functions to compute equilibrium probability of particular secondary structures
+\item A\+PI\+: Add dynamic string stream data type and associated functions
+\item A\+PI\+: Add priority-\/queue like data structure with unordered fill capability and ordered output callback execution
+\item A\+PI\+: Add functions to detect unstructured domain motifs in M\+FE, centroid, and M\+EA structures
+\item A\+PI\+: Fix bug in sliding-\/window partition function computation with S\+H\+A\+PE reactivity and Deigan et al. conversion method
+\item A\+PI\+: Fix application of \textquotesingle{}$<$\textquotesingle{} and \textquotesingle{}$>$\textquotesingle{} constraint symbols in dot-\/bracket provided constraints (was broken since v2.\+4.\+2)
+\item A\+PI\+: Fix M\+EA structure computation in the presence of unstructured domains
+\item A\+PI\+: Stabilize order of probability entries in E\+PS dot-\/plot files
+\item Fix compiler warnings on wrong type of printf() in naview.\+c
+\item Define V\+R\+N\+A\+\_\+\+V\+E\+R\+S\+I\+ON macro as string literal and add macros for major, minor, and patch numbers
+\item Stabilize parallel make of Mac OS X installer
+\item Add energy parameter set from Langdon et al. 2018
+\item Add autoconf checks for P\+O\+S\+IX threads compiler/linker support
+\item S\+W\+IG\+: Fix \textquotesingle{}next\textquotesingle{} is a perl keyword warnings for Perl5 wrapper
+\item S\+W\+IG\+: Catch errors and throw execptions whenever scripting language provided callback functions are not applicable or fail
+\item S\+W\+IG\+: Add keyword arguments and autodoc feature for Python/\+Python3 wrappers
+\end{DoxyItemize}
+
+v2.\+4.\+4
+\begin{DoxyItemize}
+\item Change verbose output for soft-\/constraints derived ligand binding motifs in R\+N\+Afold
+\item Allow for lowercase letters in ct2db input
+\item Fix bug in interior-\/like G-\/\+Quadruplex M\+FE computation for single sequences
+\item Fix autoconf switch to enable deprecation warnings
+\item Fix bug in eval\+\_\+int\+\_\+loop() that prevented propagation of energy evaluation for loops with nick in strands
+\item Fix several bugs for S\+H\+A\+PE reactivity related comparative partition function computations
+\item Fix annotation of Post\+Script output for soft-\/constraint derived ligand binding motifs in R\+N\+Afold
+\item Fix constraint indices for multibranch loops in unpaired probability computations of L\+Pfold.\+c
+\item Fix dangling end contributions in comparative partition function for exterior loops
+\item A\+PI\+: Add simplified interface for \hyperlink{group__pf__cofold_ga4e5c7d06c302a7c59fc0d64dc142ca63}{vrna\+\_\+pf\+\_\+dimer()}
+\item A\+PI\+: Move concentraton dependent implementation for co-\/folding to separate compile unit
+\item A\+PI\+: Add new A\+PI functions for exterior loop evaluations
+\item A\+PI\+: Add simplified interfaces for energy evaluation with G-\/\+Quadruplexes and circular R\+N\+As
+\item A\+PI\+: Add findpath functions that allow for specification of an upper bound for the saddle point
+\item Add configure-\/time linker check for Python3 interface
+\item Add automatic C\+PP suggestions for deprecated function substitutes
+\item Major restucturing and constraints feature additions in loop type dependent energy evaluation functions
+\item Major restructuring in M\+FE implementations
+\item Major restructuring in PF implementations
+\item Minor fixes in Boltzmann sampling implementation
+\item S\+W\+IG\+: Fix wrappers for findpath() implementation
+\item S\+W\+IG\+: Add tons of energy evaluation wrappers
+\item S\+W\+IG\+: Fix configure-\/time check of Perl5 interface build capabilities
+\item S\+W\+IG\+: Wrap functions from walk.\+c and neighbor.\+c
+\item D\+OC\+: Add some missing references to manpages of executable programs
+\item R\+E\+F\+M\+AN\+: Heavy re-\/ordering of the R\+N\+Alib reference manual
+\end{DoxyItemize}
+
+v2.\+4.\+3
+\begin{DoxyItemize}
+\item Fix handling of dangling end contribution at sequence boundaries for sliding window base pair probability computations
+\item Fix handling of base pair hard constraints in sliding-\/window implementations
+\item Fix sliding-\/window pair probability computations with multibranch-\/loop unpaired constraints
+\item Fix sliding-\/window non-\/specific base pair hard constraint implementation
+\item Fix probability computation for stochastic backtracking in R\+N\+Asubopt -\/-\/stoch\+B\+T\+\_\+en output
+\item Fix regression in comparative structure prediction for circular R\+N\+As
+\item Fix L\+D\+F\+L\+A\+GS for scripting language interfaces in corresponding Makefiles
+\item Stabilize partition function scaling by always using sfact scaling factor from model details
+\item Add -\/-\/pf\+\_\+scale commandling parameter to R\+N\+Aplfold
+\item Add constraint framework for single sequence circular R\+NA structure prediction
+\item Add R\+N\+Afold test suite to check for working implementation of constraints for circular R\+N\+As
+\item Add a brief contribution guideline C\+O\+N\+T\+R\+I\+B\+U\+T\+I\+N\+G.\+md
+\item Prevent R\+N\+Aplfold from creating inf/-\/inf output when solution set is empty with particular hard constraints
+\item Include R\+N\+Aforester v2.\+0.\+1
+\end{DoxyItemize}
+
+v2.\+4.\+2
+\begin{DoxyItemize}
+\item Fix G-\/\+Quadruplex energy corrections in comparative structure energy evaluations
+\item Fix discrepancy in comparative exterior loop dangling end contribution of eval vs. M\+FE predictions
+\item Fix regression in R\+N\+Aup unstructuredness and interaction energy computations
+\item Fix sequence length confusions when F\+A\+S\+TA input contains carriage returns
+\item Fix build problems of R\+N\+Alocmin with older compilers
+\item Fix sliding-\/window hard constraints where single nucleotides are prohibited from pairing
+\item Fix dot-\/bracket output string length in sliding-\/window M\+FE with G-\/\+Quadruplexes
+\item Fix unpaired probability computations for separate individual loop types in L\+Pfold.\+c
+\item Fix bad memory access in R\+N\+Asubopt with dot-\/bracket constraint
+\item Add full W\+U\+SS support for -\/-\/\+S\+S\+\_\+cons constraint option in R\+N\+Aalifold
+\item Add commandline option to R\+N\+A\+Lalifold that enables splitting of energy contributions into separate parts
+\item Add missing hard constraint cases to sliding-\/window partition function implementation
+\item Add C\+SV output option to R\+N\+Acofold
+\item Use the same model details for S\+CI computations in R\+N\+Aalifold
+\item Abort computations in \hyperlink{group__eval_gab12e6b1226227670322150df018734f8}{vrna\+\_\+eval\+\_\+structure\+\_\+v()} if structure has unexpected length
+\item Use original M\+SA in all output generated by R\+N\+Aalifold and R\+N\+A\+Lalifold
+\item A\+PI\+: Add new functions to convert dot-\/bracket like structure annotations
+\item A\+PI\+: Add various new utility functions for alignment handling and comparative structure predictions
+\item A\+PI\+: Add function \hyperlink{group__string__utils_gac632775617f4b2df096bfe8efb53d07f}{vrna\+\_\+strsplit()} to split string into tokens
+\item A\+PI\+: Do not convert sequences of input M\+SA to uppercase letters in \hyperlink{group__file__utils_ga59204cd1daa4927f5127cc65a2886efd}{vrna\+\_\+file\+\_\+msa\+\_\+read\+\_\+record()}
+\item A\+PI\+: Rename vrna\+\_\+annotate\+\_\+bp\+\_\+covar() and vrna\+\_\+annotate\+\_\+pr\+\_\+covar()
+\item A\+PI\+: Add new no\+LP neighbor generation
+\item S\+W\+IG\+: Add wrapper for functions in file\+\_\+utils\+\_\+msa.\+h
+\item S\+W\+IG\+: Add wrappers for \hyperlink{group__subopt__stochbt_ga901fe42a33b07be083421741bf7dc610}{vrna\+\_\+pbacktrack()} and \hyperlink{group__subopt__stochbt_ga347375a4da8bdff74639529847f97d4f}{vrna\+\_\+pbacktrack5()}
+\item S\+W\+IG\+: Add vrna\+\_\+db\+\_\+to\+\_\+element\+\_\+string() to scripting language interface
+\item R\+E\+F\+M\+AN\+: Fix formula to image conversion in H\+T\+ML output
+\end{DoxyItemize}
+
+v2.\+4.\+1
+\begin{DoxyItemize}
+\item Fix memory leak in fold\+\_\+compound methods of S\+W\+IG interface
+\item Fix memory leaks in double $\ast$$\ast$ returning functions of S\+W\+IG Perl5 interface
+\item Fix memory leak in vrna\+\_\+ep\+\_\+t to-\/string() function of S\+W\+IG interface
+\item Regression\+: Fix reverting pf\+\_\+scale to defaults after \hyperlink{group__energy__parameters_gad607bc3a5b5da16400e2ca4ea5560233}{vrna\+\_\+exp\+\_\+params\+\_\+rescale()}
+\item Regression\+: Fix homo-\/dimer partition function computation in R\+N\+Acofold
+\item Add unit tests for R\+N\+Acofold executable
+\item Add S\+H\+A\+PE reactivity support to R\+N\+Acofold
+\item Add S\+H\+A\+PE reactivity support to R\+N\+A\+Lalifold
+\end{DoxyItemize}
+
+v2.\+4.\+0
+\begin{DoxyItemize}
+\item Bump libsvm to version 3.\+22
+\item Print G-\/\+Quadruplex corrections in verbose mode of R\+N\+Aeval
+\item Change behavior of R\+N\+Afold -\/-\/outfile option to something more predictable
+\item Unify max\+\_\+bp\+\_\+span usage among sliding window prediction algorithms\+: R\+N\+Aplfold, R\+N\+A\+Lfold, and R\+N\+A\+Lalifold now consider any base pair (i,j) with (j -\/ i + 1) $<$= max\+\_\+bp\+\_\+span
+\item Add S\+H\+A\+PE reactivity data support to R\+N\+A\+Lfold
+\item Add commands-\/file support for R\+N\+A\+Lfold, R\+N\+Aplfold (hard/soft constraints)
+\item Add R\+N\+Alocmin -\/ Calculate local minima from structures via gradient walks
+\item Add R\+NA Bioinformatics tutorial (P\+DF version)
+\item Add hard constraints to sliding-\/window M\+FE implementations (R\+N\+A\+Lfold, R\+N\+A\+Lalifold)
+\item Add hard constraints to sliding-\/window PF implementations (R\+N\+Aplfold)
+\item Add soft constraints to sliding-\/window M\+FE implementation for single sequences (R\+N\+A\+Lfold)
+\item Add soft constraints to sliding-\/window PF implementations (R\+N\+Aplfold)
+\item Add S\+W\+IG interfaces for sliding-\/window M\+F\+E/\+PF implementations
+\item Add proper S\+W\+IG interface for alignment and structure plotting functions
+\item Add proper S\+W\+IG interface for duplexfold, duplex\+\_\+subopt, and its comparative variants
+\item Add S\+W\+IG wrapper for \hyperlink{group__energy__parameters_gad607bc3a5b5da16400e2ca4ea5560233}{vrna\+\_\+exp\+\_\+params\+\_\+rescale()}
+\item Add explicit destructor for S\+W\+IG generated vrna\+\_\+md\+\_\+t objects
+\item Add S\+W\+IG perl5 typemap for simple nested S\+TL vectors
+\item Add dummy field in \hyperlink{structvrna__structured__domains__s}{vrna\+\_\+structured\+\_\+domains\+\_\+s}
+\item Add note about S\+SE optimized code in reference manual
+\item Add S\+W\+IG interface for findpath implementation
+\item Add prepare() functions for ptypes-\/arrays and vrna\+\_\+(exp\+\_\+)param\+\_\+t
+\item Add warnings for ignored commands in function \hyperlink{group__file__utils_ga5e993fc4b9602af73aaaab4d3b3cd9a9}{vrna\+\_\+commands\+\_\+apply()}
+\item Add callback featured functions for sliding window M\+FE and PF implementations
+\item Change default behavior of adding soft constraints to a vrna\+\_\+fold\+\_\+compound\+\_\+t (store only)
+\item Several fixes with respect to G-\/\+Quadruplex prediction in sliding-\/window M\+FE recursions (single sequence and comparative implementation)
+\item Replace comparative sliding-\/window M\+FE recursions (All hits are reported to callback and can be filtered in a post-\/processing step)
+\item A\+PI\+: Remove E\+\_\+mb\+\_\+loop\+\_\+stack() and introduce new function \hyperlink{group__loops_ga73f048d35475e1d8f50b7d4ac6a2aeb6}{vrna\+\_\+\+E\+\_\+mb\+\_\+loop\+\_\+stack()} as a replacement
+\item A\+PI\+: change data type of all constraint bit-\/flags from `char` to `unsigned char`
+\item A\+PI\+: change data type of a2s array in comparative structure prediction from `unsigned short` to `unsigned int`
+\item A\+PI\+: Change function parameter order in \hyperlink{group__local__pf__fold_ga70ec33810fa17a9f67a7c59f156d0137}{vrna\+\_\+probs\+\_\+window()} to follow the style of other callback-\/aware functions in R\+N\+Alib
+\item Move sliding-\/window M\+FE implementations to new file mfe\+\_\+window.\+c
+\item Fix building P\+DF Reference manual with non-\/standard executable paths
+\item Fix redefinition of macro O\+N\+\_\+\+S\+A\+M\+E\+\_\+\+S\+T\+R\+A\+N\+D() in subopt.\+c
+\item Fix dangling end issues in sliding-\/window M\+FE implementations
+\item Fix regression for -\/-\/canonical\+B\+Ponly switch in R\+N\+Afold/\+R\+N\+Acofold/\+R\+N\+Asubopt
+\item Fix building sliding-\/window M\+FE implementation without S\+VM support
+\item Fix parsing of S\+T\+O\+C\+K\+H\+O\+LM 1.\+0 M\+SA files that contain M\+SA spanning multiple blocks
+\item Fix Alidot link in R\+N\+Aalifold manpage
+\item Fix wrong pre-\/processor flags when enabling single-\/precision PF computations
+\item Fix unit testing perl5 interface by including builddir/tests in P\+E\+R\+L5\+L\+IB path
+\item Fix buffer overflow in hairpin loop sequence motif extraction for circular R\+N\+As
+\item Fix out-\/of-\/bounds memory access in neighbor.\+c
+\item Restore capability to compile stand-\/alone findpath utility
+\item Restore capability to use non-\/standard alphabets for structure prediction
+\item Restore old-\/\+A\+PI random number functions in S\+W\+IG interface
+\item Allow additional control characters in M\+AF M\+SA input that do not end a block
+\item Improve reference manual
+\item Make functions in \hyperlink{pair__mat_8h_source}{pair\+\_\+mat.\+h} static inline
+\item Prevent users from adding out-\/of-\/range base pair soft constraints
+\item Inline print functions in color\+\_\+output.\+inc
+\item Start documenting callback features in reference manual
+\item Re-\/write large portions of sliding-\/window PF implementation
+\item Introduce soft-\/constraint state flag
+\item Clean-\/up S\+W\+IG unit test framework
+\item Remove obsolete scripts ct2b.\+pl and colorrna.\+pl from src/\+Utils directory
+\item Remove old R\+N\+Afold tutorial
+\end{DoxyItemize}
+
+v2.\+3.\+5
+\begin{DoxyItemize}
+\item Fix duplication of output filename prefix in R\+N\+Afold
+\item Add V3.\+0 A\+PI for sliding window partition function (a.\+k.\+a. R\+N\+A\+P\+Lfold)
+\item Add G-\/\+Quadruplex prediction to R\+N\+A\+Lalifold
+\item Add S\+W\+IG wrappers for callback-\/based sliding window comparative M\+FE prediction
+\item Add S\+S\+E4.\+1 multiloop decomposition for single sequence M\+FE prediction
+\item Enable R\+N\+Afold unit tests to run in paralllel
+\item Enable users to turn-\/off base pair probability computations in R\+N\+Acofold with -\/a option
+\item Split move set in neighbor.\+c
+\end{DoxyItemize}
+
+v2.\+3.\+4
+\begin{DoxyItemize}
+\item Fix G-\/\+Quadruplex probability computation for single sequences
+\item Fix double-\/free when using S\+H\+A\+PE reactivity data in R\+N\+Aalifold
+\item Fix out-\/of-\/bounds access in strand\+\_\+number array
+\item Fix weighting of S\+H\+A\+PE reactivity data in consensus structure prediction when fewer data than sequences are present
+\item Fix z-\/score output in R\+N\+A\+Lfold
+\item Substitute field name \textquotesingle{}A0\textquotesingle{}/\textquotesingle{}B0\textquotesingle{} in data structure \hyperlink{structvrna__dimer__conc__s}{vrna\+\_\+dimer\+\_\+conc\+\_\+s} by \textquotesingle{}Ac\+\_\+start\textquotesingle{}/\textquotesingle{}Bc\+\_\+start\textquotesingle{} to avoid clashes with termios.\+h (Mac O\+SX Python wrapper bug)
+\item Minimize usage of \textquotesingle{}unsafe\textquotesingle{} sprintf() calls
+\item Enhance auto-\/id feature in executable programs
+\item Always sanitize output file names to avoid problems due to strange F\+A\+S\+TA headers
+\item Lift restrictions of F\+A\+S\+TA header length in R\+N\+Afold, R\+N\+Acofold, and R\+N\+Aeval
+\item Add Vienna\+R\+N\+A/config.\+h with pre-\/processor definitions of configure time choices
+\item Add test-\/suite for R\+N\+Afold
+\item Add functions to procude colored E\+PS structure alignments
+\item Add function to write Stockholm 1.\+0 formatted alignments
+\item Add function to sanitize file names
+\item Add callback based implementation for sliding-\/window M\+FE prediction (single sequences, comparative structure prediction)
+\item Add fast A\+PI 3.\+0 implementations to generate structural neighbors and perform steepest descent / random walks (Thanks to Gregor!)
+\item Add parameter option to R\+N\+A\+Lalifold for colored E\+PS structure alignment and structure plot output
+\item Add parameter option to R\+N\+A\+Lalifold to write hits into Stockholm file
+\item Add parameter option to R\+N\+Aalifold to write Stockholm 1.\+0 formatted output
+\item Add parameter option to R\+N\+Aalifold to suppress stderr spam
+\item Add auto-\/id feature to R\+N\+Aplot, R\+N\+A\+Lfold, R\+N\+Asubopt, R\+N\+Aplfold, R\+N\+Aheat
+\item Add S\+H\+A\+PE reactivity derived pseudo-\/energies as separate output in R\+N\+Aalifold
+\item Add colored output to R\+N\+A2\+Dfold, R\+N\+A\+Lalifold, R\+N\+A\+Lfold, R\+N\+Aduplex, R\+N\+Aheat, R\+N\+Ainverse, R\+N\+Aplfold, and R\+N\+Asubopt
+\item Add command line parameters to R\+N\+Asubopt to allow for specification of input/output files
+\end{DoxyItemize}
+
+v2.\+3.\+3
+\begin{DoxyItemize}
+\item Fix multiloop contributions for comparative partition function
+\item Fix building python2 extension module for O\+SX
+\end{DoxyItemize}
+
+v2.\+3.\+2
+\begin{DoxyItemize}
+\item Fix pair probability plist creation with G-\/\+Quadruplexes
+\item Allow for specification of python2/3-\/config at configure time
+\item Fix init of vrna\+\_\+md\+\_\+t data structure after call to \hyperlink{group__model__details_gabad896c3650d420f3f3ddefc69e2bceb}{set\+\_\+model\+\_\+details()}
+\item Fix bug in consensus partition function with hard constraints that force nucleotides to be paired
+\item Fix compilation of functions that use ellipsis/va\+\_\+list
+\item Enable generic hard constraints by default
+\item Fix init of partition function DP matrices for unusually short R\+N\+As
+\item Fix behavior of R\+N\+Aplfold for unusually short R\+N\+As
+\item Report S\+CI of 0 in R\+N\+Aalifold when sum of single sequence M\+F\+Es is 0
+\item Avoid multiple includes of \hyperlink{pair__mat_8h_source}{pair\+\_\+mat.\+h}
+\item Add configure flag to build entirely static executables
+\end{DoxyItemize}
+
+v2.\+3.\+1
+\begin{DoxyItemize}
+\item Add description for how to use unstructured domains through command files to reference manual and R\+N\+Afold manpage
+\item Fix compilation issue for Windows platforms with MingW
+\item Add missing newline in non-\/\+T\+T\+Y-\/color output of \hyperlink{group__utils_ga039bae6153a6415b054dbe6045f83d03}{vrna\+\_\+message\+\_\+info()}
+\item Fix regression in \hyperlink{group__model__details_ga36ae40b8c3b82362f5798ad5b047b814}{vrna\+\_\+md\+\_\+update()} that resulted in incomplete init of reverse-\/basepair type array
+\item Extend coverage of generic hard constraints for partition function computations
+\item Fix scaling of secondary structure in E\+PS plot such that it always fits into bounding box
+\item Several fixes and improvements for S\+W\+IG generated scripting language interface(s)
+\end{DoxyItemize}
+
+v2.\+3.\+0
+\begin{DoxyItemize}
+\item Add grammar extension with structured and unstructured domains
+\item Add default implementation for unstructured domains to allow for ligand/protein binding to unpaired structure segments (M\+FE and PF for single sequences)
+\item Introduced command files that subsume constraint definition files (currently used in R\+N\+Afold and R\+N\+Acofold)
+\item Replace explicit calls to asprintf() with portable equivalent functions in the library
+\item Fix configure script to deal with situations where Perl module can\textquotesingle{}t be build
+\item Fix bug in doc/\+Makefile.\+am that prevented H\+T\+ML installation due to long argument list
+\item Added utility functions that deal with conversion between different units
+\item Bugfix in S\+W\+IG wrapped generic soft constraint feature
+\item Add \hyperlink{group__subopt__wuchty_ga700f662506a233e42dd7fda74fafd40e}{subopt()} and subopt\+\_\+zuker() methods to S\+W\+IG wrapped fold\+\_\+compound objects
+\item Bugfix multiloop decomposition in M\+FE for circular R\+N\+As
+\item Add separate function to compute pscore for alignments
+\item Renamed V\+R\+N\+A\+\_\+\+V\+C\+\_\+\+T\+Y\+P\+E\+\_\+$\ast$ macros to V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+$\ast$
+\item Bugfix regression that prevented programs to fail on too long input sequences
+\item Extend E\+PS dot-\/plot in R\+N\+Afold to include motif/binding probabilities from unstructured domains
+\item Add variadic functions for error/warning/info message
+\item Add ID manipulation feature to R\+N\+Aeval
+\item Extend A\+PI for soft constraint feature for more fine-\/grained control
+\item Add section on S\+W\+IG wrapped functions in reference manual
+\item Fix bug in interior loop computations when hard constraints result in non-\/canonical base pairs
+\end{DoxyItemize}
+
+v 2.\+2.\+10
+\begin{DoxyItemize}
+\item Do not \textquotesingle{}forget\textquotesingle{} subopt results when output is not written to file handle and sorting is switched off
+\item Fix bad memory access in \hyperlink{group__subopt__wuchty_ga0f11d738fb8c8b1885a90c11c8931ff6}{vrna\+\_\+subopt()} with sorted output
+\item Add S\+W\+IG wrappers for \hyperlink{group__subopt__wuchty_ga1053837e6b6f158093508f8a70998352}{vrna\+\_\+subopt\+\_\+cb()}
+\item Correctly show if C11 features are activated in configure status
+\item Fix autoconf checks to allow for cross compilation again
+\end{DoxyItemize}
+
+v 2.\+2.\+9
+\begin{DoxyItemize}
+\item Fix bug in partition function scaling for backward compatibility of ali\+\_\+pf\+\_\+fold()
+\item Stabilize v3.\+0 A\+PI when building R\+N\+Alib and third party program linking against it with compilers that use different C/\+C++ standards
+\item Add details on how to link against R\+N\+Alib to the reference manual
+\item Fix R\+N\+Alib2.\+pc
+\item Fix bug for temperature setting in R\+N\+Aplfold
+\item Use -\/fflat-\/lto-\/objects for static R\+N\+Alib library to allow linking without L\+TO
+\item Fix interpretation of \textquotesingle{}P\textquotesingle{} hard constraint for single nucleotides in constraint definition files
+\item Add \textquotesingle{}A\textquotesingle{} command for hard constraints
+\item Fix several hard constraint corner-\/cases in M\+FE and partition function computation when nucleotides must not be unpaired
+\item Fix order of hard constraints when read from input file
+\item Allow for non-\/canonical base pairs in M\+FE and partition function computations if hard constraints demand it
+\item Fix behavior of -\/-\/without-\/swig configure script option
+\item Fix bug in hard constraints usage of exterior loop M\+FE prediction with odd dangles
+\item Add parsers for Clustal, Stockholm, F\+A\+S\+TA, and M\+AF formatted alignment files
+\item Enable R\+N\+Aalifold to use Clustal, Stockholm, F\+A\+S\+TA, or M\+AF alignments as input
+\item Lift restriction of sequence number in alignments for R\+N\+Aalifold
+\item Enable A\+N\+SI colors for T\+TY output in R\+N\+Afold, R\+N\+Acofold, R\+N\+Aalifold, R\+N\+Asubopt, and warnings/errors issued by R\+N\+Alib
+\item Add various new commandline options to manipulate sequence/alignment I\+Ds in R\+N\+Afold, R\+N\+Acofold and R\+N\+Aalifold
+\end{DoxyItemize}
+
+v 2.\+2.\+8
+\begin{DoxyItemize}
+\item Fix bad memory access in R\+N\+Aalifold
+\item Fix regression in R\+N\+Aalifold to restore covariance contribution ratio determination for circular R\+NA alignments
+\item Changed output of R\+N\+Asubopt in energy-\/band enumeration mode to print M\+FE and energy range in kcal/mol instead of 10cal/mol
+\item Include latest Kinfold sources that make use of v3.\+0 A\+PI, therefore speeding up runtime substantially
+\item Re-\/activate warnings in R\+N\+Aeval when non-\/canonical base pairs are encountered
+\item Fix syntactic incompatibilities that potentially prevented compilation with compilers other than gcc
+\item dd function to compare nucleotides encoded in I\+U\+P\+AC format
+\item Fix regression in energy evaluation for circular R\+NA sequences
+\item Fix regression in suboptimal structure enumeration for circular R\+N\+As
+\item Allow for P i-\/j k-\/l commands in constraint definition files
+\item Make free energy evaluation functions polymorphic
+\item Add free energy evaluation functions that allow for specifying verbosity level
+\item Secure functions in alphabet.\+c against N\+U\+LL pointer arguments
+\item Fix incompatibility with swig $>$= 3.\+0.\+9
+\item Fix memory leak in swig-\/generated scripting language interface(s) for user-\/provided target language soft-\/constraint callbacks
+\item Expose additional functions to swig-\/generated scripting language interface(s)
+\item Build Python3 interface by default
+\item Start of more comprehensive scripting language interface documentation
+\item Fix linking of python2/python3 interfaces when libpython is in non-\/standard directory
+\item Restructured viennarna.\+spec for R\+PM based distributions
+\item Several syntactic changes in the implementation to minimize compiler warnings
+\item Fix -\/-\/with-\/$\ast$/-\/-\/without-\/$\ast$ and -\/-\/enable-\/$\ast$/-\/-\/disable-\/$\ast$ configure script behavior
+\end{DoxyItemize}
+
+v 2.\+2.\+7
+\begin{DoxyItemize}
+\item Fix partition function scaling for long sequences in R\+N\+Afold, R\+N\+Aalifold, and R\+N\+Aup
+\item Fix backtracking issue in R\+N\+Acofold when -\/-\/no\+LP option is activated
+\item Fix hard constraints issue for circular R\+N\+As in generating suboptimal structures
+\item Rebuild reference manual only when actually required
+\end{DoxyItemize}
+
+v 2.\+2.\+6
+\begin{DoxyItemize}
+\item Plugged memory leak in R\+N\+Acofold
+\item Fixed partition function rescaling bug in R\+N\+Aup
+\item Fixed bug in R\+N\+A\+Lfold with window sizes larger than sequence length
+\item Re-\/added S\+CI parameter for R\+N\+Aalifold
+\item Fixed backtracking issue for large G-\/quadruplexes in R\+N\+Aalifold
+\item Fixed missing F\+A\+S\+TA id in R\+N\+Aeval output
+\item Added option to R\+N\+Aalifold that allows to specify prefix for output files
+\item Several fixes and additional functions/methods in scripting language interface(s)
+\item Added version information for scripting language interface(s)
+\item Some changes to allow for compilation with newer compilers, such as gcc 6.\+1
+\end{DoxyItemize}
+
+v 2.\+2.\+5
+\begin{DoxyItemize}
+\item Fixed regression in R\+N\+Acofold that prohibited output of concentration computations
+\item Fixed behavior of R\+N\+Afold and R\+N\+Acofold when hard constraints create empty solution set (programs now abort with error message)
+\item Added optional Python 3 interface
+\item Added R\+N\+A\+::\+Params Perl 5 sub-\/package
+\item Update R\+N\+A\+::\+Design Perl 5 sub-\/package
+\item Simplified usage of v3.\+0 A\+PI with default options
+\item Wrap more functions of v3.\+0 A\+PI in S\+W\+IG generated scripting language interfaces
+\item Plugged some memory leaks in S\+W\+IG generated scripting language interfaces
+\item Changed parameters of recursion status callback in vrna\+\_\+fold\+\_\+compound\+\_\+t
+\item Enable definition and binding of callback functions from within S\+W\+IG target language
+\item Added optional subpackage Kinwalker
+\item Added several configure options to ease building and packaging under Mac\+OS X
+\item Added new utility script R\+N\+Adesign.\+pl
+\end{DoxyItemize}
+
+v 2.\+2.\+4
+\begin{DoxyItemize}
+\item Fixed bug in R\+N\+Asubopt that occasionally produced cofolded structures twice
+\item Removed debugging output in preparations of consensus structure prediction datastructures
+\end{DoxyItemize}
+
+v 2.\+2.\+3
+\begin{DoxyItemize}
+\item Added postscipt annotations for found ligand motifs in R\+N\+Afold
+\item Added more documentation for the constraints features in R\+N\+Afold and R\+N\+Aalifold
+\item Restore backward compatibility of \hyperlink{group__consensus__fold_ga5349960075b1847720a2e9df021e2675}{get\+\_\+alipf\+\_\+arrays()}
+\end{DoxyItemize}
+
+v 2.\+2.\+2
+\begin{DoxyItemize}
+\item Fix regression bug that occasionally prevented backtracking with R\+N\+Acofold -\/-\/no\+LP
+\end{DoxyItemize}
+
+v 2.\+2.\+1
+\begin{DoxyItemize}
+\item Fix regression bug that made R\+N\+Acofold -\/a unusable
+\item Fix regression bug that prohibited R\+N\+Afold to compute the M\+EA structure when G-\/\+Quadruplex support was switched on
+\item Fix bug in Kinfold to enable loading energy parameters from file
+\item Fix potential use of uninitialized value in R\+N\+Apdist
+\item Add manpage for ct2db
+\item Fix M\+EA computation when G-\/\+Quadruplex support is activated
+\item Allow for vendor installation of the perl interface using I\+N\+S\+T\+A\+L\+L\+D\+I\+RS=vendor at configure time
+\item Install architecture dependent and independent files of the perl and python interface to their correct file system locations
+\end{DoxyItemize}
+
+v 2.\+2.\+0
+\begin{DoxyItemize}
+\item R\+N\+Aforester is now of version 2.\+0
+\item New program R\+N\+Apvmin to compute pseudo-\/energy pertubation vector that minimizes discrepancy between observed and predicted pairing probabilities
+\item S\+H\+A\+PE reactivity support for R\+N\+Afold, R\+N\+Asubopt, and R\+N\+Aalifold
+\item Ligand binding to hairpin-\/ and interior-\/loop motif support in R\+N\+Afold
+\item New commandline option to limit maximum base pair span for R\+N\+Afold, R\+N\+Asubopt, R\+N\+Acofold, and R\+N\+Aalifold
+\item Bugfix in R\+N\+Aheat to remove numerical instabilities
+\item Bugfix in R\+N\+Aplex to allow for computation of interactions without length limitation
+\item Bugfix in R\+N\+Aplot for simple layouts and hairpins of size 0
+\item (generic) hard-\/ and soft-\/constraints for M\+FE, partition function, base pair probabilities, stochastic backtracking, and suboptimal secondary structures of single sequences, sequence alignments, and sequence dimers
+\item libsvm version as required for z-\/scoring in R\+N\+A\+Lfold is now 3.\+20
+\item Stochastic backtracking for single sequences is faster due to usage of Boustrophedon scheme
+\item First polymorphic functions \hyperlink{group__mfe__fold_gabd3b147371ccf25c577f88bbbaf159fd}{vrna\+\_\+mfe()}, \hyperlink{group__pf__fold_ga29e256d688ad221b78d37f427e0e99bc}{vrna\+\_\+pf()}, and \hyperlink{group__subopt__stochbt_ga901fe42a33b07be083421741bf7dc610}{vrna\+\_\+pbacktrack()}.
+\item The F\+L\+T\+\_\+\+O\+R\+\_\+\+D\+BL macro is now a typedef
+\item New functions to convert between different secondary structure representations, such as helix lists, and R\+N\+Ashapes abstractions
+\item First object-\/oriented interface for new A\+PI functions in the scripting language interfaces
+\item new Vienna\+R\+N\+A-\/perl submodule that augments the Perl interface to R\+N\+Alib
+\item Ligand binding to hairpin-\/ and interior-\/loop motif support in C-\/library and scripting language interfaces.
+\item Libraries are generated using libtool
+\item Linking of libraries and executables defaults to use Link Time Optimization (L\+TO)
+\item Large changes in directory structure of the source code files
+\end{DoxyItemize}
+
+v 2.\+1.\+9
+\begin{DoxyItemize}
+\item Fixed integer underflow bug in R\+N\+A\+Lfold
+\item Added Sequence Conservation index (S\+CI) option to R\+N\+Aalifold
+\item Fixed bug in energy evaluation of dangling ends / terminal mismatches of exterior loops and multibranch loops
+\item Fixed bug in alifold partition function for circular R\+N\+As
+\item Fixed bug in alifold that scrambled backtracing with activated G-\/\+Quadruplex support
+\item Fixed bug in alifold backtracking for larger G-\/\+Quadruplexes
+\end{DoxyItemize}
+
+v 2.\+1.\+8
+\begin{DoxyItemize}
+\item Repaired incorporation of R\+N\+Ainverse user provided alphabet
+\item Fix missing F\+A\+S\+TA ID in R\+N\+Aeval output
+\item prevent race condition in parallel calls of \hyperlink{group__local__mfe__fold_ga16e5a70e60835bb969eaecbe6482f1be}{Lfold()}
+\item Fixed memory bug in \hyperlink{group__local__mfe__fold_ga16e5a70e60835bb969eaecbe6482f1be}{Lfold()} that occured using long sequences and activated G-\/\+Quad support
+\item Added latest version of switch.\+pl
+\end{DoxyItemize}
+
+v 2.\+1.\+7
+\begin{DoxyItemize}
+\item Fixed bug in R\+N\+A\+Lfold -\/z
+\item Python and Perl interface are compiling again under Mac\+O\+SX
+\item Fixed handling of C arrays in Python interface
+\item Added latest version of switch.\+pl
+\item Make relplot.\+pl work with R\+N\+Acofold output
+\end{DoxyItemize}
+
+v 2.\+1.\+6
+\begin{DoxyItemize}
+\item New commandline switches allow for elimination of non-\/canonical base pairs from constraint structures in R\+N\+Afold, R\+N\+Aalifold and R\+N\+Asubopt
+\item updated moveset functions
+\item final fix for discrepancy of tri-\/loop evaluation between partition function and mfe
+\item pkg-\/config file now includes the Open\+MP linker flag if necessary
+\item New program ct2db allows for conversion of .ct files into dot-\/bracket notation (incl. pseudo-\/knot removal)
+\end{DoxyItemize}
+
+v 2.\+1.\+5
+\begin{DoxyItemize}
+\item Fix for discrepancy between special hairpin loop evaluation in partition functions and M\+FE
+\end{DoxyItemize}
+
+v 2.\+1.\+4
+\begin{DoxyItemize}
+\item Fix of G-\/quadruplex support in \hyperlink{group__subopt__wuchty_ga700f662506a233e42dd7fda74fafd40e}{subopt()}
+\item Fix for discrepancy between special hairpin loop evaluation in partition functions and M\+FE
+\end{DoxyItemize}
+
+v 2.\+1.\+3
+\begin{DoxyItemize}
+\item R\+N\+Afold\+: Bugfix for ignoring user specified energy parameter files
+\item R\+N\+Acofold\+: Bugfix for crashing upon constrained folding without specifying a constraint structure
+\item R\+N\+Asubopt\+: Added G-\/quadruplex support
+\item R\+N\+Aalifold\+: Added parameter option to specify base pair probability threshold in dotplot
+\item Fix of several G-\/quadruplex related bugs
+\item Added G-\/quadruplex support in \hyperlink{group__subopt__wuchty_ga700f662506a233e42dd7fda74fafd40e}{subopt()}
+\end{DoxyItemize}
+
+v 2.\+1.\+2
+\begin{DoxyItemize}
+\item R\+N\+Afold\+: Bugfix for randomly missing probabilities in dot-\/plot during batch job execution
+\item R\+N\+Aeval\+: Bugfix for misinterpreted G-\/quadruplex containing sequences where the quadruplex starts at nucleotide 1
+\item R\+N\+Asubopt\+: Slight changes to the output of stochastic backtracking and zuker subopt
+\item Fix of some memory leaks
+\item Bugfixes in \hyperlink{group__subopt__zuker_ga0d5104e3ecf119d8eabd40aa5fe47f90}{zukersubopt()}, \hyperlink{group__pf__fold_ga1cc05aaa9b0e7df2d3887e98321c2030}{assign\+\_\+plist\+\_\+from\+\_\+pr()}
+\item New threadsafe variants of putoutp\+U\+\_\+prob$\ast$() for L\+Pfold()
+\item Provision of python2 interface support.
+\end{DoxyItemize}
+
+v 2.\+1.\+1
+\begin{DoxyItemize}
+\item Bugfix to restore backward compatibility with Vienna\+R\+NA Package 1.\+8.\+x A\+PI (this bug also affected proper usage of the the perl interface)
+\end{DoxyItemize}
+
+v 2.\+1.\+0
+\begin{DoxyItemize}
+\item G-\/\+Quadruplex support in R\+N\+Afold, R\+N\+Acofold, R\+N\+A\+Lfold, R\+N\+Aalifold, R\+N\+Aeval and R\+N\+Aplot
+\item L\+Pfold got a new option to output its computations in split-\/mode
+\item several G-\/\+Quadruplex related functions were introduced with this release
+\item several functions for moves in an R\+NA landscape were introduced
+\item new function in alipfold.\+c now enables access to the partition function matrices of \hyperlink{group__consensus__pf__fold_ga1a5f6cfb9d761fa862ce4edc7c369cd2}{alipf\+\_\+fold()}
+\item different numeric approach was implement for concentration dependend co-\/folding to avoid instabilities which occured under certain circumstances
+\end{DoxyItemize}
+
+v 2.\+0.\+7
+\begin{DoxyItemize}
+\item Bugfix for R\+N\+Aplfold where segfault happened upon usage of -\/O option
+\item Corrected misbehavior of R\+N\+Aeval and R\+N\+Aplot in tty mode
+\end{DoxyItemize}
+
+v 2.\+0.\+6
+\begin{DoxyItemize}
+\item Bugfix for bad type casting with gcc under Mac\+O\+SX (resulted in accidental \char`\"{}sequence too long\char`\"{} errors)
+\item Bugfix for disappearing tri-\//hexaloop contributions when read in from certain parameter files
+\item Bugfix for R\+N\+A\+Lfold that segfaulted on short strange sequences like A\+T+ repeats
+\item Change of R\+N\+A2\+Dfold output format for stochastic backtracking
+\end{DoxyItemize}
+
+v 2.\+0.\+5
+\begin{DoxyItemize}
+\item Restored z-\/score computation capabilities in R\+N\+A\+Lfold
+\end{DoxyItemize}
+
+v 2.\+0.\+4
+\begin{DoxyItemize}
+\item Bugfix for R\+N\+Acofold partition function
+\item Perl wrapper compatibility to changed R\+N\+Alib has been restored
+\item Backward compatibility for partition function calls has been restored
+\end{DoxyItemize}
+
+v 2.\+0.\+3
+\begin{DoxyItemize}
+\item Bugfix for R\+N\+Aalifold partition function and base pair probabilities in v2.\+0.\+3b
+\item Added Boltzmann factor scaling in R\+N\+Asubopt, R\+N\+Aalifold, R\+N\+Aplfold and R\+N\+Acofold
+\item Bugfix for alipfold() in v2.\+0.\+3b
+\item Restored threadsafety of folding matrix access in L\+Pfold.\+c, alipfold.\+c, part\+\_\+func.\+c, part\+\_\+func\+\_\+co.\+c and part\+\_\+func\+\_\+up.\+c
+\item Added several new functions regarding threadsafe function calls in terms of concurrently changing the model details
+\item Added pkg-\/config file in the distribution to allow easy checks for certain R\+N\+Alib2 versions, compiler flags and linker flags.
+\end{DoxyItemize}
+
+v 2.\+0.\+2
+\begin{DoxyItemize}
+\item added support for Boltzmann factor scaling in R\+N\+Afold
+\item fixed fastaheader to filename bug
+\item plugged some memory leaks
+\end{DoxyItemize}
+
+v 2.\+0.\+1
+\begin{DoxyItemize}
+\item First official release of version 2.\+0
+\item included latest bugfixes
+\end{DoxyItemize}
+
+\+\_\+\+\_\+\+History\+\_\+\+\_\+
+
+2011-\/03-\/10 Ronny Lorenz \href{mailto:ronny@tbi.univie.ac.at}{\tt ronny@tbi.\+univie.\+ac.\+at}
+\begin{DoxyItemize}
+\item new naming scheme for all shipped energy parameter files
+\item fixed bugs that appear while compiling with gcc under Mac\+OS X
+\item fixed bug in R\+N\+Aup -\/-\/interaction-\/first where the longer of the first two sequences was taken as target
+\item added full F\+A\+S\+TA input support to R\+N\+Afold, R\+N\+Acofold, R\+N\+Aheat, R\+N\+Aplfold R\+N\+A\+Lfoldz, R\+N\+Asubopt and R\+N\+A\+Lfold
+\end{DoxyItemize}
+
+2010-\/11-\/24 Ronny Lorenz \href{mailto:ronny@tbi.univie.ac.at}{\tt ronny@tbi.\+univie.\+ac.\+at}
+\begin{DoxyItemize}
+\item first full pre-\/release of version 2.\+0
+\end{DoxyItemize}
+
+2009-\/11-\/03 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+\begin{DoxyItemize}
+\item Fix memory corruption in \hyperlink{group__plotting__utils_ga821802c3685e37e15182341f6217470d}{P\+S\+\_\+color\+\_\+aln()}
+\end{DoxyItemize}
+
+2009-\/09-\/09 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+\begin{DoxyItemize}
+\item Fix bug in R\+N\+Aplfold when -\/u and -\/L parameters are equal
+\item Fix double call to \hyperlink{group__mfe__fold__single_ga107fdfe5fd641868156bfd849f6866c7}{free\+\_\+arrays()} in R\+N\+Afold.\+c
+\item Improve drawing of cofolded structures
+\end{DoxyItemize}
+
+2009-\/05-\/14 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item Fix occasional segfault in R\+N\+Aalifold\textquotesingle{}s print\+\_\+aliout()
+\end{DoxyItemize}
+
+2009-\/02-\/24 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item Add -\/\+M\+EA options to R\+N\+Afold and R\+N\+Aalifold
+\item change energy\+\_\+of\+\_\+alistruct to return float not void
+\end{DoxyItemize}
+
+2009-\/02-\/24 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item R\+N\+Afold will draw structures unless -\/no\+PS is used (no more \char`\"{}structure too long\char`\"{} messages)
+\item Restore the \char`\"{}alifold.\+out\char`\"{} output from R\+N\+Aalifold -\/p
+\item R\+N\+Aalifold -\/circ did not work due to wrong return type
+\item Accessibility calculation with R\+N\+Aplfold would give wrong results for u$<$=30
+\end{DoxyItemize}
+
+2008-\/12-\/03 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item Add zuker style suboptimals to R\+N\+Asubopt (-\/z)
+\item \hyperlink{utils_8h_abe51806d14cff0789a8c1df7dbc45b71}{get\+\_\+line()} should be much faster when reading huge sequences (e.\+g. whole chromosomes for R\+N\+A\+Lfold)
+\end{DoxyItemize}
+
+2008-\/08-\/12 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item Add Ribosum matrices for covariance scoring in R\+N\+Aalifold
+\end{DoxyItemize}
+
+2008-\/06-\/27 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item Change R\+N\+Aalifold to used berni\textquotesingle{}s new energy evaluation w/o gaps
+\item Add stochastic backtracking in R\+N\+Aalifold
+\end{DoxyItemize}
+
+2008-\/07-\/04 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item modify output of R\+N\+Aup (again). Program reading R\+N\+Aup output will have to updated!
+\end{DoxyItemize}
+
+2008-\/07-\/02 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item R\+N\+Aplfold now computes accessibilities for all regions up to a max length simultaneously. Slightly slower when only 1 value is needed, but much faster if all of them are wanted. This entails a new output format. Programs reading accessibility output from R\+N\+Aplfold need to be updated!
+\end{DoxyItemize}
+
+2008-\/03-\/31 Stephan Bernhart \href{mailto:berni@tbi.univie.ac.at}{\tt berni@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add cofolding to R\+N\+Asubopt
+\end{DoxyItemize}
+
+2008-\/01-\/08 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item ensure circfold works even for open chain
+\end{DoxyItemize}
+
+2007-\/12-\/13 Ulli Mueckstein \href{mailto:ulli@tbi.univie.ac.at}{\tt ulli@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item upate R\+N\+Aup related files R\+N\+Aup can now include the intramolecular structure of both molecules and handles constraints.
+\end{DoxyItemize}
+
+2007-\/12-\/05 Ronny Lorenz \href{mailto:ronny@tbi.univie.ac.at}{\tt ronny@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add circfold variants in part\+\_\+func.\+c alipfold.\+c subopt.\+c
+\end{DoxyItemize}
+
+2007-\/09-\/19 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item compute the controid structure of the ensemble in R\+N\+Afold -\/p
+\item fix a missing factor 2 in \hyperlink{part__func_8h_ae9556ba7ded44fe2321b6f67c3fc02a3}{mean\+\_\+bp\+\_\+dist()}. C\+A\+U\+T\+I\+ON ensemble diversities returned by R\+N\+Afold -\/p are now twice as large as in earlier versions.
+\end{DoxyItemize}
+
+2007-\/09-\/04 Ivo Hofacker \href{mailto:ivo@blini.tbi.univie.ac.at}{\tt ivo@blini.\+tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item fix a bug in \hyperlink{group__local__mfe__fold_ga16e5a70e60835bb969eaecbe6482f1be}{Lfold()} where base number n-\/max-\/4 would never pair
+\end{DoxyItemize}
+
+2007-\/08-\/26 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add R\+N\+Aaliduplex the alignment version of R\+N\+Aduplex
+\item introduce a minimal distance between hits produced by duplex\+\_\+subopt()
+\end{DoxyItemize}
+
+2007-\/07-\/03 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add a \hyperlink{group__eval_ga507d4fd93f4b398d793ba2402731388d}{loop\+\_\+energy()} function to compute energy of a single loop
+\end{DoxyItemize}
+
+2007-\/06-\/23 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add \hyperlink{group__local__consensus__fold_ga864db0f9c428356d978ad0600aa9a8bc}{ali\+Lfold()} and R\+N\+A\+Lalifold, alignment variant of \hyperlink{group__local__mfe__fold_ga16e5a70e60835bb969eaecbe6482f1be}{Lfold()}
+\end{DoxyItemize}
+
+2007-\/04-\/30 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+\begin{DoxyItemize}
+\item add R\+N\+Aup to distribution
+\end{DoxyItemize}
+
+2007-\/04-\/15 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+\begin{DoxyItemize}
+\item fix segfault in colorps output (thanks to Andres Varon)
+\end{DoxyItemize}
+
+2007-\/03-\/03 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+\begin{DoxyItemize}
+\item avoid unnormalized doubles in scale\mbox{[}\mbox{]}, big speedup for \hyperlink{group__pf__fold_gadc3db3d98742427e7001a7fd36ef28c2}{pf\+\_\+fold()} on very long sequences
+\end{DoxyItemize}
+
+2007-\/02-\/03 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item R\+N\+Aalifold can now produce colored structure plots and alignment plots
+\end{DoxyItemize}
+
+2007-\/02-\/01 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item Fix segfault in R\+N\+Aplfold because of missing prototype
+\end{DoxyItemize}
+
+2006-\/12-\/01 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item R\+N\+Aduplex would segfault when no structure base pairs are possible
+\end{DoxyItemize}
+
+2006-\/08-\/22 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add computation stacking probabilities using R\+N\+Afold -\/p2
+\item add -\/no\+PS option for N\+R\+Afold to supress drawing structures
+\end{DoxyItemize}
+
+2006-\/08-\/09 Stephan Bernhart \href{mailto:berni@tbi.univie.ac.at}{\tt berni@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item R\+N\+Aplfold can now compute probabilites of unpaired regions (scanning version of R\+N\+Aup)
+\end{DoxyItemize}
+
+2006-\/06-\/14 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item compile library with -\/fpic (if available) for use as shared library in the Perl module.
+\item fix another bug when calling \hyperlink{group__local__mfe__fold_ga16e5a70e60835bb969eaecbe6482f1be}{Lfold()} repeatedly
+\item fix switch cmdline parsing in R\+N\+Aalifold (-\/mis implied -\/4)
+\item fix bug in \hyperlink{group__mfe__cofold_gabc8517f22cfe70595ee81fc837910d52}{cofold()} with dangles=0
+\end{DoxyItemize}
+
+2006-\/05-\/08 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item fix segfault in \hyperlink{group__local__mfe__fold_ga16e5a70e60835bb969eaecbe6482f1be}{Lfold()} when calling repeatedly
+\item fix structure parsing in R\+N\+Astruct.\+c (thanks to Michael Pheasant for reporting both bugs)
+\item add duplexfold() and \hyperlink{group__consensus__mfe__fold_ga4cf00f0659e5f0480335d69e797f05b1}{alifold()} to Perl module
+\item distinguish window size and max pair span in L\+Pfold
+\end{DoxyItemize}
+
+2006-\/04-\/05 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item fix performance bug in \hyperlink{part__func__co_8h_ae5c1e7331718669bdae7a86de2be6184}{co\+\_\+pf\+\_\+fold()}
+\item use relative error for termination of Newton iteration
+\end{DoxyItemize}
+
+2006-\/03-\/02 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add circular folding in \hyperlink{group__consensus__mfe__fold_ga4cf00f0659e5f0480335d69e797f05b1}{alifold()}
+\end{DoxyItemize}
+
+2006-\/01-\/18 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item cleanup berni partition cofold code, including several bug fixes
+\end{DoxyItemize}
+
+2006-\/01-\/16 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item update R\+N\+Aplfold to working version
+\item add P\+S\+\_\+dot\+\_\+plot\+\_\+turn() in P\+S\+\_\+dot.\+c
+\end{DoxyItemize}
+
+2005-\/11-\/07 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add new utilities colorna and coloraln
+\end{DoxyItemize}
+
+2005-\/10-\/11 Christoph Flamm \href{mailto:xtof@tbi.univie.ac.at}{\tt xtof@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item adapt \hyperlink{plot__structure_8h_a0873c7cc4cd7a11c9a2cea19dde7e9c9}{P\+S\+\_\+rna\+\_\+plot()} for drawing co-\/folded structures
+\end{DoxyItemize}
+
+2005-\/07-\/24 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item fix a few memory problems in structure comparison routines
+\end{DoxyItemize}
+
+2005-\/04-\/30 Ivo Hofacker \href{mailto:ivo@blini.tbi.univie.ac.at}{\tt ivo@blini.\+tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add folding of circular R\+N\+As
+\end{DoxyItemize}
+
+2005-\/03-\/11 Ivo Hofacker \href{mailto:ivo@blini.tbi.univie.ac.at}{\tt ivo@blini.\+tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add -\/mis option to R\+N\+Aalifold to give \char`\"{}most informative
+	  sequence\char`\"{} as consensus
+\end{DoxyItemize}
+
+2005-\/02-\/10 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item move \hyperlink{group__consensus__mfe__fold_ga4cf00f0659e5f0480335d69e797f05b1}{alifold()} into the library
+\end{DoxyItemize}
+
+2004-\/12-\/22 Stephan Bernhart \href{mailto:berni@tbi.univie.ac.at}{\tt berni@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add partition function version of R\+N\+Acofold
+\end{DoxyItemize}
+
+2004-\/12-\/23 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add R\+N\+Apaln for fast structural alignments (R\+N\+Apdist improvement)
+\end{DoxyItemize}
+
+2004-\/08-\/12 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item fix constrained folding in stochastic backtracking
+\end{DoxyItemize}
+
+2004-\/07-\/21 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add R\+N\+Aduplex, to compute hybrid structures without intra-\/molecular pairs
+\end{DoxyItemize}
+
+2004-\/02-\/09 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item fix bug in fold that caused segfaults when using Intel compiler
+\item add computation of ensemble diversity to R\+N\+Afold
+\end{DoxyItemize}
+
+2003-\/09-\/10 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add annotation options to R\+N\+Aplot
+\end{DoxyItemize}
+
+2003-\/08-\/04 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item stochastic backtracking finally works. Try e.\+g. R\+N\+Asubopt -\/p 10
+\end{DoxyItemize}
+
+2003-\/07-\/18 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add relplot.\+pl and rotate\+\_\+ss.\+pl utilities for reliability annotation and rotation of rna structure plots
+\end{DoxyItemize}
+
+2003-\/01-\/29 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add R\+N\+A\+Lfold program to compute locally optimal structures with maximum pair span.
+\item add R\+N\+Acofold for computing hybrid structure
+\end{DoxyItemize}
+
+2002-\/11-\/07 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item change \hyperlink{profiledist_8h_a904c7eaf4a2413567c00ac4891749d18}{Make\+\_\+bp\+\_\+profile()} and \hyperlink{profiledist_8h_abe75e90e00a1e5dd8862944ed53dad5d}{profile\+\_\+edit\+\_\+distance()} to use simple (float $\ast$) arrays; makes Perl access much easier. R\+N\+Apdist -\/B now works again
+\end{DoxyItemize}
+
+2002-\/10-\/28 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item Improved Perl module with pod documentation; allow to write things like (\$structure, \$energy) = R\+N\+A\+::fold(\$seq); Compatibility warning\+: the ptrvalue() and related functions are gone, see the pod documentation for alternatives.
+\end{DoxyItemize}
+
+2002-\/10-\/29 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item added svg structure plots in P\+S\+\_\+dot.\+c and R\+N\+Aplot
+\end{DoxyItemize}
+
+2002-\/08-\/15 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item Improve reading of clustal files (alifold)
+\item add a sample alifold.\+cgi script
+\end{DoxyItemize}
+
+2001-\/09-\/18 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item moved suboptimal folding into the library, thus it\textquotesingle{}s now accessible from the Perl module
+\end{DoxyItemize}
+
+2001-\/08-\/31 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item added co-\/folding support in \hyperlink{group__eval_gac2b37fea2145c94d925a3f33378ef87b}{energy\+\_\+of\+\_\+struct()}, and thus R\+N\+Aeval
+\end{DoxyItemize}
+
+2001-\/04-\/30 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item switch from handcrafted makefiles to automake and autoconf
+\end{DoxyItemize}
+
+2001-\/04-\/05 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item added P\+S\+\_\+rna\+\_\+plot\+\_\+a to produce structure plots with annotation
+\end{DoxyItemize}
+
+2001-\/03-\/03 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add alifold; predict consensus structures from alignment
+\end{DoxyItemize}
+
+2000-\/09-\/28 Ivo Hofacker \href{mailto:ivo@tbi.univie.ac.at}{\tt ivo@tbi.\+univie.\+ac.\+at}
+
+
+\begin{DoxyItemize}
+\item add -\/d3 option to R\+N\+Afold for co-\/axial stacking 
+\end{DoxyItemize} 

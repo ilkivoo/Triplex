@@ -1,0 +1,51 @@
+<map id="ViennaRNA/perturbation_fold.h" name="ViennaRNA/perturbation_fold.h">
+<area shape="rect" id="node2" href="$constraints_8h.html" title="Functions and data structures for constraining secondary structure predictions and evaluation..." alt="" coords="5060,95,5231,121"/>
+<area shape="rect" id="node3" href="$data__structures_8h.html" title="Various data structures and pre&#45;processor macros. " alt="" coords="2435,169,2631,196"/>
+<area shape="rect" id="node19" href="$fold__compound_8h.html" title="The Basic Fold Compound API. " alt="" coords="4507,430,4701,457"/>
+<area shape="rect" id="node31" href="$interior__loops_8h.html" title="Energy evaluation of interior loops for MFE and partition function calculations. " alt="" coords="3317,423,3451,464"/>
+<area shape="rect" id="node4" href="$2Dfold_8h.html" title="MFE structures for base pair distance classes. " alt="" coords="2356,341,2500,367"/>
+<area shape="rect" id="node5" href="$2Dpfold_8h.html" title="Partition function implementations for base pair distance classes. " alt="" coords="4075,251,4226,278"/>
+<area shape="rect" id="node6" href="$ali__plex_8h_source.html" title="ViennaRNA/ali_plex.h" alt="" coords="4250,251,4401,278"/>
+<area shape="rect" id="node7" href="$alifold_8h.html" title="Functions for comparative structure prediction using RNA sequence alignments. " alt="" coords="1371,512,1511,539"/>
+<area shape="rect" id="node8" href="$boltzmann__sampling_8h.html" title="Boltzmann Sampling of secondary structures from the ensemble. " alt="" coords="1479,333,1633,375"/>
+<area shape="rect" id="node9" href="$part__func_8h.html" title="Partition function implementations. " alt="" coords="1197,430,1357,457"/>
+<area shape="rect" id="node10" href="$part__func__co_8h.html" title="Partition function for two RNA sequences. " alt="" coords="683,512,864,539"/>
+<area shape="rect" id="node11" href="$centroid_8h.html" title="Centroid structure computation. " alt="" coords="1201,341,1353,367"/>
+<area shape="rect" id="node12" href="$cofold_8h.html" title="MFE implementations for RNA&#45;RNA interaction. " alt="" coords="769,341,911,367"/>
+<area shape="rect" id="node13" href="$commands_8h.html" title="Parse and apply different commands that alter the behavior of secondary structure prediction and eval..." alt="" coords="341,251,512,278"/>
+<area shape="rect" id="node14" href="$constraints__hard_8h.html" title="Functions and data structures for handling of secondary structure hard constraints. " alt="" coords="5431,244,5590,285"/>
+<area shape="rect" id="node15" href="$constraints__ligand_8h.html" title="Functions for incorporation of ligands binding to hairpin and interior loop motifs using the soft con..." alt="" coords="4883,244,5042,285"/>
+<area shape="rect" id="node16" href="$constraints__SHAPE_8h.html" title="This module provides function to incorporate SHAPE reactivity data into the folding recursions by mea..." alt="" coords="5066,244,5225,285"/>
+<area shape="rect" id="node17" href="$constraints__soft_8h.html" title="Functions and data structures for secondary structure soft constraints. " alt="" coords="5249,244,5407,285"/>
+<area shape="rect" id="node18" href="$dp__matrices_8h.html" title="Functions to deal with standard dynamic programming (DP) matrices. " alt="" coords="4425,251,4602,278"/>
+<area shape="rect" id="node20" href="$duplex_8h.html" title="Functions for simple RNA&#45;RNA duplex interactions. " alt="" coords="587,251,731,278"/>
+<area shape="rect" id="node21" href="$equilibrium__probs_8h.html" title="Equilibrium Probability implementations. " alt="" coords="375,333,532,375"/>
+<area shape="rect" id="node22" href="$eval_8h.html" title="Functions and variables related to energy evaluation of sequence/structure pairs. ..." alt="" coords="119,341,249,367"/>
+<area shape="rect" id="node23" href="$fold_8h.html" title="MFE calculations for single RNA sequences. " alt="" coords="171,430,298,457"/>
+<area shape="rect" id="node24" href="$exterior__loops_8h.html" title="Energy evaluation of exterior loops for MFE and partition function calculations. " alt="" coords="556,333,695,375"/>
+<area shape="rect" id="node25" href="$file__formats_8h.html" title="Read and write different file formats for RNA sequences, structures. " alt="" coords="1059,251,1234,278"/>
+<area shape="rect" id="node26" href="$findpath_8h.html" title="A breadth&#45;first search heuristic for optimal direct folding paths. " alt="" coords="1259,251,1411,278"/>
+<area shape="rect" id="node27" href="$fold__vars_8h.html" title="Here all all declarations of the global variables used throughout RNAlib. " alt="" coords="1435,251,1594,278"/>
+<area shape="rect" id="node28" href="$gquad_8h.html" title="G&#45;quadruplexes. " alt="" coords="985,341,1127,367"/>
+<area shape="rect" id="node29" href="$grammar_8h.html" title="Implementations for the RNA folding grammar. " alt="" coords="4627,251,4784,278"/>
+<area shape="rect" id="node30" href="$hairpin__loops_8h.html" title="Energy evaluation of hairpin loops for MFE and partition function calculations. " alt="" coords="2399,430,2582,457"/>
+<area shape="rect" id="node32" href="$LPfold_8h.html" title="Partition function implementation for the Lfold algorithm. " alt="" coords="1861,341,2003,367"/>
+<area shape="rect" id="node33" href="$MEA_8h.html" title="Computes a MEA (maximum expected accuracy) structure. " alt="" coords="2027,341,2162,367"/>
+<area shape="rect" id="node34" href="$mfe_8h.html" title="Compute Minimum Free energy (MFE) and backtrace corresponding secondary structures from RNA sequence ..." alt="" coords="755,251,883,278"/>
+<area shape="rect" id="node35" href="$multibranch__loops_8h.html" title="Energy evaluation of multibranch loops for MFE and partition function calculations. " alt="" coords="2607,423,2769,464"/>
+<area shape="rect" id="node36" href="$neighbor_8h.html" title="Methods to compute the neighbors of an RNA secondary structure. " alt="" coords="61,251,216,278"/>
+<area shape="rect" id="node37" href="$params_8h.html" title="Functions to deal with sets of energy parameters. " alt="" coords="1669,251,1819,278"/>
+<area shape="rect" id="node38" href="$subopt_8h.html" title="RNAsubopt and density of states declarations. " alt="" coords="2186,341,2331,367"/>
+<area shape="rect" id="node39" href="$part__func__up_8h.html" title="Implementations for accessibility and RNA&#45;RNA interaction as a stepwise process. " alt="" coords="2443,251,2624,278"/>
+<area shape="rect" id="node40" href="$PKplex_8h_source.html" title="ViennaRNA/PKplex.h" alt="" coords="2649,251,2797,278"/>
+<area shape="rect" id="node41" href="$plex_8h_source.html" title="ViennaRNA/plex.h" alt="" coords="2821,251,2952,278"/>
+<area shape="rect" id="node42" href="$plot__layouts_8h.html" title="Secondary structure plot layout algorithms. " alt="" coords="2976,251,3152,278"/>
+<area shape="rect" id="node43" href="$profiledist_8h.html" title="ViennaRNA/profiledist.h" alt="" coords="3176,251,3339,278"/>
+<area shape="rect" id="node44" href="$PS__dot_8h.html" title="Various functions for plotting RNA secondary structures, dot&#45;plots and other visualizations. " alt="" coords="3725,341,3875,367"/>
+<area shape="rect" id="node45" href="$snofold_8h_source.html" title="ViennaRNA/snofold.h" alt="" coords="3363,251,3511,278"/>
+<area shape="rect" id="node46" href="$snoop_8h_source.html" title="ViennaRNA/snoop.h" alt="" coords="3536,251,3677,278"/>
+<area shape="rect" id="node47" href="$string__utils_8h.html" title="General utility&#45; and helper&#45;functions for RNA sequence and structure strings used throughout the Vien..." alt="" coords="2147,251,2317,278"/>
+<area shape="rect" id="node48" href="$utils_8h.html" title="General utility&#45; and helper&#45;functions used throughout the ViennaRNA Package. " alt="" coords="2575,341,2705,367"/>
+<area shape="rect" id="node49" href="$structure__utils_8h.html" title="Various utility&#45; and helper&#45;functions for secondary structure parsing, converting, etc. " alt="" coords="3701,244,3848,285"/>
+<area shape="rect" id="node50" href="$unstructured__domains_8h.html" title="Functions to modify unstructured domains, e.g. to incorporate ligands binding to unpaired stretches..." alt="" coords="4711,333,4878,375"/>
+</map>
