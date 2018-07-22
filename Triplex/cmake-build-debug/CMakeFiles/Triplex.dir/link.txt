@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Triplex.dir/main.cpp.o CMakeFiles/Triplex.dir/bindRNA/BindRNA.cpp.o CMakeFiles/Triplex.dir/Triplexator/Triplexator.cpp.o  -o Triplex 

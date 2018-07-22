@@ -1,0 +1,3 @@
+/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/CMakeFiles/Triplex.dir

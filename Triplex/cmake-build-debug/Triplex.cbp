@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Triplex"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Triplex">
+				<Option output="/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Triplex" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 Triplex"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Triplex/fast">
+				<Option output="/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Triplex" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 Triplex/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/olya/SRW/git/Triplex/Triplex/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/olya/SRW/git/Triplex/Triplex/Triplexator/Triplexator.cpp">
+			<Option target="Triplex"/>
+		</Unit>
+		<Unit filename="/home/olya/SRW/git/Triplex/Triplex/Triplexator/Triplexator.h">
+			<Option target="Triplex"/>
+		</Unit>
+		<Unit filename="/home/olya/SRW/git/Triplex/Triplex/bindRNA/BindRNA.cpp">
+			<Option target="Triplex"/>
+		</Unit>
+		<Unit filename="/home/olya/SRW/git/Triplex/Triplex/bindRNA/BindRNA.h">
+			<Option target="Triplex"/>
+		</Unit>
+		<Unit filename="/home/olya/SRW/git/Triplex/Triplex/main.cpp">
+			<Option target="Triplex"/>
+		</Unit>
+		<Unit filename="/home/olya/SRW/git/Triplex/Triplex/structRNASites.h">
+			<Option target="Triplex"/>
+		</Unit>
+		<Unit filename="/home/olya/SRW/git/Triplex/Triplex/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
